@@ -9,20 +9,9 @@
 
   <div style="position: relative; bottom: -150px; right: 10px; text-align: right;">
     <p>
-      We have received your application and you will receive an e-mail confirmation within the next few days.
-      This confirmation will include instructions on submitting certain application requirements and other
-      documents to support your application.
-    </p>
-    <p>
-      <b>Following the completion of the supplemental information, you will be asked to submit certain requirements.</b>
+      Your information has been recorded. Thank you for taking the time to update with us.
+      We would like also to invite you to visit the AIM alumni portal at www.aimalumni.org  and REGISTER so that you will be updated on the latest news, events, and reunions that the Institute has for its alumni.
+      Please do not hesitate to contact us at aimalumni@aim.edu  should you have any questions or need any assistance.
     </p>
   </div>
-</div>
-<div style="width: 800px;">
-  <% if @supplemental_detail.created_at == @supplemental_detail.updated_at %>
-      <%= render 'new_form' %>
-  <% else %>
-      <%= render 'supplemental_complete' %>
-      <%= render 'requirements' %>
-  <% end %>
 </div>
