@@ -6,13 +6,10 @@ class OnlineApplicationForm < ActiveRecord::Base
   belongs_to :supplemental_detail
   has_many :requirements
 
-  DTL_STATUS = {10 => 'prospect', 20 => 'applicant', 30 => 'candidate', 40 => 'accepted', 50 => 'confirmed', 60 => 'enrolled', 90 => 'Deleted'}
-  DTL_SUBSTATUS = {10 => {11 => 'hot lead', 12 => 'cold lead', 13 => 'withdraw'},
-               20 => {21 => 'current_applicant', 22 => 'deferred', 23 => 'withdraw', 24 => 'work and reapply'},
-               30 => {31 => 'for evaluation', 32 => 'for interview', 33 => 'withdraw', 34 => 'deferred', 35 => 'conditional', 36 => 'work and reinterview', 37 => 'rejected'},
-               40 => {41 => 'currently accepted', 42 => 'previously accepted', 43 => 'deferred', 44 => 'withdraw'},
-               50 => {51 => 'currently confirmed', 51 => 'previously accepted', 52 => 'deferred', 53 => 'withdraw'},
-               60 => {61 => 'currently enrolled', 62 => 'leave of absence', 63 => 'failed', 64 => 'withdrawn', 65 => 'deferred', 66 => 'returnee'},
+  DTL_STATUS = {10 => 'registered', 20 => 'recorded', 30 => 'for verification', 90 => 'Deleted'}
+  DTL_SUBSTATUS = {10 => {11 => 'registered'},
+               20 => {21 => 'recorded'},
+               30 => {31 => 'for for verification'},
                90 => {91 => 'deleted'}}
 
   def self.get_status(status = 0)
