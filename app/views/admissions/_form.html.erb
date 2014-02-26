@@ -53,6 +53,20 @@
   </div>
 </div>
 
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="civil_status">Civil Status</label>
+
+  <div class="controls">
+    <select id="civil_status" name="personal_detail[civil_status]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
+      <option>Select One</option>
+      <option>Unmarried</option>
+      <option>Married</option>
+    </select>
+  </div>
+</div>
+
+
 <!-- Text input-->
 <div class="control-group">
   <label class="control-label" for="dob">Date of Birth</label>

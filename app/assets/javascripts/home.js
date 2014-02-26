@@ -1,5 +1,5 @@
 $(document).ready(function (e) {
-    $('#page-title').text("Online Admissions");
+    $('#page-title').text("Alumni Update Campaign");
     $('#application-instructions').hide();
 })
 
