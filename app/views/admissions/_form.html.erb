@@ -780,6 +780,16 @@
   </div>
 </div>
 
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="work-fax-number">Fax Number</label>
+
+  <div class="controls">
+    <input id="work-fax-number" name="employment_detail[work_fax_number]" value="<%= @employment_detail.work_fax_number %>" type="text" placeholder="" class="input-xlarge">
+
+  </div>
+</div>
+
 <!-- Multiple Radios -->
 <div class="control-group">
   <label class="control-label" for="company_type">Company Type</label>
@@ -796,6 +806,10 @@
     <label class="radio" for="company-type-2">
       <input type="radio" name="employment_detail[company_type]" id="company-type-2" value="Non-Profit">
       Non-Profit
+    </label>
+    <label class="radio" for="company-type-3">
+      <input type="radio" name="employment_detail[company_type]" id="company-type-3" value="Retired">
+      Retired
     </label>
   </div>
 </div>
@@ -827,59 +841,6 @@
   </div>
 </div>
 
-<!-- Textarea -->
-<div class="control-group">
-  <label class="control-label" for="work-job-responsibilities">Job Responsibilities</label>
-
-  <div class="controls">
-    <textarea id="work-job-responsibilities" name="employment_detail[work_job_responsibilities]" placeholder="Briefly describe your job
-      responsibilities."><%= @employment_detail.work_job_responsibilities %></textarea>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="date-hired">Employment Start Date</label>
-
-  <div class="controls">
-    <input id="date-hired" name="employment_detail[date_hired]" type="text" value="<%= @employment_detail.date_hired %>" placeholder="Enter the Approximate Date of Commencement" class="input-xlarge date-pick non-dob">
-
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="date-fired" id="end-date-label">Employment End Date</label>
-
-  <div class="controls" id="termination-date-form">
-    <input id="date-fired" name="employment_detail[date_fired]" value="<%= @employment_detail.date_fired %>" type="text" placeholder="Leave blank if still employed" class="input-xlarge date-pick non-dob">
-
-  </div>
-  <div class="controls" id="termination-date">
-    <a href="javascript:showTerminationDate();">Click here if you are no longer connected with this employer.</a>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="manager-exp-years">Total Months of Management Experience</label>
-
-  <div class="controls">
-    <input id="manager-exp-years" name="employment_detail[manager_exp_years]" value="<%= @employment_detail.manager_exp_years %>" type="text" placeholder="" class="input-xlarge">
-
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="years-work-experience">Total Months of Employment</label>
-
-  <div class="controls">
-    <input id="years-work-experience" name="employment_detail[years_work_experience]" value="<%= @employment_detail.years_work_experience %>" type="text" placeholder="" class="input-xlarge">
-
-  </div>
-</div>
-
 <!-- Button (Double) -->
 <div class="control-group">
   <label class="control-label" for="submit-employment-info-back"></label>
@@ -900,21 +861,21 @@
 <!-- Start Page 3 -->
 <div id="page-3">
   <!-- Form Name -->
-  <legend>Bachelor's Degree</legend>
+  <legend>AIM Degree</legend>
 
   <!-- Text input-->
   <div class="control-group">
     <label class="control-label" for="education_detail[last-school-name]">Institution Name</label>
 
     <div class="controls">
-      <input id="last-school-name" name="education_detail[last_school_name]" type="text" value="<%= @education_detail.last_school_name %>" placeholder="" class="input-xlarge">
+      <input id="last-school-name" name="education_detail[last_school_name]" type="text" value="Asian Institute of Management" class="input-xlarge" readonly>
 
     </div>
   </div>
 
   <!-- Text input-->
   <div class="control-group">
-    <label class="control-label" for="last-school-course-title">Concentration/Course Title</label>
+    <label class="control-label" for="last-school-course-title">AIM Program/Course Title</label>
 
     <div class="controls">
       <input id="last-school-course-title" name="education_detail[last_school_course_title]" value="<%= @education_detail.last_school_course_title %>" type="text" placeholder="" class="input-xlarge">
@@ -924,55 +885,26 @@
 
   <!-- Select Basic -->
   <div class="control-group">
-    <label class="control-label" for="last-school-degree">Degree</label>
+    <label class="control-label" for="last-school-degree">Program Type</label>
 
     <div class="controls">
       <select id="last-school-degree" name="education_detail[last_school_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.last_school_degree %>">
-        <option>Bachelor's Degree</option>
-        <option>Master's Degree</option>
-        <option>Doctorate Degree</option>
-        <option>Certificate Course</option>
-        <option>Diploma Course</option>
+        <option>Graduate Degree</option>
+        <option>Short Course</option>
       </select>
-    </div>
-  </div>
-
-  <!-- Textarea -->
-  <div class="control-group">
-    <label class="control-label" for="last-school-address">Address</label>
-
-    <div class="controls">
-      <textarea id="last-school-address" name="education_detail[last_school_address]" placeholder="Address of last school attended"><%= @education_detail.last_school_address %></textarea>
-    </div>
-  </div>
-
-  <!-- Text input-->
-  <div class="control-group">
-    <label class="control-label" for="last-school-commencement-date">Date First Attended</label>
-
-    <div class="controls">
-      <input id="last-school-commencement-date" name="education_detail[last_school_commencement_date]" value="<%= @education_detail.last_school_commencement_date %>" type="text" placeholder="Enter the date commenced" class="input-xlarge date-pick non-dob">
-
     </div>
   </div>
 
   <!-- Text input-->
   <div id="graduation-date-field">
     <div class="control-group">
-      <label class="control-label" for="last-school-end-date">Graduation Date</label>
+      <label class="control-label" for="last-school-end-date">Graduation Date (approximate)</label>
 
       <div class="controls">
         <input id="last-school-end-date" name="education_detail[last_school_end_date]" value="<%= @education_detail.last_school_end_date %>" type="text" placeholder="Enter the date completed" class="input-xlarge date-pick non-dob">
       </div>
     </div>
   </div>
-
-  <div id="graduation-date-field-alternate">
-    <div class="controls">
-      <a href="javascript:showCompletionDate()">Click here if you have studied after completing this program.</a>
-    </div>
-  </div>
-
 
   <div id="highest-degree-obtained">
     <!-- Form Name -->
@@ -1044,16 +976,13 @@
 
   <hr/>
   <div style="width: 800px; border-radius: 5px; background: lightgray; padding: 10px;">
-    <h3>Declaration</h3>
+    <h3>Submission</h3>
 
     <p>
-      By submitting this application, I agree to comply with the rules on admission and enrollment of AIM;
-      to notify the Admissions Board of AIM if there is any change of information in this application;
-      and I understand that documents submitted in support of this application shall become property of AIM;
-      that AIM may change or revoke any decision if the information supplied is incorrect.
+      Thank you for updating your information.
     </p>
 
-    <p>Finally, I declare that the information in this application form is true and correct.</p>
+    <p>Please click on the "Update Information" button below once you have reviewed your information.</p>
 
     <!-- Button (Double) -->
     <div class="control-group">
@@ -1061,7 +990,7 @@
 
       <div class="controls">
         <button id="education-back" name="education-back" class="btn btn-inverse">Back - Employment</button>
-        <button id="education-submit" name="education-submit" class="btn btn-info">Submit Application</button>
+        <button id="education-submit" name="education-submit" class="btn btn-info">Update Information</button>
       </div>
     </div>
   </div>
