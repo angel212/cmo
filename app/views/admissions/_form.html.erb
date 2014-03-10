@@ -9,7 +9,27 @@
 <!-- Form Name -->
 <legend>Personal Information</legend>
 
+
+<!-- Multiple Radios -->
+<div class="control-group">
+  <label class="control-label" for="title">Title</label>
+  <div class="controls">
+    <label class="radio" for="title-0">
+      <input type="radio" name="personal_detail[title]" id="title-0" value="Mr." checked="checked">
+      Mr.
+    </label>
+    <label class="radio" for="title-1">
+      <input type="radio" name="personal_detail[title]" id="title-1" value="Ms.">
+      Ms.
+    </label>
+    <label class="radio" for="title-2">
+      <input type="radio" name="personal_detail[title]" id="title-2" value="Mrs.">
+      Mrs.
+    </label>
+  </div>
+</div>
 <!-- Text input-->
+
 <div class="control-group">
   <label class="control-label" for="first-name">First Name</label>
 
@@ -35,6 +55,15 @@
 
   <div class="controls">
     <input id="last-name" name="personal_detail[last_name]" value="<%= @personal_details.last_name %>" type="text" placeholder="Last Name" class="input-xlarge">
+
+  </div>
+</div>
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="last-name">Name on Badge</label>
+
+  <div class="controls">
+    <input id="last-name" name="personal_detail[badge_name]" value="<%= @personal_details.badge_name %>" type="text" placeholder="Nickname/Name" class="input-xlarge">
 
   </div>
 </div>

@@ -6,6 +6,12 @@
   <tr>
     <td style="width:400px; font-weight:bold; background:#DEB887;" colspan="6">PERSONAL INFORMATION</td>
   </tr>
+
+  <tr>
+    <td valign="top" colspan="5" style="height:10px; font-weight:bold;">
+      Title: <p class="form-detail"><%= @online_application_form.personal_detail.title %></p>
+    </td>
+  </tr>
   <tr>
     <td valign="top" colspan="2" style="height:40px; font-weight:bold;">
       First Name: <p class="form-detail"><%= @online_application_form.personal_detail.first_name %></p>
@@ -17,6 +23,10 @@
       Last Name: <p class="form-detail"><%= @online_application_form.personal_detail.last_name %></p>
     </td>
   </tr>
+  <tr>
+    <td valign="top" colspan="5" style="height:10px; font-weight:bold;">
+      Name on Badge: <p class="form-detail"><%= @online_application_form.personal_detail.badge_name %></p>
+    </td>
   <tr>
     <td colspan="6">&nbsp;</td>
   </tr>

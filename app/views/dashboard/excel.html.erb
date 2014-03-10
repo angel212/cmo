@@ -45,9 +45,11 @@
     <td>Date Created</td>
     <td>Date Updated</td>
     <td>Status</td>
+    <td>Title</td>
     <td>First Name</td>
     <td>Middle Name</td>
     <td>Last Name</td>
+    <td>Name on Badge</td>
     <td>Gender</td>
     <td>DOB</td>
     <td>Citizenship</td>
@@ -94,9 +96,11 @@
             <td><%= online_application.created_at.strftime('%m/%d/%Y %H:%M') %></td>
             <td><%= online_application.updated_at.strftime('%m/%d/%Y %H:%M') %></td>
             <td><%= OnlineApplicationForm.get_status(online_application.status).capitalize %></td>
+            <td><%= online_application.personal_detail.title %></td>
             <td><%= online_application.personal_detail.first_name %></td>
             <td><%= online_application.personal_detail.middle_name %></td>
             <td><%= online_application.personal_detail.last_name %></td>
+            <td><%= online_application.personal_detail.badge_name %></td>
             <td><%= online_application.personal_detail.gender %></td>
             <td><%= online_application.personal_detail.dob %></td>
             <td><%= online_application.personal_detail.citizenship %></td>
