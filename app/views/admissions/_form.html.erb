@@ -14,8 +14,12 @@
 <div class="control-group">
   <label class="control-label" for="title">Title</label>
   <div class="controls">
+    <label class="radio" for="title-1">
+      <input type="radio" name="personal_detail[title]" id="title-1" value="Dr."  checked="checked">
+      Ms.
+    </label>
     <label class="radio" for="title-0">
-      <input type="radio" name="personal_detail[title]" id="title-0" value="Mr." checked="checked">
+      <input type="radio" name="personal_detail[title]" id="title-0" value="Mr."  >
       Mr.
     </label>
     <label class="radio" for="title-1">
@@ -60,7 +64,7 @@
 </div>
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="last-name">Name on Badge</label>
+  <label class="control-label" for="last-name">Preferred Name to appear on the ID/Badge</label>
 
   <div class="controls">
     <input id="last-name" name="personal_detail[badge_name]" value="<%= @personal_details.badge_name %>" type="text" placeholder="Nickname/Name" class="input-xlarge">
