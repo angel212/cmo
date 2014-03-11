@@ -1,5 +1,5 @@
 $(document).ready(function (e) {
-    $('#page-title').text("Alumni Update Campaign");
+    $('#page-title').text("ABC Conference Registration");
     $('#application-instructions').hide();
 })
 
