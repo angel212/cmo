@@ -63,7 +63,7 @@ class SupplementalDetailsController < ApplicationController
 
     respond_to do |format|
       if @supplemental_detail.update_attributes(params[:supplemental_detail])
-        format.html { redirect_to edit_supplemental_detail_path(@supplemental_detail), notice: 'Supplemental detail was successfully updated.' }
+        format.html { redirect_to edit_supplemental_detail_path(@supplemental_detail), notice: 'Group preference has been recorded.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -9,9 +9,16 @@
 
   <div style="position: relative; bottom: -150px; right: 10px; text-align: right;">
     <p>
-      Your information has been recorded. Thank you for taking the time to update with us.
-      We would like also to invite you to visit the AIM alumni portal at www.aimalumni.org  and REGISTER so that you will be updated on the latest news, events, and reunions that the Institute has for its alumni.
-      Please do not hesitate to contact us at aimalumni@aim.edu  should you have any questions or need any assistance.
+      Thank you for registering for the ASEAN Business Conference. You shall receive a separate e-mail confirming your
+      registration
+      and an invoice for the applicable registration fees.
+
+      If you are registering as a group, kindly indicate your membership in the group by answering the appropriate
+      questions below.
     </p>
   </div>
 </div>
+
+<% if @supplemental_detail.group.blank? %>
+    <%= render :partial => 'new_form' %>
+<% end %>
