@@ -39,7 +39,7 @@ $(document).ready(function (e) {
 
     $('#submit-personal-info').click(function (e) {
         e.preventDefault();
-        $('#page-title').text("Employment Details");
+        $('#page-title').text("Professional Affiliation");
         $('div#page-1').hide();
         $('div#page-2').show();
     })
