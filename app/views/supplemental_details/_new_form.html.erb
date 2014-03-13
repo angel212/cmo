@@ -12,9 +12,6 @@
 <form accept-charset="UTF-8" action="/supplement/<%= @supplemental_detail.id %>" class="edit_supplemental_detail form-horizontal" id="edit_supplemental_detail_1" method="post">
   <fieldset>
 
-    <!-- Form Name -->
-    <legend>Form Name</legend>
-
     <!-- Multiple Radios -->
     <div class="control-group">
       <label class="control-label" for="supplemental_detail[group]">Are you part of a group?</label>
@@ -27,10 +24,6 @@
           <input type="radio" name="supplemental_detail[group]" id="supplemental_detail[group]-1" value="No">
           No
         </label>
-        <label class="radio" for="supplemental_detail[group]-2">
-          <input type="radio" name="supplemental_detail[group]" id="supplemental_detail[group]-2" value="Maybe">
-          Maybe
-        </label>
       </div>
     </div>
 
@@ -39,6 +32,15 @@
       <label class="control-label" for="supplemental_detail[group_name]">Group Reference</label>
       <div class="controls">
         <input id="supplemental_detail[group_name]" name="supplemental_detail[group_name]" type="text" placeholder="Please enter the group name or other reference" class="input-xlarge">
+        <p class="help-block">Provide any reference name for your group</p>
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="supplemental_detail[organization_name]">Name of Organization</label>
+      <div class="controls">
+        <input id="supplemental_detail[organization_name]" name="supplemental_detail[organization_name]" type="text" placeholder="Please enter the organization name" class="input-xlarge">
         <p class="help-block">Provide any reference name for your group</p>
       </div>
     </div>
