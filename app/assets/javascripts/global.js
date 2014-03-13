@@ -10,6 +10,20 @@ $(document).ready(function (e) {
     $('#termination-date-form').hide();
     $('#end-date-label').hide();
     $('#highest-degree-obtained').hide();
+    $('#aim-alumni-form').hide();
+    $('#registration-submission').hide();
+
+    $('#alumni-yes').click(function(e) {
+        e.preventDefault();
+        $('#alumni-question').hide();
+        $('#aim-alumni-form').show();
+        $('#registration-submission').show();
+    })
+    $('#alumni-no').click(function(e) {
+        e.preventDefault();
+        $('#alumni-question').hide();
+        $('#registration-submission').show();
+    })
 
     $('#begin-app-submit').click(function(e){
        if ($('#email').val().search('test') != -1) {
