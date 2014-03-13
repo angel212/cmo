@@ -60,7 +60,7 @@ $(document).ready(function (e) {
 
     $('#education-back').click(function (e) {
         $('div#page-3').hide();
-        $('#page-title').text("Employment Details");
+        $('#page-title').text("Professional Affiliation");
         $('div#page-2').show();
         e.preventDefault();
 
