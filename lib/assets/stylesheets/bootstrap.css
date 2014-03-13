@@ -5197,11 +5197,11 @@ input[type="submit"].btn.btn-mini {
 }
 
 .modal {
-  position: fixed;
+  position: absolute;
   top: 10%;
-  left: 50%;
+  left: 43%;
   z-index: 1050;
-  width: 560px;
+  width: 755px;
   margin-left: -280px;
   background-color: #ffffff;
   border: 1px solid #999;
