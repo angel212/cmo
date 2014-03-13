@@ -19,7 +19,7 @@
       <li>
     <label class="radio" for="title-1">
       <input type="radio" name="personal_detail[title]" id="title-1" value="Dr."  checked="checked">
-      Ms.
+      Dr.
     </label></li>
     <li>
       <label class="radio" for="title-0">
@@ -727,11 +727,11 @@
 <div id="page-2">
 
 <!-- Form Name -->
-<legend>Employment Details</legend>
-
+<!--<legend>Employment Details</legend>-->
+<br><br>
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="company-name">Employer Name</label>
+  <label class="control-label" for="company-name">Organization Name</label>
 
   <div class="controls">
     <input id="company-name" name="employment_detail[company_name]" value="<%= @employment_detail.company_name %>" type="text" placeholder="Company Name" class="input-xlarge">
@@ -741,16 +741,16 @@
 
 <!-- Textarea -->
 <div class="control-group">
-  <label class="control-label" for="work-address">Employer Address</label>
+  <label class="control-label" for="work-address">Organization Address</label>
 
   <div class="controls">
-    <textarea id="work-address" name="employment_detail[work_address]" placeholder="Enter your employer's address"><%= @employment_detail.work_address %></textarea>
+    <textarea id="work-address" name="employment_detail[work_address]" placeholder="Enter your employer's address" style="margin: 0px; width: 270px; height: 51px;"><%= @employment_detail.work_address %></textarea>
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="work-phone">Employer Phone Number</label>
+  <label class="control-label" for="work-phone">Telephone</label>
 
   <div class="controls">
     <input id="work-phone" name="employment_detail[work_phone]" value="<%= @employment_detail.work_phone %>" type="text" placeholder="Work Phone Number" class="input-xlarge">
@@ -759,68 +759,68 @@
 </div>
 
 <!-- Select Basic -->
-<div class="control-group">
-  <label class="control-label" for="work-industry">Industry</label>
+<!--<div class="control-group">-->
+  <!--<label class="control-label" for="work-industry">Industry</label>-->
 
-  <div class="controls">
-    <select id="work-industry" name="employment_detail[work_industry]" class="input-xlarge dropdown-value" data-chosen-value="<%= @employment_detail.work_industry %>">
-      <option>Agriculture</option>
-      <option>Accounting</option>
-      <option>Advertising</option>
-      <option>Aerospace</option>
-      <option>Aircraft</option>
-      <option>Airline</option>
-      <option>Apparel &amp; Accessories</option>
-      <option>Automotive</option>
-      <option>Banking</option>
-      <option>Broadcasting</option>
-      <option>Brokerage</option>
-      <option>Biotechnology</option>
-      <option>Call Centers</option>
-      <option>Cargo Handling</option>
-      <option>Chemical</option>
-      <option>Computer</option>
-      <option>Consulting</option>
-      <option>Consumer Products</option>
-      <option>Cosmetics</option>
-      <option>Defense</option>
-      <option>Department Stores</option>
-      <option>Education</option>
-      <option>Electronics</option>
-      <option>Energy</option>
-      <option>Entertainment &amp; Leisure</option>
-      <option>Executive Search</option>
-      <option>Financial Services</option>
-      <option>Food, Beverage &amp;</option>
-      <option>Grocery</option>
-      <option>Health Care</option>
-      <option>Internet Publishing</option>
-      <option>Investment Banking</option>
-      <option>Legal</option>
-      <option>Manufacturing</option>
-      <option>Motion Picture &amp; Video</option>
-      <option>Music</option>
-      <option>Newspaper Publishers</option>
-      <option>Online Auctions</option>
-      <option>Pension Funds</option>
-      <option>Pharmaceuticals</option>
-      <option>Private Equity</option>
-      <option>Publishing</option>
-      <option>Real Estate</option>
-      <option>Retail &amp; Wholesale</option>
-      <option>Securities &amp; Commodity Exchanges</option>
-      <option>Service</option>
-      <option>Soap &amp; Detergent</option>
-      <option>Software</option>
-      <option>Sports</option>
-      <option>Technology</option>
-      <option>Telecommunications</option>
-      <option>Television</option>
-      <option>Transportation</option>
-      <option>Venture Capital</option>
-    </select>
-  </div>
-</div>
+  <!--<div class="controls">-->
+    <!--<select id="work-industry" name="employment_detail[work_industry]" class="input-xlarge dropdown-value" data-chosen-value="<%= @employment_detail.work_industry %>">-->
+      <!--<option>Agriculture</option>-->
+      <!--<option>Accounting</option>-->
+      <!--<option>Advertising</option>-->
+      <!--<option>Aerospace</option>-->
+      <!--<option>Aircraft</option>-->
+      <!--<option>Airline</option>-->
+      <!--<option>Apparel &amp; Accessories</option>-->
+      <!--<option>Automotive</option>-->
+      <!--<option>Banking</option>-->
+      <!--<option>Broadcasting</option>-->
+      <!--<option>Brokerage</option>-->
+      <!--<option>Biotechnology</option>-->
+      <!--<option>Call Centers</option>-->
+      <!--<option>Cargo Handling</option>-->
+      <!--<option>Chemical</option>-->
+      <!--<option>Computer</option>-->
+      <!--<option>Consulting</option>-->
+      <!--<option>Consumer Products</option>-->
+      <!--<option>Cosmetics</option>-->
+      <!--<option>Defense</option>-->
+      <!--<option>Department Stores</option>-->
+      <!--<option>Education</option>-->
+      <!--<option>Electronics</option>-->
+      <!--<option>Energy</option>-->
+      <!--<option>Entertainment &amp; Leisure</option>-->
+      <!--<option>Executive Search</option>-->
+      <!--<option>Financial Services</option>-->
+      <!--<option>Food, Beverage &amp;</option>-->
+      <!--<option>Grocery</option>-->
+      <!--<option>Health Care</option>-->
+      <!--<option>Internet Publishing</option>-->
+      <!--<option>Investment Banking</option>-->
+      <!--<option>Legal</option>-->
+      <!--<option>Manufacturing</option>-->
+      <!--<option>Motion Picture &amp; Video</option>-->
+      <!--<option>Music</option>-->
+      <!--<option>Newspaper Publishers</option>-->
+      <!--<option>Online Auctions</option>-->
+      <!--<option>Pension Funds</option>-->
+      <!--<option>Pharmaceuticals</option>-->
+      <!--<option>Private Equity</option>-->
+      <!--<option>Publishing</option>-->
+      <!--<option>Real Estate</option>-->
+      <!--<option>Retail &amp; Wholesale</option>-->
+      <!--<option>Securities &amp; Commodity Exchanges</option>-->
+      <!--<option>Service</option>-->
+      <!--<option>Soap &amp; Detergent</option>-->
+      <!--<option>Software</option>-->
+      <!--<option>Sports</option>-->
+      <!--<option>Technology</option>-->
+      <!--<option>Telecommunications</option>-->
+      <!--<option>Television</option>-->
+      <!--<option>Transportation</option>-->
+      <!--<option>Venture Capital</option>-->
+    <!--</select>-->
+  <!--</div>-->
+<!--</div>-->
 
 <!-- Text input-->
 <div class="control-group">
@@ -894,22 +894,31 @@
   </div>
 </div>
 
-<!-- Select Basic -->
+<!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="position-level">Position Level</label>
+  <label class="control-label" for="company-position">Course / Area of Study (if student)</label>
 
   <div class="controls">
-    <select id="position-level" name="employment_detail[position_level]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.position_level %>">
-      <option>Director</option>
-      <option>Manager</option>
-      <option>Supervisor</option>
-      <option>Rank &amp; File</option>
-      <option>Consultant</option>
-      <option>Contractor</option>
-      <option>Informal</option>
-    </select>
+    <input id="company-position" name="employment_detail[course]" value="<%= @employment_detail.course %>" type="text" placeholder="" class="input-xlarge">
+
   </div>
 </div>
+<!-- Select Basic -->
+<!--<div class="control-group">-->
+  <!--<label class="control-label" for="position-level">Position Level</label>-->
+
+  <!--<div class="controls">-->
+    <!--<select id="position-level" name="employment_detail[position_level]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.position_level %>">-->
+      <!--<option>Director</option>-->
+      <!--<option>Manager</option>-->
+      <!--<option>Supervisor</option>-->
+      <!--<option>Rank &amp; File</option>-->
+      <!--<option>Consultant</option>-->
+      <!--<option>Contractor</option>-->
+      <!--<option>Informal</option>-->
+    <!--</select>-->
+  <!--</div>-->
+<!--</div>-->
 
 <!-- Button (Double) -->
 <div class="control-group">
