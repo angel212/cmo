@@ -149,8 +149,8 @@ function rankChange(dir, element, distance, ranksIds, idsRanks, idsPoss)
         idsPoss[idDisp] = idsPoss[idDisp] + distance;
 
         // change the form input values
-        $("input[name='personal_detail[track"+id+"']").attr("value",idsRanks[id]);
-        $("input[name='track"+idDisp+"']").attr("value",idsRanks[idDisp]);
+        $("input[name='personal_detail[track"+id+"]']").attr("value",idsRanks[id]);
+        $("input[name='track"+idDisp+"]']").attr("value",idsRanks[idDisp]);
 
         // change the rank display number
         $("font.rankDisp#el"+id).html(idsRanks[id]+1);
