@@ -100,7 +100,8 @@ function showCompletionDate() {
 
 //
 
-var speed = 0.5 * 1000; // how long each transition is, milliseconds
+// Settings
+var speed = .1 * 1000; // how long each transition is, milliseconds
 
 $(document).ready(
     function()
@@ -149,8 +150,8 @@ function rankChange(dir, element, distance, ranksIds, idsRanks, idsPoss)
         idsPoss[idDisp] = idsPoss[idDisp] + distance;
 
         // change the form input values
-        $("input[name='personal_detail[track"+id+"']").attr("value",idsRanks[id]);
-        $("input[name='track"+idDisp+"']").attr("value",idsRanks[idDisp]);
+        $("input[name='personal_detail[track"+id+"]']").attr("value",idsRanks[id]);
+        $("input[name='personal_detail[track"+idDisp+"]']").attr("value",idsRanks[idDisp]);
 
         // change the rank display number
         $("font.rankDisp#el"+id).html(idsRanks[id]+1);
