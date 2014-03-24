@@ -67,9 +67,11 @@
     <td>Company Name</td>
     <td>Work Address</td>
     <td>Work Phone</td>
+    <td>Word Fax Number</td>
     <td>Work Industry</td>
     <td>Company Type</td>
     <td>Position</td>
+    <td>Course(if student)</td>
     <td>Position Level</td>
     <td>Job Responsibilities</td>
     <td>Employment Start</td>
@@ -88,6 +90,14 @@
     <td>Address</td>
     <td>Date Started</td>
     <td>Date Ended</td>
+    <td>Harnessing Banking and Financial Markets</td>
+    <td>Realizing ASEAN’s Full Human Capital Potential </td>
+    <td>Strengthening Connectivity</td>
+    <td>Strengthening Leadership and Governance</td>
+    <td>Building A Resilient ASEAN Economic Community</td>
+    <td>Part of the group?</td>
+    <td>Group Name</td>
+    <td>Organization Name</td>
   </tr>
   <% @online_applications.each do |online_application| %>
       <% if (online_application.personal_detail.present? && online_application.employment_detail.present? && online_application.education_detail.present?) %>
@@ -118,9 +128,11 @@
             <td><%= online_application.employment_detail.company_name %></td>
             <td><%= online_application.employment_detail.work_address %></td>
             <td><%= online_application.employment_detail.work_phone %></td>
+            <td><%= online_application.employment_detail.work_fax_number %></td>
             <td><%= online_application.employment_detail.work_industry %></td>
             <td><%= online_application.employment_detail.company_type %></td>
             <td><%= online_application.employment_detail.company_position %></td>
+            <td><%= online_application.employment_detail.course %></td>
             <td><%= online_application.employment_detail.position_level %></td>
             <td><%= online_application.employment_detail.work_job_responsibilities %></td>
             <td><%= online_application.employment_detail.date_hired %></td>
@@ -139,6 +151,14 @@
             <td><%= online_application.education_detail.highest_school_address %></td>
             <td><%= online_application.education_detail.highest_school_commencement_date %></td>
             <td><%= online_application.education_detail.highest_school_end_date %></td>
+            <td><%= online_application.personal_detail.track0.to_i + 1 %></td>
+            <td><%= online_application.personal_detail.track1.to_i + 1 %></td>
+            <td><%= online_application.personal_detail.track2.to_i + 1 %></td>
+            <td><%= online_application.personal_detail.track3.to_i + 1 %></td>
+            <td><%= online_application.personal_detail.track4.to_i + 1 %></td>
+            <td><%= online_application.supplemental_detail.try(:group) %></td>
+            <td><%= online_application.supplemental_detail.try(:group_name) %></td>
+            <td><%= online_application.supplemental_detail.try(:organization_name) %></td>
           </tr>
       <% end %>
   <% end %>
