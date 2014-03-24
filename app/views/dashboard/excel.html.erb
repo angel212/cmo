@@ -1,7 +1,7 @@
 <%= javascript_include_tag 'table2CSV' %>
 
 <script>
-    $(document).ready(function () {
+    window.onload = function () {
         $('#page-title').text('Application Registry');
         $('#result-table').each(function () {
             var $table = $(this);
@@ -25,7 +25,7 @@
                 document.body.removeChild(downloadLink);
             });
         });
-    })
+    }
 </script>
 
 <br/>
