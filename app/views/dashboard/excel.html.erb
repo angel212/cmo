@@ -102,7 +102,7 @@
   <% @online_applications.each do |online_application| %>
       <% if (online_application.personal_detail.present? && online_application.employment_detail.present? && online_application.education_detail.present?) %>
           <tr>
-            <td><%= online_application.id %></td>
+            <td><% if (online_application.supplemental_detail.try(:group) == "Yes") %><%= online_application.id.to_s + "G" %><% else %><%= online_application.id %></td><% end %>
             <td><%= online_application.created_at.strftime('%m/%d/%Y %H:%M') %></td>
             <td><%= online_application.updated_at.strftime('%m/%d/%Y %H:%M') %></td>
             <td><%= OnlineApplicationForm.get_status(online_application.status).capitalize %></td>
