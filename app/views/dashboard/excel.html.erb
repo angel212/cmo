@@ -98,6 +98,7 @@
     <td>Part of the group?</td>
     <td>Group Name</td>
     <td>Organization Name</td>
+    <td>Alumni or not</td>
   </tr>
   <% @online_applications.each do |online_application| %>
       <% if (online_application.personal_detail.present? && online_application.employment_detail.present? && online_application.education_detail.present?) %>
@@ -159,6 +160,7 @@
             <td><%= online_application.supplemental_detail.try(:group) %></td>
             <td><%= online_application.supplemental_detail.try(:group_name) %></td>
             <td><%= online_application.supplemental_detail.try(:organization_name) %></td>
+            <td><%= online_application.education_detail.last_school_course_title.present? ? 'Yes' : 'No' %></td>
           </tr>
       <% end %>
   <% end %>
