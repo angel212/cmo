@@ -6,10 +6,11 @@ class OnlineApplicationForm < ActiveRecord::Base
   belongs_to :supplemental_detail
   has_many :requirements
 
-  DTL_STATUS = {10 => 'registered', 20 => 'recorded', 30 => 'for verification', 90 => 'Deleted'}
+  DTL_STATUS = {10 => 'registered', 20 => 'recorded', 30 => 'for verification', 40 => 'paid', 90 => 'Deleted'}
   DTL_SUBSTATUS = {10 => {11 => 'registered'},
                20 => {21 => 'recorded'},
                30 => {31 => 'for for verification'},
+               40 => {41 => 'paid'},
                90 => {91 => 'deleted'}}
 
   def self.get_status(status = 0)
