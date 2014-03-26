@@ -18,11 +18,13 @@ $(document).ready(function (e) {
         $('#alumni-question').hide();
         $('#aim-alumni-form').show();
         $('#registration-submission').show();
+        $('#last-school-name').val("Asian Institute of Management");
     })
     $('#alumni-no').click(function(e) {
         e.preventDefault();
         $('#alumni-question').hide();
         $('#registration-submission').show();
+        $('#last-school-name').val("");
     })
 
     $('#begin-app-submit').click(function(e){
