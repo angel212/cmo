@@ -1,0 +1,16 @@
+<p>
+  Hello,
+</p>
+
+<p>
+  An application from <%= @online_application_form.personal_detail.first_name %> <%= @online_application_form.personal_detail.last_name %>(<%= @online_application_form.personal_detail.email %>) has been received on <%= DateTime.strftime('%m/%d/%Y %H:%M') %>.
+  Kindly facilitate the creation of their invoice.
+</p>
+
+<p>
+  Please <%= link_to 'click here', 'http://abcregistration.aim.edu/dashboard' %> to view the application that have been received.
+</p>
+
+<p>
+  Thank You.
+</p>

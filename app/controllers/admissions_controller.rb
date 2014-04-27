@@ -93,6 +93,7 @@ class AdmissionsController < ApplicationController
     @supplemental_detail = SupplementalDetail.create!
     @online_application.update_attribute :supplemental_detail_id, @supplemental_detail.id
 
+    AbcRegistrationMailer.registration_alert(@online_application).deliver!
     redirect_to edit_supplemental_detail_path(@supplemental_detail)
   end
 
