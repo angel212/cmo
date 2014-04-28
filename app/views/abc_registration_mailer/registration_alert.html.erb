@@ -3,7 +3,7 @@
 </p>
 
 <p>
-  An application from <%= @online_application_form.personal_detail.first_name %> <%= @online_application_form.personal_detail.last_name %>(<%= @online_application_form.personal_detail.email %>) has been received on <%= DateTime.strftime('%m/%d/%Y %H:%M') %>.
+  An application from <%= @online_application_form.personal_detail.first_name %> <%= @online_application_form.personal_detail.last_name %>(<%= @online_application_form.personal_detail.email %>) has been received on <%= @online_application_form.created_at.strftime('%m/%d/%Y %H:%M') %>.
   Kindly facilitate the creation of their invoice.
 </p>
 
