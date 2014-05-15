@@ -10,7 +10,7 @@
         <% personal_detail = applicant.personal_detail %>
         <% if personal_detail.present? %>
             <tr>
-                  <td><%= applicant.try(:id)git s %></td>
+              <td><%= applicant.try(:id) %></td>
               <td><%= OnlineApplicationForm.get_status(applicant.status).capitalize %></td>
               <td><%= "#{personal_detail.first_name} #{personal_detail.middle_name} #{personal_detail.last_name}" %></td>
               <td><%= link_to('View', online_application_form_path(applicant.id), :class => 'btn btn-info no-print') %></td>
