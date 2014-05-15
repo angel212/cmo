@@ -81,9 +81,9 @@ class AdmissionsController < ApplicationController
         education_detail.merge!(k => DateTime.strptime(v, '%d/%m/%Y')) rescue next
       end
 
-      @personal_details.update_attributes!(params[:personal_detail])
-      @employment_detail.update_attributes!(params[:employment_detail])
-      @education_detail.update_attributes!(params[:education_detail])
+      @personal_details.update_attributes!(personal_detail)
+      @employment_detail.update_attributes!(employment_detail)
+      @education_detail.update_attributes!(education_detail)
 
       @online_application.update_attribute :browser, request.env['HTTP_USER_AGENT']
     rescue Exception => e
