@@ -46,7 +46,7 @@ OnlineApplication::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( home.js global.js realtime.js online_application_forms.css table2CSV.js)
+  config.assets.precompile += %w(home.js, global.js, realtime., online_application_forms.css, table2CSV.js)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

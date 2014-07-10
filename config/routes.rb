@@ -1,4 +1,7 @@
 OnlineApplication::Application.routes.draw do
+  resources :preferences
+
+
   resources :requirements
 
 

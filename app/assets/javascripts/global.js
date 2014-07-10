@@ -4,6 +4,7 @@ $(document).ready(function (e) {
     $('li#step-1 a').addClass('highlighted');
     $('div#page-2').hide();
     $('div#page-3').hide();
+    $('div#page-4').hide();
     $('#page-title').text("Personal Particulars");
     $('.pagination').hide();
     $('#page-title').append($('.pagination'));
@@ -58,28 +59,42 @@ $(document).ready(function (e) {
         $('#page-title').text("Professional Affiliation");
         $('div#page-1').hide();
         $('div#page-2').show();
+
+
     })
 
-    $('#submit-employment-info-back').click(function (e) {
+    $('#submit-education-info-back').click(function (e) {
         $('div#page-2').hide();
         $('#page-title').text("Personal Particulars");
         $('div#page-1').show();
         e.preventDefault();
     })
-
-    $('#submit-employment-info-next').click(function (e) {
+    $('#submit-education-info-next').click(function (e) {
         $('div#page-2').hide();
         $('#page-title').text("Educational Background");
         $('div#page-3').show();
         e.preventDefault();
     })
-
-    $('#education-back').click(function (e) {
+    $('#submit-employment-info-back').click(function (e) {
         $('div#page-3').hide();
-        $('#page-title').text("Professional Affiliation");
+        $('#page-title').text("Personal Particulars");
         $('div#page-2').show();
         e.preventDefault();
+    })
 
+
+    $('#submit-employment-info-next').click(function (e) {
+        $('div#page-3').hide();
+        $('#page-title').text("Educational Background");
+        $('div#page-4').show();
+        e.preventDefault();
+    })
+
+    $('#submit-preferences-info-back').click(function (e) {
+        $('div#page-4').hide();
+        $('#page-title').text("Personal Particulars");
+        $('div#page-3').show();
+        e.preventDefault();
     })
 
     $('#education-submit').click(function (e) {

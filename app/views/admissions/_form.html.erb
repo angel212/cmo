@@ -11,36 +11,36 @@
 
 
 <!-- Multiple Radios -->
-<div class="control-group" style="margin-bottom: -10px;">
-  <label class="control-label" for="title">Title</label>
+<!--<div class="control-group" style="margin-bottom: -10px;">-->
+  <!--<label class="control-label" for="title">Title</label>-->
 
-  <div class="controls">
-    <div class="inline">
-      <ul>
-        <li>
-          <label class="radio" for="title-1">
-            <input type="radio" name="personal_detail[title]" id="title-1" value="Dr." checked="checked">
-            Dr.
-          </label></li>
-        <li>
-          <label class="radio" for="title-0">
-            <input type="radio" name="personal_detail[title]" id="title-0" value="Mr.">
-            Mr.
-          </label></li>
-        <li>
-          <label class="radio" for="title-1">
-            <input type="radio" name="personal_detail[title]" id="title-1" value="Ms.">
-            Ms.
-          </label></li>
-        <li>
-          <label class="radio" for="title-2">
-            <input type="radio" name="personal_detail[title]" id="title-2" value="Mrs.">
-            Mrs.
-          </label></li>
-      </ul>
-    </div>
-  </div>
-</div>
+  <!--<div class="controls">-->
+    <!--<div class="inline">-->
+      <!--<ul>-->
+        <!--<li>-->
+          <!--<label class="radio" for="title-1">-->
+            <!--<input type="radio" name="personal_detail[title]" id="title-1" value="Dr." checked="checked">-->
+            <!--Dr.-->
+          <!--</label></li>-->
+        <!--<li>-->
+          <!--<label class="radio" for="title-0">-->
+            <!--<input type="radio" name="personal_detail[title]" id="title-0" value="Mr.">-->
+            <!--Mr.-->
+          <!--</label></li>-->
+        <!--<li>-->
+          <!--<label class="radio" for="title-1">-->
+            <!--<input type="radio" name="personal_detail[title]" id="title-1" value="Ms.">-->
+            <!--Ms.-->
+          <!--</label></li>-->
+        <!--<li>-->
+          <!--<label class="radio" for="title-2">-->
+            <!--<input type="radio" name="personal_detail[title]" id="title-2" value="Mrs.">-->
+            <!--Mrs.-->
+          <!--</label></li>-->
+      <!--</ul>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 <!-- Text input-->
 
 <div class="control-group">
@@ -71,13 +71,13 @@
 
   </div>
 </div>
+
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="last-name">Preferred Name to appear on the ID/Badge</label>
+  <label class="control-label" for="dob">Date of Birth</label>
 
   <div class="controls">
-    <input id="last-name" name="personal_detail[badge_name]" value="<%= @personal_details.badge_name %>" type="text" placeholder="Nickname/Name" class="input-xlarge">
-
+    <p class="data-placeholder"><%= @personal_details.dob.strftime('%d/%m/%Y') %></p>
   </div>
 </div>
 
@@ -93,32 +93,6 @@
     </select>
   </div>
 </div>
-
-<!-- Select Basic -->
-<div class="control-group">
-  <label class="control-label" for="civil_status">Civil Status</label>
-
-  <div class="controls">
-    <select id="civil_status" name="personal_detail[civil_status]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
-      <option>Select One</option>
-      <option>Single</option>
-      <option>Married</option>
-      <option>Separated</option>
-      <option>Divorced/Annulled</option>
-      <option>Widow(er)</option>
-    </select>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="dob">Date of Birth</label>
-
-  <div class="controls">
-    <p class="data-placeholder"><%= @personal_details.dob.strftime('%d/%m/%Y') %></p>
-  </div>
-</div>
-
 <!-- Select Basic -->
 <div class="control-group">
 <label class="control-label" for="citizenship">Country of Citizenship</label>
@@ -376,6 +350,54 @@
 </div>
 </div>
 
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="civil_status">Civil Status</label>
+
+  <div class="controls">
+    <select id="civil_status" name="personal_detail[civil_status]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
+      <option>Select One</option>
+      <option>Single</option>
+      <option>Married</option>
+      <option>Separated</option>
+      <option>Divorced/Annulled</option>
+      <option>Widow(er)</option>
+      <option>B2 TempVisitor-Pleas</option>
+      <option>F1 Student</option>
+      <option>H1b TempSpecWorker</option>
+      <option>IM Immigrant</option>
+      <option>J1 ExchangeVisitor</option>
+      <option>L1 IntraCoTransferee</option>
+      <option>L2 IntraCoTransferee</option>
+      <option>Mex-NAFTATNCan.</option>
+      <option>Other</option>
+      <option>PR PermanentResident</option>
+      <option>US Citizen</option>
+
+    </select>
+  </div>
+</div>
+
+<legend>Mailing Address and Contact Information
+</legend>
+<!-- Text input-->
+<!--<div class="control-group">-->
+  <!--<label class="control-label" for="last-name">Preferred Name to appear on the ID/Badge</label>-->
+
+  <!--<div class="controls">-->
+    <!--<input id="last-name" name="personal_detail[badge_name]" value="<%= @personal_details.badge_name %>" type="text" placeholder="Nickname/Name" class="input-xlarge">-->
+
+  <!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
 <!-- Text input-->
 <div class="control-group">
   <label class="control-label" for="address-1">Address</label>
@@ -398,7 +420,17 @@
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="city"></label>
+  <label class="control-label" for="address-2"></label>
+
+  <div class="controls">
+    <input id="address-2" name="personal_detail[address_2]" value="<%= @personal_details.address_3 %>" type="text" placeholder="Address Line 3" class="input-xlarge">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="city">City</label>
 
   <div class="controls">
     <input id="city" name="personal_detail[city]" value="<%= @personal_details.city %>" type="text" placeholder="City" class="input-xlarge">
@@ -407,14 +439,13 @@
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="address-state">State/Province</label>
+  <label class="control-label" for="address-post-code">Post Code</label>
 
   <div class="controls">
-    <input id="address-state" name="personal_detail[address_state]" value="<%= @personal_details.address_state %>" type="text" placeholder="State/Province" class="input-xlarge">
+    <input id="address-post-code" name="personal_detail[address_post_code]" value="<%= @personal_details.address_post_code %>" type="text" placeholder="Post Code" class="input-xlarge">
 
   </div>
 </div>
-
 <!-- Select Basic -->
 <div class="control-group">
 <label class="control-label" for="address-country">Country</label>
@@ -673,27 +704,86 @@
 </div>
 
 <!-- Text input-->
+<!--<div class="control-group">-->
+  <!--<label class="control-label" for="address-state">State/Province</label>-->
+
+  <!--<div class="controls">-->
+    <!--<input id="address-state" name="personal_detail[address_state]" value="<%= @personal_details.address_state %>" type="text" placeholder="State/Province" class="input-xlarge">-->
+
+  <!--</div>-->
+<!--</div>-->
+
+<!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="address-post-code">Post Code</label>
+  <label class="control-label" for="home-phone">Current Telephone #</label>
 
   <div class="controls">
-    <input id="address-post-code" name="personal_detail[address_post_code]" value="<%= @personal_details.address_post_code %>" type="text" placeholder="Post Code" class="input-xlarge">
+    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Current Telephone #" class="input-xlarge">
 
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="email">E-Mail</label>
+  <label class="control-label" for="home-phone">Current Mobile #</label>
 
   <div class="controls">
-    <input id="email" name="personal_detail[email]" value="<%= @personal_details.email %>" type="text" placeholder="E-Mail Address" class="input-xlarge">
+    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Current Mobile #" class="input-xlarge">
+
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="home-phone">Telephone</label>
+  <label class="control-label" for="home-phone">Home Address</label>
+
+  <div class="controls">
+    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Home Address" class="input-xlarge">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="home-phone">Home City</label>
+
+  <div class="controls">
+    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Home City" class="input-xlarge">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="home-phone">Home Country</label>
+
+  <div class="controls">
+    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Home Country" class="input-xlarge">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="home-phone">Home Postal</label>
+
+  <div class="controls">
+    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Home Postal" class="input-xlarge">
+
+  </div>
+</div>
+<!-- Text input-->
+<!--<div class="control-group">-->
+  <!--<label class="control-label" for="email">E-Mail</label>-->
+
+  <!--<div class="controls">-->
+    <!--<input id="email" name="personal_detail[email]" value="<%= @personal_details.email %>" type="text" placeholder="E-Mail Address" class="input-xlarge">-->
+  <!--</div>-->
+<!--</div>-->
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="home-phone">Home Telephone</label>
 
   <div class="controls">
     <input id="home-phone" name="personal_detail[home_phone]" value="<%= @personal_details.home_phone %>" type="text" placeholder="Home Phone" class="input-xlarge">
@@ -703,7 +793,7 @@
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="cell-phone">Mobile Phone</label>
+  <label class="control-label" for="cell-phone">Home Mobile Phone</label>
 
   <div class="controls">
     <input id="cell-phone" name="personal_detail[cell_phone]" value="<%= @personal_details.cell_phone %>" type="text" placeholder="Cell Phone" class="input-xlarge">
@@ -716,48 +806,317 @@
   <label class="control-label" for="submit-personal-info"></label>
 
   <div class="controls">
-    <button id="submit-personal-info" name="submit-personal-info" class="btn btn-info">Next - Employment Information
+    <button id="submit-personal-info" name="submit-personal-info" class="btn btn-info">Next - Education
     </button>
   </div>
 </div>
 
 </div>
 <!-- End Page 1 -->
-
-<!-- Start Page 2 -->
+<!--Start Page 2-->
 <div id="page-2">
+<legend id="educ-div">Education</legend>
+
+
+  <!-- Text input-->
+  <div class="control-group">
+    <label class="control-label" for="last-school-course-title" id="focus1">Program/Course Title</label>
+      <div class="controls">
+        <select id="last-school-course-title" name="education_detail[last_school_course_title]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.last_school_course_title %>">
+          <option>MBA - Master of Business Administration</option>
+          <option>Master's Degree</option>
+</select>
+      </div>
+  </div>
+
+  <!-- Text input-->
+  <div id="graduation-date-field">
+    <div class="control-group">
+      <label class="control-label" for="class-year-date">Class Year</label>
+
+      <div class="controls">
+        <input id="last-school-end-date" name="" value="" type="text" placeholder="Enter the date completed" class="input-xlarge date-pick non-dob">
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div id="graduation-date-field">
+    <div class="control-group">
+      <label class="control-label" for="last-school-end-date">Graduation Date (approximate)</label>
+
+      <div class="controls">
+        <input id="last-school-end-date" name="education_detail[last_school_end_date]" value="<%= @education_detail.last_school_end_date %>" type="text" placeholder="Enter the date completed" class="input-xlarge date-pick non-dob">
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div id="graduation-date-field">
+    <div class="control-group">
+      <label class="control-label" for="scholarship">Do you Have Scholarship?</label>
+
+      <div class="controls">
+        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div id="graduation-date-field">
+    <div class="control-group">
+      <label class="control-label" for="scholarship">Club Affiliations</label>
+
+      <div class="controls">
+        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div id="graduation-date-field">
+    <div class="control-group">
+      <label class="control-label" for="scholarship">Other Graduate Degrees</label>
+
+      <div class="controls">
+        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div id="graduation-date-field">
+    <div class="control-group">
+      <label class="control-label" for="scholarship">MBA Schools</label>
+
+      <div class="controls">
+        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div id="graduation-date-field">
+    <div class="control-group">
+      <label class="control-label" for="scholarship">Certifications/Licenses</label>
+
+      <div class="controls">
+        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div id="graduation-date-field">
+    <div class="control-group">
+      <label class="control-label" for="scholarship">Undergraduate Major</label>
+
+      <div class="controls">
+        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+      </div>
+    </div>
+  </div>
+
+<!-- Text input-->
+<div id="graduation-date-field">
+  <div class="control-group">
+    <label class="control-label" for="scholarship">Laguange Ability</label>
+
+    <div class="controls">
+      <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+    </div>
+  </div>
+</div>
+
+
+  <div class="control-group">
+    <label class="control-label" for="submit-education-info-next"></label>
+
+    <div class="controls">
+      <button id="submit-education-info-back" name="submit-education-info-back" class="btn btn-inverse">Next - Personal Details/Mailing Ad
+      </button>
+      <button id="submit-education-info-next" name="submit-education-info-next" class="btn btn-info">Next - Professional Experience
+      </button>
+    </div>
+  </div>
+
+</div>
+<!--End Page 2-->
+<!-- Start Page 3 -->
+<div id="page-3">
 
 <!-- Form Name -->
-<!--<legend>Employment Details</legend>-->
+<legend>Professional Experience</legend>
 <br><br>
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="company-name">Organization Name</label>
+  <label class="control-label" for="company-name">Total Years of Work Experience</label>
 
   <div class="controls">
-    <input id="company-name" name="employment_detail[company_name]" value="<%= @employment_detail.company_name %>" type="text" placeholder="Company Name" class="input-xlarge">
+    <select class="input-xlarge  dropdown-value">
 
-  </div>
-</div>
+      <option>	Less than 2 years	</option>
+      <option>	2-5 years	</option>
+      <option>	5-10 years	</option>
+      <option>	10-15 years	</option>
+      <option>	15-20 years	</option>
+      <option>	20 - 25 Years	</option>
+      <option>	25 + Years	</option>
 
-<!-- Textarea -->
-<div class="control-group">
-  <label class="control-label" for="work-address">Organization Address</label>
+    </select>
 
-  <div class="controls">
-    <textarea id="work-address" name="employment_detail[work_address]" placeholder="Enter your employer's address" style="margin: 0px; width: 270px; height: 51px;"><%= @employment_detail.work_address %></textarea>
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="work-phone">Telephone</label>
+  <label class="control-label" for="company-name">Function - Experience</label>
 
   <div class="controls">
-    <input id="work-phone" name="employment_detail[work_phone]" value="<%= @employment_detail.work_phone %>" type="text" placeholder="Work Phone Number" class="input-xlarge">
+    <select class="input-xlarge  dropdown-value">
+
+
+    </select>
 
   </div>
 </div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Industry - Experience</label>
+
+  <div class="controls">
+    <select class="input-xlarge  dropdown-value">
+
+
+
+    </select>
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Work Authorization</label>
+
+  <div class="controls">
+    <select class="input-xlarge  dropdown-value">
+
+
+    </select>
+
+  </div>
+</div>
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Geographic - Experience</label>
+
+  <div class="controls">
+    <select class="input-xlarge  dropdown-value">
+
+
+
+    </select>
+
+  </div>
+</div>
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Years of Supervisory Work Experience</label>
+
+  <div class="controls">
+    <select class="input-xlarge  dropdown-value">
+
+      <option>	Less than 2 years	</option>
+      <option>	2-5 years	</option>
+      <option>	5-10 years	</option>
+      <option>	10-15 years	</option>
+      <option>	15-20 years	</option>
+      <option>	20 - 25 Years	</option>
+      <option>	25 + Years	</option>
+
+    </select>
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Salary prior to MBA (per annum)</label>
+
+  <div class="controls">
+    <select class="input-xlarge  dropdown-value">
+
+      <option>	Below $10,000	</option>
+      <option>	$10,000 - $14,999	</option>
+      <option>	$15,000 - $19,999	</option>
+      <option>	$20,000 - $24,999	</option>
+      <option>	$25,000 - $29,999	</option>
+      <option>	$30,000 - $34,999	</option>
+      <option>	$35,000 - $39,999	</option>
+      <option>	$40,000 - $44,999	</option>
+      <option>	$45,000 - $49,999	</option>
+      <option>	$50,000 above 	</option>
+    </select>
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Salary prior to MBA (per annum)</label>
+
+  <div class="controls">
+    <select class="input-xlarge  dropdown-value">
+
+      <option>Yes</option>
+      <option>No</option>
+
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Name of Company before MBA</label>
+
+  <div class="controls">
+    <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Job title / designation</label>
+
+  <div class="controls">
+    <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Bachelor's Degree</label>
+
+  <div class="controls">
+    <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">School</label>
+
+  <div class="controls">
+    <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
+
+  </div>
+</div>
+
+
 
 <!-- Select Basic -->
 <!--<div class="control-group">-->
@@ -823,88 +1182,7 @@
 <!--</div>-->
 <!--</div>-->
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="work-fax-number">Fax Number</label>
 
-  <div class="controls">
-    <input id="work-fax-number" name="employment_detail[work_fax_number]" value="<%= @employment_detail.work_fax_number %>" type="text" placeholder="" class="input-xlarge">
-
-  </div>
-</div>
-
-<!-- Multiple Radios -->
-<div class="control-group" style="margin-bottom: -10px;">
-  <label class="control-label" for="company_type">Company Type</label>
-
-  <div class="controls">
-    <div class="inline">
-      <ul>
-        <li>
-          <label class="radio" for="company-type-0">
-            <input type="radio" name="employment_detail[company_type]" id="company-type-0" value="Government" checked="checked">
-            Government
-          </label></li>
-        <li>
-          <label class="radio" for="company-type-1">
-            <input type="radio" name="employment_detail[company_type]" id="company-type-1" value="Academe">
-            Academe
-          </label></li>
-        <li>
-          <label class="radio" for="company-type-2">
-            <input type="radio" name="employment_detail[company_type]" id="company-type-2" value="Business">
-            Business
-          </label></li>
-        <li>
-          <label class="radio" for="company-type-3">
-            <input type="radio" name="employment_detail[company_type]" id="company-type-3" value="NGO">
-            NGO
-          </label></li>
-        <br/>
-        <li>
-          <label class="radio" for="company-type-4">
-            <input type="radio" name="employment_detail[company_type]" id="company-type-4" value="Multilateral/Dev't Agency">
-            Multilateral/Dev't Agency
-          </label></li>
-        <li>
-          <label class="radio" for="company-type-5">
-            <input type="radio" name="employment_detail[company_type]" id="company-type-5" value="Media">
-            Media
-          </label></li>
-        <li>
-          <label class="radio" for="company-type-6">
-            <input type="radio" name="employment_detail[company_type]" id="company-type-6" value="Research Institution">
-            Research Institution
-          </label></li>
-        <li>
-          <label class="radio" for="company-type-7">
-            <input type="radio" name="employment_detail[company_type]" id="company-type-7" value="Student">
-            Student
-          </label></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="company-position">Position</label>
-
-  <div class="controls">
-    <input id="company-position" name="employment_detail[company_position]" value="<%= @employment_detail.company_position %>" type="text" placeholder="" class="input-xlarge">
-
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="company-position">Course / Area of Study (if student)</label>
-
-  <div class="controls">
-    <input id="company-position" name="employment_detail[course]" value="<%= @employment_detail.work_industry %>" type="text" placeholder="" class="input-xlarge">
-
-  </div>
-</div>
 <!-- Select Basic -->
 <!--<div class="control-group">-->
 <!--<label class="control-label" for="position-level">Position Level</label>-->
@@ -928,195 +1206,101 @@
 
   <div class="controls">
     <button id="submit-employment-info-back" name="submit-employment-info-back" class="btn btn-inverse">Back -
-      Particulars
+      Education
     </button>
     <button id="submit-employment-info-next" name="submit-employment-info-next" class="btn btn-info">Next -
-      AIM Alumni Status
+      Preferences
     </button>
   </div>
 </div>
 
 </div>
-<!-- End Page 2 -->
+<!-- End Page 3 -->
 
-<!-- Start Page 3 -->
-<div id="page-3">
+<!-- Start Page 4 -->
+<div id="page-4">
   <!-- Form Name -->
-  <legend>AIM Degree (please accomplish if you are an Alumni)</legend>
+  <legend>Preferences</legend>
 
-  <!-- Button (Double) -->
-  <div id="alumni-question">
-    <div class="control-group">
-      <label class="control-label" for="alumni-yes">Are you an AIM Alumni?</label>
-
-      <div class="controls">
-        <button id="alumni-yes" name="alumni-yes" class="btn btn-success">Yes</button>
-        <button id="alumni-no" name="alumni-no" class="btn btn-danger">No</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="aim-alumni-form">
-    <!-- Text input-->
-    <div class="control-group">
-      <label class="control-label" for="education_detail[last-school-name]">Institution Name</label>
-
-      <div class="controls">
-        <input id="last-school-name" name="education_detail[last_school_name]" type="text" value="" class="input-xlarge" readonly>
-
-      </div>
-    </div>
-
-    <!-- Text input-->
-    <div class="control-group">
-      <label class="control-label" for="last-school-course-title">AIM Program/Course Title</label>
-
-      <div class="controls">
-        <input id="last-school-course-title" name="education_detail[last_school_course_title]" value="<%= @education_detail.last_school_course_title %>" type="text" placeholder="" class="input-xlarge">
-
-      </div>
-    </div>
-
-    <!-- Select Basic
+  <!-- Text input-->
   <div class="control-group">
-    <label class="control-label" for="last-school-degree">Program Type</label>
+    <label class="control-label" for="company-name">Industry - Preference</label>
 
     <div class="controls">
-      <select id="last-school-degree" name="education_detail[last_school_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.last_school_degree %>">
-        <option>Graduate Degree</option>
-        <option>Short Course</option>
+      <select class="input-xlarge  dropdown-value">
+
+        <option>Yes</option>
+        <option>No</option>
+
       </select>
     </div>
   </div>
--->
-    <!-- Text input-->
-    <div id="graduation-date-field">
-      <div class="control-group">
-        <label class="control-label" for="last-school-end-date">Graduation Date (approximate)</label>
 
-        <div class="controls">
-          <input id="last-school-end-date" name="education_detail[last_school_end_date]" value="<%= @education_detail.last_school_end_date %>" type="text" placeholder="Enter the date completed" class="input-xlarge date-pick non-dob">
-        </div>
-      </div>
+  <!-- Text input-->
+  <div class="control-group">
+    <label class="control-label" for="company-name">Most Important Criteria for Choosing a Job</label>
+
+    <div class="controls">
+      <select class="input-xlarge  dropdown-value">
+
+        <option>Yes</option>
+        <option>No</option>
+
+      </select>
     </div>
-
-    <div id="highest-degree-obtained">
-      <!-- Form Name -->
-      <legend>Highest Degree Obtained</legend>
-      <!-- Text input-->
-      <div class="control-group">
-        <label class="control-label" for="highest-school-name">Institution Name</label>
-
-        <div class="controls">
-          <input id="highest-school-name" name="education_detail[highest_school_name]" type="text" value="<%= @education_detail.highest_school_name %>" placeholder="" class="input-xlarge">
-
-        </div>
-      </div>
-
-      <!-- Text input-->
-      <div class="control-group">
-        <label class="control-label" for="highest-school-course-title">Concentration/Course Title</label>
-
-        <div class="controls">
-          <input id="highest-school-course-title" name="education_detail[highest_school_course_title]" value="<%= @education_detail.highest_school_course_title %>" type="text" placeholder="" class="input-xlarge">
-
-        </div>
-      </div>
-
-      <!-- Select Basic -->
-      <div class="control-group">
-        <label class="control-label" for="highest-school-degree">Degree</label>
-
-        <div class="controls">
-          <select id="highest-school-degree" name="education_detail[highest_school_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.highest_school_degree %>">
-            <option>Bachelor's Degree</option>
-            <option>Master's Degree</option>
-            <option>Doctorate Degree</option>
-            <option>Certificate Course</option>
-            <option>Diploma Course</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Textarea -->
-      <div class="control-group">
-        <label class="control-label" for="highest-school-address">Address</label>
-
-        <div class="controls">
-          <textarea id="highest-school-address" name="education_detail[highest_school_address]" placeholder="Address of institution"><%= @education_detail.highest_school_address %></textarea>
-        </div>
-      </div>
-
-      <!-- Text input-->
-      <div class="control-group">
-        <label class="control-label" for="highest-school-commencement-date">Date First Attended</label>
-
-        <div class="controls">
-          <input id="highest-school-commencement-date" name="education_detail[highest_school_commencement_date]" value="<%= @education_detail.highest_school_commencement_date %>" type="text" placeholder="Enter the date commenced" class="input-xlarge date-pick non-dob">
-
-        </div>
-      </div>
-
-      <!-- Text input-->
-      <div class="control-group">
-        <label class="control-label" for="highest-school-end-date">Graduation Date</label>
-
-        <div class="controls">
-          <input id="highest-school-end-date" name="education_detail[highest_school_end_date]" type="text" value="<%= @education_detail.highest_school_end_date %>" placeholder="Enter the date completed" class="input-xlarge date-pick non-dob">
-
-        </div>
-      </div>
-    </div>
-
-    <hr/>
   </div>
 
-  <div id="registration-submission" style="width: 800px; border-radius: 5px; background: lightgray; padding: 10px;">
-    <h3>Tracks Sessions</h3>
+  <!-- Text input-->
+  <div class="control-group">
+    <label class="control-label" for="company-name">Desired job titles</label>
 
-    <p>The 2nd Asian Business Conference will involve parallel breakout sessions on the second day to allow for more focused discussions on issues of interest. Please rank the session according to order of preference, with 1 as highest, and 5 as lowest. We will confirm your final track session thru e-mail. (Note: Delegate slots for each track are limited. Delegates will be registered for each track on a first-come, first-served basis) </p>
-<!--controll group tracking -rank-->
-    <div class="control-group">
-
-      <div class = "rankContainer">
-        <div class = "rankElement" id = "el0">
-          <input type="hidden" name="personal_detail[track0]" >
-          <font class = "rankDisp" id = "el0">1</font>
-          &nbsp;&nbsp;&nbsp;Harnessing  Banking and Financial Markets<b class = "down">&nbsp;∨</b>
-          <b class = "up">∧&nbsp;</b>
-        </div>
-        <div class = "rankElement" id = "el1">
-          <input type="hidden" name="personal_detail[track1]">
-          <font class = "rankDisp" id = "el1">2</font>
-          &nbsp;&nbsp;&nbsp;Realizing ASEAN’s Full  Human Capital Potential<b class = "down">&nbsp;∨</b>
-          <b class = "up">∧&nbsp;</b>
-        </div>
-        <div class = "rankElement" id = "el2">
-          <input type="hidden" name="personal_detail[track2]">
-          <font class = "rankDisp" id = "el2">3</font>
-          &nbsp;&nbsp;&nbsp;Strengthening Connectivity<b class = "down">&nbsp;∨</b>
-          <b class = "up">∧&nbsp;</b>
-        </div>
-        <div class = "rankElement" id = "el3">
-          <input type="hidden" name="personal_detail[track3]">
-          <font class = "rankDisp" id = "el3">4</font>
-          &nbsp;&nbsp; Strengthening Leadership  and Governance
-          <b class = "down">&nbsp;∨</b>
-          <b class = "up">∧&nbsp;</b>
-        </div>
-        <div class = "rankElement" id = "el4">
-          <input type="hidden" name="personal_detail[track4]">
-          <font class = "rankDisp" id = "el4">5</font>
-          &nbsp;&nbsp;&nbsp;Building A Resilient ASEAN  Economic Community<b class = "down">&nbsp;∨</b>
-          <b class = "up">∧&nbsp;</b>
-        </div>
-      </div>
+    <div class="controls">
+      <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
 
     </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="control-group">
+    <label class="control-label" for="company-name">Desired Salary after MBA (per annum)</label>
+
+    <div class="controls">
+      <select class="input-xlarge  dropdown-value">
+
+        <option>Yes</option>
+        <option>No</option>
+
+      </select>
+    </div>
+  </div>
+
+  <!-- Text input-->
+  <div class="control-group">
+    <label class="control-label" for="company-name">Candidate Job Reporting Status</label>
+
+    <div class="controls">
+      <select class="input-xlarge  dropdown-value">
+
+        <option>	Seeking a position	</option>
+        <option>	Received an offer	</option>
+        <option>	Accepted an offer	</option>
+        <option>	Not Seeking: Starting a Business	</option>
+        <option>	Not Seeking: Continuing Education	</option>
+        <option>	Not Seeking: Company Sponsored	</option>
+        <option>	Not Seeking: Other reasons	</option>
+        <option>	Not reported	</option>
+
+      </select>
+    </div>
+  </div>
 
 
 
-    <h3>Submission</h3>
+
+
+
+
+  <h3>Submission</h3>
 
     <p>
       Thank you for registering to the ASEAN Business Conference.
@@ -1129,13 +1313,13 @@
       <label class="control-label" for="education-back"></label>
 
       <div class="controls">
-        <button id="education-back" name="education-back" class="btn btn-inverse">Back - Employment</button>
+        <button id="submit-preferences-info-back" name="submit-preferences-info-back" class="btn btn-inverse">Back - Employment</button>
         <button id="education-submit" name="education-submit" class="btn btn-info">Register</button>
       </div>
     </div>
   </div>
 </div>
-<!-- End Page 3 -->
+<!-- End Page 4 -->
 
 </fieldset>
 </form>

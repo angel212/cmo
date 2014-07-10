@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140320010049) do
+ActiveRecord::Schema.define(:version => 20140709084113) do
 
   create_table "education_details", :force => true do |t|
     t.string   "last_school_name"
@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(:version => 20140320010049) do
     t.datetime "updated_at",                                      :null => false
     t.string   "highest_school_country"
     t.string   "last_school_country"
+    t.string   "scholarship"
+    t.string   "class_year"
+    t.string   "affiliation"
+    t.string   "other_degree"
+    t.string   "mba_school"
+    t.string   "certification"
+    t.string   "undergrad_major"
+    t.string   "language"
   end
 
   create_table "employment_details", :force => true do |t|
@@ -49,6 +57,19 @@ ActiveRecord::Schema.define(:version => 20140320010049) do
     t.datetime "updated_at",                               :null => false
     t.string   "work_fax_number"
     t.string   "course"
+    t.string   "years_ofexp"
+    t.string   "function_exp"
+    t.string   "industry_exp"
+    t.string   "work_authorization"
+    t.string   "geographic_authorization"
+    t.string   "years_supervisor_exp"
+    t.string   "salary_mba"
+    t.string   "sabbatical"
+    t.string   "company_before_mba"
+    t.string   "company_location"
+    t.string   "job_title"
+    t.string   "degree"
+    t.string   "school"
   end
 
   create_table "online_application_forms", :force => true do |t|
@@ -65,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20140320010049) do
     t.datetime "composite_updated_at"
     t.integer  "supplemental_detail_id"
     t.string   "browser"
+    t.string   "preference_id"
   end
 
   create_table "personal_details", :force => true do |t|
@@ -95,6 +117,23 @@ ActiveRecord::Schema.define(:version => 20140320010049) do
     t.string   "track2"
     t.string   "track3"
     t.string   "track4"
+    t.string   "address_3"
+    t.string   "current_telephone"
+    t.string   "current_mobile"
+    t.string   "home_address"
+    t.string   "home_city"
+    t.string   "home_country"
+    t.string   "home_postal"
+  end
+
+  create_table "preferences", :force => true do |t|
+    t.string   "industry"
+    t.string   "criteria"
+    t.string   "job_title"
+    t.string   "salary_after_mba"
+    t.string   "candidate_job_status"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
   end
 
   create_table "requirement_types", :force => true do |t|

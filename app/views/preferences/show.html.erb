@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Industry:</b>
+  <%= @preference.industry %>
+</p>
+
+<p>
+  <b>Criteria:</b>
+  <%= @preference.criteria %>
+</p>
+
+<p>
+  <b>Job title:</b>
+  <%= @preference.job_title %>
+</p>
+
+<p>
+  <b>Salary after mba:</b>
+  <%= @preference.salary_after_mba %>
+</p>
+
+<p>
+  <b>Candidate job status:</b>
+  <%= @preference.candidate_job_status %>
+</p>
+
+
+<%= link_to 'Edit', edit_preference_path(@preference) %> |
+<%= link_to 'Back', preferences_path %>

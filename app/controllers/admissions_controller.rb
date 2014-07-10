@@ -11,6 +11,7 @@ class AdmissionsController < ApplicationController
     @personal_details = @online_application.personal_detail
     @employment_detail = @online_application.employment_detail
     @education_detail = @online_application.education_detail
+    @preference = @online_application.preference
 
 
     respond_to do |format|
@@ -45,10 +46,12 @@ class AdmissionsController < ApplicationController
       @personal_details = PersonalDetail.create!(:email => params[:email], :dob => params[:dob])
       @employment_detail = EmploymentDetail.create!
       @education_detail = EducationDetail.create!
+      @preferences = Preference.create!
 
       @online_application.update_attributes!(personal_detail_id: @personal_details.id,
                                              employment_detail_id: @employment_detail.id,
-                                             education_detail_id: @education_detail.id)
+                                             education_detail_id: @education_detail.id,
+                                             preference_id: @preferences.id)
     elsif @online_application.present? && @online_application.personal_detail.dob.nil?
       PersonalDetail.where(email: params[:email]).each { |x| x.update_attribute :dob, dob }
     elsif @online_application.present? && @online_application.personal_detail.dob != dob
@@ -64,10 +67,12 @@ class AdmissionsController < ApplicationController
       @personal_details = @online_application.personal_detail
       @employment_detail = @online_application.employment_detail
       @education_detail = @online_application.education_detail
+      @preference = @online_application.preference
 
       personal_detail = params[:personal_detail]
       employment_detail = params[:personal_detail]
       education_detail = params[:personal_detail]
+      preference = params[:preferences]
 
       personal_detail.each_pair do |k, v|
         personal_detail.merge!(k => DateTime.strptime(v, '%d/%m/%Y')) rescue next
@@ -81,9 +86,14 @@ class AdmissionsController < ApplicationController
         education_detail.merge!(k => DateTime.strptime(v, '%d/%m/%Y')) rescue next
       end
 
+      preference.each_pair do |k, v|
+        preference.merge!(k => DateTime.strptime(v, '%d/%m/%Y')) rescue next
+      end
+
       @personal_details.update_attributes!(personal_detail)
       @employment_detail.update_attributes!(employment_detail)
       @education_detail.update_attributes!(education_detail)
+      @preference.update_attributes!(preference)
 
       @online_application.update_attribute :browser, request.env['HTTP_USER_AGENT']
     rescue Exception => e
