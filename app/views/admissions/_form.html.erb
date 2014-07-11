@@ -423,7 +423,7 @@
   <label class="control-label" for="address-2"></label>
 
   <div class="controls">
-    <input id="address-2" name="personal_detail[address_2]" value="<%= @personal_details.address_3 %>" type="text" placeholder="Address Line 3" class="input-xlarge">
+    <input id="address-2" name="personal_detail[address_3]" value="<%= @personal_details.address_3 %>" type="text" placeholder="Address Line 3" class="input-xlarge">
 
   </div>
 </div>
@@ -718,7 +718,7 @@
   <label class="control-label" for="home-phone">Current Telephone #</label>
 
   <div class="controls">
-    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Current Telephone #" class="input-xlarge">
+    <input id="home-phone" name="personal_detail[current_telephone]" value="<%=  %>" type="text" placeholder="Current Telephone #" class="input-xlarge">
 
   </div>
 </div>
@@ -728,7 +728,7 @@
   <label class="control-label" for="home-phone">Current Mobile #</label>
 
   <div class="controls">
-    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Current Mobile #" class="input-xlarge">
+    <input id="home-phone" name="personal_detail[current_mobile]" value="<%=  %>" type="text" placeholder="Current Mobile #" class="input-xlarge">
 
   </div>
 </div>
@@ -738,7 +738,7 @@
   <label class="control-label" for="home-phone">Home Address</label>
 
   <div class="controls">
-    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Home Address" class="input-xlarge">
+    <input id="home-phone" name="personal_detail[home_address]" value="<%=  %>" type="text" placeholder="Home Address" class="input-xlarge">
 
   </div>
 </div>
@@ -748,7 +748,7 @@
   <label class="control-label" for="home-phone">Home City</label>
 
   <div class="controls">
-    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Home City" class="input-xlarge">
+    <input id="home-phone" name="personal_detail[home_city]" value="<%=  %>" type="text" placeholder="Home City" class="input-xlarge">
 
   </div>
 </div>
@@ -758,7 +758,7 @@
   <label class="control-label" for="home-phone">Home Country</label>
 
   <div class="controls">
-    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Home Country" class="input-xlarge">
+    <input id="home-phone" name="personal_detail[home_country]" value="<%=  %>" type="text" placeholder="Home Country" class="input-xlarge">
 
   </div>
 </div>
@@ -768,7 +768,7 @@
   <label class="control-label" for="home-phone">Home Postal</label>
 
   <div class="controls">
-    <input id="home-phone" name="" value="<%=  %>" type="text" placeholder="Home Postal" class="input-xlarge">
+    <input id="home-phone" name="personal_detail[home_postal]" value="<%=  %>" type="text" placeholder="Home Postal" class="input-xlarge">
 
   </div>
 </div>
@@ -835,7 +835,7 @@
       <label class="control-label" for="class-year-date">Class Year</label>
 
       <div class="controls">
-        <input id="last-school-end-date" name="" value="" type="text" placeholder="Enter the date completed" class="input-xlarge date-pick non-dob">
+        <input id="last-school-end-date" name="education_detail[class_year]" value="" type="text" placeholder="Enter the date completed" class="input-xlarge date-pick non-dob">
       </div>
     </div>
   </div>
@@ -857,7 +857,11 @@
       <label class="control-label" for="scholarship">Do you Have Scholarship?</label>
 
       <div class="controls">
-        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+       <select name="education_detail[scholarship]" class="input-xlarge  dropdown-value">
+
+        <option>	Yes	</option>
+        <option>	No	</option>
+        </select>
       </div>
     </div>
   </div>
@@ -868,7 +872,7 @@
       <label class="control-label" for="scholarship">Club Affiliations</label>
 
       <div class="controls">
-        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+        <input id="last-school-end-date" name="education_detail[affiliation]" value="" type="text" placeholder="yes/no" class="input-xlarge">
       </div>
     </div>
   </div>
@@ -879,7 +883,7 @@
       <label class="control-label" for="scholarship">Other Graduate Degrees</label>
 
       <div class="controls">
-        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+        <input id="last-school-end-date" name="education_detail[other_degree]" value="" type="text" placeholder="yes/no" class="input-xlarge">
       </div>
     </div>
   </div>
@@ -890,7 +894,7 @@
       <label class="control-label" for="scholarship">MBA Schools</label>
 
       <div class="controls">
-        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+        <input id="last-school-end-date" name="education_detail[mba_school]" value="" type="text" placeholder="yes/no" class="input-xlarge">
       </div>
     </div>
   </div>
@@ -901,7 +905,7 @@
       <label class="control-label" for="scholarship">Certifications/Licenses</label>
 
       <div class="controls">
-        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+        <input id="last-school-end-date" name="education_detail[certification]" value="" type="text" placeholder="yes/no" class="input-xlarge">
       </div>
     </div>
   </div>
@@ -912,7 +916,7 @@
       <label class="control-label" for="scholarship">Undergraduate Major</label>
 
       <div class="controls">
-        <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+        <input id="last-school-end-date" name="education_detail[undergrad_major]" value="" type="text" placeholder="yes/no" class="input-xlarge">
       </div>
     </div>
   </div>
@@ -923,7 +927,7 @@
     <label class="control-label" for="scholarship">Laguange Ability</label>
 
     <div class="controls">
-      <input id="last-school-end-date" name="" value="" type="text" placeholder="yes/no" class="input-xlarge date-pick non-dob">
+      <input id="last-school-end-date" name="education_detail[language]" value="" type="text" placeholder="yes/no" class="input-xlarge">
     </div>
   </div>
 </div>
@@ -953,7 +957,7 @@
   <label class="control-label" for="company-name">Total Years of Work Experience</label>
 
   <div class="controls">
-    <select class="input-xlarge  dropdown-value">
+    <select name="employment_detail[years_ofexp]" class="input-xlarge  dropdown-value">
 
       <option>	Less than 2 years	</option>
       <option>	2-5 years	</option>
@@ -973,7 +977,7 @@
   <label class="control-label" for="company-name">Function - Experience</label>
 
   <div class="controls">
-    <select class="input-xlarge  dropdown-value">
+    <select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value">
 
 
     </select>
@@ -986,7 +990,7 @@
   <label class="control-label" for="company-name">Industry - Experience</label>
 
   <div class="controls">
-    <select class="input-xlarge  dropdown-value">
+    <select name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value">
 
 
 
@@ -1000,7 +1004,7 @@
   <label class="control-label" for="company-name">Work Authorization</label>
 
   <div class="controls">
-    <select class="input-xlarge  dropdown-value">
+    <select name="employment_detail[work_authorization]" class="input-xlarge  dropdown-value">
 
 
     </select>
@@ -1012,7 +1016,7 @@
   <label class="control-label" for="company-name">Geographic - Experience</label>
 
   <div class="controls">
-    <select class="input-xlarge  dropdown-value">
+    <select name="employment_detail[geographic_authorization]" class="input-xlarge  dropdown-value">
 
 
 
@@ -1025,7 +1029,7 @@
   <label class="control-label" for="company-name">Years of Supervisory Work Experience</label>
 
   <div class="controls">
-    <select class="input-xlarge  dropdown-value">
+    <select name="employment_detail[years_supervisor_exp]" class="input-xlarge  dropdown-value">
 
       <option>	Less than 2 years	</option>
       <option>	2-5 years	</option>
@@ -1045,7 +1049,7 @@
   <label class="control-label" for="company-name">Salary prior to MBA (per annum)</label>
 
   <div class="controls">
-    <select class="input-xlarge  dropdown-value">
+    <select name="employment_detail[salary_mba]" class="input-xlarge  dropdown-value">
 
       <option>	Below $10,000	</option>
       <option>	$10,000 - $14,999	</option>
@@ -1064,10 +1068,10 @@
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="company-name">Salary prior to MBA (per annum)</label>
+  <label class="control-label" for="company-name">Sabbatical?</label>
 
   <div class="controls">
-    <select class="input-xlarge  dropdown-value">
+    <select name="employment_detail[sabbatical]" class="input-xlarge  dropdown-value">
 
       <option>Yes</option>
       <option>No</option>
@@ -1081,7 +1085,17 @@
   <label class="control-label" for="company-name">Name of Company before MBA</label>
 
   <div class="controls">
-    <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
+    <input id="company-name" name="employment_detail[company_before_mba]" value="" type="text" placeholder="Company Name" class="input-xlarge">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="company-name">Location</label>
+
+  <div class="controls">
+    <input id="company-name" name="employment_detail[company_location]" value="" type="text" placeholder="Company Name" class="input-xlarge">
 
   </div>
 </div>
@@ -1091,7 +1105,7 @@
   <label class="control-label" for="company-name">Job title / designation</label>
 
   <div class="controls">
-    <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
+    <input id="company-name" name="employment_detail[job_title]" value="" type="text" placeholder="Company Name" class="input-xlarge">
 
   </div>
 </div>
@@ -1101,7 +1115,7 @@
   <label class="control-label" for="company-name">Bachelor's Degree</label>
 
   <div class="controls">
-    <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
+    <input id="company-name" name="employment_detail[degree]" value="" type="text" placeholder="Company Name" class="input-xlarge">
 
   </div>
 </div>
@@ -1111,7 +1125,7 @@
   <label class="control-label" for="company-name">School</label>
 
   <div class="controls">
-    <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
+    <input id="company-name" name="employment_detail[school]" value="" type="text" placeholder="Company Name" class="input-xlarge">
 
   </div>
 </div>
@@ -1227,7 +1241,7 @@
     <label class="control-label" for="company-name">Industry - Preference</label>
 
     <div class="controls">
-      <select class="input-xlarge  dropdown-value">
+      <select name="preference[industry]" class="input-xlarge  dropdown-value">
 
         <option>Yes</option>
         <option>No</option>
@@ -1241,7 +1255,7 @@
     <label class="control-label" for="company-name">Most Important Criteria for Choosing a Job</label>
 
     <div class="controls">
-      <select class="input-xlarge  dropdown-value">
+      <select name="preference[criteria]" class="input-xlarge  dropdown-value">
 
         <option>Yes</option>
         <option>No</option>
@@ -1255,7 +1269,7 @@
     <label class="control-label" for="company-name">Desired job titles</label>
 
     <div class="controls">
-      <input id="company-name" name="" value="" type="text" placeholder="Company Name" class="input-xlarge">
+      <input id="company-name" name="preference[job_title]" value="" type="text" placeholder="Company Name" class="input-xlarge">
 
     </div>
   </div>
@@ -1265,7 +1279,7 @@
     <label class="control-label" for="company-name">Desired Salary after MBA (per annum)</label>
 
     <div class="controls">
-      <select class="input-xlarge  dropdown-value">
+      <select name="preference[salary_after_mba]" class="input-xlarge  dropdown-value">
 
         <option>Yes</option>
         <option>No</option>
@@ -1279,7 +1293,7 @@
     <label class="control-label" for="company-name">Candidate Job Reporting Status</label>
 
     <div class="controls">
-      <select class="input-xlarge  dropdown-value">
+      <select name="preference[candidate_job_status]" class="input-xlarge  dropdown-value">
 
         <option>	Seeking a position	</option>
         <option>	Received an offer	</option>

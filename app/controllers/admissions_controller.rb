@@ -72,7 +72,7 @@ class AdmissionsController < ApplicationController
       personal_detail = params[:personal_detail]
       employment_detail = params[:personal_detail]
       education_detail = params[:personal_detail]
-      preference = params[:preferences]
+      preference = params[:preference]
 
       personal_detail.each_pair do |k, v|
         personal_detail.merge!(k => DateTime.strptime(v, '%d/%m/%Y')) rescue next
