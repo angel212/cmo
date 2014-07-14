@@ -14,13 +14,7 @@ $(document).ready(function (e) {
     $('#aim-alumni-form').hide();
     $('#registration-submission').hide();
 
-    $('#alumni-yes').click(function(e) {
-        e.preventDefault();
-        $('#alumni-question').hide();
-        $('#aim-alumni-form').show();
-        $('#registration-submission').show();
-        $('#last-school-name').val("Asian Institute of Management");
-    })
+
     $('#alumni-no').click(function(e) {
         e.preventDefault();
         $('#alumni-question').hide();
