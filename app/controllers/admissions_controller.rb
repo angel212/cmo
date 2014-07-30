@@ -33,9 +33,9 @@ class AdmissionsController < ApplicationController
     end
 
     begin
-      dob = DateTime.strptime(params[:dob], '%d/%m/%Y')
+      #dob = DateTime.strptime(params[:dob], '%d/%m/%Y')
     rescue
-      redirect_to '/', {alert: 'Please provide a valid date of birth.'} and return
+      #redirect_to '/', {alert: 'Please provide a valid date of birth.'} and return
     end
 
     # Check the password/DOB
@@ -43,7 +43,7 @@ class AdmissionsController < ApplicationController
     # Create the application if the online application form is not present.
     if @online_application.blank?
       @online_application = OnlineApplicationForm.create!(status: 10)
-      @personal_details = PersonalDetail.create!(:email => params[:email], :dob => params[:dob])
+      @personal_details = PersonalDetail.create!(:email => params[:email], :email => params[:password])#:dob => params[:dob])
       @employment_detail = EmploymentDetail.create!
       @education_detail = EducationDetail.create!
       @preferences = Preference.create!
@@ -54,11 +54,11 @@ class AdmissionsController < ApplicationController
                                              preference_id: @preferences.id)
     elsif @online_application.present? && @online_application.personal_detail.dob.nil?
       PersonalDetail.where(email: params[:email]).each { |x| x.update_attribute :dob, dob }
-    elsif @online_application.present? && @online_application.personal_detail.dob != dob
+    elsif @online_application.present? && @online_application.personal_detail.email != params['password'] #@online_application.personal_detail.dob != dob
       redirect_to '/', {alert: 'We have found your application but your Date of Birth does not match our records. Please try again. If you continue to experience this issue, kindly contact us through <a href="mailto:icthelpdesk@aim.edu">icthelpdesk@aim.edu</a> or call +63 (2) 894 0043.'.html_safe} and return
     end
 
-    redirect_to("/admissions/#{@online_application.id}/edit") and return
+    #redirect_to("/admissions/#{@online_application.id}/edit") and return
   end
 
   def update
@@ -70,8 +70,8 @@ class AdmissionsController < ApplicationController
       @preference = @online_application.preference
 
       personal_detail = params[:personal_detail]
-      employment_detail = params[:personal_detail]
-      education_detail = params[:personal_detail]
+      employment_detail = params[:employment_detail]
+      education_detail = params[:education_detail]
       preference = params[:preference]
 
       personal_detail.each_pair do |k, v|
