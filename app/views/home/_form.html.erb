@@ -1,48 +1,34 @@
-<div id="online-admissions-login">
-  <form class="form-horizontal" action="/admissions" method="post">
-    <fieldset>
-       <!--Text input-->
-      <div class="control-group"><br>
-        <label class="control-label" for="email">E-Mail Address</label>
+<div id="online-admissions-login" style="margin-left: 80px; margin-top: -30px;">
+  <table style="margin-left: 10px;">
+    <form class="form-horizontal" action="/admissions" method="post">
+      <fieldset>
+        <tr>
+          <td>
+            <input id="email" name="email" type="text" placeholder="AIM Email" style="height:30px;font-family:calibri;">
+          </td>
+        </tr>
 
-        <div class="controls">
-          <input id="email" name="email" type="text" placeholder="Your e-mail address" class="input-xlarge" style="z-index: auto;">
-        </div>
-      </div>
+        <tr>
+          <td>
+            <input id="dob" name="dob" type="text" placeholder="Password" style="height:30px;font-family:calibri;">
+          </td>
+        </tr>
 
-      <!-- Text input-->
-      <div class="control-group">
-        <label class="control-label" for="dob">Date of Birth</label>
-
-        <div class="controls">
-          <div>
-            <input id="dob" name="dob" type="text" placeholder="Your date of birth" class="input-xlarge date-pick dob">
-          </div>
-          <div>
-            Please enter your date of birth in DD/MM/YYYY format. (e.g. '01/11/2014' refers to November 1, 2014)
-          </div>
-        </div>
-      </div>
-
-      <!-- Button -->
-      <div class="control-group">
-        <label class="control-label" for="submit"></label>
-
-        <div class="controls">
-          <button id="begin-app-submit" name="submit" class="btn btn-primary">Begin/Continue Application</button>
-        </div>
-      </div>
-
-      <!--<div class="control-group">-->
+        <tr>
+          <td>
+            <button id="begin-app-submit" name="submit" class="btn" style="margin-left: 40px;width: 160px;margin-top:20px;border-radius: 6px;">Login</button>
+          </td>
+        </tr>
+        <!--<div class="control-group">-->
         <!--<label class="control-label" for="show-instructions"></label>-->
 
         <!--<div id="online-application-instructions-toggle" class="controls">-->
-          <!--<a id="show-instructions" data-toggle="modal" href="#application-instructions" class="btn btn-warning">-->
-            <!--View Registration Rates-->
-          <!--</a>-->
+        <!--<a id="show-instructions" data-toggle="modal" href="#application-instructions" class="btn btn-warning">-->
+        <!--View Registration Rates-->
+        <!--</a>-->
         <!--</div>-->
-      <!--</div>-->
-
-    </fieldset>
-  </form>
+        <!--</div>-->
+      </fieldset>
+    </form>
+  </table>
 </div>

@@ -5,6 +5,8 @@ $(document).ready(function (e) {
     $('div#page-2').hide();
     $('div#page-3').hide();
     $('div#page-4').hide();
+    $('div#page-5').hide();
+    $('div#page-6').hide();
     $('#page-title').text("Personal Particulars");
     $('.pagination').hide();
     $('#page-title').append($('.pagination'));
@@ -13,7 +15,6 @@ $(document).ready(function (e) {
     $('#highest-degree-obtained').hide();
     $('#aim-alumni-form').hide();
     $('#registration-submission').hide();
-
 
     $('#alumni-no').click(function(e) {
         e.preventDefault();
@@ -53,8 +54,6 @@ $(document).ready(function (e) {
         $('#page-title').text("Professional Affiliation");
         $('div#page-1').hide();
         $('div#page-2').show();
-
-
     })
 
     $('#submit-education-info-back').click(function (e) {
@@ -88,6 +87,38 @@ $(document).ready(function (e) {
         $('div#page-4').hide();
         $('#page-title').text("Personal Particulars");
         $('div#page-3').show();
+        e.preventDefault();
+    })
+
+    $('.about-me-btn').click(function (e) {
+        $('div#page-2').hide();
+        $('div#page-3').hide();
+        $('div#page-4').hide();
+        $('div#page-1').show();
+        e.preventDefault();
+    })
+
+    $('.education-btn').click(function (e) {
+    $('div#page-1').hide();
+    $('div#page-3').hide();
+    $('div#page-4').hide();
+    $('div#page-2').show();
+    e.preventDefault();
+})
+
+    $('.workexperience-btn').click(function (e) {
+        $('div#page-1').hide();
+        $('div#page-2').hide();
+        $('div#page-4').hide();
+        $('div#page-3').show();
+        e.preventDefault();
+    })
+
+    $('.profile-btn').click(function (e) {
+        $('div#page-1').hide();
+        $('div#page-3').hide();
+        $('div#page-2').hide();
+        $('div#page-4').show();
         e.preventDefault();
     })
 

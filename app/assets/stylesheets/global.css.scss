@@ -1,183 +1,322 @@
-body {
-  background-color: #0D112E;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* Patricks Stylesheet*/
+
+* {
+  font-family:Calibri;
 }
 
-@media print
-{
-  .no-print, .no-print *
-  {
-    display: none !important;
-  }
-
-  .content-container, .admissions-container {
-    height: auto !important;
-    overflow-y: auto !important;
-  }
-
-  .footer-online-admissions {
-    display: none !important;
-  }
+html {
+  background-color: #0d112e;
 }
 
-.data-placeholder {
-  margin-top: 5px;
-}
-.aim-brand {
-  background-color: #0D112E;
-  padding-bottom: 10px;
-}
-
-.admissions-container {
-  width: 900px;
-  margin: 0 auto;
-  background: #ffffff;
+.nav {
+  text-align:center;
+  display:block;
+  width:1000px;
+  height:60px;
+  margin:0 auto 0 auto;
+  background-color:rgb(23, 102, 54);
 }
 
-.admissions-title {
-  background-color: #3A5D8D;
+.nav ul {
+  list-style-type:none;
 }
 
-.admissions-header {
-  font-size: 24px;
-  color: white;
-  margin-top: 0px;
+.nav ul li{
+  display:inline-block;
+  margin:0 auto 0 auto;
+  height:auto;
 }
 
-h1 {
-  padding-left: 10px;
+.nav a {
+  font-size:12px;
+  display:block;
+  width:110px;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-.content-container {
-  padding-left: 10px;
-  padding-bottom: 10px;
-  height: 600px;
-  overflow: scroll;
+.main {
+  margin:0 auto 0 auto;
+  width: 1000px;
+  height:650px;
+  background-color:white;
+  margin-top: -1px;
+  background-color: #f9f9f9;
+  color: #7d7d7d;
+  overflowyx: auto;
 }
 
-.label {
-  float: left;
+.footer {
+  display:block;
+  width:710px;
+  height:30px;
+  margin:0 auto 0 auto;
+  background-color:transparent;
+  font-size:12px;
+}
+
+.footer ul {
+  list-style-type:none;
+}
+
+.footer ul li{
+  display:inline-block;
+  float:left;
+  height:30px;
+}
+
+.footer a {
+  display:block;
+  width:80px;
+  color: #5379a7;
+  letter-spacing: 0.5px;
+  text-decoration:none;
   font-weight: bold;
-  font-family: sans-serif;
-  font-size: 14px;
+  font-size:10px;
 }
 
-.input-field {
-  float: left;
+.footer a:hover {
+  color: #608dc3;
+  text-shadow: none;
 }
 
-.input-field-set {
-  clear: both;
-  display: block;
-  width: 100%;
+.footer a:hover{
+  text-decoration:underline;
+}
+
+.header img {
+  margin-left:175px;
+}
+
+.leftcolumn {
+  position: absolute;
+  height: 548px;
+  width: 250px;
+  background-color: #3a5c8d;
+}
+
+.leftcolumn ul {
+  list-style-type:none;
+}
+
+.leftcolumn a {
+  font-size:17px;
+  display:block;
+  width:180px;
+  color:black;
+  text-decoration:none;
+}
+
+.leftcolumn a:hover {
+
+}
+
+.content {
+  margin-left: 280px;
+  overflow-y: auto;
+  height:534px;
+}
+
+.leftcolumn ul li a {
+  color:white;
+}
+
+/************************************************** */
+
+.nav1 li a {
+  text-decoration:none;
+  color:#ffffff;
+  padding:21px;
+}
+
+.nav1 li a:hover {
+  background-color: none;
+}
+
+.nav1 li {
+  display:inline;
+}
+
+.nav1 ul {
+  list-style-type: none;
+}
+
+.nav1 ul li {
   position: relative;
+  border-right: #a5a5a5 thin solid;
+  float: left;
+  height: 25px;
+  margin-top: -14px;
 }
 
-.highlighted {
-  background-color: lightblue;
+.nav1 ul li a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  margin-top: -17px;
 }
 
-.footer-online-admissions {
-
+.nav1 ul li:hover{
+  background: #078965;
 }
 
-div.intro-online-admissions {
-  width: 400px;
-  margin: 50px auto;
+.nav1 ul li a:hover{
+  color: #d39937;
 }
 
-div#online-admissions-login {
-  width: 550px;
-  margin: 0px auto;
+.nav1 ul li ul {
+  display: none
 }
 
-p#intro-online-admissions-text {
-  clear: both;
-  font-weight: bold;
+.nav1 ul li:hover ul {
+  display: block;
+  position: absolute;
 }
 
-.footer-online-admissions {
-  padding-top: 10px;
-  color: lightgray;
-  font-size: 8px;
+.nav1 ul li:hover ul li a {
+  display:block;
+  background:url(aim_rightCol_form_bg_002.png)top left ;
+  color:#ffffff;
+  width: 100px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+.nav1 ul li:hover ul li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+  background-color: darkcyan;
+}
+
+/* *******************************************  */
+.nav1 ul li:hover ul li ul{
+  display: none
+}
+
+.nav1 ul li:hover ul li:hover ul{
+  display: none
+}
+
+.nav1 ul li:hover ul li:hover ul{
+  display:block;
+  top:5px;
+  left:101px;
+  color:#ffffff;
+  width: 100px;
   text-align: center;
 }
 
-div#show-personal-detail.detail-bubble {
-  border-radius: 10px;
-  padding: 20px;
-  background-color: beige;
-}
-
-div#show-employment-detail {
-  border-radius: 10px;
-  padding: 20px;
-  background-color: lightblue;
-}
-
-div#show-education-detail {
-  border-radius: 10px;
-  padding: 20px;
-  background-color: lightgreen;
-}
-
-.applicant-dtl-main {
-  tr:nth-child(even) {background: #CCC}
-  tr:nth-child(odd) {background: #FFF}
-}
-
-.unread-application  {
-  font-weight: bold;
-}
-
-.form-detail {
-  font-family: 'Courier', 'Courier New';
-  font-weight: normal !important;
-}
-
-.inline > ul > li {
-  display: inline-block;
-  margin-top: 6px;
-  padding-right: 5px;
-}
-b.up
-{
-  cursor: pointer;
-  float: right;
-}
-b.up:hover {color: #ffc741;}
-
-/* down button */
-b.down
-{
-  cursor: pointer;
-  float: right;
-}
-b.down:hover {color: #ffc741;}
-
-/* shows the rank of the element */
-font.rankDisp
-{
-  position: absolute;
-  color: #ffc741;
-}
-
-/* Container div for Rank, HTML form rank selector */
-.rankContainer
-{
-  position: relative;
-  width: 412px; height: auto;
-  border: 1px #645c56 solid;
-  padding: 8px;
-}
-
-/* Rankable element div for Rank, HTML form rank  */
-.rankElement
-{
-  position: relative;
-  width: 400px; height: auto;
-  margin: 3px;
-  padding: 3px;
-  background: #645c56;
+.nav1ul li:hover ul li a:hover {
+  text-decoration: underline;
   color: #ffffff;
+  background-color: darkcyan;
+}
+/* *******************************************  */
+
+.nav1 {
+  position: relative;
+  background: #00805a;
+  width: 1000px;
+  height: 25px;
+  margin: 0 auto 0 auto;
+  border: 1px solid black;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: #a5a5a5 thin solid;
+  margin-left: -1px;
+}
+
+.btn {
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+  background-color:#1e62d0;
+  -webkit-border-top-left-radius:0px;
+  -moz-border-radius-topleft:0px;
+  border-top-left-radius:0px;
+  -webkit-border-top-right-radius:0px;
+  -moz-border-radius-topright:0px;
+  border-top-right-radius:0px;
+  -webkit-border-bottom-right-radius:0px;
+  -moz-border-radius-bottomright:0px;
+  border-bottom-right-radius:0px;
+  -webkit-border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px;
+  border-bottom-left-radius:0px;
+  text-indent:0;
+  border:1px solid #337fed;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:40px;
+  line-height:40px;
+  width:100px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #1570cd;
+  border-radius:3px;
+}
+
+.btn:hover {
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+  cursor: pointer;
+  background-color:#3d94f6;
+}
+
+.btn:active {
+  position:relative;
+  top:1px;
+}
+
+input[type="text"],select,input[type="date"] {
+  width:240px;
+  margin-right: 70%;
+  background-color: #F2F2F2;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  padding: 4px 5px 4px 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4D4D4D;
+  text-shadow: 0px 1px 0px #FBFBFB;
+}
+
+.leftcolumn ul li {
+  padding:5px 15px;
+}
+
+.leftcolumn ul li:hover {
+  background-color:rgb(92, 118, 206);
+}
+
+.leftcolumn ul li a{
+  font-size:18px;
+}
+
+.leftcolumn ul li a:hover{
+
+}
+
+.leftcolumn ul {
+  margin-left:20px;
+}
+
+*::-webkit-input-placeholder {
+  font-size:16px;
+  padding-left:15px;
+}
+*:-moz-placeholder {
+  font-size:16px;
+  padding-left:15px;
+}
+*:-ms-input-placeholder { /* IE10+ */
+  font-size:16px;
+  padding-left:15px;
+}
+
+.test:hover {
+  opacity: 1;
 }
