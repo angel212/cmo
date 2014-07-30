@@ -6,7 +6,7 @@ class SupplementalDetailsController < ApplicationController
     @supplemental_details = SupplementalDetail.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.json { render json: @supplemental_details }
     end
   end

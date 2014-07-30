@@ -81,7 +81,7 @@ OnlineApplication::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   resources :admissions
-
+  resources :profile
   resources :online_inquiries
   post '/admissions/submit/(:id)' => 'admissions#update'
   post '/realtime/(:id)' => 'realtime#realtime_submit'

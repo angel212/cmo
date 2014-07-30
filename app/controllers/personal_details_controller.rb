@@ -5,7 +5,7 @@ class PersonalDetailsController < ApplicationController
     @personal_details = PersonalDetail.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.json { render json: @personal_details }
     end
   end

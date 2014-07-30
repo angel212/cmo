@@ -5,7 +5,7 @@ class EmploymentDetailsController < ApplicationController
     @employment_details = EmploymentDetail.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.json { render json: @employment_details }
     end
   end

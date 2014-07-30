@@ -5,7 +5,7 @@ class RequirementsController < ApplicationController
     @requirements = Requirement.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.json { render json: @requirements }
     end
   end

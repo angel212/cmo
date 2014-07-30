@@ -58,7 +58,9 @@ class AdmissionsController < ApplicationController
       redirect_to '/', {alert: 'We have found your application but your Date of Birth does not match our records. Please try again. If you continue to experience this issue, kindly contact us through <a href="mailto:icthelpdesk@aim.edu">icthelpdesk@aim.edu</a> or call +63 (2) 894 0043.'.html_safe} and return
     end
 
-    #redirect_to("/admissions/#{@online_application.id}/edit") and return
+   #redirect_to("/profile/#{@online_application.id}") and return
+   redirect_to("/admissions/#{@online_application.id}/edit") and return
+
   end
 
   def update

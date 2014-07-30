@@ -23,10 +23,7 @@
       Last Name: <p class="form-detail"><%= @online_application_form.personal_detail.last_name %></p>
     </td>
   </tr>
-  <tr>
-    <td valign="top" colspan="5" style="height:10px; font-weight:bold;">
-      Name on Badge: <p class="form-detail"><%= @online_application_form.personal_detail.badge_name %></p>
-    </td>
+
   <tr>
     <td colspan="6">&nbsp;</td>
   </tr>
@@ -43,7 +40,6 @@
     <td width="104" valign="top" style="font-weight:bold;">Age: <p class="form-detail"><%= (DateTime.now - @online_application_form.personal_detail.dob).to_i / 365 if @online_application_form.personal_detail.dob.present? %></p></td>
     <td width="153" valign="top" style="font-weight:bold;">Citizenship1:
       <p class="form-detail"><%= @online_application_form.personal_detail.citizenship %></p></td>
-    <td width="152" valign="top" style="font-weight:bold;">Citizenship2:</td>
     <td width="102" valign="top" style="font-weight:bold;">Gender:
       <p class="form-detail"><%= @online_application_form.personal_detail.gender %></p></td>
     <td width="198" valign="top" style="font-weight:bold;">Civil Status:
@@ -59,10 +55,10 @@
         border-color: #000;
         border-collapse: collapse;">
   <tr>
-    <td height="31" valign="top" style="font-weight:bold;">Phone:
-      <p class="form-detail"><%= @online_application_form.personal_detail.home_phone %></p></td>
-    <td colspan="2" valign="top" style="font-weight:bold;">Mobile:
-      <p class="form-detail"><%= @online_application_form.personal_detail.cell_phone %></p></td>
+    <td height="31" valign="top" style="font-weight:bold;">Current Telephone #:
+      <p class="form-detail"><%= @online_application_form.personal_detail.current_telephone %></p></td>
+    <td colspan="2" valign="top" style="font-weight:bold;">Current Mobile:
+      <p class="form-detail"><%= @online_application_form.personal_detail.current_mobile %></p></td>
     <td colspan="3" valign="top" style="font-weight:bold;">Email:
       <p class="form-detail"><%= @online_application_form.personal_detail.email %></p></td>
   </tr>
@@ -76,5 +72,13 @@
         <%= @online_application_form.personal_detail.address_country %>
       </p>
     </td>
+  </tr>
+  <tr>
+    <td width="127" colspan="2" valign="top" style="height:40px;font-weight:bold;">City:
+      <p class="form-detail"><%= @online_application_form.personal_detail.city %></p></td>
+    <td width="127" valign="top" style="height:40px;font-weight:bold;">Postal Code:
+      <p class="form-detail"><%= @online_application_form.personal_detail.address_post_code %></p></td>
+    <td width="127" colspan="2" valign="top" style="height:40px;font-weight:bold;">Country:
+      <p class="form-detail"><%= @online_application_form.personal_detail.address_country %></p></td>
   </tr>
 </table>

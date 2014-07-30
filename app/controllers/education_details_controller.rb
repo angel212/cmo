@@ -5,7 +5,7 @@ class EducationDetailsController < ApplicationController
     @education_details = EducationDetail.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.json { render json: @education_details }
     end
   end

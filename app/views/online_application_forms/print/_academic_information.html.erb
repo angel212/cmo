@@ -10,30 +10,36 @@
     <td height="25" colspan="4" style="font-weight:bold;">Bachelor Degree</td>
   </tr>
   <tr>
-    <td width="201" valign="top" height="43" style="font-weight:bold;">Course:
+    <td width="201" colspan="2" valign="top" height="43" style="font-weight:bold;">Course:
       <p class="form-detail"><%= @online_application_form.education_detail.last_school_degree %> <%= @online_application_form.education_detail.last_school_course_title %></p>
     </td>
-    <td width="168" valign="top" style="font-weight:bold;">School:
-      <p class="form-detail"><%= @online_application_form.education_detail.last_school_name %></p></td>
-    <td width="210" valign="top" style="font-weight:bold;">Award:
-      <p class="form-detail"></p></td>
-    <td width="261" valign="top" style="font-weight:bold;">Date Conferred:
+    <td width="168" valign="top" style="font-weight:bold;">Class Year:
+      <p class="form-detail"><%= @online_application_form.education_detail.class_year %></p></td>
+    <td width="168" valign="top" style="font-weight:bold;">Graduation Year:
       <p class="form-detail"><%= @online_application_form.education_detail.last_school_end_date %></p></td>
+
   </tr>
   <tr>
-    <td colspan="6" style="font-weight:bold;">Masters/ Phd Degree</td>
+    <td width="210"colspan="2" valign="top" style="font-weight:bold;">Scholarship:
+      <p class="form-detail"><%= @online_application_form.education_detail.scholarship %></p></td>
+    <td width="261" colspan="2" valign="top" style="font-weight:bold;">Club Affiliations:
+      <p class="form-detail"><%= @online_application_form.education_detail.affiliation %></p></td>
   </tr>
   <tr>
-    <td height="34">
-      <p class="form-detail"><%= @online_application_form.education_detail.highest_school_degree %> <%= @online_application_form.education_detail.highest_school_course_title %></p>
+    <td colspan="6" style="font-weight:bold;">Other Graduate Degrees
+      <p class="form-detail"><%= @online_application_form.education_detail.other_degree %></p></td>
+  </tr>
+  <tr>
+    <td height="34"  valign="top" style="font-weight:bold;"> MBA Schools
+      <p class="form-detail"><%= @online_application_form.education_detail.mba_school %> </p>
     </td>
-    <td>
-      <p class="form-detail"><%= @online_application_form.education_detail.highest_school_name %></p>
+    <td  valign="top" style="font-weight:bold;">Certifications/Licenses
+      <p class="form-detail"><%= @online_application_form.education_detail.certification %></p>
     </td>
-    <td>
-      <p class="form-detail"></p>
-    <td>
-      <p class="form-detail"><%= @online_application_form.education_detail.highest_school_end_date %></p>
+    <td  valign="top" style="font-weight:bold;">Undergraduate Major
+      <p class="form-detail"><%= @online_application_form.education_detail.undergrad_major %></p>
+    <td  valign="top" style="font-weight:bold;">Laguange Ability
+      <p class="form-detail"><%= @online_application_form.education_detail.language %></p>
     </td>
   </tr>
 </table>

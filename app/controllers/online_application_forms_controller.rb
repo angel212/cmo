@@ -5,7 +5,7 @@ class OnlineApplicationFormsController < ApplicationController
     @online_application_forms = OnlineApplicationForm.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # show.html.erb
       format.json { render json: @online_application_forms }
     end
   end
