@@ -1,7 +1,96 @@
+<script type="text/javascript">
+
+    function showApplicationInstructions() {
+        $('#application-instructions').show();
+    }
+
+</script>
 <script>
-  $(document).ready(function(){
-      $('.dropdown-value').each(function(e){
-          $(this).val($(this).data('chosen-value'));
-      });
-  })
+    $(document).ready(function () {
+        $('.dropdown-value').each(function (e) {
+            $(this).val($(this).data('chosen-value'));
+        });
+
+    })
+</script>
+<script>
+    $(function () {
+        $("#personal_edit").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    height: 500,
+                    width: 750
+                }
+        );
+
+        $("#mailing_address").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    height: 600,
+                    width: 750
+                }
+        );
+
+        $("#education_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    height: 600,
+                    width: 750
+                }
+        );
+
+        $("#professional_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    height: 600,
+                    width: 750
+                }
+        );
+
+    });
+
+
+</script>
+<script>
+    $(function () {
+
+        $("#personal_edit_link").click(function () {
+            $("#personal_edit").dialog("open");
+        });
+
+        $("#mailing_edit_link").click(function () {
+            $("#mailing_address").dialog("open");
+        });
+        $("#education_edit_link").click(function () {
+            $("#education_dialog").dialog("open");
+        });
+        $("#professional_edit_link").click(function () {
+            $("#professional_dialog").dialog("open");
+        });
+
+    });
+</script>
+
+<script>
+    $(function () {
+
+        $("#personal_edit_link_close").click(function () {
+            $("#personal_edit").dialog("close");
+        });
+
+        $("#cancel_mailing").click(function () {
+            $("#mailing_address").dialog("close");
+        });
+
+        $("#cancel_education").click(function () {
+            $("#education_dialog").dialog("close");
+        });
+        $("#cancel_professional").click(function () {
+            $("#professional_dialog").dialog("close");
+        });
+    });
 </script>
