@@ -8,11 +8,6 @@
   </tr>
 
   <tr>
-    <td valign="top" colspan="5" style="height:10px; font-weight:bold;">
-      Title: <p class="form-detail"><%= @online_application_form.personal_detail.title %></p>
-    </td>
-  </tr>
-  <tr>
     <td valign="top" colspan="2" style="height:40px; font-weight:bold;">
       First Name: <p class="form-detail"><%= @online_application_form.personal_detail.first_name %></p>
     </td>
@@ -38,7 +33,7 @@
     <td width="127" valign="top" style="height:40px;font-weight:bold;">Birthdate:
       <p class="form-detail"><%= @online_application_form.personal_detail.dob %></p></td>
     <td width="104" valign="top" style="font-weight:bold;">Age: <p class="form-detail"><%= (DateTime.now - @online_application_form.personal_detail.dob).to_i / 365 if @online_application_form.personal_detail.dob.present? %></p></td>
-    <td width="153" valign="top" style="font-weight:bold;">Citizenship1:
+    <td width="153" valign="top" style="font-weight:bold;">Citizenship:
       <p class="form-detail"><%= @online_application_form.personal_detail.citizenship %></p></td>
     <td width="102" valign="top" style="font-weight:bold;">Gender:
       <p class="form-detail"><%= @online_application_form.personal_detail.gender %></p></td>
@@ -80,5 +75,35 @@
       <p class="form-detail"><%= @online_application_form.personal_detail.address_post_code %></p></td>
     <td width="127" colspan="2" valign="top" style="height:40px;font-weight:bold;">Country:
       <p class="form-detail"><%= @online_application_form.personal_detail.address_country %></p></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="6" style="height:40px;font-weight:bold;">
+      Home Address
+      <p class="form-detail"><%= @online_application_form.personal_detail.home_address %>  </p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2" style="height:40px;font-weight:bold;">
+      Home City
+      <p class="form-detail"><%= @online_application_form.personal_detail.home_city %>  </p>
+    </td>
+    <td valign="top" colspan="2" style="height:40px;font-weight:bold;">
+      Home Country
+      <p class="form-detail"><%= @online_application_form.personal_detail.home_country %>  </p>
+    </td>
+    <td valign="top" colspan="2" style="height:40px;font-weight:bold;">
+      Home Postal
+      <p class="form-detail"><%= @online_application_form.personal_detail.home_postal %>  </p>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="3" style="height:40px;font-weight:bold;">
+      Home Telephone
+      <p class="form-detail"><%= @online_application_form.personal_detail.home_phone %>  </p>
+    </td>
+    <td valign="top" colspan="3" style="height:40px;font-weight:bold;">
+      Home Telephone
+      <p class="form-detail"><%= @online_application_form.personal_detail.cell_phone %>  </p>
+    </td>
   </tr>
 </table>
