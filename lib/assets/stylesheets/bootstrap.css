@@ -210,15 +210,16 @@ textarea {
     margin: 0.5cm;
   }
   p,
-  h2,
+  /*h2,*/
   h3 {
     orphans: 3;
     widows: 3;
   }
-  h2,
+  /*h2,*/
   h3 {
     page-break-after: avoid;
   }
+
 }
 
 body {
@@ -733,7 +734,7 @@ a.text-success:focus {
 }
 
 h1,
-h2,
+/*h2,*/
 h3,
 h4,
 h5,
@@ -747,7 +748,7 @@ h6 {
 }
 
 h1 small,
-h2 small,
+/*h2 small,*/
 h3 small,
 h4 small,
 h5 small,
@@ -758,7 +759,7 @@ h6 small {
 }
 
 h1,
-h2,
+/*h2,*/
 h3 {
   line-height: 40px;
 }
@@ -767,9 +768,9 @@ h1 {
   font-size: 38.5px;
 }
 
-h2 {
-  font-size: 31.5px;
-}
+/*h2 {*/
+  /*font-size: 31.5px;*/
+/*}*/
 
 h3 {
   font-size: 24.5px;
@@ -791,9 +792,9 @@ h1 small {
   font-size: 24.5px;
 }
 
-h2 small {
-  font-size: 17.5px;
-}
+/*h2 small {*/
+  /*font-size: 17.5px;*/
+/*}*/
 
 h3 small {
   font-size: 14px;
