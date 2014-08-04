@@ -1,6 +1,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('#page-title').text("<%= "#{@online_application_form.personal_detail.last_name}, #{@online_application_form.personal_detail.first_name} #{@online_application_form.personal_detail.middle_name}" %>");
+        $('#leftcolumn').hide();
     })
 </script>
 
@@ -32,7 +33,7 @@
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="tab1">
-      <div id="print-details">
+      <div id="print-details" style="overflow-y: auto; height: 800px;">
         <%= render :partial => 'print' %>
       </div>
     </div>
