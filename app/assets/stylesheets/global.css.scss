@@ -62,7 +62,7 @@ html {
 
 .leftcolumn {
   position: absolute;
-  height: 998px;
+  height: 1002px;
   width: 250px;
   background-color: #3a5c8d;
 }
@@ -256,7 +256,7 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 }
 
 .leftcolumn ul li {
-  padding:5px 15px;
+  padding:5px 5px;
 }
 
 .leftcolumn ul li:hover {
@@ -264,7 +264,7 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 }
 
 .leftcolumn ul li a{
-  font-size:18px;
+  font-size:17px;
 }
 
 .leftcolumn ul li a:hover{
@@ -272,7 +272,8 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 }
 
 .leftcolumn ul {
-  margin-left:20px;
+  margin-left:90px;
+  margin-top: 15px;
 }
 
 *::-webkit-input-placeholder {
@@ -290,4 +291,25 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 
 .test:hover {
   opacity: 1;
+}
+
+.changeColor {
+  background-color: #5c76ce;
+}
+
+.student_table {
+  margin-left: 100px;
+  color: black;
+  width: 420px;
+  font-size: 16px;
+}
+
+.student_table th, td {
+  border: 1px solid black;
+}
+
+.student_table td:first-child{
+  font-weight: bold;
+  color: black !important;
+  width: 310px;
 }
