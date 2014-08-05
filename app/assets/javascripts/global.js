@@ -141,3 +141,11 @@ function showCompletionDate() {
 }
 
 //
+
+$(document).ready(function(){
+    var targetElement = $("#leftcolumn li");
+    targetElement.click(function() {
+        $(this).siblings().removeClass("changeColor");
+        $(this).addClass("changeColor");
+    });
+});

@@ -26,7 +26,7 @@
     <!--</div>-->
   <!--</div>-->
 
-  <div class="potential-errors">
+  <div class="potential-errors" style="position: absolute">
     <% if notice.present? %>
         <p class="alert alert-info"><%= notice %></p>
     <% end %>
@@ -49,12 +49,18 @@
 
   <div class="content-container">
     <div class="top" id="top" style="background-color: #3a5c8d;height: 35px;width: auto;color:white;">
-      <p style="backgroutopnd-color: #3a5c8d;height: 40px;width: 750px;color: white;position: absolute;margin-left: 250px;font-size:22px;margin-top: 5px">Career Management Office</p>
+      <p style="height: 40px; width: 750px; color: white; position: absolute;margin-left: 250px;font-size: 22px;margin-top: 5px;font-weight: bold;padding-top: 4px;">Career Management Office</p>
     </div>
     <div class="leftcolumn" id="leftcolumn">
-      <h3 style="padding-left:40px;"><span style="color:white;">Welcome,</span><br/><span style="color:yellow;">Nepomuceno, Mar Angel</span><br/><img src="" /></h3><br/>
-      <img src="https://scontent-b-lax.xx.fbcdn.net/hphotos-xfp1/t1.0-9/1921878_723891680980271_4360094652380396743_n.jpg" style="height: 190px;width: 160px; margin-left: 40px;margin-top: -40px; z-index: 999; border: 1px solid black;"/>
-      <!--/assets/Taylor-Grad.jpg-->
+      <div style="height:290px;border-bottom: 1px solid black">
+      <p style="padding-left: 40px; font-weight: bold;  font-size: 17px;padding-top: 10px;"><span style="color:white;">Welcome,</span><br/><span style="color:yellow;">Nepomuceno, Mar Angel</span><br/><img src="" /></p><br/>
+      <img src="https://scontent-b-lax.xx.fbcdn.net/hphotos-xfp1/t1.0-9/1921878_723891680980271_4360094652380396743_n.jpg" style="height: 190px;
+              width: 160px;
+              margin-left: 45px;
+              margin-top: -35px;
+              z-index: 999;
+              border: 2px solid black;"/>
+      </div>
       <ul>
         <li><a href="aboutme.html" class="about-me-btn" >About Me</a></li>
         <li><a href="education.html" class="education-btn">Education</a></li>
@@ -87,7 +93,7 @@
       <li><a href="#">Student Life</a></li>
   </ul>
   -->
-  <p style="text-align:center;color: #5379a7;letter-spacing: 0.5px;text-decoration:none;font-weight: bold;font-size:11px;">Copyright © 2014 Asian Institute of Management</p>
+  <p style="text-align:center;color: #5379a7;letter-spacing: 0.5px;text-decoration:none;font-weight: bold;font-size:11px;padding-top: 10px;">Copyright © 2014 Asian Institute of Management</p>
 </div>
 
 </body>
