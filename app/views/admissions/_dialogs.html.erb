@@ -317,7 +317,7 @@
 </table>
 </p>
 <span>
-   <button id="education-submit" name="education-submit" class="btn btn-info" >Update Personal
+   <button id="education-submit" name="education-submit" class="btn btn-info">Update Personal
      Details
    </button>
      <button id="personal_edit_link_close" name="personal_edit_link_close" class="btn btn-info">
@@ -666,13 +666,13 @@
     <button id="" name="" class="btn btn-info" style="margin-left: 225px;">
       Update Personal Details
     </button>
-     <button id="cancel_mailing" name="cancel_mailing" class="btn btn-info" >
+     <button id="cancel_mailing" name="cancel_mailing" class="btn btn-info">
        Cancel
-    </button>
+     </button>
   </span>
 </span>
 </div>
- <!-- -->
+<!-- -->
 <div id="education_dialog" title="Educational Details">
   <span>
 
@@ -710,13 +710,42 @@
       <tr>
         <td>Club Affiliations:</td>
         <td>
-          <input id="last-school-end-date" name="education_detail[affiliation]" value="<%= @education_detail.affiliation %>" type="text" class="input-xlarge">
+          <select name="education_detail[affiliation]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.affiliation %>">
+            <option>Select One</option>
+            <option>ADB Alumni Association Association</option>
+            <option>AIM Green</option>
+            <option>Consulting Club</option>
+            <option>Cricket Club</option>
+            <option>E-Club</option>
+            <option>Entrepreneurial Club</option>
+            <option>Finance Club</option>
+            <option>IMSA(International Muslim Students Association)</option>
+            <option>Marketing Club</option>
+            <option>Movie "Popcorn" Club</option>
+            <option>PACTS (Philanthropic Society)</option>
+            <option>Sports Club</option>
+            <option>Talent Club</option>
+            <option>Other</option>
+          </select>
         </td>
       </tr>
       <tr>
         <td>Other Graduate Degrees:</td>
         <td>
-          <input id="last-school-end-date" name="education_detail[other_degree]" value="<%= @education_detail.other_degree %>" type="text" class="input-xlarge">
+          <select name="education_detail[other_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.other_degree %>">
+            <option>Select One</option>
+            <option>JD</option>
+            <option>MA</option>
+            <option>MD</option>
+            <option>MS</option>
+            <option>PhD</option>
+            <option>Other Business Master's</option>
+            <option>Accounting</option>
+            <option>Finance</option>
+            <option>Human Resources</option>
+            <option>Information Technology</option>
+            <option>Management</option>
+          </select>
         </td>
       </tr>
       <tr>
@@ -728,7 +757,27 @@
       <tr>
         <td>Certifications/Licenses:</td>
         <td>
-          <input id="last-school-end-date" name="education_detail[certification]" value="<%= @education_detail.certification %>" type="text" class="input-xlarge">
+          <select name="education_detail[certification]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.certification %>">
+            <option>Select One</option>
+            <option>Architect License</option>
+            <option>CDP</option>
+            <option>CFA</option>
+            <option>CFP</option>
+            <option>CISA</option>
+            <option>CPA</option>
+            <option>CSP</option>
+            <option>DVM</option>
+            <option>EIT</option>
+            <option>FRM</option>
+            <option>PE</option>
+            <option>PHR</option>
+            <option>Pilot License</option>
+            <option>Real Estate License</option>
+            <option>RN</option>
+            <option>Series 7</option>
+            <option>Series 63</option>
+            <option>Security Clearance</option>
+          </select>
         </td>
       </tr>
       <tr>
@@ -749,125 +798,125 @@
   </span>
   <span>
     <button id="education-submit" name="education-submit" class="btn btn-info">Update Education Details</button>
-     <button id="cancel_education" name="cancel_education" class="btn btn-info" >
+     <button id="cancel_education" name="cancel_education" class="btn btn-info">
        Cancel
      </button>
   </span>
 </div>
- <!-- -->
+<!-- -->
 <div id="professional_dialog" title="Professional Experience">
   <span>
   <table style="padding-left: 50px;color: #7d7d7d;width: 565;">
-      <tr>
-        <td>Total Years of Work Experience:</td>
-        <td>
-          <select name="employment_detail[years_ofexp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_ofexp %>">
-            <option>Less than 2 years</option>
-            <option>2-5 years</option>
-            <option>5-10 years</option>
-            <option>10-15 years</option>
-            <option>15-20 years</option>
-            <option>20 - 25 Years</option>
-            <option>25 + Years</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td>Function - Experience:</td>
-        <td>
-          <select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">
-            <option>group</option>
-          </select></td>
-      </tr>
-      <tr>
-        <td>Industry - Experience:</td>
-        <td>
-          <select name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
-            <option>sample</option>
-          </select></td>
-      </tr>
-      <tr>
-        <td>Work Authorization:</td>
-        <td>
-          <select name="employment_detail[work_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.work_authorization %>">
-            <option>sample</option>
-          </select></td>
-      </tr>
-      <tr>
-        <td>Geographic - Experience:</td>
-        <td>
-          <select name="employment_detail[geographic_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.geographic_authorization %>">
-            <option>sample</option>
-          </select></td>
-      </tr>
-      <tr>
-        <td>Years of Supervisory Work Experience:</td>
-        <td>
-          <select name="employment_detail[years_supervisor_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_supervisor_exp %>">
-            <option>Less than 2 years</option>
-            <option>2-5 years</option>
-            <option>5-10 years</option>
-            <option>10-15 years</option>
-            <option>15-20 years</option>
-            <option>20 - 25 Years</option>
-            <option>25 + Years</option>
-          </select></td>
-      </tr>
-      <tr>
-        <td>Salary prior to MBA (per annum):</td>
-        <td>
-          <select name="employment_detail[salary_mba]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.salary_mba %>">
-            <option>Below $10,000</option>
-            <option>$10,000 - $14,999</option>
-            <option>$15,000 - $19,999</option>
-            <option>$20,000 - $24,999</option>
-            <option>$25,000 - $29,999</option>
-            <option>$30,000 - $34,999</option>
-            <option>$35,000 - $39,999</option>
-            <option>$40,000 - $44,999</option>
-            <option>$45,000 - $49,999</option>
-            <option>$50,000 above</option>
-          </select></td>
-      </tr>
-      <tr>
-        <td>Sabbatical?:</td>
-        <td>
-          <select name="employment_detail[sabbatical]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.sabbatical %>">
-            <option>Yes</option>
-            <option>No</option>
-          </select></td>
-      </tr>
-      <tr>
-        <td>Name of Company before MBA:</td>
-        <td>
-          <input id="company-name" name="employment_detail[company_before_mba]" value="<%= @employment_detail.company_before_mba %>" type="text" class="input-xlarge">
-        </td>
-      </tr>
-      <tr>
-        <td>Location:</td>
-        <td>
-          <input id="company-name" name="employment_detail[company_location]" value="<%= @employment_detail.company_location %>" type="text" class="input-xlarge">
-        </td>
-      </tr>
-      <tr>
-        <td>Job title / designation:</td>
-        <td>
-          <input id="company-name" name="employment_detail[job_title]" value="<%= @employment_detail.job_title %>" type="text" class="input-xlarge">
-        </td>
-      </tr>
-      <tr>
-        <td>Bachelor's Degree:</td>
-        <td>
-          <input id="company-name" name="employment_detail[degree]" value="<%= @employment_detail.degree %>" type="text" class="input-xlarge">
-        </td>
-      </tr>
-      <tr>
-        <td>School:</td>
-        <td>
-          <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.school %>" type="text" class="input-xlarge">
-        </td>
-      </tr>
-    </table>
+    <tr>
+      <td>Total Years of Work Experience:</td>
+      <td>
+        <select name="employment_detail[years_ofexp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_ofexp %>">
+          <option>Less than 2 years</option>
+          <option>2-5 years</option>
+          <option>5-10 years</option>
+          <option>10-15 years</option>
+          <option>15-20 years</option>
+          <option>20 - 25 Years</option>
+          <option>25 + Years</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Function - Experience:</td>
+      <td>
+        <select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">
+          <option>group</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>Industry - Experience:</td>
+      <td>
+        <select name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
+          <option>sample</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>Work Authorization:</td>
+      <td>
+        <select name="employment_detail[work_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.work_authorization %>">
+          <option>sample</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>Geographic - Experience:</td>
+      <td>
+        <select name="employment_detail[geographic_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.geographic_authorization %>">
+          <option>sample</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>Years of Supervisory Work Experience:</td>
+      <td>
+        <select name="employment_detail[years_supervisor_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_supervisor_exp %>">
+          <option>Less than 2 years</option>
+          <option>2-5 years</option>
+          <option>5-10 years</option>
+          <option>10-15 years</option>
+          <option>15-20 years</option>
+          <option>20 - 25 Years</option>
+          <option>25 + Years</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>Salary prior to MBA (per annum):</td>
+      <td>
+        <select name="employment_detail[salary_mba]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.salary_mba %>">
+          <option>Below $10,000</option>
+          <option>$10,000 - $14,999</option>
+          <option>$15,000 - $19,999</option>
+          <option>$20,000 - $24,999</option>
+          <option>$25,000 - $29,999</option>
+          <option>$30,000 - $34,999</option>
+          <option>$35,000 - $39,999</option>
+          <option>$40,000 - $44,999</option>
+          <option>$45,000 - $49,999</option>
+          <option>$50,000 above</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>Sabbatical?:</td>
+      <td>
+        <select name="employment_detail[sabbatical]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.sabbatical %>">
+          <option>Yes</option>
+          <option>No</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td>Name of Company before MBA:</td>
+      <td>
+        <input id="company-name" name="employment_detail[company_before_mba]" value="<%= @employment_detail.company_before_mba %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Location:</td>
+      <td>
+        <input id="company-name" name="employment_detail[company_location]" value="<%= @employment_detail.company_location %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Job title / designation:</td>
+      <td>
+        <input id="company-name" name="employment_detail[job_title]" value="<%= @employment_detail.job_title %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Bachelor's Degree:</td>
+      <td>
+        <input id="company-name" name="employment_detail[degree]" value="<%= @employment_detail.degree %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>School:</td>
+      <td>
+        <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.school %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+  </table>
 </span>
    <span>
      <button id="education-submit" name="education-submit" class="btn btn-info">Update Professional Experience</button>
