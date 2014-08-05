@@ -1,5 +1,6 @@
 <%= javascript_include_tag 'table2CSV' %>
 
+
 <script>
     window.onload = function () {
         $('#page-title').text('Application Registry');
@@ -26,10 +27,29 @@
             });
         });
     }
+    $(document).ready(function (e) {
+
+
+
+        $('.top').hide();
+        $('#leftcolumn').hide();
+         
+
+    })
 </script>
 
+    <style>
+    table, td, th {
+        border: 1px solid green;
+    }
+
+    th {
+        background-color: green !important;
+        color: white;
+    }
+</style>
 <br/>
-<div class="alert alert-info row-fluid">
+<div class="alert alert-info row-fluid" style="width: auto;">
   <div class="span8">
     <p style="position: relative; top: 5px;">Deleted Applications Are Not Included</p>
   </div>
@@ -38,67 +58,67 @@
   </div>
 
 </div>
-
-<table id="result-table" class="table table-striped">
+<div style="overflow-y: auto; overflow-x: auto; width: auto; height: auto;" >
+<table id="result-table" class="table table-striped" >
   <tr>
-    <td>Application ID</td>
-    <td>Date Created</td>
-    <td>Date Updated</td>
-    <td>Status</td>
-    <td>Title</td>
-    <td>First Name</td>
-    <td>Middle Name</td>
-    <td>Last Name</td>
-    <td>Name on Badge</td>
-    <td>Gender</td>
-    <td>DOB</td>
-    <td>Citizenship</td>
-    <td>Civil Status</td>
-    <td>Medications Taken</td>
-    <td>Address 1</td>
-    <td>Address 2</td>
-    <td>City</td>
-    <td>State/Province</td>
-    <td>Country</td>
-    <td>Post Code</td>
-    <td>E-Mail</td>
-    <td>Home Phone</td>
-    <td>Mobile Phone</td>
-    <td>Company Name</td>
-    <td>Work Address</td>
-    <td>Work Phone</td>
-    <td>Word Fax Number</td>
-    <td>Work Industry</td>
-    <td>Company Type</td>
-    <td>Position</td>
-    <td>Course(if student)</td>
-    <td>Position Level</td>
-    <td>Job Responsibilities</td>
-    <td>Employment Start</td>
-    <td>Employment End</td>
-    <td>Years Management Exp</td>
-    <td>Years Work Experience</td>
-    <td>Last School Attended</td>
-    <td>Program</td>
-    <td>Degree</td>
-    <td>Address</td>
-    <td>Date Started</td>
-    <td>Date Ended</td>
-    <td>Highest School Attended</td>
-    <td>Program</td>
-    <td>Degree</td>
-    <td>Address</td>
-    <td>Date Started</td>
-    <td>Date Ended</td>
-    <td>Harnessing Banking and Financial Markets</td>
-    <td>Realizing ASEAN’s Full Human Capital Potential </td>
-    <td>Strengthening Connectivity</td>
-    <td>Strengthening Leadership and Governance</td>
-    <td>Building A Resilient ASEAN Economic Community</td>
-    <td>Part of the group?</td>
-    <td>Group Name</td>
-    <td>Organization Name</td>
-    <td>Alumni or not</td>
+    <th>Application ID</th>
+    <th>Date Created</th>
+    <th>Date Updated</th>
+    <th>Status</th>
+    <th>Title</th>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Last Name</th>
+    <th>Name on Badge</th>
+    <th>Gender</th>
+    <th>DOB</th>
+    <th>Citizenship</th>
+    <th>Civil Status</th>
+    <th>Medications Taken</th>
+    <th>Address 1</th>
+    <th>Address 2</th>
+    <th>City</th>
+    <th>State/Province</th>
+    <th>Country</th>
+    <th>Post Code</th>
+    <th>E-Mail</th>
+    <th>Home Phone</th>
+    <th>Mobile Phone</th>
+    <th>Company Name</th>
+    <th>Work Address</th>
+    <th>Work Phone</th>
+    <th>Word Fax Number</th>
+    <th>Work Industry</th>
+    <th>Company Type</th>
+    <th>Position</th>
+    <th>Course(if student)</th>
+    <th>Position Level</th>
+    <th>Job Responsibilities</th>
+    <th>Employment Start</th>
+    <th>Employment End</th>
+    <th>Years Management Exp</th>
+    <th>Years Work Experience</th>
+    <th>Last School Attended</th>
+    <th>Program</th>
+    <th>Degree</th>
+    <th>Address</th>
+    <th>Date Started</th>
+    <th>Date Ended</th>
+    <th>Highest School Attended</th>
+    <th>Program</th>
+    <th>Degree</th>
+    <th>Address</th>
+    <th>Date Started</th>
+    <th>Date Ended</th>
+    <th>Harnessing Banking and Financial Markets</th>
+    <th>Realizing ASEAN’s Full Human Capital Potential </th>
+    <th>Strengthening Connectivity</th>
+    <th>Strengthening Leadership and Governance</th>
+    <th>Building A Resilient ASEAN Economic Community</th>
+    <th>Part of the group?</th>
+    <th>Group Name</th>
+    <th>Organization Name</th>
+    <th>Alumni or not</th>
   </tr>
   <% @online_applications.each do |online_application| %>
       <% if (online_application.personal_detail.present? && online_application.employment_detail.present? && online_application.education_detail.present?) %>
@@ -165,3 +185,4 @@
       <% end %>
   <% end %>
 </table>
+</div>
