@@ -1,17 +1,17 @@
 /* Patricks Stylesheet*/
 
 * {
-  font-family:Calibri;
+  font-family: Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
 }
 
 html {
-  background-color: #0d112e;
+  background-color: rgb(52, 46, 46);
 }
 
 .main {
   margin:0 auto 0 auto;
   width: 1000px;
-  height:1100px;
+  height:980px;
   background-color:white;
   margin-top: -1px;
   background-color: #f9f9f9;
@@ -62,9 +62,11 @@ html {
 
 .leftcolumn {
   position: absolute;
-  height: 1002px;
+  height:917px;
   width: 250px;
-  background-color: #3a5c8d;
+  background-color: #511212;
+  margin-top: -35px;
+  box-shadow: 0 0 15px black;
 }
 
 .leftcolumn ul {
@@ -72,7 +74,7 @@ html {
 }
 
 .leftcolumn a {
-  font-size:17px;
+  font-size:15px;
   display:block;
   width:180px;
   color:black;
@@ -84,9 +86,10 @@ html {
 }
 
 .content {
-  margin-left: 280px;
+  margin-left: 265px;
   overflow-y: auto;
-  height:960px;
+  height:910px;
+  width: auto;
 }
 
 .leftcolumn ul li a {
@@ -260,11 +263,11 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 }
 
 .leftcolumn ul li:hover {
-  background-color:rgb(92, 118, 206);
+  background-color:rgb(157, 42, 42);
 }
 
 .leftcolumn ul li a{
-  font-size:17px;
+  font-size:14px;
 }
 
 .leftcolumn ul li a:hover{
@@ -294,22 +297,36 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 }
 
 .changeColor {
-  background-color: #5c76ce;
+  background-color: rgb(157, 42, 42);
 }
 
 .student_table {
-  margin-left: 100px;
   color: black;
   width: 420px;
-  font-size: 16px;
+  font-size: 13px;
+  margin: 0 auto 0 auto;
+  padding: 20px 20px;
+  margin-top: 25px;
 }
 
-.student_table th, td {
-  border: 1px solid black;
+.student_table td {
+  border-bottom: 1px solid #7d7d7d;
 }
 
 .student_table td:first-child{
   font-weight: bold;
   color: black !important;
-  width: 310px;
+  width: auto;
+}
+
+.student_table tr:last-child{
+  border-bottom: 2px solid black;
+}
+.student_table tr:first-child{
+  border-top: 2px solid black;
+}
+
+.student_table tr:hover {
+  background-color: rgb(182, 179, 179);
+  width: 100%;
 }

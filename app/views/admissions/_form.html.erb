@@ -10,13 +10,13 @@
 <!-- Text input-->
 
 <div class="content">
-<h2 style="margin-top: 40px;border-bottom: 2px solid #3a5c8d;color: #3a5c8d;">Personal
-  Details<a href="#" id="personal_edit_link" style="color: black;font-size: 14px; margin-left: 525px; margin-top: 11px;">[Edit]</a>
+<h2 style="margin-top: 40px;border-bottom: 2px solid #511212;color: #511212;">Personal
+  Details<a href="#" id="personal_edit_link" style="color: black;font-size: 14px; margin-left: 517px; margin-top: 11px;">[Edit]</a>
 
 </h2>
 
 
-<table class="student_table">
+<table class="student_table" cellpadding="3">
 <tr>
   <td>First Name:</td>
   <td>
@@ -57,10 +57,15 @@
 </tr>
 </table>
 
-<h2 style="border-bottom: 2px solid #3a5c8d;color: #3a5c8d;">Mailing Address and Contact
-  Information<a href="#" id="mailing_edit_link" style="color: black;font-size: 14px; margin-left: 305px; margin-top: 11px;padding: 0">[Edit]</a>
+<h2 style="border-bottom: 2px solid #511212;padding-top:30px;color: #511212;">Mailing Address and Contact
+  Information<a href="#" id="mailing_edit_link" style="color: black;
+        font-size: 14px;
+        margin-left: 269px;
+        margin-top: 6px;
+        position: absolute;
+        padding: 0;">[Edit]</a>
 </h2>
-<table class="student_table" border="1">
+<table class="student_table" cellpadding="3">
 <tr>
   <td>Address Line 1:</td>
   <td>
@@ -147,7 +152,7 @@
 </tr>
 </table>
 
-<button id="submit-personal-info" name="submit-personal-info" class="btn btn-info" style="margin: 25px 250px;">Next - Education</button>
+<button id="submit-personal-info" name="submit-personal-info" class="btn" style="margin: 25px 300px;">Next - Education</button>
 </div>
 </div>
 <!-- End Page 1 -->
@@ -155,9 +160,9 @@
 <!--Start Page 2-->
 <div id="page-2">
   <div class="content">
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #3a5c8d;color:#3a5c8d;">Education<a href="#" id="education_edit_link" style="color: black;font-size: 14px; margin-left: 570px; margin-top: 11px;">[Edit]</a>
+    <h2 style="margin-top: 40px;border-bottom: 2px solid #511212;color:#511212;">Education<a href="#" id="education_edit_link" style="color: black;font-size: 14px; margin-left: 578px; margin-top: 11px;">[Edit]</a>
     </h2>
-    <table class="student_table" border="1">
+    <table class="student_table" cellpadding="3">
       <tr>
         <td>Program/Course Title:</td>
         <td>
@@ -223,13 +228,13 @@
     <div class="control-group">
       <label class="control-label" for="submit-education-info-next"></label>
 
-      <div class="controls" style="margin: 30px 100px;">
-        <button id="submit-education-info-back" name="submit-education-info-back" class="btn btn-inverse">Back
+      <div class="controls" style="margin: 30px 135px;">
+        <button id="submit-education-info-back" name="submit-education-info-back" class="btn">Back
           -
           Personal
           Details/Mailing Ad
         </button>
-        <button id="submit-education-info-next" name="submit-education-info-next" class="btn btn-info">Next -
+        <button id="submit-education-info-next" name="submit-education-info-next" class="btn">Next -
           Professional
           Experience
         </button>
@@ -243,9 +248,9 @@
 <div id="page-3">
   <div class="content">
 
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #3a5c8d;color: #3a5c8d;">Professional
-      Experience<a href="#" id="professional_edit_link"  style="color: black;font-size: 14px; margin-left: 450px; margin-top: 11px;">[Edit]</a></h2>
-    <table class="student_table" border="1">
+    <h2 style="margin-top: 40px;border-bottom: 2px solid #511212;color: #511212;">Professional
+      Experience<a href="#" id="professional_edit_link"  style="color: black;font-size: 14px; margin-left: 435px; margin-top: 11px;">[Edit]</a></h2>
+    <table class="student_table" cellpadding="3">
       <tr>
         <td>Total Years of Work Experience: <%= @employment_detail.id %></td>
         <td>
@@ -326,15 +331,14 @@
       </tr>
     </table>
 
-    <div class="control-group" style="margin: 30px 0px;">
+    <div class="control-group" style="margin: 30px 45px;">
       <label class="control-label" for="submit-employment-info-back"></label>
-
       <div class="controls">
-        <button id="submit-employment-info-back" name="submit-employment-info-back" class="btn btn-inverse">Back
+        <button id="submit-employment-info-back" name="submit-employment-info-back" class="btn">Back
           -
           Education
         </button>
-        <button id="submit-employment-info-next" name="submit-employment-info-next" class="btn btn-info">Next -
+        <button id="submit-employment-info-next" name="submit-employment-info-next" class="btn">Next -
           Preferences
         </button>
       </div>
@@ -347,9 +351,9 @@
 <div id="page-4">
   <div class="content">
 
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #3a5c8d;color: #3a5c8d;">Industry -
-      Preference<a href="" style="color: black;font-size: 14px; margin-left: 470px; margin-top: 11px;">[Edit]</a></h2>
-    <table class="student_table" border="1">
+    <h2 style="margin-top: 40px;border-bottom: 2px solid #511212;color: #511212;">Industry -
+      Preference<a href="" style="color: black;font-size: 14px; margin-left: 469px; margin-top: 11px;">[Edit]</a></h2>
+    <table class="student_table" cellpadding="3">
       <tr>
         <td>Industry - Preference:</td>
         <td>
@@ -385,12 +389,12 @@
     <div class="control-group">
       <label class="control-label" for="education-back"></label>
 
-      <div class="controls" style="margin: 30px 175px;">
-        <button id="submit-preferences-info-back" name="submit-preferences-info-back" class="btn btn-inverse">Back
+      <div class="controls" style="margin: 30px 250px;">
+        <button id="submit-preferences-info-back" name="submit-preferences-info-back" class="btn">Back
           -
           Employment
         </button>
-        <button id="education-submit" name="education-submit" class="btn btn-info">Register</button>
+        <button id="education-submit" name="education-submit" class="btn">Register</button>
       </div>
     </div>
   </div>
@@ -399,8 +403,8 @@
 <!-- End Page 4 -->
 <div id="page-5">
   <div class="content">
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #3a5c8d;color: #3a5c8d;">Contact Details</h2>
-    <table class="student_table" border="1">
+    <h2 style="margin-top: 40px;border-bottom: 2px solid #511212;color: #511212;">Contact Details</h2>
+    <table class="student_table" cellpadding="3">
       <tr>
         <td>Current Mobile No:</td>
         <td>
@@ -421,10 +425,10 @@
       </tr>
     </table>
     <div class="controls" style="margin: 30px 190px;">
-      <button id="submit-preferences-info-back" name="submit-preferences-info-back" class="btn btn-inverse">Save
+      <button id="submit-preferences-info-back" name="submit-preferences-info-back" class="btn">Save
         & Continue
       </button>
-      <button id="education-submit" name="education-submit" class="btn btn-info">Upload Resume</button>
+      <button id="education-submit" name="education-submit" class="btn">Upload Resume</button>
     </div>
   </div>
 </div>
@@ -433,8 +437,8 @@
 <!-- Start Page 6 -->
 <div id="page-6">
   <div class="content">
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #3a5c8d;color: #3a5c8d;">Change Password</h2>
-    <table class="student_table">
+    <h2 style="margin-top: 40px;border-bottom: 2px solid #511212;color: #511212;">Change Password</h2>
+    <table class="student_table" cellpadding="3">
       <tr>
         <td>Old Password:</td>
         <td>
@@ -455,7 +459,7 @@
       </tr>
     </table>
     <div class="controls">
-      <button id="education-submit" name="education-submit" class="btn btn-info">Save</button>
+      <button id="education-submit" name="education-submit" class="btn">Save</button>
     </div>
   </div>
 </div>
