@@ -16,6 +16,8 @@ $(document).ready(function (e) {
     $('#aim-alumni-form').hide();
     $('#registration-submission').hide();
 
+
+
     $('#alumni-no').click(function(e) {
         e.preventDefault();
         $('#alumni-question').hide();

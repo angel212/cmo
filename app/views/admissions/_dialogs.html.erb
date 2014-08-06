@@ -6,9 +6,9 @@
 <form id="personal_details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
 <p>
-<table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto">
+<table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto" cellpadding="3">
 <tr>
-  <td>First Name:<%= @online_application.id %></td>
+  <td>First Name:</td>
   <td>
     <input id="first-name" name="personal_detail[first_name]" value="<%= @personal_details.first_name %>" type="text" class="input-xlarge">
   </td>
@@ -318,10 +318,10 @@
 </table>
 
 </form>
-<button id="personal-update" name="personal-update" class="btn btn-info">Update Personal Details
+<button id="personal-update" name="personal-update" style="margin-left: 170px;" class="btn">Update Details
 </button>
-<button id="personal_edit_link_close" name="personal_edit_link_close" class="btn btn-info">Close
-</button>
+<!--<button id="personal_edit_link_close" name="personal_edit_link_close" class="btn">Close-->
+<!--</button>-->
 
 </div>
 
@@ -332,7 +332,7 @@
 <form id="mailing-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
   <span>
-<table style="padding-left: 50px;width: 500;margin: 0 auto 0 auto;">
+<table style="padding-left: 50px;color: #7d7d7d;width: 500;margin: 0 auto 0 auto;" cellpadding="3">
 <tr>
   <td>Address Line 1:</td>
   <td>
@@ -669,17 +669,17 @@
 
 
 </form>
-<button id="mailing-update" name="mailing-update" class="btn btn-info">Update Mailing/Contact Information
+<button id="mailing-update" style="margin-left: 170px;" name="mailing-update" class="btn">Update Details
 </button>
-<button id="cancel_mailing" name="cancel_mailing" class="btn btn-info">Close
-</button>
+<!--<button id="cancel_mailing" name="cancel_mailing" class="btn">Close-->
+<!--</button>-->
 </div>
 <!-- -->
 <div id="education_dialog" title="Educational Details">
   <span>
 <form id="education-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
-  <table style="padding-left: 50px;width: 565;margin: 0 auto 0 auto;">
+  <table style="padding-left: 50px;width: 565;color: #7d7d7d;margin: 0 auto 0 auto;" cellpadding="3">
     <tr>
       <td>Program/Course Title:</td>
       <td>
@@ -801,10 +801,10 @@
 
   </span>
   <span>
-    <button id="education-details-submit" name="education-details-submit" class="btn btn-info">Update Education Details</button>
-     <button id="cancel_education" name="cancel_education" class="btn btn-info">
-       Cancel
-     </button>
+    <button id="education-details-submit" style="margin-left: 200px;" name="education-details-submit" class="btn">Update Details</button>
+     <!--<button id="cancel_education" name="cancel_education" class="btn">-->
+       <!--Cancel-->
+     <!--</button>-->
   </span>
 </div>
 <!-- -->
@@ -812,7 +812,7 @@
 
   <span>
      <form id="professional-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-       <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto">
+       <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto" cellpadding="3">
          <tr>
            <td>Total Years of Work Experience:</td>
            <td>
@@ -932,26 +932,57 @@
      </form>
   </span>
   <span>
-    <button id="professional-submit" name="professional-submit" class="btn btn-info">Update Professional Experience</button>
-     <button id="cancel_professional" name="cancel_professional" class="btn btn-info">
-       Cancel
-     </button>
+    <button id="professional-submit" style="margin-left: 220px;" name="professional-submit" class="btn">Update Details</button>
+     <!--<button id="cancel_professional" name="cancel_professional" class="btn">-->
+       <!--Cancel-->
+     <!--</button>-->
   </span>
 
 </div>
 
 <div id="preferences_dialog" title="My Preferences">
-
+<span>
   <form id="professional-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-
+    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto" cellpadding="3">
+      <tr>
+        <td>Industry - Preference:</td>
+        <td>
+          <input id="" name="" value="<%= @preference.industry %>" type="text" class="input-xlarge">
+        </td>
+      </tr>
+      <tr>
+        <td>Most Important Criteria for Choosing a Job:</td>
+        <td>
+          <input id="" name="" value="<%= @preference.criteria %>" type="text" class="input-xlarge">
+        </td>
+      </tr>
+      <tr>
+        <td>Desired job titles:</td>
+        <td>
+          <input id="" name="" value="<%= @preference.job_title %>" type="text" class="input-xlarge">
+        </td>
+      </tr>
+      <tr>
+        <td>Desired Salary after MBA (per annum):</td>
+        <td>
+          <input id="" name="" value="<%= @preference.salary_after_mba %>" type="text" class="input-xlarge">
+        </td>
+      </tr>
+      <tr>
+        <td>Candidate Job Reporting Status:</td>
+        <td>
+          <input id="" name="" value="<%= @preference.candidate_job_status %>" type="text" class="input-xlarge">
+        </td>
+      </tr>
+    </table>
   </form>
-
+</span>
     <span>
-    <button id="preferences-submit" name="preferences-submit" class="btn btn-info">
-      Update My Preferences
+    <button id="preferences-submit" style="margin-left: 230px;" name="preferences-submit" class="btn">
+      Update Details
     </button>
-     <button id="cancel_preferences" name="cancel_preferences" class="btn btn-info">
-       Cancel
-     </button>
+     <!--<button id="cancel_preferences" name="cancel_preferences" class="btn">-->
+       <!--Cancel-->
+     <!--</button>-->
     </span>
 </div>

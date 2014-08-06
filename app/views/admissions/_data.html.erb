@@ -14,16 +14,7 @@
                     modal: true,
                     autoOpen: false,
                     width: 500,
-                    draggable: false,
-                    buttons: {
-                        "Update Profile": function() {
-                            $('#application-form').submit();
-                        },
-                        "Close": function(){
-                            $(this).dialog('close');
-                        }
-
-                    }
+                    draggable: false
                 }
         );
 
@@ -31,18 +22,9 @@
                 {
                     modal: true,
                     autoOpen: false,
-                    height: 600,
+                    height: 400,
                     width: 500,
-                    draggable: false,
-                    buttons: {
-                        "Update Profile": function() {
-                            $('#application-form').submit();
-                        },
-                        "Close": function(){
-                            $(this).dialog('close');
-                        }
-
-                    }
+                    draggable: false
                 }
         );
 
@@ -50,18 +32,9 @@
                 {
                     modal: true,
                     autoOpen: false,
-                    height: 600,
-                    width: 750,
-                    draggable: false,
-                    buttons: {
-                        "Update Profile": function() {
-                            $('#application-form').submit();
-                        },
-                        "Close": function(){
-                            $(this).dialog('close');
-                        }
-
-                    }
+                    height: 400,
+                    width: 550,
+                    draggable: false
                 }
         );
 
@@ -69,37 +42,19 @@
                 {
                     modal: true,
                     autoOpen: false,
-                    height: 600,
-                    width: 750,
-                    draggable: false,
-                    buttons: {
-                        "Update Profile": function() {
-                            $('#application-form').submit();
-                        },
-                        "Close": function(){
-                            $(this).dialog('close');
-                        }
-
-                    }
+                    height: 400,
+                    width: 600,
+                    draggable: false
                 }
         );
 
-        $("#industry_dialog").dialog(
+        $("#preferences_dialog").dialog(
                 {
                     modal: true,
                     autoOpen: false,
-                    height: 600,
-                    width: 500,
-                    draggable: false,
-                    buttons: {
-                        "Update Profile": function() {
-                            $('#application-form').submit();
-                        },
-                        "Close": function(){
-                            $(this).dialog('close');
-                        }
-
-                    }
+                    height: 300,
+                    width: 610,
+                    draggable: false
                 }
         );
     });
@@ -129,8 +84,8 @@
             $("#professional_dialog").dialog("open");
         });
 
-        $("#industry_edit_link").click(function () {
-            $("#industry-dialog").dialog("open");
+        $("#preference_edit_link").click(function () {
+            $("#preferences_dialog").dialog("open");
         });
 
     });
@@ -153,8 +108,8 @@
         $("#cancel_professional").click(function () {
             $("#professional_dialog").dialog("close");
         });
-        $("#industry_edit_link").click(function () {
-            $("#industry_dialog").dialog("close");
+        $("#cancel_preferences").click(function () {
+            $("#preferences_dialog").dialog("close");
         });
     });
 </script>
