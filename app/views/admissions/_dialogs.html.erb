@@ -26,7 +26,7 @@
 </tr>
 <tr>
   <td>Date of Birth:</td>
-  <td><p class="data-placeholder"><%= @personal_details.dob.strftime('%d/%m/%Y') %></p></td>
+  <td><input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>"></td>
 </tr>
 <tr>
   <td>Gender:</td>
@@ -894,4 +894,88 @@
   </table>
 </span>
 
+</div>
+
+<div id="industry_dialog" title="Industry - Preference Info">
+  <table class="student_table" style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto" cellpadding="3">
+    <tr>
+      <td>Total Years of Work Experience:</td>
+      <td>
+        <input id="company-name" name="employment_detail[years_ofexp]" value="<%= @employment_detail.years_ofexp %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Function - Experience:</td>
+      <td>
+        <input id="company-name" name="employment_detail[function_exp]" value="<%= @employment_detail.function_exp %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Industry - Experience:</td>
+      <td>
+        <input id="company-name" name="employment_detail[industry_exp]" value="<%= @employment_detail.industry_exp %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Work Authorization:</td>
+      <td>
+        <input id="company-name" name="employment_detail[work_authorization]" value="<%= @employment_detail.work_authorization %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Geographic - Experience:</td>
+      <td>
+        <input id="company-name" name="employment_detail[geographic_authorization]" value="<%= @employment_detail.geographic_authorization %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Years of Supervisory Work Experience:</td>
+      <td>
+        <input id="company-name" name="employment_detail[years_supervisor_exp]" value="<%= @employment_detail.years_supervisor_exp %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Salary prior to MBA (per annum):</td>
+      <td>
+        <input id="company-name" name="employment_detail[salary_mba]" value="<%= @employment_detail.salary_mba %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Sabbatical?:</td>
+      <td>
+        <input id="company-name" name="employment_detail[sabbatical]" value="<%= @employment_detail.sabbatical %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Name of Company before MBA:</td>
+      <td>
+        <input id="company-name" name="employment_detail[company_before_mba]" value="<%= @employment_detail.company_before_mba %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Location:</td>
+      <td>
+        <input id="company-name" name="employment_detail[company_location]" value="<%= @employment_detail.company_location %>" type="text" class="input-xlarge">
+
+      </td>
+    </tr>
+    <tr>
+      <td>Job title / designation:</td>
+      <td>
+        <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.job_title %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>Bachelor's Degree:</td>
+      <td>
+        <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.degree %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+    <tr>
+      <td>School:</td>
+      <td>
+        <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.school %>" type="text" class="input-xlarge">
+      </td>
+    </tr>
+  </table>
 </div>
