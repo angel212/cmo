@@ -126,7 +126,23 @@ $(document).ready(function (e) {
         e.preventDefault();
         $('#application-form').submit();
     })
-
+//    submit button for the dialog boxes
+    $('#personal-update').click(function (e) {
+       e.preventDefault();
+        $('#personal_details-form').submit();
+    })
+    $('#mailing-update').click(function (e) {
+        e.preventDefault();
+        $('#mailing-details-form').submit();
+    })
+    $('#education-details-submit').click(function (e) {
+        e.preventDefault();
+        $('#education-details-form').submit();
+    })
+    $('#professional-submit').click(function (e) {
+        e.preventDefault();
+        $('#professional-details-form').submit();
+    })
 })
 
 function showTerminationDate() {
