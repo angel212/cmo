@@ -13,8 +13,7 @@
                 {
                     modal: true,
                     autoOpen: false,
-                    height: 500,
-                    width: 750,
+                    width: 500,
                     draggable: false
                 }
         );
@@ -23,8 +22,8 @@
                 {
                     modal: true,
                     autoOpen: false,
-                    height: 600,
-                    width: 750,
+                    height: 400,
+                    width: 500,
                     draggable: false
                 }
         );
@@ -33,8 +32,8 @@
                 {
                     modal: true,
                     autoOpen: false,
-                    height: 600,
-                    width: 750,
+                    height: 400,
+                    width: 550,
                     draggable: false
                 }
         );
@@ -43,12 +42,21 @@
                 {
                     modal: true,
                     autoOpen: false,
-                    height: 600,
-                    width: 750,
+                    height: 400,
+                    width: 600,
                     draggable: false
                 }
         );
 
+        $("#preferences_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    height: 300,
+                    width: 610,
+                    draggable: false
+                }
+        );
     });
 
 
@@ -67,11 +75,17 @@
         $("#mailing_edit_link").click(function () {
             $("#mailing_address").dialog("open");
         });
+
         $("#education_edit_link").click(function () {
             $("#education_dialog").dialog("open");
         });
+
         $("#professional_edit_link").click(function () {
             $("#professional_dialog").dialog("open");
+        });
+
+        $("#preference_edit_link").click(function () {
+            $("#preferences_dialog").dialog("open");
         });
 
     });
@@ -93,6 +107,9 @@
         });
         $("#cancel_professional").click(function () {
             $("#professional_dialog").dialog("close");
+        });
+        $("#cancel_preferences").click(function () {
+            $("#preferences_dialog").dialog("close");
         });
     });
 </script>
