@@ -27,21 +27,16 @@
 <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
     <li class="active"><a href="#tab1" data-toggle="tab">Basic Information</a></li>
-    <li><a href="#tab2" data-toggle="tab">Supplemental Information</a></li>
     <li><a href="#tab3" data-toggle="tab">Requirements</a></li>
 
   </ul>
   <div class="tab-content" style="margin: 35px 110px;">
-    <div class="tab-pane active" id="tab1">
-      <div id="print-details" style="overflow-y: auto; height: 800px; margin-left: 120px;">
+    <div class="tab-pane active" id="tab1" style=" height: 700px; width: 850px; margin-left: 20px; overflow-y: auto;">
+      <div id="print-details" >
         <%= render :partial => 'print' %>
       </div>
     </div>
-    <div class="tab-pane" id="tab2">
-      <div id="supplemental-details">
-        <%= render :partial => 'supplemental_detail' %>
-      </div>
-    </div>
+
     <div class="tab-pane" id="tab3">
       <div id="requirements">
         <%= render :partial => 'requirements' %>
