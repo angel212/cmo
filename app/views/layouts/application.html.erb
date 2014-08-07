@@ -55,7 +55,8 @@
       <div style="height:290px;">
       <p style="padding-left: 40px; font-weight: bold;  font-size: 14px;padding-top: 40px;"><br/><span style="color:white;">
         Welcome ! <br>
-        <%	 if params['id'].present?  %>
+
+        <%	 if params['id'].present? and @online_application_form.blank?  %>
         <%=@online_application.personal_detail.last_name %>, <%=@online_application.personal_detail.first_name %>
 
             <%  end %></span><br/><img src="" /></p><br/>
