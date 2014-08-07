@@ -20,6 +20,11 @@ $(document).ready(function (e) {
         $("body").scrollTop(0);
     });
 
+    $('#mailing_edit_link').click(function(e) {
+        return false;
+        e.preventDefault();
+    });
+
     $('#alumni-no').click(function(e) {
         e.preventDefault();
         $('#alumni-question').hide();
