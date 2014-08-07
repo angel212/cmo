@@ -320,8 +320,8 @@
 </form>
 <button id="personal-update" name="personal-update" style="margin-left: 170px;" class="btn">Update Details
 </button>
-<!--<button id="personal_edit_link_close" name="personal_edit_link_close" class="btn">Close-->
-<!--</button>-->
+<button id="personal_edit_link_close" name="personal_edit_link_close" class="btn">Close
+</button>
 
 </div>
 
@@ -671,8 +671,8 @@
 </form>
 <button id="mailing-update" style="margin-left: 170px;" name="mailing-update" class="btn">Update Details
 </button>
-<!--<button id="cancel_mailing" name="cancel_mailing" class="btn">Close-->
-<!--</button>-->
+<button id="cancel_mailing" name="cancel_mailing" class="btn">Close
+</button>
 </div>
 <!-- -->
 <div id="education_dialog" title="Educational Details">
@@ -802,9 +802,9 @@
   </span>
   <span>
     <button id="education-details-submit" style="margin-left: 200px;" name="education-details-submit" class="btn">Update Details</button>
-     <!--<button id="cancel_education" name="cancel_education" class="btn">-->
-       <!--Cancel-->
-     <!--</button>-->
+     <button id="cancel_education" name="cancel_education" class="btn">
+       Cancel
+     </button>
   </span>
 </div>
 <!-- -->
@@ -933,9 +933,9 @@
   </span>
   <span>
     <button id="professional-submit" style="margin-left: 220px;" name="professional-submit" class="btn">Update Details</button>
-     <!--<button id="cancel_professional" name="cancel_professional" class="btn">-->
-       <!--Cancel-->
-     <!--</button>-->
+     <button id="cancel_professional" name="cancel_professional" class="btn">
+       Cancel
+     </button>
   </span>
 
 </div>
@@ -947,41 +947,42 @@
       <tr>
         <td>Industry - Preference:</td>
         <td>
-          <input id="" name="" value="<%= @preference.industry %>" type="text" class="input-xlarge">
+          <input id="" name="preference[industry]" value="<%= @preference.industry %>" type="text" class="input-xlarge">
         </td>
       </tr>
       <tr>
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
-          <input id="" name="" value="<%= @preference.criteria %>" type="text" class="input-xlarge">
+          <input id="" name="preference[criteria]" value="<%= @preference.criteria %>" type="text" class="input-xlarge">
         </td>
       </tr>
       <tr>
         <td>Desired job titles:</td>
         <td>
-          <input id="" name="" value="<%= @preference.job_title %>" type="text" class="input-xlarge">
+          <input id="" name="preference[job_title]" value="<%= @preference.job_title %>" type="text" class="input-xlarge">
         </td>
       </tr>
       <tr>
         <td>Desired Salary after MBA (per annum):</td>
         <td>
-          <input id="" name="" value="<%= @preference.salary_after_mba %>" type="text" class="input-xlarge">
+          <input id="" name="preference[salary_after_mba]" value="<%= @preference.salary_after_mba %>" type="text" class="input-xlarge">
         </td>
       </tr>
       <tr>
         <td>Candidate Job Reporting Status:</td>
         <td>
-          <input id="" name="" value="<%= @preference.candidate_job_status %>" type="text" class="input-xlarge">
+          <input id="" name="preference[candidate_job_status]" value="<%= @preference.candidate_job_status %>" type="text" class="input-xlarge">
         </td>
       </tr>
     </table>
+    <span>
     <button id="preferences-submit" style="margin-left: 230px;" name="preferences-submit" class="btn">
       Update Details
     </button>
-
+      <button id="cancel_preferences" name="cancel_preferences" class="btn">
+        Cancel
+      </button>
+</span>
   </form>
     </span>
-     <!--<button id="cancel_preferences" name="cancel_preferences" class="btn">-->
-       <!--Cancel-->
-     <!--</button>-->
 </div>
