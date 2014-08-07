@@ -152,6 +152,11 @@ $(document).ready(function (e) {
         e.preventDefault();
         $('#professional-details-form').submit();
     })
+
+    $('#preferences-submit').click(function (e) {
+        e.preventDefault();
+        $('#preference-details-form').submit();
+    })
 })
 
 function showTerminationDate() {
