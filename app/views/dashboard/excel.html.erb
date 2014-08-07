@@ -37,17 +37,61 @@
 
     })
 </script>
+<script>
 
-    <style>
-    table, td, th {
-        border: 1px solid green;
-    }
+    function loading(){
+        $('#leftcolumn').hide();
+        $('#top').style.marginLeft = "-50px"
+    };
+    window.onload=loading();
 
-    th {
-        background-color: green !important;
-        color: white;
-    }
-</style>
+</script>
+<!-- **********************************PATRICKS SCRIPT*********************************************************************** -->
+
+<link rel="stylesheet" type="text/css" href="/assets/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="/assets/dataTables.fixedColumns.css">
+<link rel="stylesheet" type="text/css" href="/assets/shCore.css">
+<link rel="stylesheet" type="text/css" href="/assets/demo1.css">
+
+<script type="text/javascript" language="javascript" src="/assets/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/dataTables.fixedColumns.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/shCore.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/demo.js"></script>
+<script type="text/javascript" language="javascript" class="init">
+
+
+    $(document).ready(function() {
+        // Setup - add a text input to each footer cell
+        $('#example tfoot th').each( function () {
+            var title = $('#example thead th').eq( $(this).index() ).text();
+            $(this).html( '<input type="hidden" placeholder="Search '+title+'" />' );
+        } );
+
+        // DataTable
+        var table = $('#example').DataTable( {
+            scrollY:        "300px",
+            scrollX:        true,
+            scrollCollapse: true,
+            paging:         false
+        } );
+
+        // Apply the filter
+        table.columns().indexes().each( function (idx) {
+            $( 'input', table.column( idx ).footer() ).on( 'keyup change', function () {
+                table
+                        .column( idx )
+                        .search( this.value )
+                        .draw();
+            } );
+        } );
+
+        new $.fn.dataTable.FixedColumns( table );
+    } );
+</script>
+
+<!-- -->
+
 <br/>
 <div class="alert alert-info row-fluid" style="width: auto;">
   <div class="span8">
@@ -60,16 +104,14 @@
 
 </div>
 <div style="overflow-y: auto; overflow-x: auto; width: auto; height: auto;" >
-<table id="result-table" class="table table-striped" >
-  <tr>
-    <th>Application ID</th>
+  <table class="stripe row-border order-column" id="example" cellspacing="0" width="100%">
+    <thead>
+    <tr style="background-color: #00228d;color:#ffffff;">
+    <th>Name</th>
     <th>Date Created</th>
     <th>Date Updated</th>
     <th>Status</th>
     <th>Title</th>
-    <th>First Name</th>
-    <th>Middle Name</th>
-    <th>Last Name</th>
     <th>Name on Badge</th>
     <th>Gender</th>
     <th>DOB</th>
@@ -121,17 +163,76 @@
     <th>Organization Name</th>
     <th>Alumni or not</th>
   </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Date Created</th>
+      <th>Date Updated</th>
+      <th>Status</th>
+      <th>Title</th>
+      <th>Name on Badge</th>
+      <th>Gender</th>
+      <th>DOB</th>
+      <th>Citizenship</th>
+      <th>Civil Status</th>
+      <th>Medications Taken</th>
+      <th>Address 1</th>
+      <th>Address 2</th>
+      <th>City</th>
+      <th>State/Province</th>
+      <th>Country</th>
+      <th>Post Code</th>
+      <th>E-Mail</th>
+      <th>Home Phone</th>
+      <th>Mobile Phone</th>
+      <th>Company Name</th>
+      <th>Work Address</th>
+      <th>Work Phone</th>
+      <th>Word Fax Number</th>
+      <th>Work Industry</th>
+      <th>Company Type</th>
+      <th>Position</th>
+      <th>Course(if student)</th>
+      <th>Position Level</th>
+      <th>Job Responsibilities</th>
+      <th>Employment Start</th>
+      <th>Employment End</th>
+      <th>Years Management Exp</th>
+      <th>Years Work Experience</th>
+      <th>Last School Attended</th>
+      <th>Program</th>
+      <th>Degree</th>
+      <th>Address</th>
+      <th>Date Started</th>
+      <th>Date Ended</th>
+      <th>Highest School Attended</th>
+      <th>Program</th>
+      <th>Degree</th>
+      <th>Address</th>
+      <th>Date Started</th>
+      <th>Date Ended</th>
+      <th>Harnessing Banking and Financial Markets</th>
+      <th>Realizing ASEAN’s Full Human Capital Potential </th>
+      <th>Strengthening Connectivity</th>
+      <th>Strengthening Leadership and Governance</th>
+      <th>Building A Resilient ASEAN Economic Community</th>
+      <th>Part of the group?</th>
+      <th>Group Name</th>
+      <th>Organization Name</th>
+      <th>Alumni or not</th>
+    </tr>
+    </tfoot>
+    <tbody>
   <% @online_applications.each do |online_application| %>
       <% if (online_application.personal_detail.present? && online_application.employment_detail.present? && online_application.education_detail.present?) %>
           <tr>
-            <td><% if (online_application.supplemental_detail.try(:group) == "Yes") %><%= online_application.id.to_s + "G" %><% else %><%= online_application.id %></td><% end %>
+            <td><%= online_application.personal_detail.last_name %>, <%= online_application.personal_detail.first_name %> <%= online_application.personal_detail.middle_name %></td>
             <td><%= online_application.created_at.strftime('%m/%d/%Y %H:%M') %></td>
             <td><%= online_application.updated_at.strftime('%m/%d/%Y %H:%M') %></td>
             <td><%= OnlineApplicationForm.get_status(online_application.status).capitalize %></td>
             <td><%= online_application.personal_detail.title %></td>
-            <td><%= online_application.personal_detail.first_name %></td>
-            <td><%= online_application.personal_detail.middle_name %></td>
-            <td><%= online_application.personal_detail.last_name %></td>
             <td><%= online_application.personal_detail.badge_name %></td>
             <td><%= online_application.personal_detail.gender %></td>
             <td><%= online_application.personal_detail.dob %></td>
@@ -185,5 +286,6 @@
           </tr>
       <% end %>
   <% end %>
+    </tbody>
 </table>
 </div>
