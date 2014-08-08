@@ -3,8 +3,8 @@
 
 <script>
     window.onload = function () {
-        $('#page-title').text('Application Registry');
-        $('#result-table').each(function () {
+        $('#leftcolumn').hide();
+        $('#example').each(function () {
             var $table = $(this);
 
             var $button = $("<a download=\"download.csv\" class='btn btn-success'>");
@@ -27,15 +27,6 @@
             });
         });
     }
-    $(document).ready(function (e) {
-
-
-
-        $('.top').hide();
-        $('#leftcolumn').hide();
-         
-
-    })
 </script>
 <script>
 
@@ -133,8 +124,12 @@
   </tr>
   <% @online_applications.each do |online_application| %>
       <% if (online_application.personal_detail.present? && online_application.employment_detail.present? && online_application.education_detail.present?) %>
-          <tr>
-            <td><%= online_application.personal_detail.last_name %>, <%= online_application.personal_detail.first_name %> <%= online_application.personal_detail.middle_name %></td>
+<%	 $name = online_application.personal_detail.last_name
+       #$name += online_application.personal_detail.first_name
+       #$name += online_application.personal_detail.middle_name
+%>
+            <tr>
+            <td><%=  link_to $name, online_application_form_path(online_application.personal_detail.id) %></td>
             <td><%= online_application.created_at.strftime('%m/%d/%Y %H:%M') %></td>
             <td><%= online_application.updated_at.strftime('%m/%d/%Y %H:%M') %></td>
             <td><%= OnlineApplicationForm.get_status(online_application.status).capitalize %></td>
