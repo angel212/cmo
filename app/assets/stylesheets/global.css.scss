@@ -71,6 +71,7 @@ html {
 
 .leftcolumn ul {
   list-style-type:none;
+  margin-left: 0px;
 }
 
 .leftcolumn a {
@@ -100,7 +101,7 @@ html {
 
 .nav1 li a {
   text-decoration:none;
-  color:#ffffff;
+  color:black;
   padding:21px;
 }
 
@@ -259,7 +260,10 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 }
 
 .leftcolumn ul li {
-  padding:5px 5px;
+  padding: 8px 25px;
+  border-bottom: #a5a5a5 thin solid;
+  font-weight: bold;
+  letter-spacing: 0.1px;
 }
 
 .leftcolumn ul li:hover {
@@ -267,15 +271,12 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 }
 
 .leftcolumn ul li a{
-  font-size:14px;
-}
-
-.leftcolumn ul li a:hover{
+  font-size:13px;
+  width: auto;
+  padding: auto;
 }
 
 .leftcolumn ul {
-  margin-left:90px;
-  margin-top: 15px;
 }
 
 *::-webkit-input-placeholder {
@@ -296,7 +297,8 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 }
 
 .changeColor {
-  background-color: #078965;
+  background-color:#078965;
+  color: #d39937;
 }
 
 .student_table {
