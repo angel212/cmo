@@ -3,8 +3,8 @@
 
 <script>
     window.onload = function () {
-        $('#page-title').text('Application Registry');
-        $('#result-table').each(function () {
+        $('#leftcolumn').hide();
+        $('#example').each(function () {
             var $table = $(this);
 
             var $button = $("<a download=\"download.csv\" class='btn btn-success'>");
@@ -27,15 +27,6 @@
             });
         });
     }
-    $(document).ready(function (e) {
-
-
-
-        $('.top').hide();
-        $('#leftcolumn').hide();
-         
-
-    })
 </script>
 <script>
 
