@@ -788,7 +788,65 @@
     <tr>
       <td>Undergraduate Major:</td>
       <td>
-        <input id="last-school-end-date" name="education_detail[undergrad_major]" value="<%= @education_detail.undergrad_major %>" type="text" class="input-xlarge">
+
+      <select id="last-school-end-date" name="education_detail[undergrad_major]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.undergrad_major %>">
+
+        <option>	Business	</option>
+        <option>	Accounting	</option>
+        <option>	Advertising	</option>
+        <option>	Finance	</option>
+        <option>	Industrial Relations	</option>
+        <option>	Management / Administration	</option>
+        <option>	Marketing	</option>
+        <option>	Operations Management	</option>
+        <option>	Other	</option>
+        <option>	Engineering	</option>
+        <option>	Chemical	</option>
+        <option>	Civil	</option>
+        <option>	Computer	</option>
+        <option>	Electrical	</option>
+        <option>	Industrial	</option>
+        <option>	Mechanical	</option>
+        <option>	Other	</option>
+        <option>	Humanities	</option>
+        <option>	Communications	</option>
+        <option>	English / Literature	</option>
+        <option>	Fine Arts	</option>
+        <option>	Foreign Languages	</option>
+        <option>	Journalism	</option>
+        <option>	Music	</option>
+        <option>	Philosophy / Religion	</option>
+        <option>	Other	</option>
+        <option>	Science	</option>
+        <option>	Architecture	</option>
+        <option>	Biological Science	</option>
+        <option>	Chemistry	</option>
+        <option>	Earth Science	</option>
+        <option>	Mathematics	</option>
+        <option>	Medicine	</option>
+        <option>	Physics	</option>
+        <option>	Statistics	</option>
+        <option>	Urban Studies	</option>
+        <option>	Other	</option>
+        <option>	Social Sciences	</option>
+        <option>	Anthropology	</option>
+        <option>	Economics	</option>
+        <option>	Education	</option>
+        <option>	Government / History	</option>
+        <option>	International Relations	</option>
+        <option>	Law	</option>
+        <option>	Political Science	</option>
+        <option>	Psychology / Organizational Behavior	</option>
+        <option>	Sociology	</option>
+
+
+
+
+
+
+      </select>
+
+
       </td>
     </tr>
     <tr>
@@ -834,20 +892,124 @@
            <td>Function - Experience:</td>
            <td>
              <select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">
+               <option>	Administration	</option>
+               <option>	Advertising	</option>
+               <option>	Artist	</option>
+               <option>	Business Development	</option>
+               <option>	Consulting	</option>
+               <option>	Economic Analysis / Research	</option>
+               <option>	Education (Administrator / Faculty)	</option>
+               <option>	Engineering	</option>
+               <option>	Chemical	</option>
+               <option>	Electrical	</option>
+               <option>	Industrial	</option>
+               <option>	Mechanical	</option>
+               <option>	Entrepreneurship	</option>
+               <option>	Finance	</option>
+               <option>	Analyst / Research	</option>
+               <option>	Commercial Banking	</option>
+               <option>	Corporate Finance	</option>
+               <option>	Investment Banking	</option>
+               <option>	Investment Management	</option>
+               <option>	Lending/Relationship Mgmt	</option>
+               <option>	Mergers & Acquisitions	</option>
+               <option>	Private Client Services / Wealth Mgmt	</option>
+               <option>	Private Equity	</option>
+               <option>	Public Finance	</option>
+               <option>	Restructure / Turnaround	</option>
+               <option>	Risk Management	</option>
+               <option>	Sales & Trading	</option>
+               <option>	Treasury	</option>
+               <option>	Fundraising / Development	</option>
+               <option>	Headhunters/ Exec. Search	</option>
+               <option>	Healthcare	</option>
+               <option>	Human Resources	</option>
+               <option>	Compensation and Benefits	</option>
+               <option>	Training	</option>
+               <option>	Recruitment	</option>
+               <option>	Organizational Development	</option>
+               <option>	Employee Relations	</option>
+               <option>	Journalist / Author / Writer / Editor	</option>
+               <option>	Lawyer / Legal Professional	</option>
+               <option>	Legislative Aide / Lobbying / Advocate	</option>
+               <option>	Management	</option>
+               <option>	Operations / Production	</option>
+               <option>	Project Management	</option>
+               <option>	Retail Management	</option>
+               <option>	Supply Chain / Logistics	</option>
+               <option>	Management Development Program	</option>
+               <option>	Manufacturing	</option>
+               <option>	Marketing	</option>
+               <option>	Brand / Product Management	</option>
+               <option>	Communications / Public Relations	</option>
+               <option>	Market Research	</option>
+               <option>	Merchandising / Retail	</option>
+               <option>	Product Development / Innovation	</option>
+               <option>	Military	</option>
+               <option>	Multimedia Production / Graphic Design	</option>
+               <option>	Pharmaceuticals 	</option>
+               <option>	Purchasing / Procurement	</option>
+               <option>	Real Estate	</option>
+               <option>	Research & Development	</option>
+               <option>	Sales	</option>
+               <option>	Strategic Planning / Corporate Development	</option>
+               <option>	Information Technology	</option>
+               <option>	Systems Analysis and Design	</option>
+               <option>	Ecommerce / Internet / Web Site Management	</option>
+               <option>	Integration / Implementation	</option>
+               <option>	Systems Management	</option>
+               <option>	Training and Development	</option>
+               <option>	Technical Writer	</option>
+               <option>	Programmer	</option>
 
-               <option>5-10 years</option>
-               <option>10-15 years</option>
-               <option>group</option>
+
              </select></td>
          </tr>
          <tr>
            <td>Industry - Experience:</td>
            <td>
              <select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
-               <option>sample</option>
+               <option>	Accounting	</option>
+               <option>	Advertising	</option>
+               <option>	Advertising / Marketing Services	</option>
+               <option>	Communications / Public Relations	</option>
+               <option>	General	</option>
+               <option>	Aerospace / Aviation / Defense	</option>
+               <option>	Agribusiness	</option>
+               <option>	Automotive	</option>
+               <option>	Construction	</option>
+               <option>	Consulting	</option>
+               <option>	General	</option>
+               <option>	Biotechnology	</option>
+               <option>	Design	</option>
+               <option>	Gas and Oil	</option>
+               <option>	Healthcare	</option>
+               <option>	Human Capital	</option>
+               <option>	Management	</option>
+               <option>	Marketing	</option>
+               <option>	Nonprofit	</option>
+               <option>	Strategy	</option>
+               <option>	Supply Chain	</option>
+               <option>	Technology	</option>
+               <option>	Consumer Products	</option>
+               <option>	General	</option>
+               <option>	Alcohol	</option>
+               <option>	Apparel / Textiles	</option>
+               <option>	Beverages / Food	</option>
+               <option>	Electronics	</option>
+               <option>	Household / Personal	</option>
+               <option>	Luxury Goods	</option>
+               <option>	Tobacco	</option>
+               <option>	Economic Development / Microfinance	</option>
+               <option>	Education	</option>
+               <option>	Energy / Utilities	</option>
+               <option>	Alternative Energy	</option>
+               <option>	Cleantech	</option>
+               <option>	Energy Trading	</option>
+               <option>	Oil / Gas	</option>
+               <option>	Utility Services (Electric / Water / etc.)	</option>
+               <option>	Engineering Services	</option>
 
-               <option>5-10 years</option>
-               <option>10-15 years</option>
              </select></td>
          </tr>
          <tr>
@@ -901,7 +1063,130 @@
            <td>Geographic - Experience:</td>
            <td>
              <select name="employment_detail[geographic_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.geographic_authorization %>">
-               <option>sample</option>
+               <option>	USA	</option>
+               <option>	NORTH AMERICA (Non-US States)	</option>
+               <option>	 Algeria	</option>
+               <option>	 Angola 	</option>
+               <option>	 Cameroon 	</option>
+               <option>	 Cote d'Ivoire 	</option>
+               <option>	 Egypt 	</option>
+               <option>	 Ethiopia 	</option>
+               <option>	 Ghana 	</option>
+               <option>	 Kenya 	</option>
+               <option>	 Libya 	</option>
+               <option>	 Morocco 	</option>
+               <option>	 Nigeria 	</option>
+               <option>	 South Africa 	</option>
+               <option>	 Sudan 	</option>
+               <option>	 Tunisia 	</option>
+               <option>	 Azerbaijan 	</option>
+               <option>	 Bangladesh 	</option>
+               <option>	 China 	</option>
+               <option>	 China - Beijing Metro 	</option>
+               <option>	 China - Shanghai Metro 	</option>
+               <option>	 Hong Kong 	</option>
+               <option>	 India 	</option>
+               <option>	 Indonesia 	</option>
+               <option>	 Japan 	</option>
+               <option>	 Japan - Tokyo Metro 	</option>
+               <option>	 Kazakhstan 	</option>
+               <option>	 Macau 	</option>
+               <option>	 Malaysia 	</option>
+               <option>	 Myanmar (Burma) 	</option>
+               <option>	 Nepal 	</option>
+               <option>	 Pakistan 	</option>
+               <option>	 Philippines 	</option>
+               <option>	 Singapore 	</option>
+               <option>	 South Korea 	</option>
+               <option>	 Sri Lanka 	</option>
+               <option>	 Taiwan 	</option>
+               <option>	 Thailand 	</option>
+               <option>	 Turkmenistan 	</option>
+               <option>	 Ukraine 	</option>
+               <option>	 Uzbekistan 	</option>
+               <option>	 Vietnam 	</option>
+               <option>	Albania	</option>
+               <option>	 Austria 	</option>
+               <option>	 Belarus 	</option>
+               <option>	 Belgium 	</option>
+               <option>	 Bosnia and Herzegovina 	</option>
+               <option>	 Bulgaria 	</option>
+               <option>	 Croatia 	</option>
+               <option>	 Cyprus 	</option>
+               <option>	 Czech Republic 	</option>
+               <option>	 Denmark 	</option>
+               <option>	 Estonia 	</option>
+               <option>	 Finland 	</option>
+               <option>	 France 	</option>
+               <option>	 France - Paris Metro 	</option>
+               <option>	 Germany 	</option>
+               <option>	 Greece 	</option>
+               <option>	 Hungary 	</option>
+               <option>	 Iceland 	</option>
+               <option>	 Ireland 	</option>
+               <option>	 Italy 	</option>
+               <option>	 Kosovo 	</option>
+               <option>	 Latvia 	</option>
+               <option>	 Lithuania 	</option>
+               <option>	 Luxembourg 	</option>
+               <option>	 Macedonia 	</option>
+               <option>	 Moldova 	</option>
+               <option>	 Montenegro 	</option>
+               <option>	 Netherlands 	</option>
+               <option>	 Norway 	</option>
+               <option>	 Poland 	</option>
+               <option>	 Portugal 	</option>
+               <option>	 Romania 	</option>
+               <option>	 Russia 	</option>
+               <option>	 Serbia 	</option>
+               <option>	 Slovakia 	</option>
+               <option>	 Slovenia 	</option>
+               <option>	 Spain 	</option>
+               <option>	 Sweden 	</option>
+               <option>	 Switzerland 	</option>
+               <option>	 Turkey 	</option>
+               <option>	 Ukraine 	</option>
+               <option>	 United Kingdom 	</option>
+               <option>	 United Kingdom - London Metro 	</option>
+               <option>	Argentina	</option>
+               <option>	 Bermuda 	</option>
+               <option>	 Bolivia 	</option>
+               <option>	 Brazil 	</option>
+               <option>	 British Virgin Islands 	</option>
+               <option>	 Cayman Islands 	</option>
+               <option>	 Chile 	</option>
+               <option>	 Colombia 	</option>
+               <option>	 Costa Rica 	</option>
+               <option>	 Cuba 	</option>
+               <option>	 Dominican Republic 	</option>
+               <option>	 Ecuador 	</option>
+               <option>	 El Salvador 	</option>
+               <option>	 Guatemala 	</option>
+               <option>	 Nicaragua 	</option>
+               <option>	 Panama 	</option>
+               <option>	 Paraguay 	</option>
+               <option>	 Peru 	</option>
+               <option>	 Trinidad & Tobago 	</option>
+               <option>	 Uruguay 	</option>
+               <option>	 Venezuela 	</option>
+               <option>	 Afghanistan 	</option>
+               <option>	 Bahrain 	</option>
+               <option>	 Iran 	</option>
+               <option>	 Iraq 	</option>
+               <option>	 Israel 	</option>
+               <option>	 Jordan 	</option>
+               <option>	 Kuwait 	</option>
+               <option>	 Lebanon 	</option>
+               <option>	 Oman 	</option>
+               <option>	 Palestine 	</option>
+               <option>	 Qatar 	</option>
+               <option>	 Saudi Arabia 	</option>
+               <option>	 Syria 	</option>
+               <option>	 United Arab Emirates (UAE) 	</option>
+               <option>	 Yemen 	</option>
+               <option>	 Australia	</option>
+               <option>	 New Zealand 	</option>
+
              </select></td>
          </tr>
          <tr>
@@ -991,13 +1276,47 @@
       <tr>
         <td>Industry - Preference:</td>
         <td>
-          <input id="" name="preference[industry]" value="<%= @preference.industry %>" type="text" class="input-xlarge">
+          <select id="industry" name="preference[industry]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @preference.industry %>" >
+            <option>	Consumer Products / Fast Moving Consumer Goods	</option>
+            <option>	Banking	</option>
+            <option>	Financial Services	</option>
+            <option>	Advertising	</option>
+            <option>	Aerospace / Aviation / Defense	</option>
+            <option>	Agribusiness	</option>
+            <option>	Automotive	</option>
+            <option>	Real Estate	</option>
+            <option>	Consulting	</option>
+            <option>	Executive Search Firm/ Headhunters	</option>
+            <option>	Education	</option>
+            <option>	Energy / Utilities / Natural Resources	</option>
+            <option>	Entertainment /Media	</option>
+            <option>	Environmental Services & Sustainability	</option>
+            <option>	Government / Military	</option>
+            <option>	Healthcare	</option>
+            <option>	Hospitality / Tourism	</option>
+            <option>	Law / Legal Services	</option>
+            <option>	Manufacturing	</option>
+            <option>	Nonprofits & Social Enterprises	</option>
+            <option>	Pharmaceutical	</option>
+            <option>	Real Estate	</option>
+            <option>	Retail	</option>
+            <option>	Technology	</option>
+            <option>	Telecommunication Services	</option>
+            <option>	Transportation / Logistics	</option>
+
+          </select>
         </td>
       </tr>
       <tr>
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
-          <input id="" name="preference[criteria]" value="<%= @preference.criteria %>" type="text" class="input-xlarge">
+          <select id="criteria" name="preference[criteria]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @preference.criteria %>" >
+            <option>	Job Profile	</option>
+            <option>	Location	</option>
+            <option>	Compensation and Benefits	</option>
+            <option>	Company	</option>
+            <option>	Industry	</option>
+          </select>
         </td>
       </tr>
       <tr>
