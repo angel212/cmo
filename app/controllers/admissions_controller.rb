@@ -53,7 +53,7 @@ class AdmissionsController < ApplicationController
                                              education_detail_id: @education_detail.id,
                                              preference_id: @preferences.id)
       redirect_to '/', {alert: 'Email or Password is incorrect. <a href="mailto:icthelpdesk@aim.edu">icthelpdesk@aim.edu</a> or call +63 (2) 894 0043.'.html_safe} and return
-    elsif @online_application.present? && @online_application.personal_detail.dob.nil?
+    elsif @online_application.present? && @online_application.personal_detail.dob.nil?h
       PersonalDetail.where(email: params[:email]).each { |x| x.update_attribute :dob, dob }
     elsif @online_application.present? && @online_application.personal_detail.email != params[:email] #@online_application.personal_detail.dob != dob
       redirect_to '/', {alert: 'We have found your application but the data you input does not match our records. Please try again. If you continue to experience this issue, kindly contact us through <a href="mailto:icthelpdesk@aim.edu">icthelpdesk@aim.edu</a> or call +63 (2) 894 0043.'.html_safe} and return
