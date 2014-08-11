@@ -6,7 +6,7 @@
 <form id="personal_details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
 <p>
-<table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto" cellpadding="3">
+<table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
 <tr>
   <td>First Name:</td>
   <td>
@@ -313,10 +313,11 @@
 </table>
 
 </form>
-<button id="personal-update" name="personal-update" style="margin-left: 170px;" class="btn">Update Details
+<button id="personal_edit_link_close" name="personal_edit_link_close" class="btn"  style="margin-left: 170px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Close
 </button>
-<button id="personal_edit_link_close" name="personal_edit_link_close" class="btn">Close
+<button id="personal-update" name="personal-update" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update Details
 </button>
+
 
 </div>
 
@@ -327,7 +328,7 @@
 <form id="mailing-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
   <span>
-<table style="padding-left: 50px;color: #7d7d7d;width: 500;margin: 0 auto 0 auto;" cellpadding="3">
+<table style="padding-left: 50px;color: #7d7d7d;width: 500;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
 <tr>
   <td>Address Line 1:</td>
   <td>
@@ -664,17 +665,18 @@
 
 
 </form>
-<button id="mailing-update" style="margin-left: 170px;" name="mailing-update" class="btn">Update Details
+<button id="cancel_mailing" name="cancel_mailing" class="btn" style="margin-left: 170px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Close
 </button>
-<button id="cancel_mailing" name="cancel_mailing" class="btn">Close
+<button id="mailing-update"  name="mailing-update" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update Details
 </button>
+
 </div>
 <!-- -->
 <div id="education_dialog" title="Educational Details">
   <span>
 <form id="education-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
-  <table style="padding-left: 50px;width: 565;color: #7d7d7d;margin: 0 auto 0 auto;" cellpadding="3">
+  <table style="padding-left: 50px;width: 565;color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
     <tr>
       <td>Program/Course Title:</td>
       <td>
@@ -854,10 +856,11 @@
 
   </span>
   <span>
-    <button id="education-details-submit" style="margin-left: 200px;" name="education-details-submit" class="btn">Update Details</button>
-     <button id="cancel_education" name="cancel_education" class="btn">
-       Cancel
-     </button>
+    <button id="cancel_education" name="cancel_education" class="btn" style="margin-left: 200px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" >
+      Cancel
+    </button>
+    <button id="education-details-submit" name="education-details-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update Details</button>
+
   </span>
 </div>
 <!-- -->
@@ -865,7 +868,7 @@
 
   <span>
      <form id="professional-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-       <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto" cellpadding="3">
+       <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
          <tr>
            <td>Total Years of Work Experience:</td>
            <td>
@@ -1252,10 +1255,11 @@
      </form>
   </span>
   <span>
-    <button id="professional-submit" style="margin-left: 220px;" name="professional-submit" class="btn">Update Details</button>
-     <button id="cancel_professional" name="cancel_professional" class="btn">
-       Cancel
-     </button>
+    <button id="cancel_professional" name="cancel_professional" class="btn" style="margin-left: 220px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
+      Cancel
+    </button>
+    <button id="professional-submit"  name="professional-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update Details</button>
+
   </span>
 
 </div>
@@ -1263,7 +1267,7 @@
 <div id="preferences_dialog" title="My Preferences">
 <span>
   <form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto" cellpadding="3">
+    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
       <tr>
         <td>Industry - Preference:</td>
         <td>
@@ -1348,12 +1352,13 @@
 
   </form>
   <span>
-    <button id="preferences-submit" style="margin-left: 230px;" name="preferences-submit" class="btn">
+    <button id="cancel_preferences" name="cancel_preferences" class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
+      Cancel
+    </button>
+    <button id="preferences-submit"  name="preferences-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Update Details
     </button>
-      <button id="cancel_preferences" name="cancel_preferences" class="btn ">
-        Cancel
-      </button>
+
 </span>
     </span>
 </div>
