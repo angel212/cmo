@@ -7,6 +7,7 @@ $(document).ready(function (e) {
     $('div#page-4').hide();
     $('div#page-5').hide();
     $('div#page-6').hide();
+    $('div#page-7').hide();
     $('#page-title').text("Personal Particulars");
     $('.pagination').hide();
     $('#page-title').append($('.pagination'));
@@ -103,6 +104,7 @@ $(document).ready(function (e) {
         $('div#page-2').hide();
         $('div#page-3').hide();
         $('div#page-4').hide();
+        $('div#page-5').hide();
         $('div#page-1').show();
         e.preventDefault();
     })
@@ -111,6 +113,7 @@ $(document).ready(function (e) {
     $('div#page-1').hide();
     $('div#page-3').hide();
     $('div#page-4').hide();
+        $('div#page-5').hide();
     $('div#page-2').show();
     e.preventDefault();
 })
@@ -119,6 +122,7 @@ $(document).ready(function (e) {
         $('div#page-1').hide();
         $('div#page-2').hide();
         $('div#page-4').hide();
+        $('div#page-5').hide();
         $('div#page-3').show();
         e.preventDefault();
     })
@@ -127,7 +131,17 @@ $(document).ready(function (e) {
         $('div#page-1').hide();
         $('div#page-3').hide();
         $('div#page-2').hide();
+        $('div#page-5').hide();
         $('div#page-4').show();
+        e.preventDefault();
+    })
+
+    $('.settings-btn').click(function (e) {
+        $('div#page-1').hide();
+        $('div#page-3').hide();
+        $('div#page-2').hide();
+        $('div#page-4').hide();
+        $('div#page-5').show();
         e.preventDefault();
     })
 

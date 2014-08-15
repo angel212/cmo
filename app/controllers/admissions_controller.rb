@@ -39,7 +39,6 @@ class AdmissionsController < ApplicationController
     end
 
     # Check the password/DOB
-
     # Create the application if the online application form is not present.
     if @online_application.blank?
       @online_application = OnlineApplicationForm.create!(status: 10)
