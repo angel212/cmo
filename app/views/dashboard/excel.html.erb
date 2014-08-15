@@ -93,9 +93,9 @@
 
 </div>
 <div style="overflow-y: auto; overflow-x: auto;width: 890px;height: auto; margin-left: 45px;" >
-  <table id="result-table" class="table table-striped" >
+  <table id="result-table" class="stripe row-border order-column" >
     <thead>
-        <tr>
+        <tr style="background-color: rgb(0, 34, 141);color:white;">
             <th>Name</th>
             <th>Date Updated</th>
         </tr>
@@ -114,10 +114,10 @@
   <% $first = online_application.personal_detail.first_name %>
   <% $middle = online_application.personal_detail.middle_name %>
   <% $last = online_application.personal_detail.last_name %>
-            <tr>
-            <td><%=  link_to $last.to_s + ', ' + $first.to_s + ' ' + $middle.to_s, online_application_form_path(online_application.personal_detail.id) %></td>
-            <td><%= online_application.updated_at.strftime('%m/%d/%Y %H:%M') %></td>
-          </tr>
+  <tr>
+     <td><%=  link_to $last.to_s + ', ' + $first.to_s + ' ' + $middle.to_s, online_application_form_path(online_application.personal_detail.id) %></td>
+     <td><%= online_application.updated_at.strftime('%m/%d/%Y %H:%M') %></td>
+  </tr>
       <% end %>
   <% end %>
    </tbody>
