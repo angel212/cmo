@@ -1,24 +1,23 @@
 <script>
     $(document).ready(function (e) {
-
-    $('#leftcolumn').hide();
-})
+        $('#top').hide();
+        $('#leftcolumn').hide();
+        document.getElementById("main").style.height="450px";
+        document.getElementById("main").style.backgroundColor="rgb(13,17,46)";
+        document.getElementById("aim-brand").style.marginLeft="398px;";
+        document.getElementById("footer").style.marginTop="-50px;";
+    })
 </script>
 
-<h2>Sign in</h2>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div style="border-radius: 9px; background-color: rgb(31, 97, 143);margin: 0 auto 0 auto;height: 240px;  width: 350px; border: 1px solid black; margin-top: 70px;padding-left: 30px;box-shadow: 0 0 5px black;">
+  <h4 style="color:#ffffff;text-align: center;margin-left: -40px;">CAREER SERVICES OFFICE PORTAL</h4>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <tr>
+        <td style="padding-left: 50px;padding-top: 20px"><%= f.email_field :email, :autofocus => true, :placeholder => "Email", style: 'width:256px;margin-left:20px;margin-top:20px;' %></td>
+      </tr>
+      <tr>
+        <td style="padding-left: 50px;"><%= f.password_field :password, :placeholder => "Password", style: 'margin-left:20px;' %></td>
+      </tr>
+      <div><%= f.submit "SIGN IN", class: 'btn btn-primary', style: 'height: 40px;width: 150px;position: absolute;margin-left: 80px;' %></div>
+  <% end %>
+</div>

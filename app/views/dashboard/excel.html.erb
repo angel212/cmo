@@ -4,7 +4,7 @@
 <script>
     window.onload = function () {
         $('#leftcolumn').hide();
-        $('#example').each(function () {
+        $('#result-table').each(function () {
             var $table = $(this);
 
             var $button = $("<a download=\"download.csv\" class='btn btn-success'>");
@@ -28,6 +28,49 @@
         });
     }
 </script>
+
+<link rel="stylesheet" type="text/css" href="/assets/jquery.dataTables.css">
+<link rel="stylesheet" type="text/css" href="/assets/dataTables.fixedColumns.css">
+<link rel="stylesheet" type="text/css" href="/assets/shCore.css">
+<link rel="stylesheet" type="text/css" href="/assets/demo1.css">
+
+<script type="text/javascript" language="javascript" src="/assets/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/dataTables.fixedColumns.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/shCore.js"></script>
+<script type="text/javascript" language="javascript" src="/assets/demo.js"></script>
+<script type="text/javascript" language="javascript" class="init">
+
+
+    $(document).ready(function() {
+        // Setup - add a text input to each footer cell
+        $('#result-table tfoot th').each( function () {
+            var title = $('#result-table thead th').eq( $(this).index() ).text();
+            $(this).html( '<input type="hidden" placeholder="Search '+title+'" />' );
+        } );
+
+        // DataTable
+        var table = $('#result-table').DataTable( {
+            scrollY:        "300px",
+            scrollX:        true,
+            scrollCollapse: true,
+            paging:         false
+        } );
+
+        // Apply the filter
+        table.columns().indexes().each( function (idx) {
+            $( 'input', table.column( idx ).footer() ).on( 'keyup change', function () {
+                table
+                        .column( idx )
+                        .search( this.value )
+                        .draw();
+            } );
+        } );
+
+        new $.fn.dataTable.FixedColumns( table );
+    } );
+</script>
+<!--script ni patrick ends-->
+
 <script>
 
     function loading(){
@@ -37,20 +80,6 @@
     window.onload=loading();
 
 </script>
-<!-- **********************************PATRICKS SCRIPT*********************************************************************** -->
-
-<link rel="stylesheet" type="text/css" href="/assets/jquery.dataTables.css">
-<link rel="stylesheet" type="text/css" href="/assets/dataTables.fixedColumns.css">
-<link rel="stylesheet" type="text/css" href="/assets/shCore.css">
-<link rel="stylesheet" type="text/css" href="/assets/demo1.css">
-
-<script type="text/javascript" language="javascript" src="/assets/jquery.js"></script>
-<script type="text/javascript" language="javascript" src="/assets/jquery.dataTables.js"></script>
-<script type="text/javascript" language="javascript" src="/assets/dataTables.fixedColumns.js"></script>
-<script type="text/javascript" language="javascript" src="/assets/shCore.js"></script>
-<script type="text/javascript" language="javascript" src="/assets/demo.js"></script>
-
-<!-- -->
 
 <br/>
 <div class="alert alert-info row-fluid" style="width: auto;">
@@ -65,127 +94,32 @@
 </div>
 <div style="overflow-y: auto; overflow-x: auto;width: 890px;height: auto; margin-left: 45px;" >
   <table id="result-table" class="table table-striped" >
-    <tr style="background-color: #00228d;color:#ffffff;">
-    <th>Name</th>
-    <th>Date Created</th>
-    <th>Date Updated</th>
-    <th>Status</th>
-    <th>Title</th>
-    <th>Name on Badge</th>
-    <th>Gender</th>
-    <th>DOB</th>
-    <th>Citizenship</th>
-    <th>Civil Status</th>
-    <th>Medications Taken</th>
-    <th>Address 1</th>
-    <th>Address 2</th>
-    <th>City</th>
-    <th>State/Province</th>
-    <th>Country</th>
-    <th>Post Code</th>
-    <th>E-Mail</th>
-    <th>Home Phone</th>
-    <th>Mobile Phone</th>
-    <th>Company Name</th>
-    <th>Work Address</th>
-    <th>Work Phone</th>
-    <th>Word Fax Number</th>
-    <th>Work Industry</th>
-    <th>Company Type</th>
-    <th>Position</th>
-    <th>Course(if student)</th>
-    <th>Position Level</th>
-    <th>Job Responsibilities</th>
-    <th>Employment Start</th>
-    <th>Employment End</th>
-    <th>Years Management Exp</th>
-    <th>Years Work Experience</th>
-    <th>Last School Attended</th>
-    <th>Program</th>
-    <th>Degree</th>
-    <th>Address</th>
-    <th>Date Started</th>
-    <th>Date Ended</th>
-    <th>Highest School Attended</th>
-    <th>Program</th>
-    <th>Degree</th>
-    <th>Address</th>
-    <th>Date Started</th>
-    <th>Date Ended</th>
-    <!--<th>Harnessing Banking and Financial Markets</th>-->
-    <!--<th>Realizing ASEAN’s Full Human Capital Potential </th>-->
-    <!--<th>Strengthening Connectivity</th>-->
-    <!--<th>Strengthening Leadership and Governance</th>-->
-    <!--<th>Building A Resilient ASEAN Economic Community</th>-->
-    <th>Part of the group?</th>
-    <th>Group Name</th>
-    <th>Organization Name</th>
-    <th>Alumni or not</th>
-  </tr>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date Updated</th>
+        </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Date Updated</th>
+    </tr>
+    </tfoot>
+
+   <tbody>
   <% @online_applications.each do |online_application| %>
-      <% if (online_application.personal_detail.present? && online_application.employment_detail.present? && online_application.education_detail.present?) %>
-<%	 $name = online_application.personal_detail.last_name
-       #$name += online_application.personal_detail.first_name
-       #$name += online_application.personal_detail.middle_name
-%>
+  <% if (online_application.personal_detail.present? && online_application.employment_detail.present? && online_application.education_detail.present?) %>
+  <% $first = online_application.personal_detail.first_name %>
+  <% $middle = online_application.personal_detail.middle_name %>
+  <% $last = online_application.personal_detail.last_name %>
             <tr>
-            <td><%=  link_to $name, online_application_form_path(online_application.personal_detail.id) %></td>
-            <td><%= online_application.created_at.strftime('%m/%d/%Y %H:%M') %></td>
+            <td><%=  link_to $last.to_s + ', ' + $first.to_s + ' ' + $middle.to_s, online_application_form_path(online_application.personal_detail.id) %></td>
             <td><%= online_application.updated_at.strftime('%m/%d/%Y %H:%M') %></td>
-            <td><%= OnlineApplicationForm.get_status(online_application.status).capitalize %></td>
-            <td><%= online_application.personal_detail.title %></td>
-            <td><%= online_application.personal_detail.badge_name %></td>
-            <td><%= online_application.personal_detail.gender %></td>
-            <td><%= online_application.personal_detail.dob %></td>
-            <td><%= online_application.personal_detail.citizenship %></td>
-            <td><%= online_application.personal_detail.civil_status %></td>
-            <td><%= online_application.personal_detail.medications %></td>
-            <td><%= online_application.personal_detail.address_1 %></td>
-            <td><%= online_application.personal_detail.address_2 %></td>
-            <td><%= online_application.personal_detail.city %></td>
-            <td><%= online_application.personal_detail.address_state %></td>
-            <td><%= online_application.personal_detail.address_country %></td>
-            <td><%= online_application.personal_detail.address_post_code %></td>
-            <td><%= online_application.personal_detail.email %></td>
-            <td><%= online_application.personal_detail.home_phone %></td>
-            <td><%= online_application.personal_detail.cell_phone %></td>
-            <td><%= online_application.employment_detail.company_name %></td>
-            <td><%= online_application.employment_detail.work_address %></td>
-            <td><%= online_application.employment_detail.work_phone %></td>
-            <td><%= online_application.employment_detail.work_fax_number %></td>
-            <td><%= online_application.employment_detail.work_industry %></td>
-            <td><%= online_application.employment_detail.company_type %></td>
-            <td><%= online_application.employment_detail.company_position %></td>
-            <td><%= online_application.employment_detail.course %></td>
-            <td><%= online_application.employment_detail.position_level %></td>
-            <td><%= online_application.employment_detail.work_job_responsibilities %></td>
-            <td><%= online_application.employment_detail.date_hired %></td>
-            <td><%= online_application.employment_detail.date_fired %></td>
-            <td><%= online_application.employment_detail.manager_exp_years %></td>
-            <td><%= online_application.employment_detail.years_work_experience %></td>
-            <td><%= online_application.education_detail.last_school_name %></td>
-            <td><%= online_application.education_detail.last_school_course_title %></td>
-            <td><%= online_application.education_detail.last_school_degree %></td>
-            <td><%= online_application.education_detail.last_school_address %></td>
-            <td><%= online_application.education_detail.last_school_commencement_date %></td>
-            <td><%= online_application.education_detail.last_school_end_date %></td>
-            <td><%= online_application.education_detail.highest_school_name %></td>
-            <td><%= online_application.education_detail.highest_school_course_title %></td>
-            <td><%= online_application.education_detail.highest_school_degree %></td>
-            <td><%= online_application.education_detail.highest_school_address %></td>
-            <td><%= online_application.education_detail.highest_school_commencement_date %></td>
-            <td><%= online_application.education_detail.highest_school_end_date %></td>
-            <!--<td><%= online_application.personal_detail.track0.to_i + 1 %></td>-->
-            <!--<td><%= online_application.personal_detail.track1.to_i + 1 %></td>-->
-            <!--<td><%= online_application.personal_detail.track2.to_i + 1 %></td>-->
-            <!--<td><%= online_application.personal_detail.track3.to_i + 1 %></td>-->
-            <!--<td><%= online_application.personal_detail.track4.to_i + 1 %></td>-->
-            <td><%= online_application.supplemental_detail.try(:group) %></td>
-            <td><%= online_application.supplemental_detail.try(:group_name) %></td>
-            <td><%= online_application.supplemental_detail.try(:organization_name) %></td>
-            <td><%= online_application.education_detail.last_school_course_title.present? ? 'Yes' : 'No' %></td>
           </tr>
       <% end %>
   <% end %>
+   </tbody>
 </table>
 </div>
