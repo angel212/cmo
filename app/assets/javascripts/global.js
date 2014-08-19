@@ -188,6 +188,7 @@ function showCompletionDate() {
 
 $(document).ready(function(){
     var targetElement = $("#leftcolumn li");
+    $("#leftcolumn li:first-child").addClass("changeColor");
     targetElement.click(function() {
         $(this).siblings().removeClass("changeColor");
         $(this).addClass("changeColor");

@@ -64,9 +64,8 @@ html {
   position: absolute;
   height:917px;
   width: 250px;
-  background-color: #00805a;
   margin-top: -35px;
-  box-shadow: 0 0 15px black;
+  border-right: 1px solid black;
 }
 
 .leftcolumn ul {
@@ -94,7 +93,7 @@ html {
 }
 
 .leftcolumn ul li a {
-  color:white;
+  color:rgb(13,17,46);
 }
 
 /************************************************** */
@@ -260,9 +259,13 @@ input[type="text"],select,input[type="date"],input[type="password"] {
 
 .leftcolumn ul li {
   padding: 8px 25px;
-  border-bottom: #a5a5a5 thin solid;
+  border-bottom: rgb(13,17,46) thin solid;
   font-weight: bold;
   letter-spacing: 0.1px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  /* transition: all 0.2s ease-out; */
 }
 
 .leftcolumn ul li:hover {

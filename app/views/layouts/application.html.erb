@@ -49,12 +49,12 @@
 
   <div class="content-container">
     <div class="top" id="top" style="background-color: #f9f9f9;height: 35px;width: auto;">
-      <p style="height: 40px;width: 750px;color: rgb(13,17,46); position: absolute; letter-spacing:2px;margin-left: 230px;font-size: 18px; margin-top: 5px; font-weight: bold; padding-top: 4px; text-align: center;">Career Services Office</p>
+      <p id="header" style="height: 40px;width: 750px;color: rgb(13,17,46); position: absolute; margin-left: 230px;font-size: 21px; margin-top: 5px; font-weight: bold; padding-top: 4px; text-align: center;">Career Services Office</p>
     </div>
     <div class="leftcolumn" id="leftcolumn">
       <div style="height: 290px;
-              border-bottom: 1px solid #a5a5a5;">
-      <p style="padding-left: 40px; font-weight: bold;  font-size: 14px;"><br/><span style="color:white;">
+              border-bottom: 1px solid rgb(13,17,46);">
+      <p style="padding-left: 40px; font-weight: bold;  font-size: 14px;"><br/><span style="color:rgb(13,17,46);">
         Welcome, <br>
 
         <%	 if params['id'].present? and @online_application_form.blank?  %>
@@ -70,11 +70,13 @@
               border-radius: 4px;"/>
       </div>
       <ul>
-        <li><a href="aboutme.html" class="about-me-btn  " >About Me</a></li>
+        <li><a href="aboutme.html" class="about-me-btn" >About Me</a></li>
         <li><a href="education.html" class="education-btn">Education</a></li>
         <li><a href="workexperience.html" class="workexperience-btn">Work Experience <br/>and Preferences</a></li>
         <li><a href="view_profile.html" class="profile-btn">My Preferences</a></li>
-        <li><a href="#" class="workeperience-btn">My Uploads</a></li>
+        <li><a href="#" class="workeperience-btn">My Uploads</a>
+          <!--<%= render :partial => 'layouts/resume' %>-->
+        </li>
         <li><a href="#" class="settings-btn">Settings</a></li>
         <li><a href="/" style="" id="" >Logout</a></li>
       </ul>

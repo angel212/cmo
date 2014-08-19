@@ -9981,12 +9981,12 @@
 		 *      } );
 		 *    } );
 		 */
-		"fnFormatNumber": function ( toFormat ) {
-			return toFormat.toString().replace(
-				/\B(?=(\d{3})+(?!\d))/g,
-				this.oLanguage.sThousands
-			);
-		},
+//		"fnFormatNumber": function ( toFormat ) {
+//			return toFormat.toString().replace(
+//				/\B(?=(\d{3})+(?!\d))/g,
+//				this.oLanguage.sThousands
+//			);
+//		},
 	
 	
 		/**
@@ -13539,7 +13539,7 @@
 		"sScrollBody": "dataTables_scrollBody",
 		"sScrollFoot": "dataTables_scrollFoot",
 		"sScrollFootInner": "dataTables_scrollFootInner",
-	
+
 		/* Misc */
 		"sHeaderTH": "",
 		"sFooterTH": "",
@@ -13598,7 +13598,7 @@
 		/* Scrolling */
 		"sScrollHead": "dataTables_scrollHead "+_stateDefault,
 		"sScrollFoot": "dataTables_scrollFoot "+_stateDefault,
-	
+
 		/* Misc */
 		"sHeaderTH":  _stateDefault,
 		"sFooterTH":  _stateDefault,
