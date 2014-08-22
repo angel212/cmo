@@ -106,6 +106,7 @@ $(document).ready(function (e) {
         $('div#page-4').hide();
         $('div#page-5').hide();
         $('div#page-1').show();
+        $('div#resume').hide();
         e.preventDefault();
     })
 
@@ -113,8 +114,9 @@ $(document).ready(function (e) {
     $('div#page-1').hide();
     $('div#page-3').hide();
     $('div#page-4').hide();
-        $('div#page-5').hide();
+    $('div#page-5').hide();
     $('div#page-2').show();
+    $('div#resume').hide();
     e.preventDefault();
 })
 
@@ -124,6 +126,12 @@ $(document).ready(function (e) {
         $('div#page-4').hide();
         $('div#page-5').hide();
         $('div#page-3').show();
+        $('div#resume').hide();
+        e.preventDefault();
+    })
+
+    $('.myuploads').click(function (e) {
+        window.location="http://www.newlocation.com";
         e.preventDefault();
     })
 
@@ -133,6 +141,7 @@ $(document).ready(function (e) {
         $('div#page-2').hide();
         $('div#page-5').hide();
         $('div#page-4').show();
+        $('div#resume').hide();
         e.preventDefault();
     })
 
@@ -142,6 +151,7 @@ $(document).ready(function (e) {
         $('div#page-2').hide();
         $('div#page-4').hide();
         $('div#page-5').show();
+        $('div#resume').hide();
         e.preventDefault();
     })
 
