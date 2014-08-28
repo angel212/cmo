@@ -27,7 +27,9 @@
 </tr>
 <tr>
   <td>Date of Birth:</td>
-  <td><input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>"></td>
+  <td>
+    <input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">
+  </td>
 </tr>
 <tr>
   <td>Gender:</td>
@@ -39,414 +41,415 @@
     </select></td>
 </tr>
 <tr>
-<td>Nationality:</td>
-<td>
-<select id="citizenship" name="personal_detail[citizenship]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.citizenship %>">
-<option>Select One</option>
-  <option>	Afghan	</option>
-  <option>	Albanian	</option>
-  <option>	Algerian	</option>
-  <option>	American	</option>
-  <option>	Andorran	</option>
-  <option>	Angolan	</option>
-  <option>	Antiguans	</option>
-  <option>	Argentinean	</option>
-  <option>	Armenian	</option>
-  <option>	Australian	</option>
-  <option>	Austrian	</option>
-  <option>	Azerbaijani	</option>
-  <option>	Bahamian	</option>
-  <option>	Bahraini	</option>
-  <option>	Bangladeshi	</option>
-  <option>	Barbadian	</option>
-  <option>	Barbudans	</option>
-  <option>	Batswana	</option>
-  <option>	Belarusian	</option>
-  <option>	Belgian	</option>
-  <option>	Belizean	</option>
-  <option>	Beninese	</option>
-  <option>	Bhutanese	</option>
-  <option>	Bolivian	</option>
-  <option>	Bosnian	</option>
-  <option>	Brazilian	</option>
-  <option>	British	</option>
-  <option>	Bruneian	</option>
-  <option>	Bulgarian	</option>
-  <option>	Burkinabe	</option>
-  <option>	Burmese	</option>
-  <option>	Burundian	</option>
-  <option>	Cambodian	</option>
-  <option>	Cameroonian	</option>
-  <option>	Canadian	</option>
-  <option>	Cape Verdean	</option>
-  <option>	Central African	</option>
-  <option>	Chadian	</option>
-  <option>	Chilean	</option>
-  <option>	Chinese	</option>
-  <option>	Colombian	</option>
-  <option>	Comoran	</option>
-  <option>	Congolese	</option>
-  <option>	Costa Rican	</option>
-  <option>	Croatian	</option>
-  <option>	Cuban	</option>
-  <option>	Cypriot	</option>
-  <option>	Czech	</option>
-  <option>	Danish	</option>
-  <option>	Djibouti	</option>
-  <option>	Dominican	</option>
-  <option>	Dutch	</option>
-  <option>	East Timorese	</option>
-  <option>	Ecuadorean	</option>
-  <option>	Egyptian	</option>
-  <option>	Emirian	</option>
-  <option>	Equatorial Guinean	</option>
-  <option>	Eritrean	</option>
-  <option>	Estonian	</option>
-  <option>	Ethiopian	</option>
-  <option>	Fijian	</option>
-  <option>	Filipino	</option>
-  <option>	Finnish	</option>
-  <option>	French	</option>
-  <option>	Gabonese	</option>
-  <option>	Gambian	</option>
-  <option>	Georgian	</option>
-  <option>	German	</option>
-  <option>	Ghanaian	</option>
-  <option>	Greek	</option>
-  <option>	Grenadian	</option>
-  <option>	Guatemalan	</option>
-  <option>	Guinea-Bissauan	</option>
-  <option>	Guinean	</option>
-  <option>	Guyanese	</option>
-  <option>	Haitian	</option>
-  <option>	Herzegovinian	</option>
-  <option>	Honduran	</option>
-  <option>	Hungarian	</option>
-  <option>	I-Kiribati	</option>
-  <option>	Icelander	</option>
-  <option>	Indian	</option>
-  <option>	Indonesian	</option>
-  <option>	Iranian	</option>
-  <option>	Iraqi	</option>
-  <option>	Irish	</option>
-  <option>	Israeli	</option>
-  <option>	Italian	</option>
-  <option>	Ivorian	</option>
-  <option>	Jamaican	</option>
-  <option>	Japanese	</option>
-  <option>	Jordanian	</option>
-  <option>	Kazakhstani	</option>
-  <option>	Kenyan	</option>
-  <option>	Kittian and Nevisian	</option>
-  <option>	Kuwaiti	</option>
-  <option>	Kyrgyz	</option>
-  <option>	Laotian	</option>
-  <option>	Latvian	</option>
-  <option>	Lebanese	</option>
-  <option>	Liberian	</option>
-  <option>	Libyan	</option>
-  <option>	Liechtensteiner	</option>
-  <option>	Lithuanian	</option>
-  <option>	Luxembourger	</option>
-  <option>	Macedonian	</option>
-  <option>	Malagasy	</option>
-  <option>	Malawian	</option>
-  <option>	Malaysian	</option>
-  <option>	Maldivan	</option>
-  <option>	Malian	</option>
-  <option>	Maltese	</option>
-  <option>	Marshallese	</option>
-  <option>	Mauritanian	</option>
-  <option>	Mauritian	</option>
-  <option>	Mexican	</option>
-  <option>	Micronesian	</option>
-  <option>	Moldovan	</option>
-  <option>	Monacan	</option>
-  <option>	Mongolian	</option>
-  <option>	Moroccan	</option>
-  <option>	Mosotho	</option>
-  <option>	Motswana	</option>
-  <option>	Mozambican	</option>
-  <option>	Namibian	</option>
-  <option>	Nauruan	</option>
-  <option>	Nepalese	</option>
-  <option>	New Zealander	</option>
-  <option>	Nicaraguan	</option>
-  <option>	Nigerian	</option>
-  <option>	Nigerien	</option>
-  <option>	North Korean	</option>
-  <option>	Northern Irish	</option>
-  <option>	Norwegian	</option>
-  <option>	Omani	</option>
-  <option>	Pakistani	</option>
-  <option>	Palauan	</option>
-  <option>	Panamanian	</option>
-  <option>	Papua New Guinean	</option>
-  <option>	Paraguayan	</option>
-  <option>	Peruvian	</option>
-  <option>	Polish	</option>
-  <option>	Portuguese	</option>
-  <option>	Qatari	</option>
-  <option>	Romanian	</option>
-  <option>	Russian	</option>
-  <option>	Rwandan	</option>
-  <option>	Saint Lucian	</option>
-  <option>	Salvadoran	</option>
-  <option>	Samoan	</option>
-  <option>	San Marinese	</option>
-  <option>	Sao Tomean	</option>
-  <option>	Saudi	</option>
-  <option>	Scottish	</option>
-  <option>	Senegalese	</option>
-  <option>	Serbian	</option>
-  <option>	Seychellois	</option>
-  <option>	Sierra Leonean	</option>
-  <option>	Singaporean	</option>
-  <option>	Slovakian	</option>
-  <option>	Slovenian	</option>
-  <option>	Solomon Islander	</option>
-  <option>	Somali	</option>
-  <option>	South African	</option>
-  <option>	South Korean	</option>
-  <option>	Spanish	</option>
-  <option>	Sri Lankan	</option>
-  <option>	Sudanese	</option>
-  <option>	Surinamer	</option>
-  <option>	Swazi	</option>
-  <option>	Swedish	</option>
-  <option>	Swiss	</option>
-  <option>	Syrian	</option>
-  <option>	Taiwanese	</option>
-  <option>	Tajik	</option>
-  <option>	Tanzanian	</option>
-  <option>	Thai	</option>
-  <option>	Togolese	</option>
-  <option>	Tongan	</option>
-  <option>	Trinidadian or Tobagonian	</option>
-  <option>	Tunisian	</option>
-  <option>	Turkish	</option>
-  <option>	Tuvaluan	</option>
-  <option>	Ugandan	</option>
-  <option>	Ukrainian	</option>
-  <option>	Uruguayan	</option>
-  <option>	Uzbekistani	</option>
-  <option>	Venezuelan	</option>
-  <option>	Vietnamese	</option>
-  <option>	Welsh	</option>
-  <option>	Yemenite	</option>
-  <option>	Zambian	</option>
-  <option>	Zimbabwean	</option>
+  <td>Nationality:</td>
+  <td>
+    <select id="citizenship" name="personal_detail[citizenship]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.citizenship %>">
+      <option>Select One</option>
+      <option> Afghan</option>
+      <option> Albanian</option>
+      <option> Algerian</option>
+      <option> American</option>
+      <option> Andorran</option>
+      <option> Angolan</option>
+      <option> Antiguans</option>
+      <option> Argentinean</option>
+      <option> Armenian</option>
+      <option> Australian</option>
+      <option> Austrian</option>
+      <option> Azerbaijani</option>
+      <option> Bahamian</option>
+      <option> Bahraini</option>
+      <option> Bangladeshi</option>
+      <option> Barbadian</option>
+      <option> Barbudans</option>
+      <option> Batswana</option>
+      <option> Belarusian</option>
+      <option> Belgian</option>
+      <option> Belizean</option>
+      <option> Beninese</option>
+      <option> Bhutanese</option>
+      <option> Bolivian</option>
+      <option> Bosnian</option>
+      <option> Brazilian</option>
+      <option> British</option>
+      <option> Bruneian</option>
+      <option> Bulgarian</option>
+      <option> Burkinabe</option>
+      <option> Burmese</option>
+      <option> Burundian</option>
+      <option> Cambodian</option>
+      <option> Cameroonian</option>
+      <option> Canadian</option>
+      <option> Cape Verdean</option>
+      <option> Central African</option>
+      <option> Chadian</option>
+      <option> Chilean</option>
+      <option> Chinese</option>
+      <option> Colombian</option>
+      <option> Comoran</option>
+      <option> Congolese</option>
+      <option> Costa Rican</option>
+      <option> Croatian</option>
+      <option> Cuban</option>
+      <option> Cypriot</option>
+      <option> Czech</option>
+      <option> Danish</option>
+      <option> Djibouti</option>
+      <option> Dominican</option>
+      <option> Dutch</option>
+      <option> East Timorese</option>
+      <option> Ecuadorean</option>
+      <option> Egyptian</option>
+      <option> Emirian</option>
+      <option> Equatorial Guinean</option>
+      <option> Eritrean</option>
+      <option> Estonian</option>
+      <option> Ethiopian</option>
+      <option> Fijian</option>
+      <option> Filipino</option>
+      <option> Finnish</option>
+      <option> French</option>
+      <option> Gabonese</option>
+      <option> Gambian</option>
+      <option> Georgian</option>
+      <option> German</option>
+      <option> Ghanaian</option>
+      <option> Greek</option>
+      <option> Grenadian</option>
+      <option> Guatemalan</option>
+      <option> Guinea-Bissauan</option>
+      <option> Guinean</option>
+      <option> Guyanese</option>
+      <option> Haitian</option>
+      <option> Herzegovinian</option>
+      <option> Honduran</option>
+      <option> Hungarian</option>
+      <option> I-Kiribati</option>
+      <option> Icelander</option>
+      <option> Indian</option>
+      <option> Indonesian</option>
+      <option> Iranian</option>
+      <option> Iraqi</option>
+      <option> Irish</option>
+      <option> Israeli</option>
+      <option> Italian</option>
+      <option> Ivorian</option>
+      <option> Jamaican</option>
+      <option> Japanese</option>
+      <option> Jordanian</option>
+      <option> Kazakhstani</option>
+      <option> Kenyan</option>
+      <option> Kittian and Nevisian</option>
+      <option> Kuwaiti</option>
+      <option> Kyrgyz</option>
+      <option> Laotian</option>
+      <option> Latvian</option>
+      <option> Lebanese</option>
+      <option> Liberian</option>
+      <option> Libyan</option>
+      <option> Liechtensteiner</option>
+      <option> Lithuanian</option>
+      <option> Luxembourger</option>
+      <option> Macedonian</option>
+      <option> Malagasy</option>
+      <option> Malawian</option>
+      <option> Malaysian</option>
+      <option> Maldivan</option>
+      <option> Malian</option>
+      <option> Maltese</option>
+      <option> Marshallese</option>
+      <option> Mauritanian</option>
+      <option> Mauritian</option>
+      <option> Mexican</option>
+      <option> Micronesian</option>
+      <option> Moldovan</option>
+      <option> Monacan</option>
+      <option> Mongolian</option>
+      <option> Moroccan</option>
+      <option> Mosotho</option>
+      <option> Motswana</option>
+      <option> Mozambican</option>
+      <option> Namibian</option>
+      <option> Nauruan</option>
+      <option> Nepalese</option>
+      <option> New Zealander</option>
+      <option> Nicaraguan</option>
+      <option> Nigerian</option>
+      <option> Nigerien</option>
+      <option> North Korean</option>
+      <option> Northern Irish</option>
+      <option> Norwegian</option>
+      <option> Omani</option>
+      <option> Pakistani</option>
+      <option> Palauan</option>
+      <option> Panamanian</option>
+      <option> Papua New Guinean</option>
+      <option> Paraguayan</option>
+      <option> Peruvian</option>
+      <option> Polish</option>
+      <option> Portuguese</option>
+      <option> Qatari</option>
+      <option> Romanian</option>
+      <option> Russian</option>
+      <option> Rwandan</option>
+      <option> Saint Lucian</option>
+      <option> Salvadoran</option>
+      <option> Samoan</option>
+      <option> San Marinese</option>
+      <option> Sao Tomean</option>
+      <option> Saudi</option>
+      <option> Scottish</option>
+      <option> Senegalese</option>
+      <option> Serbian</option>
+      <option> Seychellois</option>
+      <option> Sierra Leonean</option>
+      <option> Singaporean</option>
+      <option> Slovakian</option>
+      <option> Slovenian</option>
+      <option> Solomon Islander</option>
+      <option> Somali</option>
+      <option> South African</option>
+      <option> South Korean</option>
+      <option> Spanish</option>
+      <option> Sri Lankan</option>
+      <option> Sudanese</option>
+      <option> Surinamer</option>
+      <option> Swazi</option>
+      <option> Swedish</option>
+      <option> Swiss</option>
+      <option> Syrian</option>
+      <option> Taiwanese</option>
+      <option> Tajik</option>
+      <option> Tanzanian</option>
+      <option> Thai</option>
+      <option> Togolese</option>
+      <option> Tongan</option>
+      <option> Trinidadian or Tobagonian</option>
+      <option> Tunisian</option>
+      <option> Turkish</option>
+      <option> Tuvaluan</option>
+      <option> Ugandan</option>
+      <option> Ukrainian</option>
+      <option> Uruguayan</option>
+      <option> Uzbekistani</option>
+      <option> Venezuelan</option>
+      <option> Vietnamese</option>
+      <option> Welsh</option>
+      <option> Yemenite</option>
+      <option> Zambian</option>
+      <option> Zimbabwean</option>
 
-</select></td>
+    </select></td>
 </tr>
 <tr>
-  <td>Citizenship:</td>
-  <td>
-    <select id="civil_status" name="personal_detail[civil_status]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
-      <option>Select One</option>
-      <option>	Afghan	</option>
-      <option>	Albanian	</option>
-      <option>	Algerian	</option>
-      <option>	American	</option>
-      <option>	Andorran	</option>
-      <option>	Angolan	</option>
-      <option>	Antiguans	</option>
-      <option>	Argentinean	</option>
-      <option>	Armenian	</option>
-      <option>	Australian	</option>
-      <option>	Austrian	</option>
-      <option>	Azerbaijani	</option>
-      <option>	Bahamian	</option>
-      <option>	Bahraini	</option>
-      <option>	Bangladeshi	</option>
-      <option>	Barbadian	</option>
-      <option>	Barbudans	</option>
-      <option>	Batswana	</option>
-      <option>	Belarusian	</option>
-      <option>	Belgian	</option>
-      <option>	Belizean	</option>
-      <option>	Beninese	</option>
-      <option>	Bhutanese	</option>
-      <option>	Bolivian	</option>
-      <option>	Bosnian	</option>
-      <option>	Brazilian	</option>
-      <option>	British	</option>
-      <option>	Bruneian	</option>
-      <option>	Bulgarian	</option>
-      <option>	Burkinabe	</option>
-      <option>	Burmese	</option>
-      <option>	Burundian	</option>
-      <option>	Cambodian	</option>
-      <option>	Cameroonian	</option>
-      <option>	Canadian	</option>
-      <option>	Cape Verdean	</option>
-      <option>	Central African	</option>
-      <option>	Chadian	</option>
-      <option>	Chilean	</option>
-      <option>	Chinese	</option>
-      <option>	Colombian	</option>
-      <option>	Comoran	</option>
-      <option>	Congolese	</option>
-      <option>	Costa Rican	</option>
-      <option>	Croatian	</option>
-      <option>	Cuban	</option>
-      <option>	Cypriot	</option>
-      <option>	Czech	</option>
-      <option>	Danish	</option>
-      <option>	Djibouti	</option>
-      <option>	Dominican	</option>
-      <option>	Dutch	</option>
-      <option>	East Timorese	</option>
-      <option>	Ecuadorean	</option>
-      <option>	Egyptian	</option>
-      <option>	Emirian	</option>
-      <option>	Equatorial Guinean	</option>
-      <option>	Eritrean	</option>
-      <option>	Estonian	</option>
-      <option>	Ethiopian	</option>
-      <option>	Fijian	</option>
-      <option>	Filipino	</option>
-      <option>	Finnish	</option>
-      <option>	French	</option>
-      <option>	Gabonese	</option>
-      <option>	Gambian	</option>
-      <option>	Georgian	</option>
-      <option>	German	</option>
-      <option>	Ghanaian	</option>
-      <option>	Greek	</option>
-      <option>	Grenadian	</option>
-      <option>	Guatemalan	</option>
-      <option>	Guinea-Bissauan	</option>
-      <option>	Guinean	</option>
-      <option>	Guyanese	</option>
-      <option>	Haitian	</option>
-      <option>	Herzegovinian	</option>
-      <option>	Honduran	</option>
-      <option>	Hungarian	</option>
-      <option>	I-Kiribati	</option>
-      <option>	Icelander	</option>
-      <option>	Indian	</option>
-      <option>	Indonesian	</option>
-      <option>	Iranian	</option>
-      <option>	Iraqi	</option>
-      <option>	Irish	</option>
-      <option>	Israeli	</option>
-      <option>	Italian	</option>
-      <option>	Ivorian	</option>
-      <option>	Jamaican	</option>
-      <option>	Japanese	</option>
-      <option>	Jordanian	</option>
-      <option>	Kazakhstani	</option>
-      <option>	Kenyan	</option>
-      <option>	Kittian and Nevisian	</option>
-      <option>	Kuwaiti	</option>
-      <option>	Kyrgyz	</option>
-      <option>	Laotian	</option>
-      <option>	Latvian	</option>
-      <option>	Lebanese	</option>
-      <option>	Liberian	</option>
-      <option>	Libyan	</option>
-      <option>	Liechtensteiner	</option>
-      <option>	Lithuanian	</option>
-      <option>	Luxembourger	</option>
-      <option>	Macedonian	</option>
-      <option>	Malagasy	</option>
-      <option>	Malawian	</option>
-      <option>	Malaysian	</option>
-      <option>	Maldivan	</option>
-      <option>	Malian	</option>
-      <option>	Maltese	</option>
-      <option>	Marshallese	</option>
-      <option>	Mauritanian	</option>
-      <option>	Mauritian	</option>
-      <option>	Mexican	</option>
-      <option>	Micronesian	</option>
-      <option>	Moldovan	</option>
-      <option>	Monacan	</option>
-      <option>	Mongolian	</option>
-      <option>	Moroccan	</option>
-      <option>	Mosotho	</option>
-      <option>	Motswana	</option>
-      <option>	Mozambican	</option>
-      <option>	Namibian	</option>
-      <option>	Nauruan	</option>
-      <option>	Nepalese	</option>
-      <option>	New Zealander	</option>
-      <option>	Nicaraguan	</option>
-      <option>	Nigerian	</option>
-      <option>	Nigerien	</option>
-      <option>	North Korean	</option>
-      <option>	Northern Irish	</option>
-      <option>	Norwegian	</option>
-      <option>	Omani	</option>
-      <option>	Pakistani	</option>
-      <option>	Palauan	</option>
-      <option>	Panamanian	</option>
-      <option>	Papua New Guinean	</option>
-      <option>	Paraguayan	</option>
-      <option>	Peruvian	</option>
-      <option>	Polish	</option>
-      <option>	Portuguese	</option>
-      <option>	Qatari	</option>
-      <option>	Romanian	</option>
-      <option>	Russian	</option>
-      <option>	Rwandan	</option>
-      <option>	Saint Lucian	</option>
-      <option>	Salvadoran	</option>
-      <option>	Samoan	</option>
-      <option>	San Marinese	</option>
-      <option>	Sao Tomean	</option>
-      <option>	Saudi	</option>
-      <option>	Scottish	</option>
-      <option>	Senegalese	</option>
-      <option>	Serbian	</option>
-      <option>	Seychellois	</option>
-      <option>	Sierra Leonean	</option>
-      <option>	Singaporean	</option>
-      <option>	Slovakian	</option>
-      <option>	Slovenian	</option>
-      <option>	Solomon Islander	</option>
-      <option>	Somali	</option>
-      <option>	South African	</option>
-      <option>	South Korean	</option>
-      <option>	Spanish	</option>
-      <option>	Sri Lankan	</option>
-      <option>	Sudanese	</option>
-      <option>	Surinamer	</option>
-      <option>	Swazi	</option>
-      <option>	Swedish	</option>
-      <option>	Swiss	</option>
-      <option>	Syrian	</option>
-      <option>	Taiwanese	</option>
-      <option>	Tajik	</option>
-      <option>	Tanzanian	</option>
-      <option>	Thai	</option>
-      <option>	Togolese	</option>
-      <option>	Tongan	</option>
-      <option>	Trinidadian or Tobagonian	</option>
-      <option>	Tunisian	</option>
-      <option>	Turkish	</option>
-      <option>	Tuvaluan	</option>
-      <option>	Ugandan	</option>
-      <option>	Ukrainian	</option>
-      <option>	Uruguayan	</option>
-      <option>	Uzbekistani	</option>
-      <option>	Venezuelan	</option>
-      <option>	Vietnamese	</option>
-      <option>	Welsh	</option>
-      <option>	Yemenite	</option>
-      <option>	Zambian	</option>
-      <option>	Zimbabwean	</option>
+<td>Citizenship:</td>
+<td>
+  <select id="civil_status" name="personal_detail[civil_status]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
+    <option>Select One</option>
+    <option> Afghan</option>
+    <option> Albanian</option>
+    <option> Algerian</option>
+    <option> American</option>
+    <option> Andorran</option>
+    <option> Angolan</option>
+    <option> Antiguans</option>
+    <option> Argentinean</option>
+    <option> Armenian</option>
+    <option> Australian</option>
+    <option> Austrian</option>
+    <option> Azerbaijani</option>
+    <option> Bahamian</option>
+    <option> Bahraini</option>
+    <option> Bangladeshi</option>
+    <option> Barbadian</option>
+    <option> Barbudans</option>
+    <option> Batswana</option>
+    <option> Belarusian</option>
+    <option> Belgian</option>
+    <option> Belizean</option>
+    <option> Beninese</option>
+    <option> Bhutanese</option>
+    <option> Bolivian</option>
+    <option> Bosnian</option>
+    <option> Brazilian</option>
+    <option> British</option>
+    <option> Bruneian</option>
+    <option> Bulgarian</option>
+    <option> Burkinabe</option>
+    <option> Burmese</option>
+    <option> Burundian</option>
+    <option> Cambodian</option>
+    <option> Cameroonian</option>
+    <option> Canadian</option>
+    <option> Cape Verdean</option>
+    <option> Central African</option>
+    <option> Chadian</option>
+    <option> Chilean</option>
+    <option> Chinese</option>
+    <option> Colombian</option>
+    <option> Comoran</option>
+    <option> Congolese</option>
+    <option> Costa Rican</option>
+    <option> Croatian</option>
+    <option> Cuban</option>
+    <option> Cypriot</option>
+    <option> Czech</option>
+    <option> Danish</option>
+    <option> Djibouti</option>
+    <option> Dominican</option>
+    <option> Dutch</option>
+    <option> East Timorese</option>
+    <option> Ecuadorean</option>
+    <option> Egyptian</option>
+    <option> Emirian</option>
+    <option> Equatorial Guinean</option>
+    <option> Eritrean</option>
+    <option> Estonian</option>
+    <option> Ethiopian</option>
+    <option> Fijian</option>
+    <option> Filipino</option>
+    <option> Finnish</option>
+    <option> French</option>
+    <option> Gabonese</option>
+    <option> Gambian</option>
+    <option> Georgian</option>
+    <option> German</option>
+    <option> Ghanaian</option>
+    <option> Greek</option>
+    <option> Grenadian</option>
+    <option> Guatemalan</option>
+    <option> Guinea-Bissauan</option>
+    <option> Guinean</option>
+    <option> Guyanese</option>
+    <option> Haitian</option>
+    <option> Herzegovinian</option>
+    <option> Honduran</option>
+    <option> Hungarian</option>
+    <option> I-Kiribati</option>
+    <option> Icelander</option>
+    <option> Indian</option>
+    <option> Indonesian</option>
+    <option> Iranian</option>
+    <option> Iraqi</option>
+    <option> Irish</option>
+    <option> Israeli</option>
+    <option> Italian</option>
+    <option> Ivorian</option>
+    <option> Jamaican</option>
+    <option> Japanese</option>
+    <option> Jordanian</option>
+    <option> Kazakhstani</option>
+    <option> Kenyan</option>
+    <option> Kittian and Nevisian</option>
+    <option> Kuwaiti</option>
+    <option> Kyrgyz</option>
+    <option> Laotian</option>
+    <option> Latvian</option>
+    <option> Lebanese</option>
+    <option> Liberian</option>
+    <option> Libyan</option>
+    <option> Liechtensteiner</option>
+    <option> Lithuanian</option>
+    <option> Luxembourger</option>
+    <option> Macedonian</option>
+    <option> Malagasy</option>
+    <option> Malawian</option>
+    <option> Malaysian</option>
+    <option> Maldivan</option>
+    <option> Malian</option>
+    <option> Maltese</option>
+    <option> Marshallese</option>
+    <option> Mauritanian</option>
+    <option> Mauritian</option>
+    <option> Mexican</option>
+    <option> Micronesian</option>
+    <option> Moldovan</option>
+    <option> Monacan</option>
+    <option> Mongolian</option>
+    <option> Moroccan</option>
+    <option> Mosotho</option>
+    <option> Motswana</option>
+    <option> Mozambican</option>
+    <option> Namibian</option>
+    <option> Nauruan</option>
+    <option> Nepalese</option>
+    <option> New Zealander</option>
+    <option> Nicaraguan</option>
+    <option> Nigerian</option>
+    <option> Nigerien</option>
+    <option> North Korean</option>
+    <option> Northern Irish</option>
+    <option> Norwegian</option>
+    <option> Omani</option>
+    <option> Pakistani</option>
+    <option> Palauan</option>
+    <option> Panamanian</option>
+    <option> Papua New Guinean</option>
+    <option> Paraguayan</option>
+    <option> Peruvian</option>
+    <option> Polish</option>
+    <option> Portuguese</option>
+    <option> Qatari</option>
+    <option> Romanian</option>
+    <option> Russian</option>
+    <option> Rwandan</option>
+    <option> Saint Lucian</option>
+    <option> Salvadoran</option>
+    <option> Samoan</option>
+    <option> San Marinese</option>
+    <option> Sao Tomean</option>
+    <option> Saudi</option>
+    <option> Scottish</option>
+    <option> Senegalese</option>
+    <option> Serbian</option>
+    <option> Seychellois</option>
+    <option> Sierra Leonean</option>
+    <option> Singaporean</option>
+    <option> Slovakian</option>
+    <option> Slovenian</option>
+    <option> Solomon Islander</option>
+    <option> Somali</option>
+    <option> South African</option>
+    <option> South Korean</option>
+    <option> Spanish</option>
+    <option> Sri Lankan</option>
+    <option> Sudanese</option>
+    <option> Surinamer</option>
+    <option> Swazi</option>
+    <option> Swedish</option>
+    <option> Swiss</option>
+    <option> Syrian</option>
+    <option> Taiwanese</option>
+    <option> Tajik</option>
+    <option> Tanzanian</option>
+    <option> Thai</option>
+    <option> Togolese</option>
+    <option> Tongan</option>
+    <option> Trinidadian or Tobagonian</option>
+    <option> Tunisian</option>
+    <option> Turkish</option>
+    <option> Tuvaluan</option>
+    <option> Ugandan</option>
+    <option> Ukrainian</option>
+    <option> Uruguayan</option>
+    <option> Uzbekistani</option>
+    <option> Venezuelan</option>
+    <option> Vietnamese</option>
+    <option> Welsh</option>
+    <option> Yemenite</option>
+    <option> Zambian</option>
+    <option> Zimbabwean</option>
 
-    </select>
-  </td>
+  </select>
+</td>
 </tr>
 </table>
 
 </form>
-<button id="personal_edit_link_close" name="personal_edit_link_close" class="btn"  style="margin-left: 170px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Close
+<button id="personal_edit_link_close" name="personal_edit_link_close" class="btn" style="margin-left: 170px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Close
 </button>
-<button id="personal-update" name="personal-update" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update Details
+<button id="personal-update" name="personal-update" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
+  Details
 </button>
 
 
@@ -798,7 +801,8 @@
 </form>
 <button id="cancel_mailing" name="cancel_mailing" class="btn" style="margin-left: 170px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Close
 </button>
-<button id="mailing-update"  name="mailing-update" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update Details
+<button id="mailing-update" name="mailing-update" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
+  Details
 </button>
 
 </div>
@@ -915,62 +919,58 @@
       <td>Undergraduate Major:</td>
       <td>
 
-      <select id="last-school-end-date" name="education_detail[undergrad_major]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.undergrad_major %>">
+        <select id="last-school-end-date" name="education_detail[undergrad_major]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.undergrad_major %>">
 
-        <option>	Business	</option>
-        <option>	Accounting	</option>
-        <option>	Advertising	</option>
-        <option>	Finance	</option>
-        <option>	Industrial Relations	</option>
-        <option>	Management / Administration	</option>
-        <option>	Marketing	</option>
-        <option>	Operations Management	</option>
-        <option>	Other	</option>
-        <option>	Engineering	</option>
-        <option>	Chemical	</option>
-        <option>	Civil	</option>
-        <option>	Computer	</option>
-        <option>	Electrical	</option>
-        <option>	Industrial	</option>
-        <option>	Mechanical	</option>
-        <option>	Other	</option>
-        <option>	Humanities	</option>
-        <option>	Communications	</option>
-        <option>	English / Literature	</option>
-        <option>	Fine Arts	</option>
-        <option>	Foreign Languages	</option>
-        <option>	Journalism	</option>
-        <option>	Music	</option>
-        <option>	Philosophy / Religion	</option>
-        <option>	Other	</option>
-        <option>	Science	</option>
-        <option>	Architecture	</option>
-        <option>	Biological Science	</option>
-        <option>	Chemistry	</option>
-        <option>	Earth Science	</option>
-        <option>	Mathematics	</option>
-        <option>	Medicine	</option>
-        <option>	Physics	</option>
-        <option>	Statistics	</option>
-        <option>	Urban Studies	</option>
-        <option>	Other	</option>
-        <option>	Social Sciences	</option>
-        <option>	Anthropology	</option>
-        <option>	Economics	</option>
-        <option>	Education	</option>
-        <option>	Government / History	</option>
-        <option>	International Relations	</option>
-        <option>	Law	</option>
-        <option>	Political Science	</option>
-        <option>	Psychology / Organizational Behavior	</option>
-        <option>	Sociology	</option>
-
-
+          <option> Business</option>
+          <option> Accounting</option>
+          <option> Advertising</option>
+          <option> Finance</option>
+          <option> Industrial Relations</option>
+          <option> Management / Administration</option>
+          <option> Marketing</option>
+          <option> Operations Management</option>
+          <option> Other</option>
+          <option> Engineering</option>
+          <option> Chemical</option>
+          <option> Civil</option>
+          <option> Computer</option>
+          <option> Electrical</option>
+          <option> Industrial</option>
+          <option> Mechanical</option>
+          <option> Other</option>
+          <option> Humanities</option>
+          <option> Communications</option>
+          <option> English / Literature</option>
+          <option> Fine Arts</option>
+          <option> Foreign Languages</option>
+          <option> Journalism</option>
+          <option> Music</option>
+          <option> Philosophy / Religion</option>
+          <option> Other</option>
+          <option> Science</option>
+          <option> Architecture</option>
+          <option> Biological Science</option>
+          <option> Chemistry</option>
+          <option> Earth Science</option>
+          <option> Mathematics</option>
+          <option> Medicine</option>
+          <option> Physics</option>
+          <option> Statistics</option>
+          <option> Urban Studies</option>
+          <option> Other</option>
+          <option> Social Sciences</option>
+          <option> Anthropology</option>
+          <option> Economics</option>
+          <option> Education</option>
+          <option> Government / History</option>
+          <option> International Relations</option>
+          <option> Law</option>
+          <option> Political Science</option>
+          <option> Psychology / Organizational Behavior</option>
+          <option> Sociology</option>
 
 
-
-
-      </select>
+        </select>
 
 
       </td>
@@ -987,10 +987,12 @@
 
   </span>
   <span>
-    <button id="cancel_education" name="cancel_education" class="btn" style="margin-left: 200px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" >
+    <button id="cancel_education" name="cancel_education" class="btn" style="margin-left: 200px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Cancel
     </button>
-    <button id="education-details-submit" name="education-details-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update Details</button>
+    <button id="education-details-submit" name="education-details-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
+      Details
+    </button>
 
   </span>
 </div>
@@ -999,615 +1001,623 @@
 
   <span>
      <form id="professional-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-       <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
-         <tr>
-           <td>Total Years of Work Experience:</td>
-           <td>
-             <select id="years_ofexp" name="employment_detail[years_ofexp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_ofexp %>">
-               <option>Less than 2 years</option>
-               <option>2-5 years</option>
-               <option>5-10 years</option>
-               <option>10-15 years</option>
-               <option>15-20 years</option>
-               <option>20 - 25 Years</option>
-               <option>25 + Years</option>
-             </select>
-           </td>
-         </tr>
-         <tr>
-           <td>Function - Experience:</td>
-           <td>
-             <select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">
-               <option>	Administration	</option>
-               <option>	Advertising	</option>
-               <option>	Artist	</option>
-               <option>	Business Development	</option>
-               <option>	Consulting	</option>
-               <option>	Economic Analysis / Research	</option>
-               <option>	Education (Administrator / Faculty)	</option>
-               <option>	Engineering	</option>
-               <option>	Chemical	</option>
-               <option>	Electrical	</option>
-               <option>	Industrial	</option>
-               <option>	Mechanical	</option>
-               <option>	Entrepreneurship	</option>
-               <option>	Finance	</option>
-               <option>	Analyst / Research	</option>
-               <option>	Commercial Banking	</option>
-               <option>	Corporate Finance	</option>
-               <option>	Investment Banking	</option>
-               <option>	Investment Management	</option>
-               <option>	Lending/Relationship Mgmt	</option>
-               <option>	Mergers & Acquisitions	</option>
-               <option>	Private Client Services / Wealth Mgmt	</option>
-               <option>	Private Equity	</option>
-               <option>	Public Finance	</option>
-               <option>	Restructure / Turnaround	</option>
-               <option>	Risk Management	</option>
-               <option>	Sales & Trading	</option>
-               <option>	Treasury	</option>
-               <option>	Fundraising / Development	</option>
-               <option>	Headhunters/ Exec. Search	</option>
-               <option>	Healthcare	</option>
-               <option>	Human Resources	</option>
-               <option>	Compensation and Benefits	</option>
-               <option>	Training	</option>
-               <option>	Recruitment	</option>
-               <option>	Organizational Development	</option>
-               <option>	Employee Relations	</option>
-               <option>	Journalist / Author / Writer / Editor	</option>
-               <option>	Lawyer / Legal Professional	</option>
-               <option>	Legislative Aide / Lobbying / Advocate	</option>
-               <option>	Management	</option>
-               <option>	Operations / Production	</option>
-               <option>	Project Management	</option>
-               <option>	Retail Management	</option>
-               <option>	Supply Chain / Logistics	</option>
-               <option>	Management Development Program	</option>
-               <option>	Manufacturing	</option>
-               <option>	Marketing	</option>
-               <option>	Brand / Product Management	</option>
-               <option>	Communications / Public Relations	</option>
-               <option>	Market Research	</option>
-               <option>	Merchandising / Retail	</option>
-               <option>	Product Development / Innovation	</option>
-               <option>	Military	</option>
-               <option>	Multimedia Production / Graphic Design	</option>
-               <option>	Pharmaceuticals 	</option>
-               <option>	Purchasing / Procurement	</option>
-               <option>	Real Estate	</option>
-               <option>	Research & Development	</option>
-               <option>	Sales	</option>
-               <option>	Strategic Planning / Corporate Development	</option>
-               <option>	Information Technology	</option>
-               <option>	Systems Analysis and Design	</option>
-               <option>	Ecommerce / Internet / Web Site Management	</option>
-               <option>	Integration / Implementation	</option>
-               <option>	Systems Management	</option>
-               <option>	Training and Development	</option>
-               <option>	Technical Writer	</option>
-               <option>	Programmer	</option>
+     <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+     <tr>
+       <td>Total Years of Work Experience:</td>
+       <td>
+         <select id="years_ofexp" name="employment_detail[years_ofexp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_ofexp %>">
+           <option>Less than 2 years</option>
+           <option>2-5 years</option>
+           <option>5-10 years</option>
+           <option>10-15 years</option>
+           <option>15-20 years</option>
+           <option>20 - 25 Years</option>
+           <option>25 + Years</option>
+         </select>
+       </td>
+     </tr>
+     <tr>
+       <td>Function - Experience:</td>
+       <td>
+         <select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">
+           <option> Administration</option>
+           <option> Advertising</option>
+           <option> Artist</option>
+           <option> Business Development</option>
+           <option> Consulting</option>
+           <option> Economic Analysis / Research</option>
+           <option> Education (Administrator / Faculty)</option>
+           <option> Engineering</option>
+           <option> Chemical</option>
+           <option> Electrical</option>
+           <option> Industrial</option>
+           <option> Mechanical</option>
+           <option> Entrepreneurship</option>
+           <option> Finance</option>
+           <option> Analyst / Research</option>
+           <option> Commercial Banking</option>
+           <option> Corporate Finance</option>
+           <option> Investment Banking</option>
+           <option> Investment Management</option>
+           <option> Lending/Relationship Mgmt</option>
+           <option> Mergers & Acquisitions</option>
+           <option> Private Client Services / Wealth Mgmt</option>
+           <option> Private Equity</option>
+           <option> Public Finance</option>
+           <option> Restructure / Turnaround</option>
+           <option> Risk Management</option>
+           <option> Sales & Trading</option>
+           <option> Treasury</option>
+           <option> Fundraising / Development</option>
+           <option> Headhunters/ Exec. Search</option>
+           <option> Healthcare</option>
+           <option> Human Resources</option>
+           <option> Compensation and Benefits</option>
+           <option> Training</option>
+           <option> Recruitment</option>
+           <option> Organizational Development</option>
+           <option> Employee Relations</option>
+           <option> Journalist / Author / Writer / Editor</option>
+           <option> Lawyer / Legal Professional</option>
+           <option> Legislative Aide / Lobbying / Advocate</option>
+           <option> Management</option>
+           <option> Operations / Production</option>
+           <option> Project Management</option>
+           <option> Retail Management</option>
+           <option> Supply Chain / Logistics</option>
+           <option> Management Development Program</option>
+           <option> Manufacturing</option>
+           <option> Marketing</option>
+           <option> Brand / Product Management</option>
+           <option> Communications / Public Relations</option>
+           <option> Market Research</option>
+           <option> Merchandising / Retail</option>
+           <option> Product Development / Innovation</option>
+           <option> Military</option>
+           <option> Multimedia Production / Graphic Design</option>
+           <option> Pharmaceuticals</option>
+           <option> Purchasing / Procurement</option>
+           <option> Real Estate</option>
+           <option> Research & Development</option>
+           <option> Sales</option>
+           <option> Strategic Planning / Corporate Development</option>
+           <option> Information Technology</option>
+           <option> Systems Analysis and Design</option>
+           <option> Ecommerce / Internet / Web Site Management</option>
+           <option> Integration / Implementation</option>
+           <option> Systems Management</option>
+           <option> Training and Development</option>
+           <option> Technical Writer</option>
+           <option> Programmer</option>
 
 
-             </select></td>
-         </tr>
-         <tr>
-           <td>Industry - Experience:</td>
-           <td>
-             <select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
-               <option>	Accounting	</option>
-               <option>	Advertising	</option>
-               <option>	Advertising / Marketing Services	</option>
-               <option>	Communications / Public Relations	</option>
-               <option>	General	</option>
-               <option>	Aerospace / Aviation / Defense	</option>
-               <option>	Agribusiness	</option>
-               <option>	Automotive	</option>
-               <option>	Construction	</option>
-               <option>	Consulting	</option>
-               <option>	General	</option>
-               <option>	Biotechnology	</option>
-               <option>	Design	</option>
-               <option>	Gas and Oil	</option>
-               <option>	Healthcare	</option>
-               <option>	Human Capital	</option>
-               <option>	Management	</option>
-               <option>	Marketing	</option>
-               <option>	Nonprofit	</option>
-               <option>	Strategy	</option>
-               <option>	Supply Chain	</option>
-               <option>	Technology	</option>
-               <option>	Consumer Products	</option>
-               <option>	General	</option>
-               <option>	Alcohol	</option>
-               <option>	Apparel / Textiles	</option>
-               <option>	Beverages / Food	</option>
-               <option>	Electronics	</option>
-               <option>	Household / Personal	</option>
-               <option>	Luxury Goods	</option>
-               <option>	Tobacco	</option>
-               <option>	Economic Development / Microfinance	</option>
-               <option>	Education	</option>
-               <option>	Energy / Utilities	</option>
-               <option>	Alternative Energy	</option>
-               <option>	Cleantech	</option>
-               <option>	Energy Trading	</option>
-               <option>	Oil / Gas	</option>
-               <option>	Utility Services (Electric / Water / etc.)	</option>
-               <option>	Engineering Services	</option>
+         </select></td>
+     </tr>
+     <tr>
+       <td>Industry - Experience:</td>
+       <td>
+         <select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
+           <option> Accounting</option>
+           <option> Advertising</option>
+           <option> Advertising / Marketing Services</option>
+           <option> Communications / Public Relations</option>
+           <option> General</option>
+           <option> Aerospace / Aviation / Defense</option>
+           <option> Agribusiness</option>
+           <option> Automotive</option>
+           <option> Construction</option>
+           <option> Consulting</option>
+           <option> General</option>
+           <option> Biotechnology</option>
+           <option> Design</option>
+           <option> Gas and Oil</option>
+           <option> Healthcare</option>
+           <option> Human Capital</option>
+           <option> Management</option>
+           <option> Marketing</option>
+           <option> Nonprofit</option>
+           <option> Strategy</option>
+           <option> Supply Chain</option>
+           <option> Technology</option>
+           <option> Consumer Products</option>
+           <option> General</option>
+           <option> Alcohol</option>
+           <option> Apparel / Textiles</option>
+           <option> Beverages / Food</option>
+           <option> Electronics</option>
+           <option> Household / Personal</option>
+           <option> Luxury Goods</option>
+           <option> Tobacco</option>
+           <option> Economic Development / Microfinance</option>
+           <option> Education</option>
+           <option> Energy / Utilities</option>
+           <option> Alternative Energy</option>
+           <option> Cleantech</option>
+           <option> Energy Trading</option>
+           <option> Oil / Gas</option>
+           <option> Utility Services (Electric / Water / etc.)</option>
+           <option> Engineering Services</option>
 
-             </select></td>
-         </tr>
-         <tr>
-           <td>Work Authorization:</td>
-           <td>
-             <select name="employment_detail[work_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.work_authorization %>">
-             <option>United States</option>
-             <option>European Union</option>
-             <option>Afghanistan</option>
-             <option>Akrotiri</option>
-             <option>Albania</option>
-             <option>Algeria</option>
-             <option>American Samoa</option>
-             <option>Andorra</option>
-             <option>Angola</option>
-             <option>Anguilla</option>
-             <option>Antarctica</option>
-             <option>Antigua and Barbuda</option>
-             <option>Argentina</option>
-             <option>Armenia</option>
-             <option>Aruba</option>
-             <option>Ashmore and Cartier Islands</option>
-             <option>Australia</option>
-             <option>Austria</option>
-             <option>Azerbaijan</option>
-             <option>Bahamas</option>
-             <option>Bahrain</option>
-             <option>Baker Island</option>
-             <option>Bangladesh</option>
-             <option>Barbados</option>
-             <option>Belarus</option>
-             <option>Belgium</option>
-             <option>Belize</option>
-             <option>Benin</option>
-             <option>Bermuda</option>
-             <option>Bhutan</option>
-             <option>Bolivia</option>
-             <option>Bosnia and Herzegovina</option>
-             <option>Botswana</option>
-             <option>Bouvet Island</option>
-             <option>Brazil</option>
-             <option>British Virgin Islands</option>
-             <option>Brunei</option>
-             <option>Bulgaria</option>
-             <option>Burkina Faso</option>
-             <option>Burma</option>
-             <option>Burundi</option>
-             <option>Cambodia</option>
-             <option>Cameroon</option>
-             <option>Canada</option>
-             <option>Cape Verde</option>
-             <option>Cayman Islands</option>
-             <option>Central African Republic</option>
-             <option>Chad</option>
-             <option>Chile</option>
-             <option>China</option>
-             <option>Christmas Island</option>
-             <option>Clipperton Island</option>
-             <option>Cocos (Keeling) Islands</option>
-             <option>Colombia</option>
-             <option>Comoros</option>
-             <option>Congo - Democratic Republic of the</option>
-             <option>Congo - Republic of the</option>
-             <option>Cook Islands</option>
-             <option>Coral Sea Islands</option>
-             <option>Costa Rica</option>
-             <option>Cote d'Ivoire</option>
-             <option>Croatia</option>
-             <option>Cuba</option>
-             <option>Cyprus</option>
-             <option>Czech Republic</option>
-             <option>Denmark</option>
-             <option>Dhekelia</option>
-             <option>Djibouti</option>
-             <option>Dominica</option>
-             <option>Dominican Republic</option>
-             <option>Ecuador</option>
-             <option>Egypt</option>
-             <option>El Salvador</option>
-             <option>Equatorial Guinea</option>
-             <option>Eritrea</option>
-             <option>Estonia</option>
-             <option>Ethiopia</option>
-             <option>Europa Island</option>
-             <option>Falkland Islands (Islas Malvinas)</option>
-             <option>Faroe Islands</option>
-             <option>Fiji</option>
-             <option>Finland</option>
-             <option>France</option>
-             <option>French Polynesia</option>
-             <option>French Southern and Antarctic Lands</option>
-             <option>Gabon</option>
-             <option>Gambia</option>
-             <option>Gaza Strip</option>
-             <option>Georgia</option>
-             <option>Germany</option>
-             <option>Ghana</option>
-             <option>Gibraltar</option>
-             <option>Greece</option>
-             <option>Greenland</option>
-             <option>Grenada</option>
-             <option>Guam</option>
-             <option>Guatemala</option>
-             <option>Guernsey</option>
-             <option>Guinea</option>
-             <option>Guinea-Bissau</option>
-             <option>Guyana</option>
-             <option>Haiti</option>
-             <option>Heard Island and McDonald Islands</option>
-             <option>Holy See (Vatican City)</option>
-             <option>Honduras</option>
-             <option>Hong Kong</option>
-             <option>Howland Island</option>
-             <option>Hungary</option>
-             <option>Iceland</option>
-             <option>India</option>
-             <option>Indonesia</option>
-             <option>Iran</option>
-             <option>Iraq</option>
-             <option>Ireland</option>
-             <option>Isle of Man</option>
-             <option>Israel</option>
-             <option>Italy</option>
-             <option>Jamaica</option>
-             <option>Jan Mayen</option>
-             <option>Japan</option>
-             <option>Jarvis Island</option>
-             <option>Jersey</option>
-             <option>Johnston Atoll</option>
-             <option>Jordan</option>
-             <option>Kazakhstan</option>
-             <option>Kenya</option>
-             <option>Kingman Reef</option>
-             <option>Kiribati</option>
-             <option>Korea - North</option>
-             <option>Korea - South</option>
-             <option>Kuwait</option>
-             <option>Kyrgyzstan</option>
-             <option>Laos</option>
-             <option>Latvia</option>
-             <option>Lebanon</option>
-             <option>Lesotho</option>
-             <option>Liberia</option>
-             <option>Libya</option>
-             <option>Liechtenstein</option>
-             <option>Lithuania</option>
-             <option>Luxembourg</option>
-             <option>Macau</option>
-             <option>Macedonia</option>
-             <option>Madagascar</option>
-             <option>Malawi</option>
-             <option>Malaysia</option>
-             <option>Maldives</option>
-             <option>Mali</option>
-             <option>Malta</option>
-             <option>Marshall Islands</option>
-             <option>Mauritania</option>
-             <option>Mauritius</option>
-             <option>Mayotte</option>
-             <option>Mexico</option>
-             <option>Micronesia - Federated States of</option>
-             <option>Midway Islands</option>
-             <option>Moldova</option>
-             <option>Monaco</option>
-             <option>Mongolia</option>
-             <option>Montenegro</option>
-             <option>Montserrat</option>
-             <option>Morocco</option>
-             <option>Mozambique</option>
-             <option>Namibia</option>
-             <option>Nauru</option>
-             <option>Navassa Island</option>
-             <option>Nepal</option>
-             <option>Netherlands</option>
-             <option>Netherlands Antilles</option>
-             <option>New Caledonia</option>
-             <option>New Zealand</option>
-             <option>Nicaragua</option>
-             <option>Niger</option>
-             <option>Nigeria</option>
-             <option>Niue</option>
-             <option>Norfolk Island</option>
-             <option>Northern Mariana Islands</option>
-             <option>Norway</option>
-             <option>Oman</option>
-             <option>Pakistan</option>
-             <option>Palau</option>
-             <option>Palmyra Atoll</option>
-             <option>Panama</option>
-             <option>Papua New Guinea</option>
-             <option>Paracel Islands</option>
-             <option>Paraguay</option>
-             <option>Peru</option>
-             <option>Philippines</option>
-             <option>Pitcairn Islands</option>
-             <option>Poland</option>
-             <option>Portugal</option>
-             <option>Puerto Rico</option>
-             <option>Qatar</option>
-             <option>Romania</option>
-             <option>Russia</option>
-             <option>Rwanda</option>
-             <option>Saint Helena</option>
-             <option>Saint Kitts and Nevis</option>
-             <option>Saint Lucia</option>
-             <option>Saint Pierre and Miquelon</option>
-             <option>Saint Vincent and the Grenadines</option>
-             <option>Samoa</option>
-             <option>San Marino</option>
-             <option>Sao Tome and Principe</option>
-             <option>Saudi Arabia</option>
-             <option>Senegal</option>
-             <option>Serbia and Montenegro</option>
-             <option>Seychelles</option>
-             <option>Sierra Leone</option>
-             <option>Singapore</option>
-             <option>Slovakia</option>
-             <option>Slovenia</option>
-             <option>Solomon Islands</option>
-             <option>Somalia</option>
-             <option>South Africa</option>
-             <option>South Georgia and the South Sandwich Islands</option>
-             <option>Spain</option>
-             <option>Spratly Islands</option>
-             <option>Sri Lanka</option>
-             <option>Sudan</option>
-             <option>Suriname</option>
-             <option>Svalbard</option>
-             <option>Swaziland</option>
-             <option>Sweden</option>
-             <option>Switzerland</option>
-             <option>Syria</option>
-             <option>Taiwan</option>
-             <option>Tajikistan</option>
-             <option>Tanzania</option>
-             <option>Thailand</option>
-             <option>Timor-Leste</option>
-             <option>Togo</option>
-             <option>Tokelau</option>
-             <option>Tonga</option>
-             <option>Trinidad and Tobago</option>
-             <option>Tunisia</option>
-             <option>Turkey</option>
-             <option>Turkmenistan</option>
-             <option>Turks and Caicos Islands</option>
-             <option>Tuvalu</option>
-             <option>Uganda</option>
-             <option>Ukraine</option>
-             <option>United Arab Emirates</option>
-             <option>United Kingdom</option>
-             <option>Uruguay</option>
-             <option>Uzbekistan</option>
-             <option>Vanuatu</option>
-             <option>Venezuela</option>
-             <option>Vietnam</option>
-             <option>Virgin Islands</option>
-             <option>Wake Island</option>
-             <option>Wallis and Futuna</option>
-             <option>West Bank</option>
-             <option>Western Sahara</option>
-             <option>Yemen</option>
-             <option>Zambia</option>
-             <option>Zimbabwe  </option>
+         </select></td>
+     </tr>
+     <tr>
+     <td>Work Authorization:</td>
+     <td>
+     <select name="employment_detail[work_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.work_authorization %>">
+     <option>United States</option>
+     <option>European Union</option>
+     <option>Afghanistan</option>
+     <option>Akrotiri</option>
+     <option>Albania</option>
+     <option>Algeria</option>
+     <option>American Samoa</option>
+     <option>Andorra</option>
+     <option>Angola</option>
+     <option>Anguilla</option>
+     <option>Antarctica</option>
+     <option>Antigua and Barbuda</option>
+     <option>Argentina</option>
+     <option>Armenia</option>
+     <option>Aruba</option>
+     <option>Ashmore and Cartier Islands</option>
+     <option>Australia</option>
+     <option>Austria</option>
+     <option>Azerbaijan</option>
+     <option>Bahamas</option>
+     <option>Bahrain</option>
+     <option>Baker Island</option>
+     <option>Bangladesh</option>
+     <option>Barbados</option>
+     <option>Belarus</option>
+     <option>Belgium</option>
+     <option>Belize</option>
+     <option>Benin</option>
+     <option>Bermuda</option>
+     <option>Bhutan</option>
+     <option>Bolivia</option>
+     <option>Bosnia and Herzegovina</option>
+     <option>Botswana</option>
+     <option>Bouvet Island</option>
+     <option>Brazil</option>
+     <option>British Virgin Islands</option>
+     <option>Brunei</option>
+     <option>Bulgaria</option>
+     <option>Burkina Faso</option>
+     <option>Burma</option>
+     <option>Burundi</option>
+     <option>Cambodia</option>
+     <option>Cameroon</option>
+     <option>Canada</option>
+     <option>Cape Verde</option>
+     <option>Cayman Islands</option>
+     <option>Central African Republic</option>
+     <option>Chad</option>
+     <option>Chile</option>
+     <option>China</option>
+     <option>Christmas Island</option>
+     <option>Clipperton Island</option>
+     <option>Cocos (Keeling) Islands</option>
+     <option>Colombia</option>
+     <option>Comoros</option>
+     <option>Congo - Democratic Republic of the</option>
+     <option>Congo - Republic of the</option>
+     <option>Cook Islands</option>
+     <option>Coral Sea Islands</option>
+     <option>Costa Rica</option>
+     <option>Cote d'Ivoire</option>
+     <option>Croatia</option>
+     <option>Cuba</option>
+     <option>Cyprus</option>
+     <option>Czech Republic</option>
+     <option>Denmark</option>
+     <option>Dhekelia</option>
+     <option>Djibouti</option>
+     <option>Dominica</option>
+     <option>Dominican Republic</option>
+     <option>Ecuador</option>
+     <option>Egypt</option>
+     <option>El Salvador</option>
+     <option>Equatorial Guinea</option>
+     <option>Eritrea</option>
+     <option>Estonia</option>
+     <option>Ethiopia</option>
+     <option>Europa Island</option>
+     <option>Falkland Islands (Islas Malvinas)</option>
+     <option>Faroe Islands</option>
+     <option>Fiji</option>
+     <option>Finland</option>
+     <option>France</option>
+     <option>French Polynesia</option>
+     <option>French Southern and Antarctic Lands</option>
+     <option>Gabon</option>
+     <option>Gambia</option>
+     <option>Gaza Strip</option>
+     <option>Georgia</option>
+     <option>Germany</option>
+     <option>Ghana</option>
+     <option>Gibraltar</option>
+     <option>Greece</option>
+     <option>Greenland</option>
+     <option>Grenada</option>
+     <option>Guam</option>
+     <option>Guatemala</option>
+     <option>Guernsey</option>
+     <option>Guinea</option>
+     <option>Guinea-Bissau</option>
+     <option>Guyana</option>
+     <option>Haiti</option>
+     <option>Heard Island and McDonald Islands</option>
+     <option>Holy See (Vatican City)</option>
+     <option>Honduras</option>
+     <option>Hong Kong</option>
+     <option>Howland Island</option>
+     <option>Hungary</option>
+     <option>Iceland</option>
+     <option>India</option>
+     <option>Indonesia</option>
+     <option>Iran</option>
+     <option>Iraq</option>
+     <option>Ireland</option>
+     <option>Isle of Man</option>
+     <option>Israel</option>
+     <option>Italy</option>
+     <option>Jamaica</option>
+     <option>Jan Mayen</option>
+     <option>Japan</option>
+     <option>Jarvis Island</option>
+     <option>Jersey</option>
+     <option>Johnston Atoll</option>
+     <option>Jordan</option>
+     <option>Kazakhstan</option>
+     <option>Kenya</option>
+     <option>Kingman Reef</option>
+     <option>Kiribati</option>
+     <option>Korea - North</option>
+     <option>Korea - South</option>
+     <option>Kuwait</option>
+     <option>Kyrgyzstan</option>
+     <option>Laos</option>
+     <option>Latvia</option>
+     <option>Lebanon</option>
+     <option>Lesotho</option>
+     <option>Liberia</option>
+     <option>Libya</option>
+     <option>Liechtenstein</option>
+     <option>Lithuania</option>
+     <option>Luxembourg</option>
+     <option>Macau</option>
+     <option>Macedonia</option>
+     <option>Madagascar</option>
+     <option>Malawi</option>
+     <option>Malaysia</option>
+     <option>Maldives</option>
+     <option>Mali</option>
+     <option>Malta</option>
+     <option>Marshall Islands</option>
+     <option>Mauritania</option>
+     <option>Mauritius</option>
+     <option>Mayotte</option>
+     <option>Mexico</option>
+     <option>Micronesia - Federated States of</option>
+     <option>Midway Islands</option>
+     <option>Moldova</option>
+     <option>Monaco</option>
+     <option>Mongolia</option>
+     <option>Montenegro</option>
+     <option>Montserrat</option>
+     <option>Morocco</option>
+     <option>Mozambique</option>
+     <option>Namibia</option>
+     <option>Nauru</option>
+     <option>Navassa Island</option>
+     <option>Nepal</option>
+     <option>Netherlands</option>
+     <option>Netherlands Antilles</option>
+     <option>New Caledonia</option>
+     <option>New Zealand</option>
+     <option>Nicaragua</option>
+     <option>Niger</option>
+     <option>Nigeria</option>
+     <option>Niue</option>
+     <option>Norfolk Island</option>
+     <option>Northern Mariana Islands</option>
+     <option>Norway</option>
+     <option>Oman</option>
+     <option>Pakistan</option>
+     <option>Palau</option>
+     <option>Palmyra Atoll</option>
+     <option>Panama</option>
+     <option>Papua New Guinea</option>
+     <option>Paracel Islands</option>
+     <option>Paraguay</option>
+     <option>Peru</option>
+     <option>Philippines</option>
+     <option>Pitcairn Islands</option>
+     <option>Poland</option>
+     <option>Portugal</option>
+     <option>Puerto Rico</option>
+     <option>Qatar</option>
+     <option>Romania</option>
+     <option>Russia</option>
+     <option>Rwanda</option>
+     <option>Saint Helena</option>
+     <option>Saint Kitts and Nevis</option>
+     <option>Saint Lucia</option>
+     <option>Saint Pierre and Miquelon</option>
+     <option>Saint Vincent and the Grenadines</option>
+     <option>Samoa</option>
+     <option>San Marino</option>
+     <option>Sao Tome and Principe</option>
+     <option>Saudi Arabia</option>
+     <option>Senegal</option>
+     <option>Serbia and Montenegro</option>
+     <option>Seychelles</option>
+     <option>Sierra Leone</option>
+     <option>Singapore</option>
+     <option>Slovakia</option>
+     <option>Slovenia</option>
+     <option>Solomon Islands</option>
+     <option>Somalia</option>
+     <option>South Africa</option>
+     <option>South Georgia and the South Sandwich Islands</option>
+     <option>Spain</option>
+     <option>Spratly Islands</option>
+     <option>Sri Lanka</option>
+     <option>Sudan</option>
+     <option>Suriname</option>
+     <option>Svalbard</option>
+     <option>Swaziland</option>
+     <option>Sweden</option>
+     <option>Switzerland</option>
+     <option>Syria</option>
+     <option>Taiwan</option>
+     <option>Tajikistan</option>
+     <option>Tanzania</option>
+     <option>Thailand</option>
+     <option>Timor-Leste</option>
+     <option>Togo</option>
+     <option>Tokelau</option>
+     <option>Tonga</option>
+     <option>Trinidad and Tobago</option>
+     <option>Tunisia</option>
+     <option>Turkey</option>
+     <option>Turkmenistan</option>
+     <option>Turks and Caicos Islands</option>
+     <option>Tuvalu</option>
+     <option>Uganda</option>
+     <option>Ukraine</option>
+     <option>United Arab Emirates</option>
+     <option>United Kingdom</option>
+     <option>Uruguay</option>
+     <option>Uzbekistan</option>
+     <option>Vanuatu</option>
+     <option>Venezuela</option>
+     <option>Vietnam</option>
+     <option>Virgin Islands</option>
+     <option>Wake Island</option>
+     <option>Wallis and Futuna</option>
+     <option>West Bank</option>
+     <option>Western Sahara</option>
+     <option>Yemen</option>
+     <option>Zambia</option>
+     <option>Zimbabwe</option>
 
 
-             </select></td>
-         </tr>
-         <tr>
-           <td>Geographic - Experience:</td>
-           <td>
-             <select name="employment_detail[geographic_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.geographic_authorization %>">
-               <option>	USA	</option>
-               <option>	NORTH AMERICA (Non-US States)	</option>
-               <option>	 Algeria	</option>
-               <option>	 Angola 	</option>
-               <option>	 Cameroon 	</option>
-               <option>	 Cote d'Ivoire 	</option>
-               <option>	 Egypt 	</option>
-               <option>	 Ethiopia 	</option>
-               <option>	 Ghana 	</option>
-               <option>	 Kenya 	</option>
-               <option>	 Libya 	</option>
-               <option>	 Morocco 	</option>
-               <option>	 Nigeria 	</option>
-               <option>	 South Africa 	</option>
-               <option>	 Sudan 	</option>
-               <option>	 Tunisia 	</option>
-               <option>	 Azerbaijan 	</option>
-               <option>	 Bangladesh 	</option>
-               <option>	 China 	</option>
-               <option>	 China - Beijing Metro 	</option>
-               <option>	 China - Shanghai Metro 	</option>
-               <option>	 Hong Kong 	</option>
-               <option>	 India 	</option>
-               <option>	 Indonesia 	</option>
-               <option>	 Japan 	</option>
-               <option>	 Japan - Tokyo Metro 	</option>
-               <option>	 Kazakhstan 	</option>
-               <option>	 Macau 	</option>
-               <option>	 Malaysia 	</option>
-               <option>	 Myanmar (Burma) 	</option>
-               <option>	 Nepal 	</option>
-               <option>	 Pakistan 	</option>
-               <option>	 Philippines 	</option>
-               <option>	 Singapore 	</option>
-               <option>	 South Korea 	</option>
-               <option>	 Sri Lanka 	</option>
-               <option>	 Taiwan 	</option>
-               <option>	 Thailand 	</option>
-               <option>	 Turkmenistan 	</option>
-               <option>	 Ukraine 	</option>
-               <option>	 Uzbekistan 	</option>
-               <option>	 Vietnam 	</option>
-               <option>	Albania	</option>
-               <option>	 Austria 	</option>
-               <option>	 Belarus 	</option>
-               <option>	 Belgium 	</option>
-               <option>	 Bosnia and Herzegovina 	</option>
-               <option>	 Bulgaria 	</option>
-               <option>	 Croatia 	</option>
-               <option>	 Cyprus 	</option>
-               <option>	 Czech Republic 	</option>
-               <option>	 Denmark 	</option>
-               <option>	 Estonia 	</option>
-               <option>	 Finland 	</option>
-               <option>	 France 	</option>
-               <option>	 France - Paris Metro 	</option>
-               <option>	 Germany 	</option>
-               <option>	 Greece 	</option>
-               <option>	 Hungary 	</option>
-               <option>	 Iceland 	</option>
-               <option>	 Ireland 	</option>
-               <option>	 Italy 	</option>
-               <option>	 Kosovo 	</option>
-               <option>	 Latvia 	</option>
-               <option>	 Lithuania 	</option>
-               <option>	 Luxembourg 	</option>
-               <option>	 Macedonia 	</option>
-               <option>	 Moldova 	</option>
-               <option>	 Montenegro 	</option>
-               <option>	 Netherlands 	</option>
-               <option>	 Norway 	</option>
-               <option>	 Poland 	</option>
-               <option>	 Portugal 	</option>
-               <option>	 Romania 	</option>
-               <option>	 Russia 	</option>
-               <option>	 Serbia 	</option>
-               <option>	 Slovakia 	</option>
-               <option>	 Slovenia 	</option>
-               <option>	 Spain 	</option>
-               <option>	 Sweden 	</option>
-               <option>	 Switzerland 	</option>
-               <option>	 Turkey 	</option>
-               <option>	 Ukraine 	</option>
-               <option>	 United Kingdom 	</option>
-               <option>	 United Kingdom - London Metro 	</option>
-               <option>	Argentina	</option>
-               <option>	 Bermuda 	</option>
-               <option>	 Bolivia 	</option>
-               <option>	 Brazil 	</option>
-               <option>	 British Virgin Islands 	</option>
-               <option>	 Cayman Islands 	</option>
-               <option>	 Chile 	</option>
-               <option>	 Colombia 	</option>
-               <option>	 Costa Rica 	</option>
-               <option>	 Cuba 	</option>
-               <option>	 Dominican Republic 	</option>
-               <option>	 Ecuador 	</option>
-               <option>	 El Salvador 	</option>
-               <option>	 Guatemala 	</option>
-               <option>	 Nicaragua 	</option>
-               <option>	 Panama 	</option>
-               <option>	 Paraguay 	</option>
-               <option>	 Peru 	</option>
-               <option>	 Trinidad & Tobago 	</option>
-               <option>	 Uruguay 	</option>
-               <option>	 Venezuela 	</option>
-               <option>	 Afghanistan 	</option>
-               <option>	 Bahrain 	</option>
-               <option>	 Iran 	</option>
-               <option>	 Iraq 	</option>
-               <option>	 Israel 	</option>
-               <option>	 Jordan 	</option>
-               <option>	 Kuwait 	</option>
-               <option>	 Lebanon 	</option>
-               <option>	 Oman 	</option>
-               <option>	 Palestine 	</option>
-               <option>	 Qatar 	</option>
-               <option>	 Saudi Arabia 	</option>
-               <option>	 Syria 	</option>
-               <option>	 United Arab Emirates (UAE) 	</option>
-               <option>	 Yemen 	</option>
-               <option>	 Australia	</option>
-               <option>	 New Zealand 	</option>
+     </select></td>
+     </tr>
+     <tr>
+       <td>Geographic - Experience:</td>
+       <td>
+         <select name="employment_detail[geographic_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.geographic_authorization %>">
+           <option> USA</option>
+           <option> NORTH AMERICA (Non-US States)</option>
+           <option> Algeria</option>
+           <option> Angola</option>
+           <option> Cameroon</option>
+           <option> Cote d'Ivoire</option>
+           <option> Egypt</option>
+           <option> Ethiopia</option>
+           <option> Ghana</option>
+           <option> Kenya</option>
+           <option> Libya</option>
+           <option> Morocco</option>
+           <option> Nigeria</option>
+           <option> South Africa</option>
+           <option> Sudan</option>
+           <option> Tunisia</option>
+           <option> Azerbaijan</option>
+           <option> Bangladesh</option>
+           <option> China</option>
+           <option> China - Beijing Metro</option>
+           <option> China - Shanghai Metro</option>
+           <option> Hong Kong</option>
+           <option> India</option>
+           <option> Indonesia</option>
+           <option> Japan</option>
+           <option> Japan - Tokyo Metro</option>
+           <option> Kazakhstan</option>
+           <option> Macau</option>
+           <option> Malaysia</option>
+           <option> Myanmar (Burma)</option>
+           <option> Nepal</option>
+           <option> Pakistan</option>
+           <option> Philippines</option>
+           <option> Singapore</option>
+           <option> South Korea</option>
+           <option> Sri Lanka</option>
+           <option> Taiwan</option>
+           <option> Thailand</option>
+           <option> Turkmenistan</option>
+           <option> Ukraine</option>
+           <option> Uzbekistan</option>
+           <option> Vietnam</option>
+           <option> Albania</option>
+           <option> Austria</option>
+           <option> Belarus</option>
+           <option> Belgium</option>
+           <option> Bosnia and Herzegovina</option>
+           <option> Bulgaria</option>
+           <option> Croatia</option>
+           <option> Cyprus</option>
+           <option> Czech Republic</option>
+           <option> Denmark</option>
+           <option> Estonia</option>
+           <option> Finland</option>
+           <option> France</option>
+           <option> France - Paris Metro</option>
+           <option> Germany</option>
+           <option> Greece</option>
+           <option> Hungary</option>
+           <option> Iceland</option>
+           <option> Ireland</option>
+           <option> Italy</option>
+           <option> Kosovo</option>
+           <option> Latvia</option>
+           <option> Lithuania</option>
+           <option> Luxembourg</option>
+           <option> Macedonia</option>
+           <option> Moldova</option>
+           <option> Montenegro</option>
+           <option> Netherlands</option>
+           <option> Norway</option>
+           <option> Poland</option>
+           <option> Portugal</option>
+           <option> Romania</option>
+           <option> Russia</option>
+           <option> Serbia</option>
+           <option> Slovakia</option>
+           <option> Slovenia</option>
+           <option> Spain</option>
+           <option> Sweden</option>
+           <option> Switzerland</option>
+           <option> Turkey</option>
+           <option> Ukraine</option>
+           <option> United Kingdom</option>
+           <option> United Kingdom - London Metro</option>
+           <option> Argentina</option>
+           <option> Bermuda</option>
+           <option> Bolivia</option>
+           <option> Brazil</option>
+           <option> British Virgin Islands</option>
+           <option> Cayman Islands</option>
+           <option> Chile</option>
+           <option> Colombia</option>
+           <option> Costa Rica</option>
+           <option> Cuba</option>
+           <option> Dominican Republic</option>
+           <option> Ecuador</option>
+           <option> El Salvador</option>
+           <option> Guatemala</option>
+           <option> Nicaragua</option>
+           <option> Panama</option>
+           <option> Paraguay</option>
+           <option> Peru</option>
+           <option> Trinidad & Tobago</option>
+           <option> Uruguay</option>
+           <option> Venezuela</option>
+           <option> Afghanistan</option>
+           <option> Bahrain</option>
+           <option> Iran</option>
+           <option> Iraq</option>
+           <option> Israel</option>
+           <option> Jordan</option>
+           <option> Kuwait</option>
+           <option> Lebanon</option>
+           <option> Oman</option>
+           <option> Palestine</option>
+           <option> Qatar</option>
+           <option> Saudi Arabia</option>
+           <option> Syria</option>
+           <option> United Arab Emirates (UAE)</option>
+           <option> Yemen</option>
+           <option> Australia</option>
+           <option> New Zealand</option>
 
-             </select></td>
-         </tr>
-         <tr>
-           <td>Years of Supervisory Work Experience:</td>
-           <td>
-             <select name="employment_detail[years_supervisor_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_supervisor_exp %>">
-               <option>	0 - 1 Years	<option>
-               <option>	1 - 3 Years	<option>
-               <option>	3 - 5 Years	<option>
-               <option>	5 - 10 Years	<option>
-               <option>	10 - 15 Years	<option>
-               <option>	15 + Years	<option>
+         </select></td>
+     </tr>
+     <tr>
+       <td>Years of Supervisory Work Experience:</td>
+       <td>
+         <select name="employment_detail[years_supervisor_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_supervisor_exp %>">
+           <option> 0 - 1 Years
+           <option>
+           <option> 1 - 3 Years
+           <option>
+           <option> 3 - 5 Years
+           <option>
+           <option> 5 - 10 Years
+           <option>
+           <option> 10 - 15 Years
+           <option>
+           <option> 15 + Years
+           <option>
 
-             </select></td>
-         </tr>
-         <tr>
-           <td>Salary prior to MBA (per annum):</td>
-           <td>
-             <select name="employment_detail[salary_mba]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.salary_mba %>">
-               <option>Below $10,000</option>
-               <option>$10,000 - $14,999</option>
-               <option>$15,000 - $19,999</option>
-               <option>$20,000 - $24,999</option>
-               <option>$25,000 - $29,999</option>
-               <option>$30,000 - $34,999</option>
-               <option>$35,000 - $39,999</option>
-               <option>$40,000 - $44,999</option>
-               <option>$45,000 - $49,999</option>
-               <option>$50,000 above</option>
-             </select></td>
-         </tr>
-         <tr>
-           <td>Sabbatical?:</td>
-           <td>
-             <select name="employment_detail[sabbatical]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.sabbatical %>">
-               <option>Yes</option>
-               <option>No</option>
-             </select></td>
-         </tr>
-         <tr>
-           <td>Name of Company before MBA:</td>
-           <td>
-             <input id="company-name" name="employment_detail[company_before_mba]" value="<%= @employment_detail.company_before_mba %>" type="text" class="input-xlarge">
-           </td>
-         </tr>
-         <tr>
-           <td>Location:</td>
-           <td>
-             <input id="company-name" name="employment_detail[company_location]" value="<%= @employment_detail.company_location %>" type="text" class="input-xlarge">
-           </td>
-         </tr>
-         <tr>
-           <td>Job title / designation:</td>
-           <td>
-             <input id="company-name" name="employment_detail[job_title]" value="<%= @employment_detail.job_title %>" type="text" class="input-xlarge">
-           </td>
-         </tr>
-         <tr>
-           <td>Bachelor's Degree:</td>
-           <td>
-             <input id="company-name" name="employment_detail[degree]" value="<%= @employment_detail.degree %>" type="text" class="input-xlarge">
-           </td>
-         </tr>
-         <tr>
-           <td>School:</td>
-           <td>
-             <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.school %>" type="text" class="input-xlarge">
-           </td>
-         </tr>
-       </table>
+         </select></td>
+     </tr>
+     <tr>
+       <td>Salary prior to MBA (per annum):</td>
+       <td>
+         <select name="employment_detail[salary_mba]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.salary_mba %>">
+           <option>Below $10,000</option>
+           <option>$10,000 - $14,999</option>
+           <option>$15,000 - $19,999</option>
+           <option>$20,000 - $24,999</option>
+           <option>$25,000 - $29,999</option>
+           <option>$30,000 - $34,999</option>
+           <option>$35,000 - $39,999</option>
+           <option>$40,000 - $44,999</option>
+           <option>$45,000 - $49,999</option>
+           <option>$50,000 above</option>
+         </select></td>
+     </tr>
+     <tr>
+       <td>Sabbatical?:</td>
+       <td>
+         <select name="employment_detail[sabbatical]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.sabbatical %>">
+           <option>Yes</option>
+           <option>No</option>
+         </select></td>
+     </tr>
+     <tr>
+       <td>Name of Company before MBA:</td>
+       <td>
+         <input id="company-name" name="employment_detail[company_before_mba]" value="<%= @employment_detail.company_before_mba %>" type="text" class="input-xlarge">
+       </td>
+     </tr>
+     <tr>
+       <td>Location:</td>
+       <td>
+         <input id="company-name" name="employment_detail[company_location]" value="<%= @employment_detail.company_location %>" type="text" class="input-xlarge">
+       </td>
+     </tr>
+     <tr>
+       <td>Job title / designation:</td>
+       <td>
+         <input id="company-name" name="employment_detail[job_title]" value="<%= @employment_detail.job_title %>" type="text" class="input-xlarge">
+       </td>
+     </tr>
+     <tr>
+       <td>Bachelor's Degree:</td>
+       <td>
+         <input id="company-name" name="employment_detail[degree]" value="<%= @employment_detail.degree %>" type="text" class="input-xlarge">
+       </td>
+     </tr>
+     <tr>
+       <td>School:</td>
+       <td>
+         <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.school %>" type="text" class="input-xlarge">
+       </td>
+     </tr>
+     </table>
      </form>
   </span>
   <span>
     <button id="cancel_professional" name="cancel_professional" class="btn" style="margin-left: 220px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Cancel
     </button>
-    <button id="professional-submit"  name="professional-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update Details</button>
+    <button id="professional-submit" name="professional-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
+      Details
+    </button>
 
   </span>
 
@@ -1620,33 +1630,33 @@
       <tr>
         <td>Industry - Preference:</td>
         <td>
-          <select id="industry" name="preference[industry]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @preference.industry %>" >
-            <option>	Consumer Products / Fast Moving Consumer Goods	</option>
-            <option>	Banking	</option>
-            <option>	Financial Services	</option>
-            <option>	Advertising	</option>
-            <option>	Aerospace / Aviation / Defense	</option>
-            <option>	Agribusiness	</option>
-            <option>	Automotive	</option>
-            <option>	Real Estate	</option>
-            <option>	Consulting	</option>
-            <option>	Executive Search Firm/ Headhunters	</option>
-            <option>	Education	</option>
-            <option>	Energy / Utilities / Natural Resources	</option>
-            <option>	Entertainment /Media	</option>
-            <option>	Environmental Services & Sustainability	</option>
-            <option>	Government / Military	</option>
-            <option>	Healthcare	</option>
-            <option>	Hospitality / Tourism	</option>
-            <option>	Law / Legal Services	</option>
-            <option>	Manufacturing	</option>
-            <option>	Nonprofits & Social Enterprises	</option>
-            <option>	Pharmaceutical	</option>
-            <option>	Real Estate	</option>
-            <option>	Retail	</option>
-            <option>	Technology	</option>
-            <option>	Telecommunication Services	</option>
-            <option>	Transportation / Logistics	</option>
+          <select id="industry" name="preference[industry]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @preference.industry %>">
+            <option> Consumer Products / Fast Moving Consumer Goods</option>
+            <option> Banking</option>
+            <option> Financial Services</option>
+            <option> Advertising</option>
+            <option> Aerospace / Aviation / Defense</option>
+            <option> Agribusiness</option>
+            <option> Automotive</option>
+            <option> Real Estate</option>
+            <option> Consulting</option>
+            <option> Executive Search Firm/ Headhunters</option>
+            <option> Education</option>
+            <option> Energy / Utilities / Natural Resources</option>
+            <option> Entertainment /Media</option>
+            <option> Environmental Services & Sustainability</option>
+            <option> Government / Military</option>
+            <option> Healthcare</option>
+            <option> Hospitality / Tourism</option>
+            <option> Law / Legal Services</option>
+            <option> Manufacturing</option>
+            <option> Nonprofits & Social Enterprises</option>
+            <option> Pharmaceutical</option>
+            <option> Real Estate</option>
+            <option> Retail</option>
+            <option> Technology</option>
+            <option> Telecommunication Services</option>
+            <option> Transportation / Logistics</option>
 
           </select>
         </td>
@@ -1654,12 +1664,12 @@
       <tr>
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
-          <select id="criteria" name="preference[criteria]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @preference.criteria %>" >
-            <option>	Job Profile	</option>
-            <option>	Location	</option>
-            <option>	Compensation and Benefits	</option>
-            <option>	Company	</option>
-            <option>	Industry	</option>
+          <select id="criteria" name="preference[criteria]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @preference.criteria %>">
+            <option> Job Profile</option>
+            <option> Location</option>
+            <option> Compensation and Benefits</option>
+            <option> Company</option>
+            <option> Industry</option>
           </select>
         </td>
       </tr>
@@ -1673,7 +1683,7 @@
         <td>Desired Salary after MBA (per annum):</td>
         <td>
 
-          <select id="salary_after_mba" name="preference[salary_after_mba]" class="input-xlarge dropdown-value" data-chosen-value="<%= @preference.salary_after_mba  %>">
+          <select id="salary_after_mba" name="preference[salary_after_mba]" class="input-xlarge dropdown-value" data-chosen-value="<%= @preference.salary_after_mba %>">
 
             <option>Below $10,000</option>
             <option>$10,000 - $14,999</option>
@@ -1684,7 +1694,7 @@
             <option>$35,000 - $39,999</option>
             <option>$40,000 - $44,999</option>
             <option>$45,000 - $49,999</option>
-            <option>$50,000 above </option>
+            <option>$50,000 above</option>
 
 
           </select>
@@ -1704,7 +1714,7 @@
     <button id="cancel_preferences" name="cancel_preferences" class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Cancel
     </button>
-    <button id="preferences-submit"  name="preferences-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
+    <button id="preferences-submit" name="preferences-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Update Details
     </button>
 
@@ -1715,40 +1725,65 @@
 <div id="change_pass_dialog" title="Change Password">
   <div id="dialog-content">
     <form id="" method="post" action="">
+      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+        <tr>
+          <td>
+          Current Password:</td>
+          <td>
+          <input type="password">
+          </td>
+        </tr>
+        <tr>
+          <td>
+          New Password:</td>
+          <td>
+          <input type="password">
+          </td>
+        </tr>
+        <tr>
+          <td>
+          Confirm Password:</td>
+          <td>
+          <input type="password">
+          </td>
+        </tr>
+      </table>
+      <button class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>
+      <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Save Changes
+      </button>
 
+    </form>
 
-        <p><label>Current Password:</label>
-        <input type="password" >
-        </p>
-        <p><label>New Password:</label>
-        <input type="password" >
-        </p>
-        <p><label>Confirm Password:</label>
-        <input type="password" >
-        </p>
-       </form>
-    <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Save Changes</button>
-    <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>
   </div>
 </div>
 
 <div id="change_email_dialog" title="Change Email">
   <div id="dialog-content">
     <form id="" method="post" action="">
-
-
-      <p><label>Current Email:</label>
-        <input type="text" >
-      </p>
-      <p><label>New Email:</label>
-        <input type="text" >
-      </p>
-      <p><label>Confirm Email:</label>
-        <input type="text" >
-      </p>
-
-      <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Save Changes</button>
-      <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>
+      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+        <tr>
+          <td>
+          Current Email:</td>
+          <td>
+            <input type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+          New Email:</td>
+          <td>
+            <input type="text"></td>
+        </tr>
+        <tr>
+          <td>
+          Confirm Email:</td>
+          <td>
+            <input type="text"></td>
+        </tr>
+      </table>
+      <button class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>
+      <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Save Changes
+      </button>
     </form>
 
 

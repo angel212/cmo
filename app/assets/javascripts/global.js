@@ -8,6 +8,7 @@ $(document).ready(function (e) {
     $('div#page-5').hide();
     $('div#page-6').hide();
     $('div#page-7').hide();
+    $('div#page-8').hide();
     $('#page-title').text("Personal Particulars");
     $('.pagination').hide();
     $('#page-title').append($('.pagination'));
@@ -22,6 +23,36 @@ $(document).ready(function (e) {
     });
 
     $('#mailing_edit_link').click(function(e) {
+        return false;
+        e.preventDefault();
+    });
+
+    $('#personal_edit_link').click(function(e) {
+        return false;
+        e.preventDefault();
+    });
+
+    $('#education_edit_link').click(function(e) {
+        return false;
+        e.preventDefault();
+    });
+
+    $('#professional_edit_link').click(function(e) {
+        return false;
+        e.preventDefault();
+    });
+
+    $('#preference_edit_link').click(function(e) {
+        return false;
+        e.preventDefault();
+    });
+
+    $('#change_email_link').click(function(e) {
+        return false;
+        e.preventDefault();
+    });
+
+    $('#change_pass_link').click(function(e) {
         return false;
         e.preventDefault();
     });
@@ -105,6 +136,7 @@ $(document).ready(function (e) {
         $('div#page-3').hide();
         $('div#page-4').hide();
         $('div#page-5').hide();
+        $('div#page-8').hide();
         $('div#page-1').show();
         $('div#resume').hide();
         e.preventDefault();
@@ -114,7 +146,8 @@ $(document).ready(function (e) {
     $('div#page-1').hide();
     $('div#page-3').hide();
     $('div#page-4').hide();
-    $('div#page-5').hide();
+    $('div#page-5').hide()
+    $('div#page-8').hide();
     $('div#page-2').show();
     $('div#resume').hide();
     e.preventDefault();
@@ -126,18 +159,25 @@ $(document).ready(function (e) {
         $('div#page-4').hide();
         $('div#page-5').hide();
         $('div#page-3').show();
+        $('div#page-8').hide();
         $('div#resume').hide();
         e.preventDefault();
     })
 
-    $('.myuploads').click(function (e) {
-        window.location="http://www.newlocation.com";
+    $('.myuploads-btn').click(function (e) {
+        $('div#page-1').hide();
+        $('div#page-3').hide();
+        $('div#page-4').hide();
+        $('div#page-5').hide();
+        $('div#page-2').hide();
+        $('div#page-8').show();
         e.preventDefault();
     })
 
     $('.profile-btn').click(function (e) {
         $('div#page-1').hide();
-        $('div#page-3').hide();
+        $('div#page-3').hide()
+        $('div#page-8').hide();
         $('div#page-2').hide();
         $('div#page-5').hide();
         $('div#page-4').show();
@@ -150,6 +190,7 @@ $(document).ready(function (e) {
         $('div#page-3').hide();
         $('div#page-2').hide();
         $('div#page-4').hide();
+        $('div#page-8').hide();
         $('div#page-5').show();
         $('div#resume').hide();
         e.preventDefault();
