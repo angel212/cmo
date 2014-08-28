@@ -205,8 +205,19 @@ $(document).ready(function (e) {
         $('div#resume').hide();
         $('div#page-6').hide();
         $('div#page-7').show();
+        e.preventDefault();
+    })
 
-
+    $('.myresume-btn').click(function (e) {
+        $('div#page-2').hide();
+        $('div#page-3').hide();
+        $('div#page-4').hide();
+        $('div#page-5').hide();
+        $('div#page-1').hide();
+        $('div#resume').hide();
+        $('div#page-6').hide();
+        $('div#page-7').hide();
+        $('div#page-8').show();
         e.preventDefault();
     })
 
