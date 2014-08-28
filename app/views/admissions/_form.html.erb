@@ -446,44 +446,30 @@
     </div>
   </div>
 </div>
-<!-- End Page 5 -->
+<!-- End Page 6 -->
 
-<!-- Start Page 6 -->
+
+<!-- Start Page 7-->
 <div id="page-7">
   <div class="content">
     <h2 style="margin-top: 40px;border-bottom: 2px solid #511212;color: #511212;">Change Password</h2>
     <table class="student_table" cellpadding="3">
-      <tr>
-        <td>Old Password:</td>
-        <td>
-          <input id="" name="" value="" type="text" class="input-xlarge">
-        </td>
-      </tr>
-      <tr>
-        <td>New Password:</td>
-        <td>
-          <input id="" name="" value="" type="text" class="input-xlarge">
-        </td>
-      </tr>
-      <tr>
-        <td>Confirm New Password:</td>
-        <td>
-          <input id="" name="" value="" type="text" class="input-xlarge date-pick non-dob">
-        </td>
-      </tr>
+      <% RequirementType.all.each do |requirement_type| %>
+          <tr>
+            <td>
+              <%= requirement_type.name %>
+            </td>
+            <td>
+              <!--<%= render :partial => 'upload_button', :locals => {:requirement_type_id => requirement_type.id} %>-->
+            </td>
+          </tr>
+      <% end %>
     </table>
-    <div class="controls">
-      <button id="education-submit" name="education-submit" class="btn">Save</button>
-    </div>
+
   </div>
 </div>
-<!-- End Page 6-->
 </form>
-
-<!-- Start Page 7 -->
-<div id="page-8">
-  <%= render :partial => 'layouts/resume' %>
 </div>
-<!-- End Page 7-->
 
-</div>
+
+
