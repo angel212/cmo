@@ -12,7 +12,7 @@ class AdmissionsController < ApplicationController
     @employment_detail = @online_application.employment_detail
     @education_detail = @online_application.education_detail
     @preference = @online_application.preference
-    @student=true
+    @student=1
 
     respond_to do |format|
       format.html

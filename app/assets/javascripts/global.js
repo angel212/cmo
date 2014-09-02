@@ -9,6 +9,8 @@ $(document).ready(function (e) {
     $('div#page-6').hide();
     $('div#page-7').hide();
     $('div#page-8').hide();
+    $('div#page-9').hide();
+    //$('.jBox-container').hide();
     $('#page-title').text("Personal Particulars");
     $('.pagination').hide();
     $('#page-title').append($('.pagination'));
@@ -137,7 +139,8 @@ $(document).ready(function (e) {
         $('div#page-4').hide();
         $('div#page-5').hide();
         $('div#page-8').hide();
-        $('div#page-1').show();
+        $('div#page-1').show()
+        $('div#page-9').hide();
         $('div#resume').hide();
         $('div#page-6').hide();
         $('div#page-7').hide();
@@ -151,6 +154,7 @@ $(document).ready(function (e) {
     $('div#page-5').hide()
     $('div#page-8').hide();
     $('div#page-2').show();
+    $('div#page-9').hide();
     $('div#resume').hide();
     $('div#page-6').hide();
     $('div#page-7').hide();
@@ -165,6 +169,7 @@ $(document).ready(function (e) {
         $('div#page-3').show();
         $('div#page-8').hide();
         $('div#resume').hide();
+        $('div#page-9').hide();
         $('div#page-6').hide();
         $('div#page-7').hide();
         e.preventDefault();
@@ -176,6 +181,7 @@ $(document).ready(function (e) {
         $('div#page-8').hide();
         $('div#page-2').hide();
         $('div#page-5').hide();
+        $('div#page-9').hide();
         $('div#page-4').show();
         $('div#resume').hide();
         $('div#page-6').hide();
@@ -190,7 +196,8 @@ $(document).ready(function (e) {
         $('div#page-4').hide();
         $('div#page-8').hide();
         $('div#page-5').show();
-        $('div#resume').hide();
+        $('div#resume').hide()
+        $('div#page-9').hide();
         $('div#page-6').hide();
         $('div#page-7').hide();
         e.preventDefault();
@@ -203,10 +210,46 @@ $(document).ready(function (e) {
         $('div#page-5').hide();
         $('div#page-1').hide();
         $('div#resume').hide();
+        $('div#page-9').hide();
         $('div#page-6').hide();
         $('div#page-7').show();
         e.preventDefault();
     })
+
+//    function preventDefault(e) {
+//        e = e || window.event;
+//        if (e.preventDefault)
+//            e.preventDefault();
+//        e.returnValue = false;
+//    }
+//
+//    function keydown(e) {
+//        for (var i = keys.length; i--;) {
+//            if (e.keyCode === keys[i]) {
+//                preventDefault(e);
+//                return;
+//            }
+//        }
+//    }
+//
+//    function wheel(e) {
+//        preventDefault(e);
+//    }
+//
+//    function disable_scroll() {
+//        if (window.addEventListener) {
+//            window.addEventListener('DOMMouseScroll', wheel, false);
+//        }
+//        window.onmousewheel = document.onmousewheel = wheel;
+//        document.onkeydown = keydown;
+//    }
+//
+//    function enable_scroll() {
+//        if (window.removeEventListener) {
+//            window.removeEventListener('DOMMouseScroll', wheel, false);
+//        }
+//        window.onmousewheel = document.onmousewheel = document.onkeydown = null;
+//    }
 
     $('.myresume-btn').click(function (e) {
         $('div#page-2').hide();
@@ -217,7 +260,24 @@ $(document).ready(function (e) {
         $('div#resume').hide();
         $('div#page-6').hide();
         $('div#page-7').hide();
-        $('div#page-8').show();
+        $('div#page-9').show();
+        $('div#page-8').hide();
+//        disable_scroll();
+        e.preventDefault();
+    })
+
+    $('.back-btn').click(function (e) {
+        $('div#page-2').hide();
+        $('div#page-3').hide();
+        $('div#page-4').hide();
+        $('div#page-5').hide();
+        $('div#page-1').show();
+        $('div#resume').hide();
+        $('div#page-6').hide();
+        $('div#page-7').hide();
+        $('div#page-9').hide();
+        $('div#page-8').hide();
+//        enable_scroll();
         e.preventDefault();
     })
 
