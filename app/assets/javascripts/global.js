@@ -266,7 +266,7 @@ $(document).ready(function (e) {
         e.preventDefault();
     })
 
-    $('.back-btn').click(function (e) {
+    $('.back-print-btn').click(function (e) {
         $('div#page-2').hide();
         $('div#page-3').hide();
         $('div#page-4').hide();

@@ -1,25 +1,28 @@
 <head>
-<link rel="stylesheet" href="global.css.scss">
+<link rel="stylesheet" href="/assets/global.css.scss">
   <script language="javascript">
       function printdiv(printpage)
       {
+
           var headstr = "<html><head>";
-          var style = "<link rel='stylesheet' href='global.css.scss'>";
+          var style = "<link rel='stylesheet' href='/assets/global.css.scss'>";
           var endheadstr = "</head><body>";
           var title = "<title></title>";
           var footstr = "</body>";
           var newstr = document.all.item(printpage).innerHTML;
           var oldstr = document.body.innerHTML;
           document.body.innerHTML = headstr+title+style+endheadstr+newstr+footstr;
+
           window.print();
+
           document.body.innerHTML = oldstr;
-          return false;
+          return true;
       }
   </script>
 </head>
 
 <div style="height:100%;width:100%;">
-<a href="#"><img src="http://www.guiasamarillas.es/_images/empresa/back.png" class="back-btn" style="height: 100px;width: 100px;position: absolute;top: 350px;left: 175px;"/></a>
+<a href="#" class="back-print-btn"><img src="http://www.guiasamarillas.es/_images/empresa/back.png" class="back-btn" style="height: 100px;width: 100px;position: absolute;top: 350px;left: 175px;"/></a>
   <input name="b_print" type="button" class="myButton"   onClick="printdiv('div_print');" value=" Print Resume" style="position: absolute;
           top: 10px;left: 610px;">
   <div id="div_print" style="top:60px;z-index: 9999;left:290px;position: absolute;background-color:white;border:1px solid black;/*height:630px;*/ height:1056px;width:816px;box-shadow:0 0 70px black;margin:0 auto 0 auto;color:black !important;">
