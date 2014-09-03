@@ -879,7 +879,7 @@
         </select>
       </td>
       <td><script type="text/javascript" language="JavaScript">
-          document.write('<select name="education_detail[sub_other_degree]" id="subcategory" style="visibility: hidden;" ><option value="">Select One</option></select>')
+          document.write('<select name="education_detail[sub_other_degree]" id="subcategory" style="visibility: hidden;" ><option value="<%=@education_detail.sub_other_degree %>"><%=@education_detail.sub_other_degree %></option></select>')
       </script>
         <noscript><select name="education_detail[other_degree]" id="subcategory" >
           <option value="">Select Sub-Category</option>
@@ -935,7 +935,7 @@
 
       </td>
       <td><script type="text/javascript" language="JavaScript">
-          document.write('<select name="education_detail[sub_undergrad]" id="subcategory2" style="visibility: hidden;" ><option value="">Select One</option></select>')
+          document.write('<select name="education_detail[sub_undergrad]" id="subcategory2" style="visibility: hidden;" ><option value="<%= @education_detail.sub_undergrad%>"><%= @education_detail.sub_undergrad%></option></select>')
       </script>
         <noscript><select name="education_detail[other_degree]" id="subcategory" >
           <option value="">Select Sub-Category</option>
