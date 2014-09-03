@@ -867,7 +867,7 @@
     <tr>
       <td>Other Graduate Degrees:</td>
       <td>
-        <select name="education_detail[other_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.other_degree %>" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);">
+        <select name="education_detail[other_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.other_degree %>" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);dropdownlist.style.display">
           <option>Select One</option>
           <option>JD</option>
           <option>MA</option>
@@ -878,13 +878,13 @@
 
         </select>
       </td>
-      <td><script type="text/javascript" language="JavaScript">
-          document.write('<select name="education_detail[sub_other_degree]" id="subcategory" style="visibility: hidden;" ><option value="">Select One</option></select>')
+      <script type="text/javascript" language="JavaScript">
+          document.write('<td><select name="education_detail[sub_other_degree]" id="subcategory" style="visibility:hidden;width:170px;" ><option value="">Select One</option></select></td>')
       </script>
         <noscript><select name="education_detail[other_degree]" id="subcategory" >
           <option value="">Select Sub-Category</option>
         </select>
-        </noscript></td>
+        </noscript>
     </tr>
     <tr>
       <td>MBA Schools:</td>
