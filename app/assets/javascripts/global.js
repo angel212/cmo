@@ -281,6 +281,8 @@ $(document).ready(function (e) {
         e.preventDefault();
     })
 
+
+
     $('#education-submit').click(function (e) {
         e.preventDefault();
         $('#application-form').submit();
@@ -306,6 +308,10 @@ $(document).ready(function (e) {
     $('#preferences-submit').click(function (e) {
         e.preventDefault();
         $('#preference-details-form').submit();
+    })
+    $('#changepass-submit').click(function (e) {
+        e.preventDefault();
+        $('#change-pass-form').submit();
     })
 })
 
