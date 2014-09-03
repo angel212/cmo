@@ -1,0 +1,27 @@
+<script language="javascript" type="text/javascript">
+    function dropdownlist(listindex)
+    {
+
+        document.educationdetails.subcategory.options.length = 0;
+        switch (listindex)
+        {
+
+            case "Other Business Master's" :
+                document.educationdetails.subcategory.style.visibility="visible";
+                document.educationdetails.subcategory.options[0]=new Option("Select One","");
+                document.educationdetails.subcategory.options[1]=new Option("Accounting","Accounting");
+                document.educationdetails.subcategory.options[2]=new Option("Human Resources","Human Resources");
+                document.educationdetails.subcategory.options[3]=new Option("Information Technology","Information Technology");
+                document.feducationdetails.subcategory.options[4]=new Option("Management ","Management");
+                document.educationdetails.subcategory.options[5]=new Option("Cell Phones","Cell Phones");
+
+                break;
+
+
+            default:
+                document.educationdetails.subcategory.style.visibility="hidden";
+                break;
+        }
+        return true;
+    }
+</script>

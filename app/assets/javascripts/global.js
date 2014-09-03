@@ -266,7 +266,7 @@ $(document).ready(function (e) {
         e.preventDefault();
     })
 
-    $('.back-btn').click(function (e) {
+    $('.back-print-btn').click(function (e) {
         $('div#page-2').hide();
         $('div#page-3').hide();
         $('div#page-4').hide();
@@ -280,6 +280,8 @@ $(document).ready(function (e) {
 //        enable_scroll();
         e.preventDefault();
     })
+
+
 
     $('#education-submit').click(function (e) {
         e.preventDefault();
@@ -306,6 +308,10 @@ $(document).ready(function (e) {
     $('#preferences-submit').click(function (e) {
         e.preventDefault();
         $('#preference-details-form').submit();
+    })
+    $('#changepass-submit').click(function (e) {
+        e.preventDefault();
+        $('#change-pass-form').submit();
     })
 })
 

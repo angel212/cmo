@@ -809,7 +809,7 @@
 <!-- -->
 <div id="education_dialog" title="Educational Details">
   <span>
-<form id="education-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
+<form id="education-details-form" name="educationdetails" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
   <table style="padding-left: 50px;width: 565;color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
     <tr>
@@ -867,7 +867,7 @@
     <tr>
       <td>Other Graduate Degrees:</td>
       <td>
-        <select name="education_detail[other_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.other_degree %>">
+        <select name="education_detail[other_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.other_degree %>" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);">
           <option>Select One</option>
           <option>JD</option>
           <option>MA</option>
@@ -875,13 +875,16 @@
           <option>MS</option>
           <option>PhD</option>
           <option>Other Business Master's</option>
-          <option>Accounting</option>
-          <option>Finance</option>
-          <option>Human Resources</option>
-          <option>Information Technology</option>
-          <option>Management</option>
+
         </select>
       </td>
+      <td><script type="text/javascript" language="JavaScript">
+          document.write('<select name="subcategory" style="visibility: hidden;" ><option value="">Select One</option></select>')
+      </script>
+        <noscript><select name="education[]" id="subcategory" >
+          <option value="">Select Sub-Category</option>
+        </select>
+        </noscript></td>
     </tr>
     <tr>
       <td>MBA Schools:</td>
@@ -1724,36 +1727,36 @@
 
 <div id="change_pass_dialog" title="Change Password">
   <div id="dialog-content">
-    <form id="" method="post" action="">
+    <form id="change-pass-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
       <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
         <tr>
           <td>
           Current Password:</td>
           <td>
-          <input type="password">
+          <input type="password" id="password" >
           </td>
         </tr>
         <tr>
           <td>
           New Password:</td>
           <td>
-          <input type="password">
+          <input type="password" name="online_application_form[pass]" id="form_password">
           </td>
         </tr>
         <tr>
           <td>
           Confirm Password:</td>
           <td>
-          <input type="password">
+          <input type="password" >
           </td>
         </tr>
       </table>
-      <button class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>
-      <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Save Changes
-      </button>
+
 
     </form>
-
+    <button class="btn" id="cancel_pass" name="cancel_pass" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" >Cancel</button>
+    <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" id="changepass-submit" name="changepass-submit">Save Changes
+    </button>
   </div>
 </div>
 
