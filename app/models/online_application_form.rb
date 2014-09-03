@@ -6,6 +6,7 @@ class OnlineApplicationForm < ActiveRecord::Base
   belongs_to :preference
   belongs_to :supplemental_detail
    has_many :requirements
+  has_many :language_abilities
 
   DTL_STATUS = {10 => 'registered', 20 => 'recorded', 30 => 'for verification', 40 => 'paid', 90 => 'Deleted'}
   DTL_SUBSTATUS = {10 => {11 => 'registered'},

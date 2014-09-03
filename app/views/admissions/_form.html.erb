@@ -195,6 +195,9 @@
         <td>Other Graduate Degrees:</td>
         <td>
           <%= @education_detail.other_degree %>
+          <%if @education_detail.sub_other_degree.present?   	  %>
+              - <%= @education_detail.sub_other_degree %>
+              <% end %>
         </td>
       </tr>
       <tr>
@@ -212,7 +215,7 @@
       <tr>
         <td>Undergraduate Major:</td>
         <td>
-          <%= @education_detail.undergrad_major %>
+          <%= @education_detail.undergrad_major %> - <%= @education_detail.sub_undergrad %>
         </td>
       </tr>
       <tr>
