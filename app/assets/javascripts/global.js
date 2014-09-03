@@ -20,7 +20,7 @@ $(document).ready(function (e) {
     $('#aim-alumni-form').hide();
     $('#registration-submission').hide();
 
-    $(".btn").on("click", function() {
+    $(".patrick-btn").on("click", function() {
         $("body").scrollTop(0);
     });
 
