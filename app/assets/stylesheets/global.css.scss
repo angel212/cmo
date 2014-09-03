@@ -269,6 +269,10 @@ input[type="text"],select,input[type="date"],input[type="password"] {
   /* transition: all 0.2s ease-out; */
 }
 
+.leftcolumn #navigation ul li a{
+  display: block;
+}
+
 .leftcolumn ul li:hover {
   background-color:#146D55;
 }
@@ -307,7 +311,7 @@ input[type="text"],select,input[type="date"],input[type="password"] {
   background-color:#146D55;
 }
 
-.changeColor a {
+ul li.changeColor a {
   color: #ffffff;
 }
 
