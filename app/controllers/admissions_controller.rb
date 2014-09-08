@@ -13,6 +13,7 @@ class AdmissionsController < ApplicationController
     @education_detail = @online_application.education_detail
     @preference = @online_application.preference
     @language = @online_application.language_abilities
+    @function = @online_application.function_experiences
     @student=1
 
     respond_to do |format|
@@ -119,10 +120,17 @@ class AdmissionsController < ApplicationController
     render :json => {'status' => 'success'}.to_json
   end
   def create_language
-    @language=params[:language_abilities]
+
     LanguageAbility.create!(:online_application_form_id => params[:id] , :name => params[:language_name], :level=> params[:language_level])
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
+
+  def create_function
+
+    FunctionExperience.create!(:online_application_form_id => params[:id] , :function => params[:function], :sub_function=> params[:sub_function])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
   def clean_params(params)
     params.each_pair do |key, value|
       params.merge!(key => DateTime.strptime(value, '%d/%m/%Y')) if key.scan('date').count > 0

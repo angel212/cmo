@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Online application form:</b>
+  <%= @function_experience.online_application_form_id %>
+</p>
+
+<p>
+  <b>Function:</b>
+  <%= @function_experience.function %>
+</p>
+
+<p>
+  <b>Sub function:</b>
+  <%= @function_experience.sub_function %>
+</p>
+
+
+<%= link_to 'Edit', edit_function_experience_path(@function_experience) %> |
+<%= link_to 'Back', function_experiences_path %>

@@ -1,0 +1,27 @@
+<h1>Listing function_experiences</h1>
+
+<table>
+  <tr>
+    <th>Online application form</th>
+    <th>Function</th>
+    <th>Sub function</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @function_experiences.each do |function_experience| %>
+  <tr>
+    <td><%= function_experience.online_application_form_id %></td>
+    <td><%= function_experience.function %></td>
+    <td><%= function_experience.sub_function %></td>
+    <td><%= link_to 'Show', function_experience %></td>
+    <td><%= link_to 'Edit', edit_function_experience_path(function_experience) %></td>
+    <td><%= link_to 'Destroy', function_experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Function experience', new_function_experience_path %>

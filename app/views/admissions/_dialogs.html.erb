@@ -1069,10 +1069,10 @@
   </span>
 </div>
 <!-- -->
-<div id="professional_dialog" title="Professional Experience">
+<div id="professional_dialog" title="Professional Experience" style="overflow-y: auto;">
 
-  <span>
-     <form id="professional-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
+  <span s>
+     <form id="professional-details-form"  class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
      <tr>
        <td>Total Years of Work Experience:</td>
@@ -1091,79 +1091,14 @@
      <tr>
        <td>Function - Experience:</td>
        <td>
-         <select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">
-           <option> Administration</option>
-           <option> Advertising</option>
-           <option> Artist</option>
-           <option> Business Development</option>
-           <option> Consulting</option>
-           <option> Economic Analysis / Research</option>
-           <option> Education (Administrator / Faculty)</option>
-           <option> Engineering</option>
-           <option> Chemical</option>
-           <option> Electrical</option>
-           <option> Industrial</option>
-           <option> Mechanical</option>
-           <option> Entrepreneurship</option>
-           <option> Finance</option>
-           <option> Analyst / Research</option>
-           <option> Commercial Banking</option>
-           <option> Corporate Finance</option>
-           <option> Investment Banking</option>
-           <option> Investment Management</option>
-           <option> Lending/Relationship Mgmt</option>
-           <option> Mergers & Acquisitions</option>
-           <option> Private Client Services / Wealth Mgmt</option>
-           <option> Private Equity</option>
-           <option> Public Finance</option>
-           <option> Restructure / Turnaround</option>
-           <option> Risk Management</option>
-           <option> Sales & Trading</option>
-           <option> Treasury</option>
-           <option> Fundraising / Development</option>
-           <option> Headhunters/ Exec. Search</option>
-           <option> Healthcare</option>
-           <option> Human Resources</option>
-           <option> Compensation and Benefits</option>
-           <option> Training</option>
-           <option> Recruitment</option>
-           <option> Organizational Development</option>
-           <option> Employee Relations</option>
-           <option> Journalist / Author / Writer / Editor</option>
-           <option> Lawyer / Legal Professional</option>
-           <option> Legislative Aide / Lobbying / Advocate</option>
-           <option> Management</option>
-           <option> Operations / Production</option>
-           <option> Project Management</option>
-           <option> Retail Management</option>
-           <option> Supply Chain / Logistics</option>
-           <option> Management Development Program</option>
-           <option> Manufacturing</option>
-           <option> Marketing</option>
-           <option> Brand / Product Management</option>
-           <option> Communications / Public Relations</option>
-           <option> Market Research</option>
-           <option> Merchandising / Retail</option>
-           <option> Product Development / Innovation</option>
-           <option> Military</option>
-           <option> Multimedia Production / Graphic Design</option>
-           <option> Pharmaceuticals</option>
-           <option> Purchasing / Procurement</option>
-           <option> Real Estate</option>
-           <option> Research & Development</option>
-           <option> Sales</option>
-           <option> Strategic Planning / Corporate Development</option>
-           <option> Information Technology</option>
-           <option> Systems Analysis and Design</option>
-           <option> Ecommerce / Internet / Web Site Management</option>
-           <option> Integration / Implementation</option>
-           <option> Systems Management</option>
-           <option> Training and Development</option>
-           <option> Technical Writer</option>
-           <option> Programmer</option>
+         <!--<select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">-->
+       <!--</select>-->
+         <% @online_application.function_experiences.each do |function_experience| %>
+             <span id="<%= function_experience.id %>" class="language-container" ><%= function_experience.function %> - <%= function_experience.sub_function %><!--<button  id="<%= function_experience.id %>" class="language-ability-delete">delete</button>--></span>
+             <br>
+         <% end %>
 
-
-         </select></td>
+       </td>
      </tr>
      <tr>
        <td>Industry - Experience:</td>
@@ -1682,6 +1617,69 @@
      </tr>
      </table>
      </form>
+  </span>
+  <span>
+<form name="professional_detail" class="form-horizontal" method="post" action="/admissions/function/<%= @online_application.id %>">
+  <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+    <tr>
+      <td>Function - Experience:</td>
+      <td>
+
+        <select name="function" id="function" class="input-xlarge  dropdown-value" onchange="javascript: functionlist(this.options[this.selectedIndex].value);">
+          <option value="">Select Category</option>
+          <option>	Administration	</option>
+          <option>	Advertising	</option>
+          <option>	Artist	</option>
+          <option>	Business Development	</option>
+          <option>	Consulting	</option>
+          <option>	Economic Analysis / Research	</option>
+          <option>	Education (Administrator / Faculty)	</option>
+          <option>	Engineering	</option>
+          <option>	Entrepreneurship	</option>
+          <option>	Finance	</option>
+          <option>	Fundraising / Development	</option>
+          <option>	Headhunters/ Exec. Search	</option>
+          <option>	Healthcare	</option>
+          <option>	Human Resources	</option>
+          <option>	Journalist / Author / Writer / Editor	</option>
+          <option>	Lawyer / Legal Professional	</option>
+          <option>	Legislative Aide / Lobbying / Advocate	</option>
+          <option>	Management	</option>
+          <option>	Management Development Program	</option>
+          <option>	Manufacturing	</option>
+          <option>	Marketing	</option>
+          <option>	Military	</option>
+          <option>	Multimedia Production / Graphic Design	</option>
+          <option>	Pharmaceuticals 	</option>
+          <option>	Purchasing / Procurement	</option>
+          <option>	Real Estate	</option>
+          <option>	Research & Development	</option>
+          <option>	Sales	</option>
+          <option>	Strategic Planning / Corporate Development	</option>
+          <option>	Information Technology	</option>
+          <option>	Technical Writer	</option>
+          <option>	Programmer	</option>
+
+        </select>
+
+      </td>
+      <td>
+        <script type="text/javascript" language="JavaScript">
+            document.write('<select name="sub_function" id="sub_function" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
+        </script>
+        <noscript><select name="function[]" id="subcategory" >
+          <option value="">Select Sub-Category</option>
+        </select>
+        </noscript>
+      </td>
+      <td>
+        <button>add</button>
+      </td>
+    </tr>
+  </table>
+
+</form>
+
   </span>
   <span>
     <button id="cancel_professional" name="cancel_professional" class="btn" style="margin-left: 220px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">

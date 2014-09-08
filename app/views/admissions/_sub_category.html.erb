@@ -115,7 +115,7 @@
     function languagefunction(listindex)
     {
 
-        document.languageeducationdetails.subcategory3.options.length = 0;
+        document.professional_detail.subcategory3.options.length = 0;
         switch (listindex)
         {
 
@@ -127,6 +127,92 @@
                 document.languageeducationdetails.subcategory3.options[0]=new Option("Basic","Basic");
                 document.languageeducationdetails.subcategory3.options[1]=new Option("Conversant","Conversant");
                 document.languageeducationdetails.subcategory3.options[2]=new Option("Fluent","Fluent");
+
+                break;
+        }
+        return true;
+    }
+</script>
+<!--for work exp - function exp-->
+<script language="javascript" type="text/javascript">
+    function functionlist(listindex)
+    {
+
+        document.professional_detail.sub_function.options.length = 0;
+        switch (listindex)
+        {
+
+            case "Engineering":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Chemical","Chemical");
+                document.professional_detail.sub_function.options[2]=new Option("Electrical","Electrical");
+                document.professional_detail.sub_function.options[3]=new Option("Industrial","Industrial");
+                document.professional_detail.sub_function.options[4]=new Option("Mechanical","Mechanical");
+            break;
+            case "Finance":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Analyst / Research","Analyst / Research");
+                document.professional_detail.sub_function.options[2]=new Option("Commercial Banking","Commercial Banking");
+                document.professional_detail.sub_function.options[3]=new Option("Corporate Finance","Corporate Finance");
+                document.professional_detail.sub_function.options[4]=new Option("Investment Banking","Investment Banking");
+                document.professional_detail.sub_function.options[5]=new Option("Investment Management","Investment Management");
+                document.professional_detail.sub_function.options[6]=new Option("Lending/Relationship Mgmt","Lending/Relationship Mgmt");
+                document.professional_detail.sub_function.options[7]=new Option("Mergers & Acquisitions","Mergers & Acquisitions");
+                document.professional_detail.sub_function.options[8]=new Option("Private Client Services / Wealth Mgmt","Private Client Services / Wealth Mgmt");
+                document.professional_detail.sub_function.options[9]=new Option("Private Equity","Private Equity");
+                document.professional_detail.sub_function.options[10]=new Option("Public Finance","Public Finance");
+                document.professional_detail.sub_function.options[11]=new Option("Restructure / Turnaround","Restructure / Turnaround");
+                document.professional_detail.sub_function.options[12]=new Option("Risk Management","Risk Management");
+                document.professional_detail.sub_function.options[13]=new Option("Sales & Trading","Sales & Trading");
+                document.professional_detail.sub_function.options[13]=new Option("Treasury","Treasury");
+
+                break;
+
+            case "Human Resources":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Compensation and Benefits","Compensation and Benefits");
+                document.professional_detail.sub_function.options[2]=new Option("Training","Training");
+                document.professional_detail.sub_function.options[3]=new Option("Recruitment","Recruitment");
+                document.professional_detail.sub_function.options[4]=new Option("Organizational Development","Organizational Development");
+                document.professional_detail.sub_function.options[5]=new Option("Employee Relations","Employee Relations");
+                break;
+
+            case "Management":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Operations / Production","Operations / Production");
+                document.professional_detail.sub_function.options[2]=new Option("Project Management","Project Management");
+                document.professional_detail.sub_function.options[3]=new Option("Retail Management","Retail Management");
+                document.professional_detail.sub_function.options[4]=new Option("Supply Chain / Logistics","Supply Chain / Logistics");
+
+                break;
+            case "Marketing":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Brand / Product Management","Brand / Product Management");
+                document.professional_detail.sub_function.options[2]=new Option("Communications / Public Relations","Communications / Public Relations");
+                document.professional_detail.sub_function.options[3]=new Option("Market Research","Market Research");
+                document.professional_detail.sub_function.options[4]=new Option("Merchandising / Retail","Merchandising / Retail");
+
+                break;
+            case "Information Technology":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Systems Analysis and Design","Systems Analysis and Design");
+                document.professional_detail.sub_function.options[2]=new Option("Ecommerce / Internet / Web Site Management","Ecommerce / Internet / Web Site Management");
+                document.professional_detail.sub_function.options[3]=new Option("Integration / Implementation","Integration / Implementation");
+                document.professional_detail.sub_function.options[4]=new Option("Systems Management","Systems Management");
+                document.professional_detail.sub_function.options[5]=new Option("Training and Development","Training and Development");
+                break;
+
+            default:
+
+
+                document.professional_detail.sub_function.style.visibility="hidden";
+                break;
 
                 break;
         }
