@@ -12,6 +12,7 @@ class AdmissionsController < ApplicationController
     @employment_detail = @online_application.employment_detail
     @education_detail = @online_application.education_detail
     @preference = @online_application.preference
+    @language = @online_application.language_abilities
     @student=1
 
     respond_to do |format|
@@ -69,6 +70,7 @@ class AdmissionsController < ApplicationController
       @employment_detail = @online_application.employment_detail
       @education_detail = @online_application.education_detail
       @preference = @online_application.preference
+      @language = @online_application.language_abilities
 
       personal_detail = params[:personal_detail]
       employment_detail = params[:employment_detail]
@@ -104,11 +106,23 @@ class AdmissionsController < ApplicationController
     @employment_detail.update_attributes!(params[:employment_detail])
     @education_detail.update_attributes!(params[:education_detail])
     @preference.update_attributes!(params[:preference])
+    @language.update_attributes!(params[:language_abilities])
     #::AbcRegistrationMailer.registration_alert(@online_application).deliver!
     #redirect_to edit_supplemental_detail_path(@supplemental_detail)
     redirect_to "/admissions/#{@online_application.id}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
+  def delete_language
+    language_ability = LanguageAbility.find(params[:id])
+    language_ability.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def create_language
+    @language=params[:language_abilities]
+    LanguageAbility.create!(:online_application_form_id => params[:id] , :name => params[:language_name], :level=> params[:language_level])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
   def clean_params(params)
     params.each_pair do |key, value|
       params.merge!(key => DateTime.strptime(value, '%d/%m/%Y')) if key.scan('date').count > 0

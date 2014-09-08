@@ -92,5 +92,7 @@ OnlineApplication::Application.routes.draw do
   get '/excel/export' => 'dashboard#excel'
   get 'submit_requirement' => 'requirements#submit_requirement'
   post 'supplement/(:id)' => 'supplemental_details#update'
+  post'/admissions/language/(:id)' => 'admissions#create_language'
+  get 'api/language_ability/delete/(:id)' => 'admissions#delete_language'
   root :to => 'home#index'
 end

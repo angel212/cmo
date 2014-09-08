@@ -221,8 +221,13 @@
       <tr>
         <td>Language Ability:</td>
         <td>
-          <%= @education_detail.language %>
+          <% @online_application.language_abilities.each do |language_ability| %>
+          <span id="<%= language_ability.id %>" class="language-container" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button></span>
+        <br>
+      <% end %>
+
         </td>
+
       </tr>
     </table>
 
@@ -454,7 +459,7 @@
 <!-- Start Page 7-->
 <div id="page-7">
   <div class="content">
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #511212;color: #511212;">Change Password</h2>
+    <h2 style="margin-top: 40px;border-bottom: 2px solid #511212;color: #511212;">Resume Upload</h2>
     <table class="student_table" cellpadding="3">
       <% RequirementType.all.each do |requirement_type| %>
           <tr>

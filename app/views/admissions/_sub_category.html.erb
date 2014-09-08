@@ -104,7 +104,30 @@
 
 
             default:
-                document.educationdetails.subcategory.style.visibility="hidden";
+                document.educationdetails.subcategory2.style.visibility="hidden";
+                break;
+        }
+        return true;
+    }
+</script>
+<!--for education - other graduates-->
+<script language="javascript" type="text/javascript">
+    function languagefunction(listindex)
+    {
+
+        document.languageeducationdetails.subcategory3.options.length = 0;
+        switch (listindex)
+        {
+
+
+
+            default:
+
+
+                document.languageeducationdetails.subcategory3.options[0]=new Option("Basic","Basic");
+                document.languageeducationdetails.subcategory3.options[1]=new Option("Conversant","Conversant");
+                document.languageeducationdetails.subcategory3.options[2]=new Option("Fluent","Fluent");
+
                 break;
         }
         return true;

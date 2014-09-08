@@ -329,10 +329,23 @@ function showCompletionDate() {
 //
 
 $(document).ready(function(){
+
     var targetElement = $("#leftcolumn li");
     $("#leftcolumn li:first-child").addClass("changeColor");
     targetElement.click(function() {
         $(this).siblings().removeClass("changeColor");
         $(this).addClass("changeColor");
     });
+
+    $('.language-ability-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            $('.language-container2#' + e.target.id).hide();
+            $.ajax('/api/language_ability/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
 });
