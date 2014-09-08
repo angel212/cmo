@@ -130,7 +130,11 @@ class AdmissionsController < ApplicationController
     FunctionExperience.create!(:online_application_form_id => params[:id] , :function => params[:function], :sub_function=> params[:sub_function])
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
+  def create_industry
 
+    IndustryExperience.create!(:online_application_form_id => params[:id] , :industry => params[:industry], :sub_industry=> params[:sub_industry])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
   def clean_params(params)
     params.each_pair do |key, value|
       params.merge!(key => DateTime.strptime(value, '%d/%m/%Y')) if key.scan('date').count > 0

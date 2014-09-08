@@ -1,4 +1,7 @@
 OnlineApplication::Application.routes.draw do
+  resources :industry_experiences
+
+
   resources :function_experiences
 
 
@@ -98,5 +101,6 @@ OnlineApplication::Application.routes.draw do
   post'/admissions/language/(:id)' => 'admissions#create_language'
   get 'api/language_ability/delete/(:id)' => 'admissions#delete_language'
   post'/admissions/function/(:id)' => 'admissions#create_function'
+  post'/admissions/industry/(:id)' => 'admissions#create_industry'
   root :to => 'home#index'
 end

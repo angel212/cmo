@@ -215,9 +215,119 @@
                 document.professional_detail.sub_function.style.visibility="hidden";
                 break;
 
-                break;
+
         }
         return true;
     }
 </script>
 
+<!--for work exp - industry exp-->
+<script language="javascript" type="text/javascript">
+    function industrylist(listindex)
+    {
+
+        document.industry_professional_detail.sub_industry.options.length = 0;
+        switch (listindex)
+        {
+
+            case "Advertising":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Advertising / Marketing Services","Advertising / Marketing Services");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Communications / Public Relations","Communications / Public Relations");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("General","General");
+
+                break;
+            case "Consulting":
+            document.industry_professional_detail.sub_industry.style.visibility="visible";
+            document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+            document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+            document.industry_professional_detail.sub_industry.options[2]=new Option("Biotechnology","Biotechnology");
+            document.industry_professional_detail.sub_industry.options[3]=new Option("Design","Design");
+            document.industry_professional_detail.sub_industry.options[4]=new Option("Gas and Oil","Gas and Oil");
+            document.industry_professional_detail.sub_industry.options[5]=new Option("Healthcare","Healthcare");
+            document.industry_professional_detail.sub_industry.options[6]=new Option("Human Capital","Human Capital");
+            document.industry_professional_detail.sub_industry.options[7]=new Option("Management","Management");
+            document.industry_professional_detail.sub_industry.options[8]=new Option("Marketing","Marketing");
+            document.industry_professional_detail.sub_industry.options[9]=new Option("Nonprofit","Nonprofit");
+            document.industry_professional_detail.sub_industry.options[10]=new Option("Strategy","Strategy");
+            document.industry_professional_detail.sub_industry.options[11]=new Option("Supply Chain","Supply Chain");
+            document.industry_professional_detail.sub_industry.options[12]=new Option("Technology","Technology");
+
+            break;
+            case "Consumer Products":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Alcohol","Alcohol");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Design","Design");
+                document.industry_professional_detail.sub_industry.options[4]=new Option("Gas and Oil","Gas and Oil");
+                document.industry_professional_detail.sub_industry.options[5]=new Option("Apparel / Textiles","Apparel / Textiles");
+                document.industry_professional_detail.sub_industry.options[6]=new Option("Beverages / Food","Beverages / Food");
+                document.industry_professional_detail.sub_industry.options[7]=new Option("Electronics","Electronics");
+                document.industry_professional_detail.sub_industry.options[8]=new Option("Household / Personal","Household / Personal");
+                document.industry_professional_detail.sub_industry.options[9]=new Option("Luxury Goods","Luxury Goods");
+                document.industry_professional_detail.sub_industry.options[10]=new Option("Tobacco","Tobacco");
+
+                break;
+            case "Energy / Utilities":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Alternative Energy","Alternative Energy");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Cleantech","Cleantech");
+                document.industry_professional_detail.sub_industry.options[4]=new Option("Energy Trading","Energy Trading");
+                document.industry_professional_detail.sub_industry.options[5]=new Option("Oil / Gas","Oil / Gas");
+                document.industry_professional_detail.sub_industry.options[6]=new Option("Utility Services (Electric / Water / etc.)","Utility Services (Electric / Water / etc.)");
+
+               break;
+
+            case "Entertainment":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Leisure / Recreation","Leisure / Recreation");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("New Media","New Media");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Sports & Sports Management","Sports & Sports Management");
+
+
+            break;
+
+            case "Entertainment":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Leisure / Recreation","Leisure / Recreation");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("New Media","New Media");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Sports & Sports Management","Sports & Sports Management");
+
+
+                break;
+            case "Financial":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Commercial Banking","Commercial Banking");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Diversified Financial Services","Diversified Financial Services");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Hedge Funds","Hedge Funds");
+                document.industry_professional_detail.sub_industry.options[4]=new Option("Insurance","Insurance");
+                document.industry_professional_detail.sub_industry.options[5]=new Option("Investment Banking / Brokerage","Investment Banking / Brokerage");
+                document.industry_professional_detail.sub_industry.options[6]=new Option("Investment Management","Investment Management");
+                document.industry_professional_detail.sub_industry.options[7]=new Option("Private Equity","Private Equity");
+                document.industry_professional_detail.sub_industry.options[8]=new Option("Public Finance","Public Finance");
+                document.industry_professional_detail.sub_industry.options[9]=new Option("Research & Ratings","Research & Ratings");
+                document.industry_professional_detail.sub_industry.options[10]=new Option("Tax","Tax");
+                document.industry_professional_detail.sub_industry.options[11]=new Option("Treasury","Treasury");
+                document.industry_professional_detail.sub_industry.options[12]=new Option("Capital","Capital");
+
+
+                break;
+
+            default:
+
+
+                document.industry_professional_detail.sub_industry.style.visibility="hidden";
+                break;
+
+
+        }
+        return true;
+    }
+</script>

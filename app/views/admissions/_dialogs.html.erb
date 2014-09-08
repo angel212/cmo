@@ -1103,49 +1103,13 @@
      <tr>
        <td>Industry - Experience:</td>
        <td>
-         <select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
-           <option> Accounting</option>
-           <option> Advertising</option>
-           <option> Advertising / Marketing Services</option>
-           <option> Communications / Public Relations</option>
-           <option> General</option>
-           <option> Aerospace / Aviation / Defense</option>
-           <option> Agribusiness</option>
-           <option> Automotive</option>
-           <option> Construction</option>
-           <option> Consulting</option>
-           <option> General</option>
-           <option> Biotechnology</option>
-           <option> Design</option>
-           <option> Gas and Oil</option>
-           <option> Healthcare</option>
-           <option> Human Capital</option>
-           <option> Management</option>
-           <option> Marketing</option>
-           <option> Nonprofit</option>
-           <option> Strategy</option>
-           <option> Supply Chain</option>
-           <option> Technology</option>
-           <option> Consumer Products</option>
-           <option> General</option>
-           <option> Alcohol</option>
-           <option> Apparel / Textiles</option>
-           <option> Beverages / Food</option>
-           <option> Electronics</option>
-           <option> Household / Personal</option>
-           <option> Luxury Goods</option>
-           <option> Tobacco</option>
-           <option> Economic Development / Microfinance</option>
-           <option> Education</option>
-           <option> Energy / Utilities</option>
-           <option> Alternative Energy</option>
-           <option> Cleantech</option>
-           <option> Energy Trading</option>
-           <option> Oil / Gas</option>
-           <option> Utility Services (Electric / Water / etc.)</option>
-           <option> Engineering Services</option>
+         <% @online_application.industry_experiences.each do |industry_experience| %>
+             <span id="<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><!--<button  id="<%= industry_experience.id %>" class="language-ability-delete">delete</button>--></span>
+             <br>
+         <% end %>
+         <!--<select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">-->
 
-         </select></td>
+         <!--</select></td>-->
      </tr>
      <tr>
      <td>Work Authorization:</td>
@@ -1680,6 +1644,66 @@
 
 </form>
 
+  </span>
+
+  <span>
+    <form name="industry_professional_detail" class="form-horizontal" method="post" action="/admissions/industry/<%= @online_application.id %>">
+      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+        <tr>
+          <td>Industry - Experience:</td>
+          <td>
+            <select name="industry" id="industry" class="input-xlarge  dropdown-value" onchange="javascript: industrylist(this.options[this.selectedIndex].value);">
+              <option>	Accounting	</option>
+              <option>	Advertising	</option>
+              <option>	Aerospace / Aviation / Defense	</option>
+              <option>	Agribusiness	</option>
+              <option>	Automotive	</option>
+              <option>	Construction	</option>
+              <option>	Consulting	</option>
+              <option>	Consumer Products	</option>
+              <option>	Economic Development / Microfinance	</option>
+              <option>	Education	</option>
+              <option>	Energy / Utilities	</option>
+              <option>	Engineering Services	</option>
+              <option>	Entertainment	</option>
+              <option>	Environmental Services & Sustainability	</option>
+              <option>	Financial	</option>
+              <option>	Government	</option>
+              <option>	Healthcare	</option>
+              <option>	Hospitality / Tourism	</option>
+              <option>	Human Resources / Recruitment	</option>
+              <option>	International Trade - Import / Export	</option>
+              <option>	Law / Legal Services	</option>
+              <option>	Manufacturing	</option>
+              <option>	Media	</option>
+              <option>	Natural Resources	</option>
+              <option>	Nonprofits & Social Enterprises	</option>
+              <option>	Pharmaceutical	</option>
+              <option>	Real Estate	</option>
+              <option>	Retail	</option>
+              <option>	Technology	</option>
+              <option>	Telecom	</option>
+              <option>	Transportation / Logistics	</option>
+
+
+            </select>
+          </td>
+          <td>
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select name="sub_industry" id="sub_industry" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
+            </script>
+            <noscript><select name="function[]" id="subcategory" >
+              <option value="">Select Sub-Category</option>
+            </select>
+            </noscript>
+          </td>
+          <td>
+            <button>add</button>
+          </td>
+            </tr>
+      </table>
+
+    </form>
   </span>
   <span>
     <button id="cancel_professional" name="cancel_professional" class="btn" style="margin-left: 220px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">

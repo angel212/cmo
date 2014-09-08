@@ -1,0 +1,27 @@
+<h1>Listing industry_experiences</h1>
+
+<table>
+  <tr>
+    <th>Online application form</th>
+    <th>Industry</th>
+    <th>Sub industry</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @industry_experiences.each do |industry_experience| %>
+  <tr>
+    <td><%= industry_experience.online_application_form_id %></td>
+    <td><%= industry_experience.industry %></td>
+    <td><%= industry_experience.sub_industry %></td>
+    <td><%= link_to 'Show', industry_experience %></td>
+    <td><%= link_to 'Edit', edit_industry_experience_path(industry_experience) %></td>
+    <td><%= link_to 'Destroy', industry_experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Industry experience', new_industry_experience_path %>

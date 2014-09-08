@@ -276,7 +276,11 @@
       <tr>
         <td>Industry - Experience:</td>
         <td>
-          <%= @employment_detail.industry_exp %>
+          <% @online_application.industry_experiences.each do |industry_experience| %>
+              <span id="<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><!--<button  id="<%= industry_experience.id %>" class="language-ability-delete">delete</button>--></span>
+              <br>
+          <% end %>
+
         </td>
       </tr>
       <tr>

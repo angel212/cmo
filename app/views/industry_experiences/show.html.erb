@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Online application form:</b>
+  <%= @industry_experience.online_application_form_id %>
+</p>
+
+<p>
+  <b>Industry:</b>
+  <%= @industry_experience.industry %>
+</p>
+
+<p>
+  <b>Sub industry:</b>
+  <%= @industry_experience.sub_industry %>
+</p>
+
+
+<%= link_to 'Edit', edit_industry_experience_path(@industry_experience) %> |
+<%= link_to 'Back', industry_experiences_path %>
