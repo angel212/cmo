@@ -150,6 +150,12 @@ class AdmissionsController < ApplicationController
     PreferenceIndustry.create!(:online_application_form_id => params[:id] , :industry => params[:industry], :sub_industry=> params[:sub_industry])
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
+
+  def create_preference_criteria
+
+    PreferenceCriterium.create!(:online_application_form_id => params[:id] , :criteria => params[:criteria])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
   def clean_params(params)
 
     params.each_pair do |key, value|

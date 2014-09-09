@@ -1651,13 +1651,10 @@
       <tr>
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
-          <select id="criteria" name="preference[criteria]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @preference.criteria %>">
-            <option> Job Profile</option>
-            <option> Location</option>
-            <option> Compensation and Benefits</option>
-            <option> Company</option>
-            <option> Industry</option>
-          </select>
+          <% @online_application.preference_criteriums.each do |preference_criteriums| %>
+              <span id="<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %> <!--<button  id="<%= preference_criteriums.id %>" class="language-ability-delete">delete</button>--></span>
+              <br>
+          <% end %>
         </td>
       </tr>
       <tr>
@@ -1754,6 +1751,32 @@
     </form>
   </span>
 
+  <span>
+    <form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/preference_criteria/<%= @online_application.id %>">
+      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+        <tr>
+          <td>Industry - Experience:</td>
+          <td>
+            <select name="criteria" id="criteria" class="input-xlarge  dropdown-value" >
+              <option value="">	Select One Industry	</option>
+              <option>	Job Profile	</option>
+              <option>	Location	</option>
+              <option>	Compensation and Benefits	</option>
+              <option>	Company	</option>
+              <option>	Industry	</option>
+
+
+            </select>
+          </td>
+
+          <td>
+            <button>add</button>
+          </td>
+        </tr>
+      </table>
+
+    </form>
+  </span>
   <span>
     <button id="cancel_preferences" name="cancel_preferences" class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Cancel

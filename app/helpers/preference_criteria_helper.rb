@@ -1,0 +1,2 @@
+module PreferenceCriteriaHelper
+end

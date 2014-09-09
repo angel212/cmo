@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140909060001) do
+ActiveRecord::Schema.define(:version => 20140909064859) do
 
   create_table "education_details", :force => true do |t|
     t.string   "last_school_name"
@@ -159,6 +159,13 @@ ActiveRecord::Schema.define(:version => 20140909060001) do
     t.string   "home_city"
     t.string   "home_country"
     t.string   "home_postal"
+  end
+
+  create_table "preference_criteria", :force => true do |t|
+    t.integer  "online_application_form_id"
+    t.string   "criteria"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "preference_industries", :force => true do |t|

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Online application form:</b>
+  <%= @preference_criterium.online_application_form_id %>
+</p>
+
+<p>
+  <b>Criteria:</b>
+  <%= @preference_criterium.criteria %>
+</p>
+
+
+<%= link_to 'Edit', edit_preference_criterium_path(@preference_criterium) %> |
+<%= link_to 'Back', preference_criteria_path %>

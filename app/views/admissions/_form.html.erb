@@ -383,7 +383,10 @@
       <tr>
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
-          <%= @preference.criteria %>
+          <% @online_application.preference_criteriums.each do |preference_criteriums| %>
+              <span id="<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %> <!--<button  id="<%= preference_criteriums.id %>" class="language-ability-delete">delete</button>--></span>
+              <br>
+          <% end %>
         </td>
       </tr>
       <tr>

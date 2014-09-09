@@ -1,4 +1,7 @@
 OnlineApplication::Application.routes.draw do
+  resources :preference_criteria
+
+
   resources :preference_industries
 
 
@@ -110,6 +113,7 @@ OnlineApplication::Application.routes.draw do
   post'/admissions/industry/(:id)' => 'admissions#create_industry'
   post'/admissions/geographic/(:id)' => 'admissions#create_geographic'
   post'/admissions/preference_industry/(:id)' => 'admissions#create_preference_industry'
+  post'/admissions/preference_criteria/(:id)' => 'admissions#create_preference_criteria'
 
   root :to => 'home#index'
 end
