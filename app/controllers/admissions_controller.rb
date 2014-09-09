@@ -15,6 +15,7 @@ class AdmissionsController < ApplicationController
     @language = @online_application.language_abilities
     @function = @online_application.function_experiences
     @industry = @online_application.industry_experiences
+    @preference_industry = @online_application.preference_industries
 
     @student=1
 
@@ -137,7 +138,20 @@ class AdmissionsController < ApplicationController
     IndustryExperience.create!(:online_application_form_id => params[:id] , :industry => params[:industry], :sub_industry=> params[:sub_industry])
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
+
+  def create_geographic
+
+    GeographicExperience.create!(:online_application_form_id => params[:id] , :continent => params[:continent], :country=> params[:country])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
+  def create_preference_industry
+
+    PreferenceIndustry.create!(:online_application_form_id => params[:id] , :industry => params[:industry], :sub_industry=> params[:sub_industry])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
   def clean_params(params)
+
     params.each_pair do |key, value|
       params.merge!(key => DateTime.strptime(value, '%d/%m/%Y')) if key.scan('date').count > 0
     end

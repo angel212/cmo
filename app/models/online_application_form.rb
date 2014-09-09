@@ -10,6 +10,8 @@ class OnlineApplicationForm < ActiveRecord::Base
   has_many :function_experiences
   has_many :industry_experiences
   has_many :geographic_experiences
+  has_many :preference_industries
+
 
   DTL_STATUS = {10 => 'registered', 20 => 'recorded', 30 => 'for verification', 40 => 'paid', 90 => 'Deleted'}
   DTL_SUBSTATUS = {10 => {11 => 'registered'},

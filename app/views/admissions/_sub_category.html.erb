@@ -589,3 +589,73 @@
         return true;
     }
 </script>
+<!--for preference - industry exp-->
+<script language="javascript" type="text/javascript">
+    function preferenceindustrylist(listindex)
+    {
+
+        document.preference_industry_detail.sub_industry.options.length = 0;
+        switch (listindex)
+        {
+
+            case "Consumer Products / Fast Moving Consumer Goods":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Alcohol","Alcohol");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Apparel / Textiles","Apparel / Textiles");
+                document.preference_industry_detail.sub_industry.options[3]=new Option("Beverages / Food","Beverages / Food");
+                document.preference_industry_detail.sub_industry.options[4]=new Option("Electronics","Electronics");
+                document.preference_industry_detail.sub_industry.options[5]=new Option("Household / Personal","Household / Personal");
+                document.preference_industry_detail.sub_industry.options[6]=new Option("Luxury Goods","Luxury Goods");
+                document.preference_industry_detail.sub_industry.options[7]=new Option("Tobacco","Tobacco");
+
+
+                break;
+            case "Energy / Utilities / Natural Resources":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Oil / Gas","Oil / Gas");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Utility Services (Electric / Water / etc.)","Utility Services (Electric / Water / etc.)");
+
+
+                break;
+            case "Healthcare":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Biotechnology","Biotechnology");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Medical Devices","Medical Devices");
+                document.preference_industry_detail.sub_industry.options[3]=new Option("Providers & Services","Providers & Services");
+
+
+                break;
+            case "Manufacturing":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Chemicals","Chemicals");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Heavy Equipment","Heavy Equipment");
+                document.preference_industry_detail.sub_industry.options[3]=new Option("Packaging","Packaging");
+                document.preference_industry_detail.sub_industry.options[4]=new Option("Plastics / Rubber","Plastics / Rubber");
+
+                break;
+
+            case "Technology":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Hardware","Hardware");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Software","Software");
+                document.preference_industry_detail.sub_industry.options[3]=new Option("Services","Services");
+
+                break;
+
+
+            default:
+
+
+                document.preference_industry_detail.sub_industry.style.visibility="hidden";
+                break;
+
+
+        }
+        return true;
+    }
+</script>

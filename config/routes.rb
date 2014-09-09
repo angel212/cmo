@@ -1,4 +1,7 @@
 OnlineApplication::Application.routes.draw do
+  resources :preference_industries
+
+
   resources :geographic_experiences
 
 
@@ -105,5 +108,8 @@ OnlineApplication::Application.routes.draw do
   get 'api/language_ability/delete/(:id)' => 'admissions#delete_language'
   post'/admissions/function/(:id)' => 'admissions#create_function'
   post'/admissions/industry/(:id)' => 'admissions#create_industry'
+  post'/admissions/geographic/(:id)' => 'admissions#create_geographic'
+  post'/admissions/preference_industry/(:id)' => 'admissions#create_preference_industry'
+
   root :to => 'home#index'
 end

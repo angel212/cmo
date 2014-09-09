@@ -374,7 +374,10 @@
       <tr>
         <td>Industry - Preference:</td>
         <td>
-          <%= @preference.industry %>
+          <% @online_application.preference_industries.each do |preference_industry| %>
+              <span id="<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><!--<button  id="<%= preference_industry.id %>" class="language-ability-delete">delete</button>--></span>
+              <br>
+          <% end %>
         </td>
       </tr>
       <tr>
