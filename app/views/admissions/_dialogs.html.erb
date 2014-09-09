@@ -1379,132 +1379,10 @@
      <tr>
        <td>Geographic - Experience:</td>
        <td>
-         <select name="employment_detail[geographic_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.geographic_authorization %>">
-           <option> USA</option>
-           <option> NORTH AMERICA (Non-US States)</option>
-           <option> Algeria</option>
-           <option> Angola</option>
-           <option> Cameroon</option>
-           <option> Cote d'Ivoire</option>
-           <option> Egypt</option>
-           <option> Ethiopia</option>
-           <option> Ghana</option>
-           <option> Kenya</option>
-           <option> Libya</option>
-           <option> Morocco</option>
-           <option> Nigeria</option>
-           <option> South Africa</option>
-           <option> Sudan</option>
-           <option> Tunisia</option>
-           <option> Azerbaijan</option>
-           <option> Bangladesh</option>
-           <option> China</option>
-           <option> China - Beijing Metro</option>
-           <option> China - Shanghai Metro</option>
-           <option> Hong Kong</option>
-           <option> India</option>
-           <option> Indonesia</option>
-           <option> Japan</option>
-           <option> Japan - Tokyo Metro</option>
-           <option> Kazakhstan</option>
-           <option> Macau</option>
-           <option> Malaysia</option>
-           <option> Myanmar (Burma)</option>
-           <option> Nepal</option>
-           <option> Pakistan</option>
-           <option> Philippines</option>
-           <option> Singapore</option>
-           <option> South Korea</option>
-           <option> Sri Lanka</option>
-           <option> Taiwan</option>
-           <option> Thailand</option>
-           <option> Turkmenistan</option>
-           <option> Ukraine</option>
-           <option> Uzbekistan</option>
-           <option> Vietnam</option>
-           <option> Albania</option>
-           <option> Austria</option>
-           <option> Belarus</option>
-           <option> Belgium</option>
-           <option> Bosnia and Herzegovina</option>
-           <option> Bulgaria</option>
-           <option> Croatia</option>
-           <option> Cyprus</option>
-           <option> Czech Republic</option>
-           <option> Denmark</option>
-           <option> Estonia</option>
-           <option> Finland</option>
-           <option> France</option>
-           <option> France - Paris Metro</option>
-           <option> Germany</option>
-           <option> Greece</option>
-           <option> Hungary</option>
-           <option> Iceland</option>
-           <option> Ireland</option>
-           <option> Italy</option>
-           <option> Kosovo</option>
-           <option> Latvia</option>
-           <option> Lithuania</option>
-           <option> Luxembourg</option>
-           <option> Macedonia</option>
-           <option> Moldova</option>
-           <option> Montenegro</option>
-           <option> Netherlands</option>
-           <option> Norway</option>
-           <option> Poland</option>
-           <option> Portugal</option>
-           <option> Romania</option>
-           <option> Russia</option>
-           <option> Serbia</option>
-           <option> Slovakia</option>
-           <option> Slovenia</option>
-           <option> Spain</option>
-           <option> Sweden</option>
-           <option> Switzerland</option>
-           <option> Turkey</option>
-           <option> Ukraine</option>
-           <option> United Kingdom</option>
-           <option> United Kingdom - London Metro</option>
-           <option> Argentina</option>
-           <option> Bermuda</option>
-           <option> Bolivia</option>
-           <option> Brazil</option>
-           <option> British Virgin Islands</option>
-           <option> Cayman Islands</option>
-           <option> Chile</option>
-           <option> Colombia</option>
-           <option> Costa Rica</option>
-           <option> Cuba</option>
-           <option> Dominican Republic</option>
-           <option> Ecuador</option>
-           <option> El Salvador</option>
-           <option> Guatemala</option>
-           <option> Nicaragua</option>
-           <option> Panama</option>
-           <option> Paraguay</option>
-           <option> Peru</option>
-           <option> Trinidad & Tobago</option>
-           <option> Uruguay</option>
-           <option> Venezuela</option>
-           <option> Afghanistan</option>
-           <option> Bahrain</option>
-           <option> Iran</option>
-           <option> Iraq</option>
-           <option> Israel</option>
-           <option> Jordan</option>
-           <option> Kuwait</option>
-           <option> Lebanon</option>
-           <option> Oman</option>
-           <option> Palestine</option>
-           <option> Qatar</option>
-           <option> Saudi Arabia</option>
-           <option> Syria</option>
-           <option> United Arab Emirates (UAE)</option>
-           <option> Yemen</option>
-           <option> Australia</option>
-           <option> New Zealand</option>
-
-         </select></td>
+         <% @online_application.geographic_experiences.each do |geographic_experience| %>
+             <span id="<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> - <%= geographic_experience.country %><!--<button  id="<%= geographic_experience.id %>" class="language-ability-delete">delete</button>--></span>
+             <br>
+         <% end %></td>
      </tr>
      <tr>
        <td>Years of Supervisory Work Experience:</td>
@@ -1653,6 +1531,7 @@
           <td>Industry - Experience:</td>
           <td>
             <select name="industry" id="industry" class="input-xlarge  dropdown-value" onchange="javascript: industrylist(this.options[this.selectedIndex].value);">
+              <option value="">Select Category</option>
               <option>	Accounting	</option>
               <option>	Advertising	</option>
               <option>	Aerospace / Aviation / Defense	</option>
@@ -1705,6 +1584,45 @@
 
     </form>
   </span>
+  <!--for the geographic-->
+  <span>
+    <form name="geographic_professional_detail" class="form-horizontal" method="post" action="/admissions/geographic/<%= @online_application.id %>">
+      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+        <tr>
+          <td>Industry - Experience:</td>
+          <td>
+            <select name="continent" id="continent" class="input-xlarge  dropdown-value" onchange="javascript: geographiclist(this.options[this.selectedIndex].value);">
+              <option value="">Select Category</option>
+              <option>	  NORTH AMERICA	</option>
+              <option>	  AFRICA	</option>
+              <option>	  ASIA	</option>
+              <option>	  EUROPE	</option>
+              <option>	  LATIN AMERICA & THE CARIBBEAN	</option>
+              <option>	  MIDDLE EAST	</option>
+              <option>	  OCEANIA  Australia 	</option>
+
+
+            </select>
+          </td>
+          <td>
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select name="country" id="geographic" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
+            </script>
+            <noscript><select name="function[]" id="geographic" >
+              <option value="">Select Sub-Category</option>
+            </select>
+            </noscript>
+          </td>
+          <td>
+            <button>add</button>
+          </td>
+        </tr>
+      </table>
+
+    </form>
+  </span>
+
+
   <span>
     <button id="cancel_professional" name="cancel_professional" class="btn" style="margin-left: 220px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Cancel

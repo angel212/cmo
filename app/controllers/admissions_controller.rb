@@ -14,6 +14,8 @@ class AdmissionsController < ApplicationController
     @preference = @online_application.preference
     @language = @online_application.language_abilities
     @function = @online_application.function_experiences
+    @industry = @online_application.industry_experiences
+
     @student=1
 
     respond_to do |format|

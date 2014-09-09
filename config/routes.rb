@@ -1,4 +1,7 @@
 OnlineApplication::Application.routes.draw do
+  resources :geographic_experiences
+
+
   resources :industry_experiences
 
 

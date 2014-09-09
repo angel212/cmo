@@ -292,7 +292,10 @@
       <tr>
         <td>Geographic - Experience:</td>
         <td>
-          <%= @employment_detail.geographic_authorization %>
+          <% @online_application.geographic_experiences.each do |geographic_experience| %>
+              <span id="<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> - <%= geographic_experience.country %><!--<button  id="<%= geographic_experience.id %>" class="language-ability-delete">delete</button>--></span>
+              <br>
+          <% end %>
         </td>
       </tr>
       <tr>
