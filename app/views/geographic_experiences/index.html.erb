@@ -1,0 +1,27 @@
+<h1>Listing geographic_experiences</h1>
+
+<table>
+  <tr>
+    <th>Online application form</th>
+    <th>Continent</th>
+    <th>Country</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @geographic_experiences.each do |geographic_experience| %>
+  <tr>
+    <td><%= geographic_experience.online_application_form_id %></td>
+    <td><%= geographic_experience.continent %></td>
+    <td><%= geographic_experience.country %></td>
+    <td><%= link_to 'Show', geographic_experience %></td>
+    <td><%= link_to 'Edit', edit_geographic_experience_path(geographic_experience) %></td>
+    <td><%= link_to 'Destroy', geographic_experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Geographic experience', new_geographic_experience_path %>
