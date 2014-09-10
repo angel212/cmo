@@ -341,8 +341,75 @@ $(document).ready(function(){
 
         var r = confirm("Do you really want to Delete?");
         if (r == true) {
-            $('.language-container2#' + e.target.id).hide();
+            document.getElementById("lang" + e.target.id).remove()
+            document.getElementById("lang_disp" + e.target.id).remove();
+           // $( "span" ).remove( "lang" + e.target.id);
             $.ajax('/api/language_ability/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+    $('.function-experience-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("function" + e.target.id).remove()
+            document.getElementById("function_disp" + e.target.id).remove();
+            // $( "span" ).remove( "lang" + e.target.id);
+            $.ajax('/api/function_experience/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+    $('.industry-experience-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("industry" + e.target.id).remove()
+            document.getElementById("industry_disp" + e.target.id).remove();
+            // $( "span" ).remove( "lang" + e.target.id);
+            $.ajax('/api/industry_experience/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+    $('.geographic-experience-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("geographic" + e.target.id).remove()
+            document.getElementById("geographic_disp" + e.target.id).remove();
+            // $( "span" ).remove( "lang" + e.target.id);
+            $.ajax('/api/geographic_experience/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+    $('.preference-industry-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("pre_industry" + e.target.id).remove()
+            document.getElementById("pre_industry_disp" + e.target.id).remove();
+            // $( "span" ).remove( "lang" + e.target.id);
+            $.ajax('/api/preference_industry/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+    $('.preference-criteria-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("pre_criteria" + e.target.id).remove()
+            document.getElementById("pre_criteria_disp" + e.target.id).remove();
+            // $( "span" ).remove( "lang" + e.target.id);
+            $.ajax('/api/preference_criteria/delete/' + e.target.id);
         } else {
             return false;
         }

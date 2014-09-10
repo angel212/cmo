@@ -952,8 +952,8 @@
       <td>Language Ability:</td>
       <td style="padding-left:80px; ">
         <% @online_application.language_abilities.each do |language_ability| %>
-            <span id="<%= language_ability.id %>" class="language-container2" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button></span>
-            <br>
+            <span id="lang<%= language_ability.id %>" class="language-container2" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button><br></span>
+
         <% end %>
         <!--<input id="last-school-end-date" name="education_detail[language]" value="<%= @education_detail.language %>" type="text" class="input-xlarge">-->
         <select name="language_name" id="category" onchange="javascript: languagefunction(this.options[this.selectedIndex].value);" style="width: 180px;">
@@ -1094,8 +1094,8 @@
          <!--<select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">-->
        <!--</select>-->
          <% @online_application.function_experiences.each do |function_experience| %>
-             <span id="<%= function_experience.id %>" class="language-container" ><%= function_experience.function %> - <%= function_experience.sub_function %><!--<button  id="<%= function_experience.id %>" class="language-ability-delete">delete</button>--></span>
-             <br>
+             <span id="function<%= function_experience.id %>" class="language-container" ><%= function_experience.function %> - <%= function_experience.sub_function %><button  id="<%= function_experience.id %>" class="function-experience-delete">delete</button><br></span>
+
          <% end %>
 
        </td>
@@ -1104,8 +1104,8 @@
        <td>Industry - Experience:</td>
        <td>
          <% @online_application.industry_experiences.each do |industry_experience| %>
-             <span id="<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><!--<button  id="<%= industry_experience.id %>" class="language-ability-delete">delete</button>--></span>
-             <br>
+             <span id="industry<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><button  id="<%= industry_experience.id %>" class="industry-experience-delete">delete</button> <br></span>
+
          <% end %>
          <!--<select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">-->
 
@@ -1380,8 +1380,8 @@
        <td>Geographic - Experience:</td>
        <td>
          <% @online_application.geographic_experiences.each do |geographic_experience| %>
-             <span id="<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> - <%= geographic_experience.country %><!--<button  id="<%= geographic_experience.id %>" class="language-ability-delete">delete</button>--></span>
-             <br>
+             <span id="geographic<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> - <%= geographic_experience.country %><button  id="<%= geographic_experience.id %>" class="geographic-experience-delete">delete</button><br></span>
+
          <% end %></td>
      </tr>
      <tr>
@@ -1643,8 +1643,8 @@
         <td>Industry - Preference:</td>
         <td>
           <% @online_application.preference_industries.each do |preference_industry| %>
-              <span id="<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><!--<button  id="<%= preference_industry.id %>" class="language-ability-delete">delete</button>--></span>
-              <br>
+              <span id="pre_industry<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><button  id="<%= preference_industry.id %>" class="preference-industry-delete">delete</button><br></span>
+
           <% end %>
         </td>
       </tr>
@@ -1652,8 +1652,8 @@
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
           <% @online_application.preference_criteriums.each do |preference_criteriums| %>
-              <span id="<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %> <!--<button  id="<%= preference_criteriums.id %>" class="language-ability-delete">delete</button>--></span>
-              <br>
+              <span id="pre_criteria<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %> <button  id="<%= preference_criteriums.id %>" class="preference-criteria-delete">delete</button><br></span>
+
           <% end %>
         </td>
       </tr>

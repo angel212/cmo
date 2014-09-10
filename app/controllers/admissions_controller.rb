@@ -116,12 +116,7 @@ class AdmissionsController < ApplicationController
     redirect_to "/admissions/#{@online_application.id}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
-  def delete_language
-    language_ability = LanguageAbility.find(params[:id])
-    language_ability.delete
 
-    render :json => {'status' => 'success'}.to_json
-  end
   def create_language
 
     LanguageAbility.create!(:online_application_form_id => params[:id] , :name => params[:language_name], :level=> params[:language_level])
@@ -155,6 +150,43 @@ class AdmissionsController < ApplicationController
 
     PreferenceCriterium.create!(:online_application_form_id => params[:id] , :criteria => params[:criteria])
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
+  def delete_language
+    language_ability = LanguageAbility.find(params[:id])
+    language_ability.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def delete_function
+    function_exp = FunctionExperience.find(params[:id])
+    function_exp.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def delete_industry
+    industry_exp = IndustryExperience.find(params[:id])
+    industry_exp.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def delete_geographic
+    geographic_exp = GeographicExperience.find(params[:id])
+    geographic_exp.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def delete_pre_industry
+    pre_industry= PreferenceIndustry.find(params[:id])
+    pre_industry.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def delete_pre_criteria
+    pre_criteria= PreferenceCriterium.find(params[:id])
+    pre_criteria.delete
+
+    render :json => {'status' => 'success'}.to_json
   end
   def clean_params(params)
 
