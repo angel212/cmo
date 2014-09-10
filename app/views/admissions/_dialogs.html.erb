@@ -942,16 +942,121 @@
         </select>
         </noscript></td>
     </tr>
-    <tr>
-      <td>Language Ability:</td>
-      <td>
-        <input id="last-school-end-date" name="education_detail[language]" value="<%= @education_detail.language %>" type="text" class="input-xlarge">
-      </td>
-    </tr>
+
   </table>
 
 </form>
+<form id="-language-education-details-form" name="languageeducationdetails" class="form-horizontal" method="post" action="/admissions/language/<%= @online_application.id %>">
+  <table style="padding-left: 60px; margin-left: 6px;width: 565;color: #7d7d7d;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+    <tr>
+      <td>Language Ability:</td>
+      <td style="padding-left:80px; ">
+        <% @online_application.language_abilities.each do |language_ability| %>
+            <span id="<%= language_ability.id %>" class="language-container2" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button></span>
+            <br>
+        <% end %>
+        <!--<input id="last-school-end-date" name="education_detail[language]" value="<%= @education_detail.language %>" type="text" class="input-xlarge">-->
+        <select name="language_name" id="category" onchange="javascript: languagefunction(this.options[this.selectedIndex].value);" style="width: 180px;">
+          <option>Select One</option>
+          <option>	   Albanian	</option>
+          <option>	   American Sign Language 	</option>
+          <option>	   Arabic 	</option>
+          <option>	   Armenian 	</option>
+          <option>	   Azerbaijani 	</option>
+          <option>	   Belarusian 	</option>
+          <option>	   Bengali 	</option>
+          <option>	   Bhojpuri 	</option>
+          <option>	   Bosnian 	</option>
+          <option>	   Bulgarian 	</option>
+          <option>	   Burmese 	</option>
+          <option>	   Cantonese 	</option>
+          <option>	   Catalan 	</option>
+          <option>	   Croatian 	</option>
+          <option>	   Czech 	</option>
+          <option>	   Danish 	</option>
+          <option>	   Dutch 	</option>
+          <option>	   Farsi 	</option>
+          <option>	   Fijian 	</option>
+          <option>	   Filipino 	</option>
+          <option>	   Finnish 	</option>
+          <option>	   French 	</option>
+          <option>	   Georgian 	</option>
+          <option>	   German 	</option>
+          <option>	   Greek 	</option>
+          <option>	   Gujarati 	</option>
+          <option>	   Hakka 	</option>
+          <option>	   Hebrew 	</option>
+          <option>	   Hindi 	</option>
+          <option>	   Hungarian 	</option>
+          <option>	   Icelandic 	</option>
+          <option>	   Indonesian 	</option>
+          <option>	   Italian 	</option>
+          <option>	   Japanese 	</option>
+          <option>	   Javanese 	</option>
+          <option>	   Kannada 	</option>
+          <option>	   Kazakh 	</option>
+          <option>	   Khmer 	</option>
+          <option>	   Korean 	</option>
+          <option>	   Kurdish 	</option>
+          <option>	   Lao 	</option>
+          <option>	   Latin 	</option>
+          <option>	   Latvian 	</option>
+          <option>	   Lithuanian 	</option>
+          <option>	   Maithili 	</option>
+          <option>	   Malay 	</option>
+          <option>	   Malayalam 	</option>
+          <option>	   Mandarin 	</option>
+          <option>	   Maori 	</option>
+          <option>	   Marathi 	</option>
+          <option>	   Min 	</option>
+          <option>	   Mongol 	</option>
+          <option>	   Nepali 	</option>
+          <option>	   Norwegian 	</option>
+          <option>	   Oriya 	</option>
+          <option>	   Pashto 	</option>
+          <option>	   Persian 	</option>
+          <option>	   Polish 	</option>
+          <option>	   Portuguese 	</option>
+          <option>	   Punjabi 	</option>
+          <option>	   Romanian 	</option>
+          <option>	   Russian 	</option>
+          <option>	   Serbo-Croatian 	</option>
+          <option>	   Shona 	</option>
+          <option>	   Sindhi 	</option>
+          <option>	   Sinhala 	</option>
+          <option>	   Slovak 	</option>
+          <option>	   Slovene 	</option>
+          <option>	   Spanish 	</option>
+          <option>	   Swahili 	</option>
+          <option>	   Swedish 	</option>
+          <option>	   Tagalog 	</option>
+          <option>	   Taiwanese 	</option>
+          <option>	   Tamil 	</option>
+          <option>	   Telugu 	</option>
+          <option>	   Thai 	</option>
+          <option>	   Turkish 	</option>
+          <option>	   Ukrainian 	</option>
+          <option>	   Urdu 	</option>
+          <option>	   Uzbek 	</option>
+          <option>	   Vietnamese 	</option>
+          <option>	   Wu 	</option>
 
+        </select>
+
+      </td>
+      <td>
+        <script type="text/javascript" language="JavaScript">
+            document.write('<select name="language_level" id="subcategory3" style="width:140px; "><option value="">Select Language</option></select>')
+        </script>
+        <noscript><select name="language_abilities[]" id="subcategory" >
+          <option value="">Select Language First</option>
+        </select>
+        </noscript>
+      </td>
+      <td><button>add</button></td>
+    </tr>
+  </table>
+</form>
   </span>
   <span>
     <button id="cancel_education" name="cancel_education" class="patrick-btn" style="margin-left: 200px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
