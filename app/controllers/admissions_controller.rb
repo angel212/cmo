@@ -188,6 +188,39 @@ class AdmissionsController < ApplicationController
 
     render :json => {'status' => 'success'}.to_json
   end
+  def changeEmail
+    data= OnlineApplicationForm.find(params[:id])
+  if data.personal_detail.email != params[:currentEmail]
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Incorrect "Current Email", Data not match. Please Try Again.'.html_safe} and return
+  elsif params[:newEmail] != params[:confirmEmail]
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'New Email Does not match, Please Try Again.'.html_safe} and return
+  elsif params[:newEmail].match(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/).nil?
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Please provide valid Email for your new Email.'.html_safe} and return
+  elsif PersonalDetail.where(email: params[:newEmail]).present?
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'The Email you want to use for as new Email is currently used'.html_safe} and return
+  else
+    newEmail = data.personal_detail
+    newEmail.update_attributes!(:email => params[:newEmail])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Email Updated Successfully'.html_safe} and return
+  end
+
+
+  end
+
+  def changePassword
+    data= OnlineApplicationForm.find(params[:id])
+    if data.pass != params[:CurrentPassword]
+      redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Incorrect "Current Password", Data not match. Please Try Again.'.html_safe} and return
+    elsif params[:newPassword] != params[:confirmPassword]
+      redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'New Password Does not match, Please Try Again.'.html_safe} and return
+
+    end
+
+    data.update_attributes(:pass => params[:newPassword])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Password Updated Successfully'.html_safe} and return
+
+  end
+
   def clean_params(params)
 
     params.each_pair do |key, value|

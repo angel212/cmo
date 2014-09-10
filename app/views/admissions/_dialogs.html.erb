@@ -807,7 +807,7 @@
 
 </div>
 <!-- -->
-<div id="education_dialog" title="Educational Details">
+<div id="education_dialog" title="Educational Details" style="overflow-y: auto;">
   <span>
 <form id="education-details-form" name="educationdetails" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
@@ -952,9 +952,12 @@
       <td>Language Ability:</td>
       <td style="padding-left:80px; ">
         <% @online_application.language_abilities.each do |language_ability| %>
-            <span id="lang<%= language_ability.id %>" class="language-container2" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button><br></span>
+            <span style="margin-bottom: 10px;" id="lang<%= language_ability.id %>" class="language-container2" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete" style="margin-left: 10px;">delete</button><br></span>
 
         <% end %>
+      </td>
+    </tr><tr><td>&nbsp;</td>
+    <td>
         <!--<input id="last-school-end-date" name="education_detail[language]" value="<%= @education_detail.language %>" type="text" class="input-xlarge">-->
         <select name="language_name" id="category" onchange="javascript: languagefunction(this.options[this.selectedIndex].value);" style="width: 180px;">
           <option>Select One</option>
@@ -1635,7 +1638,7 @@
 
 </div>
 
-<div id="preferences_dialog" title="My Preferences">
+<div id="preferences_dialog" title="My Preferences" style="overflow-y: auto;">
 <span>
   <form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
     <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
@@ -1755,7 +1758,7 @@
     <form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/preference_criteria/<%= @online_application.id %>">
       <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
         <tr>
-          <td>Industry - Experience:</td>
+          <td>Most Important Criteria for Choosing a Job:</td>
           <td>
             <select name="criteria" id="criteria" class="input-xlarge  dropdown-value" >
               <option value="">	Select One Industry	</option>
@@ -1791,27 +1794,27 @@
 
 <div id="change_pass_dialog" title="Change Password">
   <div id="dialog-content">
-    <form id="change-pass-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
+    <form id="change-pass-form" class="form-horizontal" method="post" action="/api/changePassword/<%= @online_application.id %>">
       <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
         <tr>
           <td>
           Current Password:</td>
           <td>
-          <input type="password" id="password" >
+          <input type="password" id="password" name="CurrentPassword" >
           </td>
         </tr>
         <tr>
           <td>
           New Password:</td>
           <td>
-          <input type="password" name="online_application_form[pass]" id="form_password">
+          <input type="password" name="newPassword" id="form_password">
           </td>
         </tr>
         <tr>
           <td>
           Confirm Password:</td>
           <td>
-          <input type="password" >
+          <input type="password" name="confirmPassword" >
           </td>
         </tr>
       </table>
@@ -1826,26 +1829,26 @@
 
 <div id="change_email_dialog" title="Change Email">
   <div id="dialog-content">
-    <form id="" method="post" action="">
+    <form id="changeEmailForm"  method="post" action="/api/changeEmail/<%= @online_application.id %>">
       <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
         <tr>
           <td>
           Current Email:</td>
           <td>
-            <input type="text">
+            <input name="currentEmail" type="text">
           </td>
         </tr>
         <tr>
           <td>
           New Email:</td>
           <td>
-            <input type="text"></td>
+            <input type="text" name="newEmail"></td>
         </tr>
         <tr>
           <td>
           Confirm Email:</td>
           <td>
-            <input type="text"></td>
+            <input type="text" name="confirmEmail"></td>
         </tr>
       </table>
       <button class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>

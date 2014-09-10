@@ -121,5 +121,8 @@ OnlineApplication::Application.routes.draw do
   get '/api/geographic_experience/delete/(:id)' => 'admissions#delete_geographic'
   get '/api/preference_industry/delete/(:id)' => 'admissions#delete_pre_industry'
  get '/api/preference_criteria/delete/(:id)' => 'admissions#delete_pre_criteria'
+
+  post'/api/changeEmail/(:id)' => 'admissions#changeEmail'
+  post'/api/changePassword/(:id)' => 'admissions#changePassword'
   root :to => 'home#index'
 end
