@@ -1,3 +1,11 @@
+<!--<link href="/assets/bootstrap.min.css" rel="stylesheet">-->
+<!--<link href="/assets/docs.css" rel="stylesheet">-->
+<!--<link href="/assets/prettify.css" rel="stylesheet">-->
+<!--<script type="text/javascript" src="/assets/prettify.js"></script>-->
+<!--<script type="text/javascript" src="/assets/jquery-1.8.2.min.js"></script>-->
+<!--<script type="text/javascript" src="/assets/bootstrap-2.1.1/js/bootstrap.min.js"></script>-->
+<!--<script type="text/javascript" src="/assets/bootstrap-modal-popover.js"></script>-->
+
 <div id="personal_edit" title="Personal Info">
 
 <!-- Form Name -->
@@ -809,7 +817,25 @@
 <!-- -->
 <div id="education_dialog" title="Educational Details">
   <span>
-<form id="education-details-form" name="educationdetails" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
+  <input type="button" class="patrick-btn" id="pop-btn" value="Add" style="font-size: 12px;font-family: helvetica, verdana, arial, sans-serif;">
+<div id="pop" class="popover right in" style="margin-left: 100px">
+  <div class="arrow"></div>
+  <h3 class="popover-title">Demo Modal Popover</h3>
+
+  <div class="popover-content" style="width: 1000px !important;">
+    <p>Edit some data related to this context:
+
+    </p><form>
+    <div style="white-space: nowrap;
+            vertical-align: middle;display:inline-block;">
+      <input type="text" class="input-medium" style="width: 100px;" placeholder="my.email@sample.com">
+      <a href="#" class="btn helloWorld">subscribe</a>
+    </div>
+  </form>
+    <p></p>
+  </div>
+</div>
+  <form id="education-details-form" name="educationdetails" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
   <table style="padding-left: 50px;width: 565;color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
     <tr>
@@ -1053,7 +1079,9 @@
         </select>
         </noscript>
       </td>
-      <td><button>add</button></td>
+      <td>
+        <!-- Button to launch modal popover -->
+      </td>
     </tr>
   </table>
 </form>
@@ -1065,7 +1093,6 @@
     <button id="education-details-submit" name="education-details-submit" class="patrick-btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
       Details
     </button>
-
   </span>
 </div>
 <!-- -->
