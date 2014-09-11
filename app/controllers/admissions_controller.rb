@@ -46,16 +46,16 @@ class AdmissionsController < ApplicationController
     # Check the password/DOB
     # Create the application if the online application form is not present.
     if @online_application.blank?
-      @online_application = OnlineApplicationForm.create!(status: 10)
-      @personal_details = PersonalDetail.create!(:email => params[:email], :dob => '01/01/1980')
-      @employment_detail = EmploymentDetail.create!
-      @education_detail = EducationDetail.create!
-      @preferences = Preference.create!
-
-      @online_application.update_attributes!(personal_detail_id: @personal_details.id,
-                                             employment_detail_id: @employment_detail.id,
-                                             education_detail_id: @education_detail.id,
-                                             preference_id: @preferences.id)
+      #@online_application = OnlineApplicationForm.create!(status: 10)
+      #@personal_details = PersonalDetail.create!(:email => params[:email], :dob => '01/01/1980')
+      #@employment_detail = EmploymentDetail.create!
+      #@education_detail = EducationDetail.create!
+      #@preferences = Preference.create!
+      #
+      #@online_application.update_attributes!(personal_detail_id: @personal_details.id,
+      #                                       employment_detail_id: @employment_detail.id,
+      #                                       education_detail_id: @education_detail.id,
+      #                                       preference_id: @preferences.id)
       redirect_to '/', {alert: 'Email or Password is incorrect. <a href="mailto:icthelpdesk@aim.edu">icthelpdesk@aim.edu</a> or call +63 (2) 894 0043.'.html_safe} and return
     elsif @online_application.present? && @online_application.personal_detail.dob.nil?
       PersonalDetail.where(email: params[:email] ).each { |x| x.update_attribute :dob, dob }
@@ -110,7 +110,7 @@ class AdmissionsController < ApplicationController
     @employment_detail.update_attributes!(params[:employment_detail])
     @education_detail.update_attributes!(params[:education_detail])
     @preference.update_attributes!(params[:preference])
-    @language.update_attributes!(params[:language_abilities])
+
     #::AbcRegistrationMailer.registration_alert(@online_application).deliver!
     #redirect_to edit_supplemental_detail_path(@supplemental_detail)
     redirect_to "/admissions/#{@online_application.id}/edit" , {alert: 'profile updated successfully'.html_safe} and return
