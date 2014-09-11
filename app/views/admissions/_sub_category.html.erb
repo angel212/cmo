@@ -133,4 +133,529 @@
         return true;
     }
 </script>
+<!--for work exp - function exp-->
+<script language="javascript" type="text/javascript">
+    function functionlist(listindex)
+    {
 
+        document.professional_detail.sub_function.options.length = 0;
+        switch (listindex)
+        {
+
+            case "Engineering":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Chemical","Chemical");
+                document.professional_detail.sub_function.options[2]=new Option("Electrical","Electrical");
+                document.professional_detail.sub_function.options[3]=new Option("Industrial","Industrial");
+                document.professional_detail.sub_function.options[4]=new Option("Mechanical","Mechanical");
+            break;
+
+            case "Finance":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Analyst / Research","Analyst / Research");
+                document.professional_detail.sub_function.options[2]=new Option("Commercial Banking","Commercial Banking");
+                document.professional_detail.sub_function.options[3]=new Option("Corporate Finance","Corporate Finance");
+                document.professional_detail.sub_function.options[4]=new Option("Investment Banking","Investment Banking");
+                document.professional_detail.sub_function.options[5]=new Option("Investment Management","Investment Management");
+                document.professional_detail.sub_function.options[6]=new Option("Lending/Relationship Mgmt","Lending/Relationship Mgmt");
+                document.professional_detail.sub_function.options[7]=new Option("Mergers & Acquisitions","Mergers & Acquisitions");
+                document.professional_detail.sub_function.options[8]=new Option("Private Client Services / Wealth Mgmt","Private Client Services / Wealth Mgmt");
+                document.professional_detail.sub_function.options[9]=new Option("Private Equity","Private Equity");
+                document.professional_detail.sub_function.options[10]=new Option("Public Finance","Public Finance");
+                document.professional_detail.sub_function.options[11]=new Option("Restructure / Turnaround","Restructure / Turnaround");
+                document.professional_detail.sub_function.options[12]=new Option("Risk Management","Risk Management");
+                document.professional_detail.sub_function.options[13]=new Option("Sales & Trading","Sales & Trading");
+                document.professional_detail.sub_function.options[13]=new Option("Treasury","Treasury");
+
+                break;
+
+            case "Human Resources":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Compensation and Benefits","Compensation and Benefits");
+                document.professional_detail.sub_function.options[2]=new Option("Training","Training");
+                document.professional_detail.sub_function.options[3]=new Option("Recruitment","Recruitment");
+                document.professional_detail.sub_function.options[4]=new Option("Organizational Development","Organizational Development");
+                document.professional_detail.sub_function.options[5]=new Option("Employee Relations","Employee Relations");
+                break;
+
+            case "Management":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Operations / Production","Operations / Production");
+                document.professional_detail.sub_function.options[2]=new Option("Project Management","Project Management");
+                document.professional_detail.sub_function.options[3]=new Option("Retail Management","Retail Management");
+                document.professional_detail.sub_function.options[4]=new Option("Supply Chain / Logistics","Supply Chain / Logistics");
+
+                break;
+            case "Marketing":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Brand / Product Management","Brand / Product Management");
+                document.professional_detail.sub_function.options[2]=new Option("Communications / Public Relations","Communications / Public Relations");
+                document.professional_detail.sub_function.options[3]=new Option("Market Research","Market Research");
+                document.professional_detail.sub_function.options[4]=new Option("Merchandising / Retail","Merchandising / Retail");
+
+                break;
+            case "Information Technology":
+                document.professional_detail.sub_function.style.visibility="visible";
+                document.professional_detail.sub_function.options[0]=new Option("Select One","");
+                document.professional_detail.sub_function.options[1]=new Option("Systems Analysis and Design","Systems Analysis and Design");
+                document.professional_detail.sub_function.options[2]=new Option("Ecommerce / Internet / Web Site Management","Ecommerce / Internet / Web Site Management");
+                document.professional_detail.sub_function.options[3]=new Option("Integration / Implementation","Integration / Implementation");
+                document.professional_detail.sub_function.options[4]=new Option("Systems Management","Systems Management");
+                document.professional_detail.sub_function.options[5]=new Option("Training and Development","Training and Development");
+                break;
+
+            default:
+
+
+                document.professional_detail.sub_function.style.visibility="hidden";
+                break;
+
+
+        }
+        return true;
+    }
+</script>
+
+<!--for work exp - industry exp-->
+<script language="javascript" type="text/javascript">
+    function industrylist(listindex)
+    {
+
+        document.industry_professional_detail.sub_industry.options.length = 0;
+        switch (listindex)
+        {
+
+            case "Advertising":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Advertising / Marketing Services","Advertising / Marketing Services");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Communications / Public Relations","Communications / Public Relations");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("General","General");
+
+                break;
+            case "Consulting":
+            document.industry_professional_detail.sub_industry.style.visibility="visible";
+            document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+            document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+            document.industry_professional_detail.sub_industry.options[2]=new Option("Biotechnology","Biotechnology");
+            document.industry_professional_detail.sub_industry.options[3]=new Option("Design","Design");
+            document.industry_professional_detail.sub_industry.options[4]=new Option("Gas and Oil","Gas and Oil");
+            document.industry_professional_detail.sub_industry.options[5]=new Option("Healthcare","Healthcare");
+            document.industry_professional_detail.sub_industry.options[6]=new Option("Human Capital","Human Capital");
+            document.industry_professional_detail.sub_industry.options[7]=new Option("Management","Management");
+            document.industry_professional_detail.sub_industry.options[8]=new Option("Marketing","Marketing");
+            document.industry_professional_detail.sub_industry.options[9]=new Option("Nonprofit","Nonprofit");
+            document.industry_professional_detail.sub_industry.options[10]=new Option("Strategy","Strategy");
+            document.industry_professional_detail.sub_industry.options[11]=new Option("Supply Chain","Supply Chain");
+            document.industry_professional_detail.sub_industry.options[12]=new Option("Technology","Technology");
+
+            break;
+            case "Consumer Products":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Alcohol","Alcohol");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Design","Design");
+                document.industry_professional_detail.sub_industry.options[4]=new Option("Gas and Oil","Gas and Oil");
+                document.industry_professional_detail.sub_industry.options[5]=new Option("Apparel / Textiles","Apparel / Textiles");
+                document.industry_professional_detail.sub_industry.options[6]=new Option("Beverages / Food","Beverages / Food");
+                document.industry_professional_detail.sub_industry.options[7]=new Option("Electronics","Electronics");
+                document.industry_professional_detail.sub_industry.options[8]=new Option("Household / Personal","Household / Personal");
+                document.industry_professional_detail.sub_industry.options[9]=new Option("Luxury Goods","Luxury Goods");
+                document.industry_professional_detail.sub_industry.options[10]=new Option("Tobacco","Tobacco");
+
+                break;
+            case "Energy / Utilities":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Alternative Energy","Alternative Energy");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Cleantech","Cleantech");
+                document.industry_professional_detail.sub_industry.options[4]=new Option("Energy Trading","Energy Trading");
+                document.industry_professional_detail.sub_industry.options[5]=new Option("Oil / Gas","Oil / Gas");
+                document.industry_professional_detail.sub_industry.options[6]=new Option("Utility Services (Electric / Water / etc.)","Utility Services (Electric / Water / etc.)");
+
+               break;
+
+            case "Entertainment":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Leisure / Recreation","Leisure / Recreation");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("New Media","New Media");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Sports & Sports Management","Sports & Sports Management");
+
+
+            break;
+
+            case "Entertainment":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Leisure / Recreation","Leisure / Recreation");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("New Media","New Media");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Sports & Sports Management","Sports & Sports Management");
+
+
+                break;
+            case "Financial":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Commercial Banking","Commercial Banking");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Diversified Financial Services","Diversified Financial Services");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Hedge Funds","Hedge Funds");
+                document.industry_professional_detail.sub_industry.options[4]=new Option("Insurance","Insurance");
+                document.industry_professional_detail.sub_industry.options[5]=new Option("Investment Banking / Brokerage","Investment Banking / Brokerage");
+                document.industry_professional_detail.sub_industry.options[6]=new Option("Investment Management","Investment Management");
+                document.industry_professional_detail.sub_industry.options[7]=new Option("Private Equity","Private Equity");
+                document.industry_professional_detail.sub_industry.options[8]=new Option("Public Finance","Public Finance");
+                document.industry_professional_detail.sub_industry.options[9]=new Option("Research & Ratings","Research & Ratings");
+                document.industry_professional_detail.sub_industry.options[10]=new Option("Tax","Tax");
+                document.industry_professional_detail.sub_industry.options[11]=new Option("Treasury","Treasury");
+                document.industry_professional_detail.sub_industry.options[12]=new Option("Capital","Capital");
+
+
+                break;
+            case "Government":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Local / State / Federal","Local / State / Federal");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Military","Military");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("General","General");
+                break;
+            case "Healthcare":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Biotechnology","Biotechnology");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Medical Devices","Medical Devices");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Providers & Services");
+                break;
+            case "Manufacturing":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Chemicals","Chemicals");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Heavy Equipment","Heavy Equipment");
+                document.industry_professional_detail.sub_industry.options[4]=new Option("Packaging","Packaging");
+                document.industry_professional_detail.sub_industry.options[5]=new Option("Plastics / Rubber","Plastics / Rubber");
+                break;
+            case "Media":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("Publishing (Print / Web)","Publishing (Print / Web)");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Radio / TV / Cable / Film","Radio / TV / Cable / Film");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("General","General");
+
+                break;
+            case "Pharmaceutical":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Distribution / Wholesale","Distribution / Wholesale");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Manufacturers","Manufacturers");
+
+                break;
+            case "Real Estate":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Commercial","Commercial");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Residential","Residential");
+                document.industry_professional_detail.sub_industry.options[4]=new Option("Services","Services");
+
+                break;
+            case "Technology":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Equipment / Hardware / Networking","Equipment / Hardware / Networking");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Internet Services / E-Commerce","Internet Services / E-Commerce");
+                document.industry_professional_detail.sub_industry.options[4]=new Option("Multimedia Products & Services","Multimedia Products & Services");
+                document.industry_professional_detail.sub_industry.options[5]=new Option("Software","Software");
+
+                break;
+            case "Telecom":
+                document.industry_professional_detail.sub_industry.style.visibility="visible";
+                document.industry_professional_detail.sub_industry.options[0]=new Option("Select One","");
+                document.industry_professional_detail.sub_industry.options[1]=new Option("General","General");
+                document.industry_professional_detail.sub_industry.options[2]=new Option("Manufacturing","Manufacturing");
+                document.industry_professional_detail.sub_industry.options[3]=new Option("Services","Services");
+
+
+                break;
+
+
+            default:
+
+
+                document.industry_professional_detail.sub_industry.style.visibility="hidden";
+                break;
+
+
+        }
+        return true;
+    }
+</script>
+<!--for professional exp - geographic-->
+<script language="javascript" type="text/javascript">
+    function geographiclist(listindex)
+    {
+
+        document.geographic_professional_detail.geographic.options.length = 0;
+        switch (listindex)
+        {
+
+            case "NORTH AMERICA":
+                document.geographic_professional_detail.geographic.style.visibility="visible";
+                document.geographic_professional_detail.geographic.options[0]=new Option("Select One","");
+                document.geographic_professional_detail.geographic.options[1]=new Option("USA","USA");
+                document.geographic_professional_detail.geographic.options[2]=new Option("NORTH AMERICA (Non-US States)","NORTH AMERICA (Non-US States)");
+                break;
+            case "AFRICA":
+                document.geographic_professional_detail.geographic.style.visibility="visible";
+                document.geographic_professional_detail.geographic.options[0]=new Option("Select One","");
+                document.geographic_professional_detail.geographic.options[1]=new Option("Algeria","Algeria");
+                document.geographic_professional_detail.geographic.options[2]=new Option("Angola","Angola");
+                document.geographic_professional_detail.geographic.options[3]=new Option("Cameroon","Cameroon");
+                document.geographic_professional_detail.geographic.options[4]=new Option("Coted'Ivoire","Coted'Ivoire");
+                document.geographic_professional_detail.geographic.options[5]=new Option("Egypt","Egypt");
+                document.geographic_professional_detail.geographic.options[6]=new Option("Ethiopia","Ethiopia");
+                document.geographic_professional_detail.geographic.options[7]=new Option("Ghana","Ghana");
+                document.geographic_professional_detail.geographic.options[8]=new Option("Kenya","Kenya");
+                document.geographic_professional_detail.geographic.options[9]=new Option("Libya","Libya");
+                document.geographic_professional_detail.geographic.options[10]=new Option("Morocco","Morocco");
+                document.geographic_professional_detail.geographic.options[11]=new Option("Nigeria","Nigeria");
+                document.geographic_professional_detail.geographic.options[12]=new Option("South Africa","South Africa");
+                document.geographic_professional_detail.geographic.options[13]=new Option("Sudan","Sudan");
+                document.geographic_professional_detail.geographic.options[14]=new Option("Tunisia","Tunisia");
+
+                break;
+
+            case "ASIA":
+                document.geographic_professional_detail.geographic.style.visibility="visible";
+                document.geographic_professional_detail.geographic.options[0]=new Option("Select One","");
+                document.geographic_professional_detail.geographic.options[1]=new Option("Azerbaijan","Azerbaijan");
+                document.geographic_professional_detail.geographic.options[2]=new Option("Bangladesh","Bangladesh");
+                document.geographic_professional_detail.geographic.options[3]=new Option("China","China");
+                document.geographic_professional_detail.geographic.options[4]=new Option("China-Beijing Metro","China-Beijing Metro");
+                document.geographic_professional_detail.geographic.options[5]=new Option("China-Shanghai Metro","China-Shanghai Metro");
+                document.geographic_professional_detail.geographic.options[6]=new Option("Hong Kong","Hong Kong");
+                document.geographic_professional_detail.geographic.options[7]=new Option("India","India");
+                document.geographic_professional_detail.geographic.options[8]=new Option("Indonesia","Indonesia");
+                document.geographic_professional_detail.geographic.options[9]=new Option("Japan","Japan");
+                document.geographic_professional_detail.geographic.options[10]=new Option("Japan-Tokyo Metro","Japan-Tokyo Metro");
+                document.geographic_professional_detail.geographic.options[11]=new Option("Kazakhstan","Kazakhstan");
+                document.geographic_professional_detail.geographic.options[12]=new Option("Macau","Macau");
+                document.geographic_professional_detail.geographic.options[13]=new Option("Malaysia","Malaysia");
+                document.geographic_professional_detail.geographic.options[14]=new Option("Myanmar(Burma)","Myanmar(Burma)");
+                document.geographic_professional_detail.geographic.options[15]=new Option("Nepal","Nepal");
+                document.geographic_professional_detail.geographic.options[16]=new Option("Pakistan","Pakistan");
+                document.geographic_professional_detail.geographic.options[17]=new Option("Philippines","Philippines");
+                document.geographic_professional_detail.geographic.options[18]=new Option("Singapore","Singapore");
+                document.geographic_professional_detail.geographic.options[19]=new Option("South Korea","South Korea");
+                document.geographic_professional_detail.geographic.options[20]=new Option("Sri Lanka","Sri Lanka");
+                document.geographic_professional_detail.geographic.options[21]=new Option("Taiwan","Taiwan");
+                document.geographic_professional_detail.geographic.options[22]=new Option("Thailand","Thailand");
+                document.geographic_professional_detail.geographic.options[23]=new Option("Turkmenistan","Turkmenistan");
+                document.geographic_professional_detail.geographic.options[24]=new Option("Ukraine","Ukraine");
+                document.geographic_professional_detail.geographic.options[25]=new Option("Uzbekistan","Uzbekistan");
+                document.geographic_professional_detail.geographic.options[26]=new Option("Vietnam","Vietnam");
+
+                break;
+            case "EUROPE":
+                document.geographic_professional_detail.geographic.style.visibility="visible";
+                document.geographic_professional_detail.geographic.options[0]=new Option("Select One","");
+                document.geographic_professional_detail.geographic.options[1]=new Option("Albania","Albania");
+                document.geographic_professional_detail.geographic.options[2]=new Option("Austria","Austria");
+                document.geographic_professional_detail.geographic.options[3]=new Option("Belarus","Belarus");
+                document.geographic_professional_detail.geographic.options[4]=new Option("Belgium","Belgium");
+                document.geographic_professional_detail.geographic.options[5]=new Option("Bosniaand Herzegovina","Bosniaand Herzegovina");
+                document.geographic_professional_detail.geographic.options[6]=new Option("Bulgaria","Bulgaria");
+                document.geographic_professional_detail.geographic.options[7]=new Option("Croatia","Croatia");
+                document.geographic_professional_detail.geographic.options[8]=new Option("Cyprus","Cyprus");
+                document.geographic_professional_detail.geographic.options[9]=new Option("Czech Republic","Czech Republic");
+                document.geographic_professional_detail.geographic.options[10]=new Option("Denmark","Denmark");
+                document.geographic_professional_detail.geographic.options[11]=new Option("Estonia","Estonia");
+                document.geographic_professional_detail.geographic.options[12]=new Option("Finland","Finland");
+                document.geographic_professional_detail.geographic.options[13]=new Option("France","France");
+                document.geographic_professional_detail.geographic.options[14]=new Option("France-Paris Metro","France-Paris Metro");
+                document.geographic_professional_detail.geographic.options[15]=new Option("Germany","Germany");
+                document.geographic_professional_detail.geographic.options[16]=new Option("Greece","Greece");
+                document.geographic_professional_detail.geographic.options[17]=new Option("Hungary","Hungary");
+                document.geographic_professional_detail.geographic.options[18]=new Option("Iceland","Iceland");
+                document.geographic_professional_detail.geographic.options[19]=new Option("Ireland","Ireland");
+                document.geographic_professional_detail.geographic.options[20]=new Option("Italy","Italy");
+                document.geographic_professional_detail.geographic.options[21]=new Option("Kosovo","Kosovo");
+                document.geographic_professional_detail.geographic.options[22]=new Option("Latvia","Latvia");
+                document.geographic_professional_detail.geographic.options[23]=new Option("Lithuania","Lithuania");
+                document.geographic_professional_detail.geographic.options[24]=new Option("Luxembourg","Luxembourg");
+                document.geographic_professional_detail.geographic.options[25]=new Option("Macedonia","Macedonia");
+                document.geographic_professional_detail.geographic.options[26]=new Option("Moldova","Moldova");
+                document.geographic_professional_detail.geographic.options[27]=new Option("Montenegro","Montenegro");
+                document.geographic_professional_detail.geographic.options[28]=new Option("Netherlands","Netherlands");
+                document.geographic_professional_detail.geographic.options[29]=new Option("Norway","Norway");
+                document.geographic_professional_detail.geographic.options[30]=new Option("Poland","Poland");
+                document.geographic_professional_detail.geographic.options[31]=new Option("Portugal","Portugal");
+                document.geographic_professional_detail.geographic.options[32]=new Option("Romania","Romania");
+                document.geographic_professional_detail.geographic.options[33]=new Option("Russia","Russia");
+                document.geographic_professional_detail.geographic.options[34]=new Option("Serbia","Serbia");
+                document.geographic_professional_detail.geographic.options[35]=new Option("Slovakia","Slovakia");
+                document.geographic_professional_detail.geographic.options[36]=new Option("Slovenia","Slovenia");
+                document.geographic_professional_detail.geographic.options[37]=new Option("Spain","Spain");
+                document.geographic_professional_detail.geographic.options[38]=new Option("Sweden","Sweden");
+                document.geographic_professional_detail.geographic.options[39]=new Option("Switzerland","Switzerland");
+                document.geographic_professional_detail.geographic.options[40]=new Option("Turkey","Turkey");
+                document.geographic_professional_detail.geographic.options[41]=new Option("Ukraine","Ukraine");
+                document.geographic_professional_detail.geographic.options[42]=new Option("United Kingdom","United Kingdom");
+                document.geographic_professional_detail.geographic.options[43]=new Option("United Kingdom-London Metro","United Kingdom-London Metro");
+
+                break;
+            case "LATIN AMERICA & THE CARIBBEAN":
+                document.geographic_professional_detail.geographic.style.visibility="visible";
+                document.geographic_professional_detail.geographic.options[0]=new Option("Select One","");
+                document.geographic_professional_detail.geographic.options[1]=new Option("Argentina","Argentina");
+                document.geographic_professional_detail.geographic.options[2]=new Option("Bermuda","Bermuda");
+                document.geographic_professional_detail.geographic.options[3]=new Option("Bolivia","Bolivia");
+                document.geographic_professional_detail.geographic.options[4]=new Option("Brazil","Brazil");
+                document.geographic_professional_detail.geographic.options[5]=new Option("British Virgin Islands","British Virgin Islands");
+                document.geographic_professional_detail.geographic.options[6]=new Option("CaymanIslands","CaymanIslands");
+                document.geographic_professional_detail.geographic.options[7]=new Option("Chile","Chile");
+                document.geographic_professional_detail.geographic.options[8]=new Option("Colombia","Colombia");
+                document.geographic_professional_detail.geographic.options[9]=new Option("CostaRica","CostaRica");
+                document.geographic_professional_detail.geographic.options[10]=new Option("Cuba","Cuba");
+                document.geographic_professional_detail.geographic.options[11]=new Option("Dominican Republic","Dominican Republic");
+                document.geographic_professional_detail.geographic.options[12]=new Option("Ecuador","Ecuador");
+                document.geographic_professional_detail.geographic.options[13]=new Option("ElSalvador","ElSalvador");
+                document.geographic_professional_detail.geographic.options[14]=new Option("Guatemala","Guatemala");
+                document.geographic_professional_detail.geographic.options[15]=new Option("Nicaragua","Nicaragua");
+                document.geographic_professional_detail.geographic.options[16]=new Option("Panama","Panama");
+                document.geographic_professional_detail.geographic.options[17]=new Option("Paraguay","Paraguay");
+                document.geographic_professional_detail.geographic.options[18]=new Option("Peru","Peru");
+                document.geographic_professional_detail.geographic.options[19]=new Option("Trinidad & Tobago","Trinidad & Tobago");
+                document.geographic_professional_detail.geographic.options[20]=new Option("Uruguay","Uruguay");
+                document.geographic_professional_detail.geographic.options[21]=new Option("Venezuela","Venezuela");
+                break;
+            case "MIDDLE EAST":
+                document.geographic_professional_detail.geographic.style.visibility="visible";
+                document.geographic_professional_detail.geographic.options[0]=new Option("Select One","");
+                document.geographic_professional_detail.geographic.options[1]=new Option("Afghanistan","Afghanistan");
+                document.geographic_professional_detail.geographic.options[2]=new Option("Bahrain","Bahrain");
+                document.geographic_professional_detail.geographic.options[3]=new Option("Iran","Iran");
+                document.geographic_professional_detail.geographic.options[4]=new Option("Iraq","Iraq");
+                document.geographic_professional_detail.geographic.options[5]=new Option("Israel","Israel");
+                document.geographic_professional_detail.geographic.options[6]=new Option("Jordan","Jordan");
+                document.geographic_professional_detail.geographic.options[7]=new Option("Kuwait","Kuwait");
+                document.geographic_professional_detail.geographic.options[8]=new Option("Lebanon","Lebanon");
+                document.geographic_professional_detail.geographic.options[9]=new Option("Oman","Oman");
+                document.geographic_professional_detail.geographic.options[10]=new Option("Palestine","Palestine");
+                document.geographic_professional_detail.geographic.options[11]=new Option("Qatar","Qatar");
+                document.geographic_professional_detail.geographic.options[12]=new Option("Saudi Arabia","Saudi Arabia");
+                document.geographic_professional_detail.geographic.options[13]=new Option("Syria","Syria");
+                document.geographic_professional_detail.geographic.options[14]=new Option("United Arab Emirates(UAE)","United Arab Emirates(UAE)");
+                document.geographic_professional_detail.geographic.options[15]=new Option("Yemen","Yemen");
+
+                break;
+            case "MIDDLE EAST":
+                document.geographic_professional_detail.geographic.style.visibility="visible";
+                document.geographic_professional_detail.geographic.options[0]=new Option("Select One","");
+                document.geographic_professional_detail.geographic.options[1]=new Option("Australia","Australia");
+                document.geographic_professional_detail.geographic.options[2]=new Option("New Zealand","New Zealand");
+
+                document.geographic_professional_detail.geographic.options[3]=new Option("Iran","Iran");
+                document.geographic_professional_detail.geographic.options[4]=new Option("Iraq","Iraq");
+                document.geographic_professional_detail.geographic.options[5]=new Option("Israel","Israel");
+                document.geographic_professional_detail.geographic.options[6]=new Option("Jordan","Jordan");
+                document.geographic_professional_detail.geographic.options[7]=new Option("Kuwait","Kuwait");
+                document.geographic_professional_detail.geographic.options[8]=new Option("Lebanon","Lebanon");
+                document.geographic_professional_detail.geographic.options[9]=new Option("Oman","Oman");
+                document.geographic_professional_detail.geographic.options[10]=new Option("Palestine","Palestine");
+                document.geographic_professional_detail.geographic.options[11]=new Option("Qatar","Qatar");
+                document.geographic_professional_detail.geographic.options[12]=new Option("SaudiArabia","SaudiArabia");
+                document.geographic_professional_detail.geographic.options[13]=new Option("Syria","Syria");
+                document.geographic_professional_detail.geographic.options[14]=new Option("United Arab Emirates(UAE)","United Arab Emirates(UAE)");
+                document.geographic_professional_detail.geographic.options[15]=new Option("Yemen","Yemen");
+            break;
+            default:
+
+
+                document.geographic_professional_detail.geographic.style.visibility="hidden";
+
+
+                break;
+        }
+        return true;
+    }
+</script>
+<!--for preference - industry exp-->
+<script language="javascript" type="text/javascript">
+    function preferenceindustrylist(listindex)
+    {
+
+        document.preference_industry_detail.sub_industry.options.length = 0;
+        switch (listindex)
+        {
+
+            case "Consumer Products / Fast Moving Consumer Goods":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Alcohol","Alcohol");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Apparel / Textiles","Apparel / Textiles");
+                document.preference_industry_detail.sub_industry.options[3]=new Option("Beverages / Food","Beverages / Food");
+                document.preference_industry_detail.sub_industry.options[4]=new Option("Electronics","Electronics");
+                document.preference_industry_detail.sub_industry.options[5]=new Option("Household / Personal","Household / Personal");
+                document.preference_industry_detail.sub_industry.options[6]=new Option("Luxury Goods","Luxury Goods");
+                document.preference_industry_detail.sub_industry.options[7]=new Option("Tobacco","Tobacco");
+
+
+                break;
+            case "Energy / Utilities / Natural Resources":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Oil / Gas","Oil / Gas");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Utility Services (Electric / Water / etc.)","Utility Services (Electric / Water / etc.)");
+
+
+                break;
+            case "Healthcare":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Biotechnology","Biotechnology");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Medical Devices","Medical Devices");
+                document.preference_industry_detail.sub_industry.options[3]=new Option("Providers & Services","Providers & Services");
+
+
+                break;
+            case "Manufacturing":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Chemicals","Chemicals");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Heavy Equipment","Heavy Equipment");
+                document.preference_industry_detail.sub_industry.options[3]=new Option("Packaging","Packaging");
+                document.preference_industry_detail.sub_industry.options[4]=new Option("Plastics / Rubber","Plastics / Rubber");
+
+                break;
+
+            case "Technology":
+                document.preference_industry_detail.sub_industry.style.visibility="visible";
+                document.preference_industry_detail.sub_industry.options[0]=new Option("Select One","");
+                document.preference_industry_detail.sub_industry.options[1]=new Option("Hardware","Hardware");
+                document.preference_industry_detail.sub_industry.options[2]=new Option("Software","Software");
+                document.preference_industry_detail.sub_industry.options[3]=new Option("Services","Services");
+
+                break;
+
+
+            default:
+
+
+                document.preference_industry_detail.sub_industry.style.visibility="hidden";
+                break;
+
+
+        }
+        return true;
+    }
+</script>

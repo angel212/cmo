@@ -1,0 +1,27 @@
+<h1>Listing preference_industries</h1>
+
+<table>
+  <tr>
+    <th>Online application form</th>
+    <th>Industry</th>
+    <th>Sub industry</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @preference_industries.each do |preference_industry| %>
+  <tr>
+    <td><%= preference_industry.online_application_form_id %></td>
+    <td><%= preference_industry.industry %></td>
+    <td><%= preference_industry.sub_industry %></td>
+    <td><%= link_to 'Show', preference_industry %></td>
+    <td><%= link_to 'Edit', edit_preference_industry_path(preference_industry) %></td>
+    <td><%= link_to 'Destroy', preference_industry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Preference industry', new_preference_industry_path %>

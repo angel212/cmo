@@ -1,4 +1,19 @@
 OnlineApplication::Application.routes.draw do
+  resources :preference_criteria
+
+
+  resources :preference_industries
+
+
+  resources :geographic_experiences
+
+
+  resources :industry_experiences
+
+
+  resources :function_experiences
+
+
   resources :language_abilities
 
 
@@ -92,7 +107,22 @@ OnlineApplication::Application.routes.draw do
   get '/excel/export' => 'dashboard#excel'
   get 'submit_requirement' => 'requirements#submit_requirement'
   post 'supplement/(:id)' => 'supplemental_details#update'
+
   post'/admissions/language/(:id)' => 'admissions#create_language'
+  post'/admissions/function/(:id)' => 'admissions#create_function'
+  post'/admissions/industry/(:id)' => 'admissions#create_industry'
+  post'/admissions/geographic/(:id)' => 'admissions#create_geographic'
+  post'/admissions/preference_industry/(:id)' => 'admissions#create_preference_industry'
+  post'/admissions/preference_criteria/(:id)' => 'admissions#create_preference_criteria'
+
   get 'api/language_ability/delete/(:id)' => 'admissions#delete_language'
+  get '/api/function_experience/delete/(:id)' => 'admissions#delete_function'
+  get '/api/industry_experience/delete/(:id)' => 'admissions#delete_industry'
+  get '/api/geographic_experience/delete/(:id)' => 'admissions#delete_geographic'
+  get '/api/preference_industry/delete/(:id)' => 'admissions#delete_pre_industry'
+ get '/api/preference_criteria/delete/(:id)' => 'admissions#delete_pre_criteria'
+
+  post'/api/changeEmail/(:id)' => 'admissions#changeEmail'
+  post'/api/changePassword/(:id)' => 'admissions#changePassword'
   root :to => 'home#index'
 end

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Online application form:</b>
+  <%= @geographic_experience.online_application_form_id %>
+</p>
+
+<p>
+  <b>Continent:</b>
+  <%= @geographic_experience.continent %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @geographic_experience.country %>
+</p>
+
+
+<%= link_to 'Edit', edit_geographic_experience_path(@geographic_experience) %> |
+<%= link_to 'Back', geographic_experiences_path %>

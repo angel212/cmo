@@ -13,6 +13,10 @@ class AdmissionsController < ApplicationController
     @education_detail = @online_application.education_detail
     @preference = @online_application.preference
     @language = @online_application.language_abilities
+    @function = @online_application.function_experiences
+    @industry = @online_application.industry_experiences
+    @preference_industry = @online_application.preference_industries
+
     @student=1
 
     respond_to do |format|
@@ -112,18 +116,113 @@ class AdmissionsController < ApplicationController
     redirect_to "/admissions/#{@online_application.id}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
+
+  def create_language
+
+    LanguageAbility.create!(:online_application_form_id => params[:id] , :name => params[:language_name], :level=> params[:language_level])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
+  def create_function
+
+    FunctionExperience.create!(:online_application_form_id => params[:id] , :function => params[:function], :sub_function=> params[:sub_function])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+  def create_industry
+
+    IndustryExperience.create!(:online_application_form_id => params[:id] , :industry => params[:industry], :sub_industry=> params[:sub_industry])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
+  def create_geographic
+
+    GeographicExperience.create!(:online_application_form_id => params[:id] , :continent => params[:continent], :country=> params[:country])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
+  def create_preference_industry
+
+    PreferenceIndustry.create!(:online_application_form_id => params[:id] , :industry => params[:industry], :sub_industry=> params[:sub_industry])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
+  def create_preference_criteria
+
+    PreferenceCriterium.create!(:online_application_form_id => params[:id] , :criteria => params[:criteria])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
   def delete_language
     language_ability = LanguageAbility.find(params[:id])
     language_ability.delete
 
     render :json => {'status' => 'success'}.to_json
   end
-  def create_language
-    @language=params[:language_abilities]
-    LanguageAbility.create!(:online_application_form_id => params[:id] , :name => params[:language_name], :level=> params[:language_level])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  def delete_function
+    function_exp = FunctionExperience.find(params[:id])
+    function_exp.delete
+
+    render :json => {'status' => 'success'}.to_json
   end
+  def delete_industry
+    industry_exp = IndustryExperience.find(params[:id])
+    industry_exp.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def delete_geographic
+    geographic_exp = GeographicExperience.find(params[:id])
+    geographic_exp.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def delete_pre_industry
+    pre_industry= PreferenceIndustry.find(params[:id])
+    pre_industry.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def delete_pre_criteria
+    pre_criteria= PreferenceCriterium.find(params[:id])
+    pre_criteria.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+  def changeEmail
+    data= OnlineApplicationForm.find(params[:id])
+  if data.personal_detail.email != params[:currentEmail]
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Incorrect "Current Email", Data not match. Please Try Again.'.html_safe} and return
+  elsif params[:newEmail] != params[:confirmEmail]
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'New Email Does not match, Please Try Again.'.html_safe} and return
+  elsif params[:newEmail].match(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/).nil?
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Please provide valid Email for your new Email.'.html_safe} and return
+  elsif PersonalDetail.where(email: params[:newEmail]).present?
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'The Email you want to use for as new Email is currently used'.html_safe} and return
+  else
+    newEmail = data.personal_detail
+    newEmail.update_attributes!(:email => params[:newEmail])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Email Updated Successfully'.html_safe} and return
+  end
+
+
+  end
+
+  def changePassword
+    data= OnlineApplicationForm.find(params[:id])
+    if data.pass != params[:CurrentPassword]
+      redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Incorrect "Current Password", Data not match. Please Try Again.'.html_safe} and return
+    elsif params[:newPassword] != params[:confirmPassword]
+      redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'New Password Does not match, Please Try Again.'.html_safe} and return
+
+    end
+
+    data.update_attributes(:pass => params[:newPassword])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'Password Updated Successfully'.html_safe} and return
+
+  end
+
   def clean_params(params)
+
     params.each_pair do |key, value|
       params.merge!(key => DateTime.strptime(value, '%d/%m/%Y')) if key.scan('date').count > 0
     end

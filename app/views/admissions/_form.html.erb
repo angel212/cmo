@@ -221,8 +221,8 @@
         <td>Language Ability:</td>
         <td>
           <% @online_application.language_abilities.each do |language_ability| %>
-          <span id="<%= language_ability.id %>" class="language-container" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button></span>
-        <br>
+          <span id="lang_disp<%= language_ability.id %>" class="language-container" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button><br></span>
+
       <% end %>
 
         </td>
@@ -265,13 +265,21 @@
       <tr>
         <td>Function - Experience:</td>
         <td>
-          <%= @employment_detail.function_exp %>
+          <% @online_application.function_experiences.each do |function_experience| %>
+              <span id="function_disp<%= function_experience.id %>" class="language-container" ><%= function_experience.function %> - <%= function_experience.sub_function %><!--<button  id="<%= function_experience.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+          <% end %>
+
         </td>
       </tr>
       <tr>
         <td>Industry - Experience:</td>
         <td>
-          <%= @employment_detail.industry_exp %>
+          <% @online_application.industry_experiences.each do |industry_experience| %>
+              <span id="industry_disp<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><!--<button  id="<%= industry_experience.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+          <% end %>
+
         </td>
       </tr>
       <tr>
@@ -283,7 +291,10 @@
       <tr>
         <td>Geographic - Experience:</td>
         <td>
-          <%= @employment_detail.geographic_authorization %>
+          <% @online_application.geographic_experiences.each do |geographic_experience| %>
+              <span id="geographic_disp<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> - <%= geographic_experience.country %><!--<button  id="<%= geographic_experience.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+          <% end %>
         </td>
       </tr>
       <tr>
@@ -362,13 +373,19 @@
       <tr>
         <td>Industry - Preference:</td>
         <td>
-          <%= @preference.industry %>
+          <% @online_application.preference_industries.each do |preference_industry| %>
+              <span id="pre_industry_disp<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><!--<button  id="<%= preference_industry.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+          <% end %>
         </td>
       </tr>
       <tr>
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
-          <%= @preference.criteria %>
+          <% @online_application.preference_criteriums.each do |preference_criteriums| %>
+              <span id="pre_criteria_disp<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %> <!--<button  id="<%= preference_criteriums.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+          <% end %>
         </td>
       </tr>
       <tr>
