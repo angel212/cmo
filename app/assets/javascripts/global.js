@@ -10,6 +10,7 @@ $(document).ready(function (e) {
     $('div#page-7').hide();
     $('div#page-8').hide();
     $('div#page-9').hide();
+    $('#pop').hide();
     //$('.jBox-container').hide();
     $('#page-title').text("Personal Particulars");
     $('.pagination').hide();
@@ -19,6 +20,10 @@ $(document).ready(function (e) {
     $('#highest-degree-obtained').hide();
     $('#aim-alumni-form').hide();
     $('#registration-submission').hide();
+
+    $("#pop-btn").on("click", function() {
+        $("#pop").toggle();
+    });
 
     $(".patrick-btn").on("click", function() {
         $("body").scrollTop(0);
