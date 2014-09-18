@@ -1,5 +1,27 @@
 /* Patricks Stylesheet*/
 
+@media print {
+  td.heading {
+    background-color: #000 !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .no-print, .no-print *
+  {
+    display: none !important;
+  }
+
+  .content-container, .admissions-container {
+    height: auto !important;
+    overflow-x: auto !important;
+  }
+
+  .footer-online-admissions {
+    display: none !important;
+  }
+
+}
+
 * {
   font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
 }
@@ -67,6 +89,9 @@ html {
   width: 250px;
   margin-top: -35px;
   border-right: 1px solid black;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
 }
 
 .leftcolumn ul {
@@ -261,7 +286,6 @@ input[type="text"], select, input[type="date"], input[type="password"] {
 }
 
 .leftcolumn ul li {
-  padding: 8px 25px;
   border-bottom: rgb(13, 17, 46) thin solid;
   font-weight: bold;
   letter-spacing: 0.1px;
@@ -273,6 +297,9 @@ input[type="text"], select, input[type="date"], input[type="password"] {
 
 .leftcolumn #navigation ul li a {
   display: block;
+  width: 100%;
+  padding: 8px 0px;
+  text-align: center;
 }
 
 .leftcolumn ul li:hover {
@@ -370,7 +397,7 @@ ul li.changeColor a {
 }
 
 .resume td:first-child {
-  /*padding: 5px 10px;*/
+  padding: 5px 10px;
 }
 
 .heading {

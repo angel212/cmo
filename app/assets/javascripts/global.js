@@ -10,6 +10,7 @@ $(document).ready(function (e) {
     $('div#page-7').hide();
     $('div#page-8').hide();
     $('div#page-9').hide();
+    $('div#address-page').hide();
     $('#pop').hide();
     //$('.jBox-container').hide();
     $('#page-title').text("Personal Particulars");
@@ -28,6 +29,15 @@ $(document).ready(function (e) {
     $(".patrick-btn").on("click", function() {
         $("body").scrollTop(0);
     });
+
+//    $( "#myForm" ).submit(function( e ) {
+//        // prevent form from sending like normal
+//        e.preventDefault();
+//        // Send post with ajax, with the postdata of the html form, whatever your page returns you can catch with .done(function(data));
+//        $.post( "", $( "#myForm" ).serialize() ).done(function( data ) {
+//            console.log( "return data: " + data );
+//        });
+//    });
 
     $('#mailing_edit_link').click(function(e) {
         return false;
@@ -81,9 +91,9 @@ $(document).ready(function (e) {
 
     $('.date-pick').datepicker();
 
-    if ($('.dob').attr('value') === undefined) {
-        $('.dob').datepicker("setDate", "01/01/1980");
-    }
+//    if ($('.dob').attr('value') === undefined) {
+//        $('.dob').datepicker("setDate", "01/01/1980");
+//    }
 
     $('button#submit').click(function(e) {
         if ($('.dob').val() == "") {
@@ -92,22 +102,36 @@ $(document).ready(function (e) {
     })
 
 
-    $.each($('.date-pick.non-dob'), function(e) {
-        var parsedDate = $.datepicker.parseDate('yy-mm-dd', $(this).attr('value'));
-        $(this).datepicker("setDate", parsedDate);
-    })
+//    $.each($('.date-pick.non-dob'), function(e) {
+//        var parsedDate = $.datepicker.parseDate('yy-mm-dd', $(this).attr('value'));
+//        $(this).datepicker("setDate", parsedDate);
+//    })
 
     $('#submit-personal-info').click(function (e) {
         e.preventDefault();
         $('#page-title').text("Professional Affiliation");
         $('div#page-1').hide();
+        $('div#address-page').show();
+    })
+
+    $('#submit-personal-details-back').click(function (e) {
+        $('div#address-page').hide();
+        $('#page-title').text("Personal Particulars");
+        $('div#page-1').show();
+        e.preventDefault();
+    })
+
+    $('#submit-address-info').click(function (e) {
+        $('div#address-page').hide();
+        $('#page-title').text("Personal Particulars");
         $('div#page-2').show();
+        e.preventDefault();
     })
 
     $('#submit-education-info-back').click(function (e) {
         $('div#page-2').hide();
         $('#page-title').text("Personal Particulars");
-        $('div#page-1').show();
+        $('div#address-page').show();
         e.preventDefault();
     })
     $('#submit-education-info-next').click(function (e) {
@@ -149,6 +173,7 @@ $(document).ready(function (e) {
         $('div#resume').hide();
         $('div#page-6').hide();
         $('div#page-7').hide();
+        $('div#address-page').hide();
         e.preventDefault();
     })
 
@@ -158,6 +183,7 @@ $(document).ready(function (e) {
     $('div#page-4').hide();
     $('div#page-5').hide()
     $('div#page-8').hide();
+    $('div#address-page').hide();
     $('div#page-2').show();
     $('div#page-9').hide();
     $('div#resume').hide();
@@ -171,6 +197,7 @@ $(document).ready(function (e) {
         $('div#page-2').hide();
         $('div#page-4').hide();
         $('div#page-5').hide();
+        $('div#address-page').hide();
         $('div#page-3').show();
         $('div#page-8').hide();
         $('div#resume').hide();
@@ -184,6 +211,7 @@ $(document).ready(function (e) {
         $('div#page-1').hide();
         $('div#page-3').hide()
         $('div#page-8').hide();
+        $('div#address-page').hide();
         $('div#page-2').hide();
         $('div#page-5').hide();
         $('div#page-9').hide();
@@ -197,6 +225,7 @@ $(document).ready(function (e) {
     $('.settings-btn').click(function (e) {
         $('div#page-1').hide();
         $('div#page-3').hide();
+        $('div#address-page').hide();
         $('div#page-2').hide();
         $('div#page-4').hide();
         $('div#page-8').hide();
@@ -213,6 +242,7 @@ $(document).ready(function (e) {
         $('div#page-3').hide();
         $('div#page-4').hide();
         $('div#page-5').hide();
+        $('div#address-page').hide();
         $('div#page-1').hide();
         $('div#resume').hide();
         $('div#page-9').hide();
@@ -262,6 +292,7 @@ $(document).ready(function (e) {
         $('div#page-4').hide();
         $('div#page-5').hide();
         $('div#page-1').hide();
+        $('div#address-page').hide();
         $('div#resume').hide();
         $('div#page-6').hide();
         $('div#page-7').hide();
@@ -279,6 +310,23 @@ $(document).ready(function (e) {
         $('div#page-1').show();
         $('div#resume').hide();
         $('div#page-6').hide();
+        $('div#address-page').hide();
+        $('div#page-7').hide();
+        $('div#page-9').hide();
+        $('div#page-8').hide();
+//        enable_scroll();
+        e.preventDefault();
+    })
+
+    $('.address-btn').click(function (e) {
+        $('div#page-2').hide();
+        $('div#page-3').hide();
+        $('div#page-4').hide();
+        $('div#page-5').hide();
+        $('div#page-1').hide();
+        $('div#resume').hide();
+        $('div#page-6').hide();
+        $('div#address-page').show();
         $('div#page-7').hide();
         $('div#page-9').hide();
         $('div#page-8').hide();
@@ -340,6 +388,54 @@ $(document).ready(function(){
     targetElement.click(function() {
         $(this).siblings().removeClass("changeColor");
         $(this).addClass("changeColor");
+    });
+
+    $('#submit-personal-info').click(function(e) {
+        $("#leftcolumn li:nth-child(2)").addClass("changeColor");
+        $("#leftcolumn li:nth-child(1)").removeClass("changeColor");
+        $("#leftcolumn li:nth-child(6)").removeClass("changeColor");
+    });
+
+    $('#submit-personal-details-back').click(function(e) {
+        $("#leftcolumn li:nth-child(1)").addClass("changeColor");
+        $("#leftcolumn li:nth-child(2)").removeClass("changeColor");
+        $("#leftcolumn li:nth-child(6)").removeClass("changeColor");
+    });
+
+    $('#submit-address-info').click(function(e) {
+        $("#leftcolumn li:nth-child(3)").addClass("changeColor");
+        $("#leftcolumn li:nth-child(2)").removeClass("changeColor");
+        $("#leftcolumn li:nth-child(6)").removeClass("changeColor");
+    });
+
+    $('#submit-education-info-next').click(function(e) {
+        $("#leftcolumn li:nth-child(4)").addClass("changeColor");
+        $("#leftcolumn li:nth-child(3)").removeClass("changeColor");
+    });
+
+    $('#submit-employment-info-next').click(function(e) {
+        $("#leftcolumn li:nth-child(5)").addClass("changeColor");
+        $("#leftcolumn li:nth-child(4)").removeClass("changeColor");
+    });
+
+    $('#submit-education-info-back').click(function(e) {
+        $("#leftcolumn li:nth-child(2)").addClass("changeColor");
+        $("#leftcolumn li:nth-child(3)").removeClass("changeColor");
+    });
+
+    $('#submit-employment-info-back').click(function(e) {
+        $("#leftcolumn li:nth-child(3)").addClass("changeColor");
+        $("#leftcolumn li:nth-child(4)").removeClass("changeColor");
+    });
+
+    $('#submit-preferences-info-back').click(function(e) {
+        $("#leftcolumn li:nth-child(4)").addClass("changeColor");
+        $("#leftcolumn li:nth-child(5)").removeClass("changeColor");
+    });
+
+    $('#back-print-btn').click(function(e) {
+        $("#leftcolumn li:nth-child(1)").addClass("changeColor");
+        $("#leftcolumn li:nth-child(7)").removeClass("changeColor");
     });
 
     $('.language-ability-delete').click(function(e) {

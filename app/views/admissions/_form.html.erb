@@ -53,106 +53,122 @@
     <%= @personal_details.civil_status %>
   </td>
 </tr>
+  <tr>
+    <td>Current Telephone No:</td>
+    <td>
+      <%= @personal_details.current_telephone %>
+    </td>
+  </tr>
+  <tr>
+    <td>Current Mobile No:</td>
+    <td>
+      <%= @personal_details.current_mobile %>
+    </td>
+  </tr>
 </table>
-
-<h2 style="padding-top:30px;border-bottom: 2px solid #146D55;color: #146D55">Mailing Address and Contact
-  Information<a href="#" id="mailing_edit_link" style="color: black;
-        font-size: 11px;
-        margin-left: 269px;
-        position: absolute;
-        padding: 0;">[Edit]</a>
-</h2>
-<table class="student_table" cellpadding="3">
-<tr>
-  <td>Address Line 1:</td>
-  <td>
-    <%= @personal_details.address_1 %>
-  </td>
-</tr>
-<tr>
-  <td>Address Line 2:</td>
-  <td>
-    <%= @personal_details.address_2 %>
-  </td>
-</tr>
-<tr>
-  <td>Address Line 3:</td>
-  <td>
-    <%= @personal_details.address_3 %>
-  </td>
-</tr>
-<tr>
-  <td>City:</td>
-  <td>
-    <%= @personal_details.city %>
-  </td>
-</tr>
-<tr>
-  <td>Postal Code:</td>
-  <td>
-    <%= @personal_details.address_post_code %>
-  </td>
-</tr>
-<tr>
-<td>Country:</td>
-<td>
-  <%= @personal_details.address_country %>
-</td>
-</tr>
-<tr>
-  <td>Current Telephone No:</td>
-  <td>
-    <%= @personal_details.current_telephone %>
-  </td>
-</tr>
-<tr>
-  <td>Current Mobile No:</td>
-  <td>
-    <%= @personal_details.current_mobile %>
-  </td>
-</tr>
-<tr>
-  <td>Home Address:</td>
-  <td>
-    <%= @personal_details.home_address %>
-  </td>
-</tr>
-<tr>
-  <td>Home City:</td>
-  <td>
-    <%= @personal_details.home_city %>
-  </td>
-</tr>
-<tr>
-  <td>Home Country:</td>
-  <td>
-    <%= @personal_details.home_country %>
-  </td>
-</tr>
-<tr>
-  <td>Home Postal Code:</td>
-  <td>
-    <%= @personal_details.home_postal %>
-  </td>
-</tr>
-<tr>
-  <td>Home Telephone:</td>
-  <td>
-    <%= @personal_details.home_phone %>
-  </td>
-</tr>
-<tr>
-  <td>Home Mobile:</td>
-  <td>
-    <%= @personal_details.cell_phone %>
-  </td>
-</tr>
-</table>
-
-<button id="submit-personal-info" name="submit-personal-info" class="patrick-btn" style="margin: 25px 280px;">Next - Education</button>
+  <button id="submit-personal-info" name="submit-personal-info" class="patrick-btn" style="margin: 25px 255px;">Next - Address and Contact</button>
 </div>
 </div>
 <!-- End Page 1 -->
+
+<!-- Start Address Page-->
+
+<div id="address-page">
+  <div class="content">
+    <h2 style="padding-top:30px;border-bottom: 2px solid #146D55;color: #146D55">Mailing Address and Contact
+      Information<a href="#" id="mailing_edit_link" style="color: black;
+            font-size: 11px;
+            margin-left: 269px;
+            position: absolute;
+            padding: 0;">[Edit]</a>
+    </h2>
+    <table class="student_table" cellpadding="3">
+      <tr>
+        <td>Address Line 1:</td>
+        <td>
+          <%= @personal_details.address_1 %>
+        </td>
+      </tr>
+      <tr>
+        <td>Address Line 2:</td>
+        <td>
+          <%= @personal_details.address_2 %>
+        </td>
+      </tr>
+      <tr>
+        <td>Address Line 3:</td>
+        <td>
+          <%= @personal_details.address_3 %>
+        </td>
+      </tr>
+      <tr>
+        <td>City:</td>
+        <td>
+          <%= @personal_details.city %>
+        </td>
+      </tr>
+      <tr>
+        <td>Postal Code:</td>
+        <td>
+          <%= @personal_details.address_post_code %>
+        </td>
+      </tr>
+      <tr>
+        <td>Country:</td>
+        <td>
+          <%= @personal_details.address_country %>
+        </td>
+      </tr>
+      <tr>
+        <td>Home Address:</td>
+        <td>
+          <%= @personal_details.home_address %>
+        </td>
+      </tr>
+      <tr>
+        <td>Home City:</td>
+        <td>
+          <%= @personal_details.home_city %>
+        </td>
+      </tr>
+      <tr>
+        <td>Home Country:</td>
+        <td>
+          <%= @personal_details.home_country %>
+        </td>
+      </tr>
+      <tr>
+        <td>Home Postal Code:</td>
+        <td>
+          <%= @personal_details.home_postal %>
+        </td>
+      </tr>
+      <tr>
+        <td>Home Telephone:</td>
+        <td>
+          <%= @personal_details.home_phone %>
+        </td>
+      </tr>
+      <tr>
+        <td>Home Mobile:</td>
+        <td>
+          <%= @personal_details.cell_phone %>
+        </td>
+      </tr>
+    </table>
+    <div class="controls" style="margin: 30px 185px;">
+      <button id="submit-personal-details-back" name="submit-education-info-back" class="patrick-btn">Back
+        -
+        Personal
+        Details
+      </button>
+      <button id="submit-address-info" name="submit-address-info" class="patrick-btn">Next - Education</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- End Address Page-->
 
 <!--Start Page 2-->
 <div id="page-2">
@@ -233,11 +249,10 @@
     <div class="control-group">
       <label class="control-label" for="submit-education-info-next"></label>
 
-      <div class="controls" style="margin: 30px 125px;">
+      <div class="controls" style="margin: 30px 80px;">
         <button id="submit-education-info-back" name="submit-education-info-back" class="patrick-btn">Back
           -
-          Personal
-          Details/Mailing Ad
+          Mailing Address and Contact Information
         </button>
         <button id="submit-education-info-next" name="submit-education-info-next" class="patrick-btn">Next -
           Professional
@@ -253,7 +268,7 @@
 <div id="page-3">
   <div class="content">
 
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55;">Professional
+    <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55;">Work
       Experience<a href="#" id="professional_edit_link"  style="color: black;font-size: 11px; margin-left: 435px;">[Edit]</a></h2>
     <table class="student_table" cellpadding="3">
       <tr>

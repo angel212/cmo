@@ -110,7 +110,7 @@ class AdmissionsController < ApplicationController
     @employment_detail.update_attributes!(params[:employment_detail])
     @education_detail.update_attributes!(params[:education_detail])
     @preference.update_attributes!(params[:preference])
-    @language.update_attributes!(params[:language_abilities])
+
     #::AbcRegistrationMailer.registration_alert(@online_application).deliver!
     #redirect_to edit_supplemental_detail_path(@supplemental_detail)
     redirect_to "/admissions/#{@online_application.id}/edit" , {alert: 'profile updated successfully'.html_safe} and return
