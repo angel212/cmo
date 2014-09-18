@@ -7,6 +7,23 @@
     window.onload=loading();
 
 </script>
+<script>
+
+    $(function () {
+        $("#add_student").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+
+        $("#open_add_dialog").click(function () {
+                    $("#add_student").dialog("open");
+                });
+    });
+</script>
 
 <!--<form method="get" action="/dashboard">-->
   <!--<%= render :partial => 'status' %>-->
@@ -27,3 +44,20 @@
 </table>
 <hr/>
   </div>
+<div id="add_student" title="Add Student Information">
+  <form id="" action="">
+    <table>
+        <tr>
+          <td>
+            </td>
+
+        </tr>
+
+    </table>
+<span>
+  <button></button>
+</span>
+
+  </form>
+
+</div>
