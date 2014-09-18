@@ -1,5 +1,74 @@
 <head>
-<link rel="stylesheet" href="/assets/global.css.scss">
+  <style>
+          @media print {
+           * {
+               font-size:14px;
+           }
+
+          td {
+              margin:10px 10px;
+          }
+
+          @page{margin:0px auto;}
+
+          .leftcolumn {
+              display:none !important;
+          }
+
+          td.header {
+              background-color: #000 !important;
+              -webkit-print-color-adjust: exact;
+          }
+
+          .no-print, .no-print *
+          {
+              display: none !important;
+          }
+
+          .content-container, .admissions-container, .print {
+              display:block !important;
+              height: auto !important;
+              width: auto !important;
+              overflow-x: hidden !important;
+          }
+
+          .footer-online-admissions {
+              display: none !important;
+          }
+
+          .print {
+              display:block !important;
+              position: absolute;
+              border:1px solid white !important;
+              box-shadow:0 0 0px;
+              left:0px !important;
+              top:10px;
+              /*height:1056px !important;*/
+              /*background-color:white;*/
+              /*border:1px solid black;*/
+              /*height:600px;*/
+              /*width:816px;*/
+              margin:0;
+          }
+
+          .remove-overflow{
+              height:auto !important;
+          }
+
+          .date-pick {
+              display: none !important;
+          }
+          .resume {
+              width: 1000px !important;
+              font-size: 20px !important;
+          }
+
+          .horizontal-row {
+              width: 1000px !important;
+          }
+
+      }
+  </style>
 <link rel="stylesheet" href="/assets/global.css.scss">
   <script language="javascript">
       function printdiv(printpage)
@@ -22,24 +91,171 @@
   </script>
 </head>
 
-<div style="height:100%;width:100%;">
-<a href="#" class="back-print-btn"><img src="http://www.guiasamarillas.es/_images/empresa/back.png" class="back-btn" style="height: 100px;width: 100px;position: absolute;top: 350px;left: 175px;"/></a>
-  <input name="b_print" type="button" class="myButton"   onClick="printdiv('div_print');" value=" Print Resume" style="position: absolute;
-          top: 10px;left: 610px;">
-  <div id="div_print" style="top:60px;z-index: 9999;left:290px;position: absolute;background-color:white;border:1px solid black;/*height:630px;*/ height:1056px;width:816px;box-shadow:0 0 70px black;margin:0 auto 0 auto;color:black !important;">
-    <div style="height:570px;/*overflow-y:auto;*/padding: 30px 30px;">
-  <p style="border-bottom:2px solid black;padding-bottom:10px;width:750px;margin:0 auto;">
-    <span style="font-weight:bold;font-size:18px;padding:0px;margin:0px;">Olga Hanah G. Agdamag</span><br/>
-    <span style="font-size: 12px">+63 917 590 5678 /hanah.agdamag@yahoo.com /oagdamag.mba2014@myapps.aim.edu</span>
+<div style="">
+<!--<input type="button" onclick="printdiv('div_print')">-->
+<p><a href="#" id="back-print-btn" class="back-print-btn btn no-print" style="position: absolute;
+        top: 20px;
+        left: 520px;">Back</a></p>
+
+<p><a href="javascript:window.print();" class="btn btn-info no-print" style="position: absolute;
+        top: 20px;
+        left: 620px;">Print Resume</a></p>
+  <div id="div_print" class="print" style="top:60px;z-index: 9999;left:290px;position: absolute;background-color:white;border:1px solid black;box-shadow:0 0 70px black;margin:0 auto 0 auto;color:black !important;">
+    <div class="remove-overflow" style="height:540px;overflow-y:auto;padding: 30px 30px;">
+  <p class="horizontal-row" style="border-bottom:2px solid black;padding-bottom:10px;width:750px;margin:0 auto;">
+    <span style="font-weight:bold;font-size:32px;padding:0px;margin:0px;"><%= @personal_details.first_name %> <%= @personal_details.middle_name %> <%= @personal_details.last_name %></span><br/>
+    <span style="font-size: 12px"><%= @personal_details.current_mobile %> / <%= @personal_details.email %></span>
     <img src="http://tapmiblogs.files.wordpress.com/2010/11/aim-logo.png" style="height: 60px;float: right;margin-top: -35px;">
   </p>
   <br/>
 
-  <table class="resume" width="750" style="font-family: arial,sans-serif;margin:0 auto;
-          font-size:11px;
+  <table class="resume" style="font-family: arial,sans-serif;margin:0 auto;
+          width: 750px;
+          font-size:16px;
           border-width: 1px;
           border-color: #000;
           border-collapse: collapse;">
+    <tr>
+      <td class="heading" colspan="6">PERSONAL DETAILS</td>
+    </tr>
+    <tr>
+      <td>Nationality</td>
+      <td><%= @personal_details.citizenship%></td>
+    </tr>
+    <tr>
+      <td>Citizenship</td>
+      <td><%= @personal_details.civil_status%></td>
+    </tr>
+    <tr>
+      <td class="heading" colspan="6">MAILING ADDRESS AND CONTACT INFORMATION</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td><%= @personal_details.address_1%> <%= @personal_details.address_2%> <%= @personal_details.address_3%>, <%= @personal_details.city%></td>
+    </tr>
+    <tr>
+      <td>Postal Code</td>
+      <td><%= @personal_details.address_post_code%></td>
+    </tr>
+    <tr>
+      <td>Country</td>
+      <td><%= @personal_details.address_country%></td>
+    </tr>
+    <tr>
+      <td>Current Telephone No.</td>
+      <td><%= @personal_details.current_telephone%></td>
+    </tr>
+    <tr>
+      <td>Current Mobile No.</td>
+      <td><%= @personal_details.current_mobile%></td>
+    </tr>
+    <tr>
+      <td class="heading" colspan="6">EDUCATION</td>
+    </tr>
+    <tr>
+      <td>Program/Course Title:</td>
+      <td>
+        <%= @education_detail.last_school_course_title %>
+      </td>
+    </tr>
+    <tr>
+      <td>Class Year:</td>
+      <td>
+        <%= @education_detail.class_year %>
+      </td>
+    </tr>
+    <tr>
+      <td>Graduation Date (approximate):</td>
+      <td>
+        <%= @education_detail.last_school_end_date %>
+      </td>
+    </tr>
+    <tr>
+      <td>Do you Have Scholarship?:</td>
+      <td>
+        <%= @education_detail.scholarship %>
+      </td>
+    </tr>
+    <tr>
+      <td>Club Affiliations:</td>
+      <td>
+        <%= @education_detail.affiliation %>
+      </td>
+    </tr>
+    <tr>
+      <td>Other Graduate Degrees:</td>
+      <td>
+        <%= @education_detail.other_degree %>
+        <%if @education_detail.sub_other_degree.present?   	  %>
+            - <%= @education_detail.sub_other_degree %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>MBA Schools:</td>
+      <td>
+        <%= @education_detail.mba_school %>
+      </td>
+    </tr>
+    <tr>
+      <td>Certifications/Licenses:</td>
+      <td>
+        <%= @education_detail.certification %>
+      </td>
+    </tr>
+    <tr>
+      <td>Undergraduate Major:</td>
+      <td>
+        <%= @education_detail.undergrad_major %> - <%= @education_detail.sub_undergrad %>
+      </td>
+    </tr>
+    <tr>
+      <td>Language Ability:</td>
+      <td>
+        <% @online_application.language_abilities.each do |language_ability| %>
+            <span id="lang_disp<%= language_ability.id %>" class="language-container" ><%= language_ability.name %> - <%= language_ability.level %><br></span>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td class="heading" colspan="6">INDUSTRY - PREFERENCE</td>
+    </tr>
+    <tr>
+      <td>Industry - Preference:</td>
+      <td>
+        <% @online_application.preference_industries.each do |preference_industry| %>
+            <span id="pre_industry_disp<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><!--<button  id="<%= preference_industry.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>Most Important Criteria for Choosing a Job:</td>
+      <td>
+        <% @online_application.preference_criteriums.each do |preference_criteriums| %>
+            <span id="pre_criteria_disp<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %> <!--<button  id="<%= preference_criteriums.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>Desired job titles:</td>
+      <td>
+        <%= @preference.job_title %>
+      </td>
+    </tr>
+    <tr>
+      <td>Desired Salary after MBA (per annum):</td>
+      <td>
+        <%= @preference.salary_after_mba %>
+      </td>
+    </tr>
+    <tr>
+      <td>Candidate Job Reporting Status:</td>
+      <td>
+        <%= @preference.candidate_job_status %>
+      </td>
+    </tr>
     <tr>
       <td class="heading" colspan="6">EDUCATION</td>
     </tr>
@@ -48,7 +264,7 @@
         Asian Institute of Management<br/>
         Masters in Business Administration<br/>
         <ul>
-          <li>Date of Graduation: Dec 2013</li>
+          <li>Date of Graduation: <%= @education_detail.last_school_end_date %></li>
         </ul>
       </td>
       <td>
@@ -67,7 +283,7 @@
         2003-2007
       </td>
     </tr>
-      <tr>
+      <!--<tr>-->
         <td class="heading" colspan="6">WORK EXPERIENCE</td>
       </tr>
       <tr>
