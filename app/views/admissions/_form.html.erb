@@ -203,8 +203,8 @@
       <tr>
         <td>Club Affiliations:</td>
         <td>
-          <% @online_application.club_affiliations.each do |club_affiliation| %>
-              <span id="lang_disp<%= club_affiliation.id %>" class="language-container" > &bull; <%= club_affiliation.affiliation %>  <!--<button  id="<%= club_affiliation.id %>" class="language-ability-delete">delete</button>--><br></span>
+          <% @online_application.club_affiliation.each do |club_affiliation| %>
+              <span id="affl_disp<%= club_affiliation.id %>" class="language-container" > &bull; <%= club_affiliation.affiliation %>  <!--<button  id="<%= club_affiliation.id %>" class="language-ability-delete">delete</button>--><br></span>
 
           <% end %>
         </td>
@@ -233,7 +233,10 @@
       <tr>
         <td>Undergraduate Major:</td>
         <td>
-          <%= @education_detail.undergrad_major %> - <%= @education_detail.sub_undergrad %>
+          <% @online_application.undergraduate_majors.each do |undergraduate_major| %>
+              <span id="undergrad_disp<%= undergraduate_major.id %>" class="language-container" > &bull; <%= undergraduate_major.undergrad %> <%if undergraduate_major.sub_undergrad.present? %> - <%=undergraduate_major.sub_undergrad %> <% end %>  <!--<button  id="<%= undergraduate_major.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+          <% end %>
         </td>
       </tr>
       <tr>

@@ -855,7 +855,7 @@
     <tr>
       <td>Club Affiliations:</td>
       <td>
-        <% @online_application.club_affiliations.each do |club_affiliation| %>
+        <% @online_application.club_affiliation.each do |club_affiliation| %>
             <span id="club_affi<%= club_affiliation.id %>" class="language-container" >&bull; <%= club_affiliation.affiliation %> <button  id="<%= club_affiliation.id %>" class="club-affiliation-delete">delete</button><br></span>
 
         <% end %>
@@ -919,26 +919,14 @@
     <tr>
       <td>Undergraduate Major:</td>
       <td>
+        <% @online_application.undergraduate_majors.each do |undergraduate_major| %>
+            <span id="undergrad_disp<%= undergraduate_major.id %>" class="language-container" > &bull; <%= undergraduate_major.undergrad %> <%if undergraduate_major.sub_undergrad.present? %> - <%=undergraduate_major.sub_undergrad %> <% end %>  <button  id="<%= undergraduate_major.id %>" class="undergraduate-major-delete">delete</button><br></span>
 
-        <select id="last-school-end-date" name="education_detail[undergrad_major]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.undergrad_major %>" onchange="javascript: undergrad(this.options[this.selectedIndex].value);">
-          <option>Select One</option>
-          <option>Business</option>
-          <option>Engineering</option>
-          <option>Humanities</option>
-          <option>Science</option>
-          <option>Social Sciences</option>
-
-        </select>
+        <% end %>
 
 
-      </td>
-      <td><script type="text/javascript" language="JavaScript">
-          document.write('<select name="education_detail[sub_undergrad]" id="subcategory2" style="visibility: hidden;width:170px;" ><option value="<%= @education_detail.sub_undergrad%>"><%= @education_detail.sub_undergrad%></option></select>')
-      </script>
-        <noscript><select name="education_detail[other_degree]" id="subcategory" >
-          <option value="">Select Sub-Category</option>
-        </select>
-        </noscript></td>
+          </td>
+      <td><a href="#" id="under_grad_open"> add</a></td>
     </tr>
 
   </table>
@@ -1888,6 +1876,38 @@
   </table>
   <button id="submit-club-affil" class="btn-info">submit</button>
 </form>
+
+</div>
+
+<div id="undergrad_major_dialog" title="Add Undergraduate Major">
+
+  <form name="undergrad_form" id="undergrad_form" class="form-horizontal" method="post" action="/admissions/undergrad_major/<%= @online_application.id %>">
+    <table>
+      <tr>
+        <td>ndergraduate Major:</td>
+        <td>
+          <select id="undergrad" name="undergraduate_major" class="input-xlarge  dropdown-value" data-chosen-value="" onchange="javascript: undergrad2(this.options[this.selectedIndex].value);">
+            <option>Select One</option>
+            <option>Business</option>-->
+            <option>Engineering</option>
+            <option>Humanities</option>
+            <option>Science</option>-->
+            <<option>Social Sciences</option>
+
+         </select>
+          <input type="hidden" value="<%= @online_application.id %>" id="club_affi-id" >
+    </td>
+      <td><script type="text/javascript" language="JavaScript">
+  document.write('<select name="subcategory22" id="subcategory22" style="visibility: hidden;width:170px;" ></select>')
+     </script>
+          <noscript><select name="education_detail[other_degree]" id="subcategory" >
+          <option value="">Select Sub-Category</option>
+          </select>
+          </noscript></td>
+      </tr>
+    </table>
+    <button id="submit-club-affil" class="btn-info">submit</button>
+  </form>
 
 </div>
 

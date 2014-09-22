@@ -27,89 +27,7 @@
         return true;
     }
 </script>
-<!--for education - undergraduate major-->
-<script language="javascript" type="text/javascript">
-    function undergrad(listindex)
-    {
 
-        document.educationdetails.subcategory2.options.length = 0;
-        switch (listindex)
-        {
-
-            case "Business" :
-                document.educationdetails.subcategory2.style.visibility="visible";
-                document.educationdetails.subcategory2.options[0]=new Option("Select One","");
-                document.educationdetails.subcategory2.options[1]=new Option("Accounting","Accounting");
-                document.educationdetails.subcategory2.options[2]=new Option("Advertising","Advertising");
-                document.educationdetails.subcategory2.options[3]=new Option("Finance","Finance");
-                document.educationdetails.subcategory2.options[4]=new Option("Industrial Relations","Industrial Relations");
-                document.educationdetails.subcategory2.options[5]=new Option("Management / Administration","Management / Administration");
-                document.educationdetails.subcategory2.options[6]=new Option("Marketing","Marketing");
-                document.educationdetails.subcategory2.options[7]=new Option("Operations Management","Operations Management");
-
-            break;
-
-            case "Engineering" :
-                document.educationdetails.subcategory2.style.visibility="visible";
-                document.educationdetails.subcategory2.options[0]=new Option("Select One","");
-                document.educationdetails.subcategory2.options[1]=new Option("Chemical","Chemical");
-                document.educationdetails.subcategory2.options[2]=new Option("Civil","Civil");
-                document.educationdetails.subcategory2.options[3]=new Option("Computer","Computer");
-                document.educationdetails.subcategory2.options[4]=new Option("Electrical","Electrical");
-                document.educationdetails.subcategory2.options[5]=new Option("Industrial","Industrial");
-                document.educationdetails.subcategory2.options[6]=new Option("Mechanical","Mechanical");
-
-            break;
-
-            case "Humanities" :
-                document.educationdetails.subcategory2.style.visibility="visible";
-                document.educationdetails.subcategory2.options[0]=new Option("Select One","");
-                document.educationdetails.subcategory2.options[1]=new Option("Communications","Communications");
-                document.educationdetails.subcategory2.options[2]=new Option("English / Literature","English / Literature");
-                document.educationdetails.subcategory2.options[3]=new Option("Fine Arts","Fine Arts");
-                document.educationdetails.subcategory2.options[4]=new Option("Foreign Languages","Foreign Languages");
-                document.educationdetails.subcategory2.options[5]=new Option("Journalism","Journalism");
-                document.educationdetails.subcategory2.options[6]=new Option("Music","Music");
-                document.educationdetails.subcategory2.options[7]=new Option("Philosophy / Religion","Philosophy / Religion");
-
-            break;
-
-            case "Science" :
-                document.educationdetails.subcategory2.style.visibility="visible";
-                document.educationdetails.subcategory2.options[0]=new Option("Select One","");
-                document.educationdetails.subcategory2.options[1]=new Option("Architecture","Architecture");
-                document.educationdetails.subcategory2.options[2]=new Option("Biological Science","Biological Science");
-                document.educationdetails.subcategory2.options[3]=new Option("Chemistry","Chemistry");
-                document.educationdetails.subcategory2.options[4]=new Option("Earth Science","Mathematics");
-                document.educationdetails.subcategory2.options[5]=new Option("Medicine","Medicine");
-                document.educationdetails.subcategory2.options[6]=new Option("Physics","Physics");
-                document.educationdetails.subcategory2.options[7]=new Option("Statistics","Statistics");
-                document.educationdetails.subcategory2.options[8]=new Option("Urban Studies","Urban Studies");
-
-            break;
-            case "Social Sciences" :
-                document.educationdetails.subcategory2.style.visibility="visible";
-                document.educationdetails.subcategory2.options[0]=new Option("Select One","");
-                document.educationdetails.subcategory2.options[1]=new Option("Anthropology","Anthropology");
-                document.educationdetails.subcategory2.options[2]=new Option("Economics","Economics");
-                document.educationdetails.subcategory2.options[3]=new Option("Education","Education");
-                document.educationdetails.subcategory2.options[4]=new Option("Government / History","Government / History");
-                document.educationdetails.subcategory2.options[5]=new Option("International Relations","International Relations");
-                document.educationdetails.subcategory2.options[6]=new Option("Law","Law");
-                document.educationdetails.subcategory2.options[7]=new Option("Political Science","Political Science");
-                document.educationdetails.subcategory2.options[8]=new Option("Psychology / Organizational Behavior","Psychology / Organizational Behavior");
-                document.educationdetails.subcategory2.options[8]=new Option("Sociology","Sociology");
-
-                break;
-
-
-            default:
-                document.educationdetails.subcategory2.style.visibility="hidden";
-                break;
-        }
-        return true;
-    }
-</script>
 <!--for education - other graduates-->
 <script language="javascript" type="text/javascript">
     function languagefunction(listindex)
@@ -658,4 +576,86 @@
         }
         return true;
     }
+</script>
+<script language="javascript" type="text/javascript">
+function undergrad2(listindex)
+{
+
+document.undergrad_form.subcategory22.options.length = 0;
+switch (listindex)
+{
+
+case "Business" :
+document.undergrad_form.subcategory22.style.visibility="visible";
+document.undergrad_form.subcategory22.options[0]=new Option("Select One","");
+document.undergrad_form.subcategory22.options[1]=new Option("Accounting","Accounting");
+document.undergrad_form.subcategory22.options[2]=new Option("Advertising","Advertising");
+document.undergrad_form.subcategory22.options[3]=new Option("Finance","Finance");
+document.undergrad_form.subcategory22.options[4]=new Option("Industrial Relations","Industrial Relations");
+document.undergrad_form.subcategory22.options[5]=new Option("Management / Administration","Management / Administration");
+document.undergrad_form.subcategory22.options[6]=new Option("Marketing","Marketing");
+document.undergrad_form.subcategory22.options[7]=new Option("Operations Management","Operations Management");
+
+break;
+
+case "Engineering" :
+document.undergrad_form.subcategory22.style.visibility="visible";
+document.undergrad_form.subcategory22.options[0]=new Option("Select One","");
+document.undergrad_form.subcategory22.options[1]=new Option("Chemical","Chemical");
+document.undergrad_form.subcategory22.options[2]=new Option("Civil","Civil");
+document.undergrad_form.subcategory22.options[3]=new Option("Computer","Computer");
+document.undergrad_form.subcategory22.options[4]=new Option("Electrical","Electrical");
+document.undergrad_form.subcategory22.options[5]=new Option("Industrial","Industrial");
+document.undergrad_form.subcategory22.options[6]=new Option("Mechanical","Mechanical");
+
+break;
+
+case "Humanities" :
+document.undergrad_form.subcategory22.style.visibility="visible";
+document.undergrad_form.subcategory22.options[0]=new Option("Select One","");
+document.undergrad_form.subcategory22.options[1]=new Option("Communications","Communications");
+document.undergrad_form.subcategory22.options[2]=new Option("English / Literature","English / Literature");
+document.undergrad_form.subcategory22.options[3]=new Option("Fine Arts","Fine Arts");
+document.undergrad_form.subcategory22.options[4]=new Option("Foreign Languages","Foreign Languages");
+document.undergrad_form.subcategory22.options[5]=new Option("Journalism","Journalism");
+document.undergrad_form.subcategory22.options[6]=new Option("Music","Music");
+document.undergrad_form.subcategory22.options[7]=new Option("Philosophy / Religion","Philosophy / Religion");
+
+break;
+
+case "Science" :
+document.undergrad_form.subcategory22.style.visibility="visible";
+document.undergrad_form.subcategory22.options[0]=new Option("Select One","");
+document.undergrad_form.subcategory22.options[1]=new Option("Architecture","Architecture");
+document.undergrad_form.subcategory22.options[2]=new Option("Biological Science","Biological Science");
+document.undergrad_form.subcategory22.options[3]=new Option("Chemistry","Chemistry");
+document.undergrad_form.subcategory22.options[4]=new Option("Earth Science","Mathematics");
+document.undergrad_form.subcategory22.options[5]=new Option("Medicine","Medicine");
+document.undergrad_form.subcategory22.options[6]=new Option("Physics","Physics");
+document.undergrad_form.subcategory22.options[7]=new Option("Statistics","Statistics");
+document.undergrad_form.subcategory22.options[8]=new Option("Urban Studies","Urban Studies");
+
+break;
+case "Social Sciences" :
+document.undergrad_form.subcategory22.style.visibility="visible";
+document.undergrad_form.subcategory22.options[0]=new Option("Select One","");
+document.undergrad_form.subcategory22.options[1]=new Option("Anthropology","Anthropology");
+document.undergrad_form.subcategory22.options[2]=new Option("Economics","Economics");
+document.undergrad_form.subcategory22.options[3]=new Option("Education","Education");
+document.undergrad_form.subcategory22.options[4]=new Option("Government / History","Government / History");
+document.undergrad_form.subcategory22.options[5]=new Option("International Relations","International Relations");
+document.undergrad_form.subcategory22.options[6]=new Option("Law","Law");
+document.undergrad_form.subcategory22.options[7]=new Option("Political Science","Political Science");
+document.undergrad_form.subcategory22.options[8]=new Option("Psychology / Organizational Behavior","Psychology / Organizational Behavior");
+document.undergrad_form.subcategory22.options[8]=new Option("Sociology","Sociology");
+
+break;
+
+
+default:
+document.undergrad_form.subcategory22.style.visibility="hidden";
+break;
+}
+return true;
+}
 </script>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Online application form:</b>
+  <%= @undergraduate_major.online_application_form_id %>
+</p>
+
+<p>
+  <b>Undergrad:</b>
+  <%= @undergraduate_major.undergrad %>
+</p>
+
+
+<%= link_to 'Edit', edit_undergraduate_major_path(@undergraduate_major) %> |
+<%= link_to 'Back', undergraduate_majors_path %>

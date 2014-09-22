@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140918061622) do
+ActiveRecord::Schema.define(:version => 20140922084233) do
 
   create_table "club_affiliations", :force => true do |t|
     t.integer  "online_application_form_id"
@@ -226,6 +226,9 @@ ActiveRecord::Schema.define(:version => 20140918061622) do
     t.string   "group_name"
     t.string   "organization_name"
   end
+
+# Could not dump table "undergraduate_majors" because of following StandardError
+#   Unknown type 'sting' for column 'sub_undergrad'
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
