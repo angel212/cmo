@@ -817,24 +817,7 @@
 <!-- -->
 <div id="education_dialog" title="Educational Details" style="overflow-y: auto;">
   <span>
-  <input type="button" class="patrick-btn" id="pop-btn" value="Add" style="font-size: 12px;font-family: helvetica, verdana, arial, sans-serif;">
-<div id="pop" class="popover right in" style="margin-left: 100px">
-  <div class="arrow"></div>
-  <h3 class="popover-title">Demo Modal Popover</h3>
 
-  <div class="popover-content" style="width: 1000px !important;">
-    <p>Edit some data related to this context:
-
-    </p><form>
-    <div style="white-space: nowrap;
-            vertical-align: middle;display:inline-block;">
-      <input type="text" class="input-medium" style="width: 100px;" placeholder="my.email@sample.com">
-      <a href="#" class="btn helloWorld">subscribe</a>
-    </div>
-  </form>
-    <p></p>
-  </div>
-</div>
   <form id="education-details-form" name="educationdetails" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
   <table style="padding-left: 50px;width: 565;color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
@@ -846,6 +829,7 @@
           <option>Master's Degree</option>
         </select>
       </td>
+
     </tr>
     <tr>
       <td>Class Year:</td>
@@ -871,24 +855,12 @@
     <tr>
       <td>Club Affiliations:</td>
       <td>
-        <select name="education_detail[affiliation]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.affiliation %>">
-          <option>Select One</option>
-          <option>ADB Alumni Association Association</option>
-          <option>AIM Green</option>
-          <option>Consulting Club</option>
-          <option>Cricket Club</option>
-          <option>E-Club</option>
-          <option>Entrepreneurial Club</option>
-          <option>Finance Club</option>
-          <option>IMSA(International Muslim Students Association)</option>
-          <option>Marketing Club</option>
-          <option>Movie "Popcorn" Club</option>
-          <option>PACTS (Philanthropic Society)</option>
-          <option>Sports Club</option>
-          <option>Talent Club</option>
-          <option>Other</option>
-        </select>
+        <% @online_application.club_affiliations.each do |club_affiliation| %>
+            <span id="club_affi<%= club_affiliation.id %>" class="language-container" >&bull; <%= club_affiliation.affiliation %> <button  id="<%= club_affiliation.id %>" class="club-affiliation-delete">delete</button><br></span>
+
+        <% end %>
       </td>
+      <td><a href="#" id="club_aff"> add</a> </td>
     </tr>
     <tr>
       <td>Other Graduate Degrees:</td>
@@ -978,7 +950,7 @@
       <td>Language Ability:</td>
       <td style="padding-left:80px; ">
         <% @online_application.language_abilities.each do |language_ability| %>
-            <span style="margin-bottom: 10px;" id="lang<%= language_ability.id %>" class="language-container2" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete" style="margin-left: 10px;">delete</button><br></span>
+            <span style="margin-bottom: 10px;" id="lang<%= language_ability.id %>" class="language-container2" >&bull; <%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete" style="margin-left: 10px;">delete</button><br></span>
 
         <% end %>
       </td>
@@ -1885,3 +1857,37 @@
 
   </div>
 </div>
+
+<div id="club_affiliation_dialog" title="Add Affiliation">
+
+<form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/club_affiliation/<%= @online_application.id %>">
+  <table>
+    <tr>
+      <td>Club Affiliations:</td>
+      <td>
+        <select name="affiliation" id="cl_affiliation" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.affiliation %>">
+          <option>Select One</option>
+          <option>ADB Alumni Association Association</option>
+          <option>AIM Green</option>
+          <option>Consulting Club</option>
+          <option>Cricket Club</option>
+          <option>E-Club</option>
+          <option>Entrepreneurial Club</option>
+          <option>Finance Club</option>
+          <option>IMSA(International Muslim Students Association)</option>
+          <option>Marketing Club</option>
+          <option>Movie "Popcorn" Club</option>
+          <option>PACTS (Philanthropic Society)</option>
+          <option>Sports Club</option>
+          <option>Talent Club</option>
+          <option>Other</option>
+        </select>
+        <input type="hidden" value="<%= @online_application.id %>" id="club_affi-id" >
+      </td>
+    </tr>
+  </table>
+  <button id="submit-club-affil" class="btn-info">submit</button>
+</form>
+
+</div>
+

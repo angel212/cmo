@@ -203,7 +203,10 @@
       <tr>
         <td>Club Affiliations:</td>
         <td>
-          <%= @education_detail.affiliation %>
+          <% @online_application.club_affiliations.each do |club_affiliation| %>
+              <span id="lang_disp<%= club_affiliation.id %>" class="language-container" > &bull; <%= club_affiliation.affiliation %>  <!--<button  id="<%= club_affiliation.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+          <% end %>
         </td>
       </tr>
       <tr>
@@ -237,7 +240,7 @@
         <td>Language Ability:</td>
         <td>
           <% @online_application.language_abilities.each do |language_ability| %>
-          <span id="lang_disp<%= language_ability.id %>" class="language-container" ><%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button><br></span>
+         <span id="lang_disp<%= language_ability.id %>" class="language-container" >&bull; <%= language_ability.name %> - <%= language_ability.level %> <!--<button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button>--><br></span>
 
       <% end %>
 

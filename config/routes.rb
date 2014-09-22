@@ -1,4 +1,7 @@
 OnlineApplication::Application.routes.draw do
+  resources :club_affiliations
+
+
   resources :preference_criteria
 
 
@@ -114,6 +117,7 @@ OnlineApplication::Application.routes.draw do
   post'/admissions/geographic/(:id)' => 'admissions#create_geographic'
   post'/admissions/preference_industry/(:id)' => 'admissions#create_preference_industry'
   post'/admissions/preference_criteria/(:id)' => 'admissions#create_preference_criteria'
+  post'/admissions/club_affiliation/(:id)' => 'admissions#create_affiliation'
 
   get 'api/language_ability/delete/(:id)' => 'admissions#delete_language'
   get '/api/function_experience/delete/(:id)' => 'admissions#delete_function'
@@ -121,6 +125,7 @@ OnlineApplication::Application.routes.draw do
   get '/api/geographic_experience/delete/(:id)' => 'admissions#delete_geographic'
   get '/api/preference_industry/delete/(:id)' => 'admissions#delete_pre_industry'
  get '/api/preference_criteria/delete/(:id)' => 'admissions#delete_pre_criteria'
+
 
   post'/api/changeEmail/(:id)' => 'admissions#changeEmail'
   post'/api/changePassword/(:id)' => 'admissions#changePassword'

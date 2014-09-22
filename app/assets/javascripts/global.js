@@ -517,5 +517,18 @@ $(document).ready(function(){
         e.preventDefault();
     })
 
+//    $('#submit-club-affil').click(function() {
+//
+//
+//        $("#cl_affiliation :selected").text();
+//        var x = $("#club_affi-id").val();
+//
+//        // $( "span" ).remove( "lang" + e.target.id);
+//
+//        $.ajax('/api/preference_criteria/delete/' + x);
+//
+//
+//    })
+
 //
 });

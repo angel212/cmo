@@ -1,0 +1,27 @@
+<h1>Listing club_affiliations</h1>
+
+<table>
+  <tr>
+    <th>Online application form</th>
+    <th>Affiliation</th>
+    <th>Others</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @club_affiliations.each do |club_affiliation| %>
+  <tr>
+    <td><%= club_affiliation.online_application_form_id %></td>
+    <td><%= club_affiliation.affiliation %></td>
+    <td><%= club_affiliation.others %></td>
+    <td><%= link_to 'Show', club_affiliation %></td>
+    <td><%= link_to 'Edit', edit_club_affiliation_path(club_affiliation) %></td>
+    <td><%= link_to 'Destroy', club_affiliation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Club affiliation', new_club_affiliation_path %>

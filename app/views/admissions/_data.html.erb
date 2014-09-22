@@ -75,6 +75,14 @@
                     draggable: false
                 }
         );
+        $("#club_affiliation_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
     });
 
 
@@ -83,7 +91,6 @@
 </script>
 <script>
     $(function () {
-
 
 
         $("#personal_edit_link").click(function () {
@@ -112,6 +119,10 @@
 
         $("#change_pass_link").click(function () {
             $("#change_pass_dialog").dialog("open");
+        });
+        $("#club_aff").click(function () {
+
+            $("#club_affiliation_dialog").dialog("open");
         });
 
     });

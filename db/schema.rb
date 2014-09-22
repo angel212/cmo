@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140909064859) do
+ActiveRecord::Schema.define(:version => 20140918061622) do
+
+  create_table "club_affiliations", :force => true do |t|
+    t.integer  "online_application_form_id"
+    t.string   "affiliation"
+    t.string   "others"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
 
   create_table "education_details", :force => true do |t|
     t.string   "last_school_name"

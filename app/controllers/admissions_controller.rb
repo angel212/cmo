@@ -16,7 +16,7 @@ class AdmissionsController < ApplicationController
     @function = @online_application.function_experiences
     @industry = @online_application.industry_experiences
     @preference_industry = @online_application.preference_industries
-
+@affiliation= @online_application.club_affiliations
     @student=1
 
     respond_to do |format|
@@ -149,6 +149,12 @@ class AdmissionsController < ApplicationController
   def create_preference_criteria
 
     PreferenceCriterium.create!(:online_application_form_id => params[:id] , :criteria => params[:criteria])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
+  def create_affiliation
+
+    ClubAffiliation.create!(:online_application_form_id => params[:id] , :affiliation => params[:affiliation])
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
