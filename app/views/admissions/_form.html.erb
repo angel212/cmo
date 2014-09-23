@@ -11,8 +11,8 @@
 <div class="content">
 
   <div class="panel panel-default" style="margin-top: 30px;">
-    <div class="panel-heading" style="">Personal Details<a href="#" id="personal_edit_link" style="color: black;font-size: 11px; margin-left: 517px;">[Edit]</a></div>
-<table class="table" style="width: 500px;margin-left: 130px;color:#333;" cellpadding="3">
+    <div class="panel-heading" style="">Personal Details<a href="#" id="personal_edit_link" style="color: white;font-size: 11px; margin-left: 550px;">[Edit]</a></div>
+<table class="table" style="margin: 0 auto;width: 400px;color:#333;" cellpadding="3">
 <tr>
   <td>First Name:</td>
   <td>
@@ -63,10 +63,9 @@
       <%= @personal_details.current_mobile %>
     </td>
   </tr>
-  <button id="submit-personal-info" name="submit-personal-info" class="patrick-btn" style="margin: 25px 255px;">Next - Address and Contact</button>
-
 </table>
-    </div>
+    <button id="submit-personal-info" name="submit-personal-info" class="patrick-btn" style="margin: 25px 250px;">Next - Address and Contact</button>
+  </div>
  </div>
 </div>
 <!-- End Page 1 -->
@@ -75,14 +74,14 @@
 
 <div id="address-page">
   <div class="content">
-    <h2 style="padding-top:30px;border-bottom: 2px solid #146D55;color: #146D55">Mailing Address and Contact
-      Information<a href="#" id="mailing_edit_link" style="color: black;
-            font-size: 11px;
-            margin-left: 269px;
-            position: absolute;
-            padding: 0;">[Edit]</a>
-    </h2>
-    <table class="table" cellpadding="3">
+    <div class="panel panel-default" style="margin-top: 30px;">
+      <div class="panel-heading" style="">Mailing Address and Contact Information<a href="#" id="mailing_edit_link" style="color: white;
+              font-size: 11px;
+              margin-left: 380px;
+              position: absolute;
+              padding: 0;">[Edit]</a></div>
+
+      <table class="table" style="width: 400px;margin: 0 auto;color:#333;" cellpadding="3">
       <tr>
         <td>Address Line 1:</td>
         <td>
@@ -156,6 +155,7 @@
         </td>
       </tr>
     </table>
+
     <div class="controls" style="margin: 30px 185px;">
       <button id="submit-personal-details-back" name="submit-education-info-back" class="patrick-btn">Back
         -
@@ -164,7 +164,7 @@
       </button>
       <button id="submit-address-info" name="submit-address-info" class="patrick-btn">Next - Education</button>
     </div>
-
+</div>
   </div>
 </div>
 
@@ -173,9 +173,11 @@
 <!--Start Page 2-->
 <div id="page-2">
   <div class="content">
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55">Education<a href="#" id="education_edit_link" style="color: black;font-size: 11px; margin-left: 578px;">[Edit]</a>
-    </h2>
-    <table class="table" cellpadding="3">
+
+    <div class="panel panel-default" style="margin-top: 30px;">
+      <div class="panel-heading" style="">Education<a href="#" id="education_edit_link" style="color: white;font-size: 11px; margin-left: 578px;">[Edit]</a></div>
+
+      <table class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
       <tr>
         <td>Program/Course Title:</td>
         <td>
@@ -268,6 +270,7 @@
           Work
           Experience
         </button>
+        </div>
       </div>
     </div>
   </div>
@@ -278,9 +281,10 @@
 <div id="page-3">
   <div class="content">
 
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55;">Work
-      Experience<a href="#" id="professional_edit_link"  style="color: black;font-size: 11px; margin-left: 510px;">[Edit]</a></h2>
-    <table class="table" cellpadding="3">
+    <div class="panel panel-default" style="margin-top: 30px;">
+      <div class="panel-heading" style="">Work Experience<a href="#" id="professional_edit_link"  style="color: white;font-size: 11px; margin-left: 540px;">[Edit]</a></div>
+
+      <table class="table" style="margin: 0 auto;width: 550px;color:#333;" cellpadding="3">
       <tr>
         <td>Total Years of Work Experience:</td>
         <td>
@@ -383,6 +387,7 @@
           Preferences
         </button>
       </div>
+      </div>
     </div>
   </div>
 </div>
@@ -392,9 +397,10 @@
 <div id="page-4">
   <div class="content">
 
-    <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55;">Industry -
-      Preference<a href="#" id="preference_edit_link" style="color: black;font-size: 11px; margin-left: 469px;">[Edit]</a></h2>
-    <table class="table" cellpadding="3">
+    <div class="panel panel-default" style="margin-top: 30px;">
+      <div class="panel-heading" style="">Industry - Preference<a href="#" id="preference_edit_link" style="color: white;font-size: 11px; margin-left: 515px;">[Edit]</a></div>
+
+      <table class="table" style="margin: 0 auto;width: 500px;color:#333;" cellpadding="3">
       <tr>
         <td>Industry - Preference:</td>
         <td>
@@ -443,6 +449,7 @@
         </button>
       </div>
     </div>
+      </div>
   </div>
 </div>
 </div>

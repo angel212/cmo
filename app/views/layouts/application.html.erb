@@ -19,11 +19,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
 
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/assets/global.css.scss">
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
 
   <%= stylesheet_link_tag :application %>
   <%= javascript_include_tag :application %>
@@ -99,18 +98,18 @@
   <!--</ul>-->
   <!--</div>-->
 
-  <div class="content-container">
+  <div class="content-container" style="background-color: #fff;">
     <div class="top" id="top" style="background-color: #146D55;
             color: white;
             height: 35px;
-            width: 749px;margin-left: 251px;">
+            width: 750px;margin-left: 250px;">
       <p id="header" style="height: 40px;width: 750px;color: white; position: absolute;font-size: 18px; margin-top: 5px; font-weight: bold; padding-top: 4px; text-align: center;" class="no-print">Career
         Services Office</p>
     </div>
     <%if @student.present? %>
         <div class="leftcolumn no-print" id="leftcolumn">
           <div style="height: 290px;
-                  border-bottom: 1px solid rgb(13,17,46);">
+                  border-bottom: 1px solid #146D55">
             <p style="padding-left: 40px; font-weight: bold;  font-size: 14px;"><br/><span style="color:rgb(13,17,46);">
         Welcome, <br>
 
@@ -137,6 +136,7 @@
               <li><a href="#" class="myresume-btn">Professional Summary</a></li>
               <li><a href="#" class="settings-btn">Settings</a></li>
               <li><a href="../../" style="" id="">Logout</a></li>
+
             </ul>
           </div>
         </div>
