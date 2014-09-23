@@ -855,7 +855,7 @@
     <tr>
       <td>Club Affiliations:</td>
       <td>
-        <% @online_application.club_affiliations.each do |club_affiliation| %>
+        <% @online_application.club_affiliation.each do |club_affiliation| %>
             <span id="club_affi<%= club_affiliation.id %>" class="language-container" >&bull; <%= club_affiliation.affiliation %> <button  id="<%= club_affiliation.id %>" class="club-affiliation-delete">delete</button><br></span>
 
         <% end %>
