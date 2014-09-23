@@ -18,6 +18,8 @@ class AdmissionsController < ApplicationController
     @preference_industry = @online_application.preference_industries
 @affiliation= @online_application.club_affiliation
     @undergrad = @online_application.undergraduate_majors
+    @other_degree = @online_application.other_graduates
+
     @student=1
 
     respond_to do |format|
@@ -161,6 +163,11 @@ class AdmissionsController < ApplicationController
   def create_undergrad
 
     UndergraduateMajor.create!(:online_application_form_id => params[:id] , :undergrad => params[:undergraduate_major], :sub_undergrad => params[:subcategory22])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+  def create_other_degree
+
+    OtherGraduate.create!(:online_application_form_id => params[:id] , :other_degree => params[:other_degree], :sub_other_degree => params[:subcategory55])
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
 

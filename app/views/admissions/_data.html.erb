@@ -91,6 +91,14 @@
                     draggable: false
                 }
         );
+        $("#other_grad_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
     });
 
 
@@ -135,6 +143,10 @@
         $("#under_grad_open").click(function () {
 
             $("#undergrad_major_dialog").dialog("open");
+        });
+        $("#other_grad_open").click(function () {
+
+            $("#other_grad_dialog").dialog("open");
         });
 
     });

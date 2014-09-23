@@ -3,25 +3,25 @@
     function dropdownlist(listindex)
     {
 
-        document.educationdetails.subcategory.options.length = 0;
+        document.other_grad_forms.subcategory55.options.length = 0;
         switch (listindex)
         {
 
             case "Other Business Master's" :
-                document.educationdetails.subcategory.style.visibility="visible";
-                document.educationdetails.subcategory.options[0]=new Option("Select One","");
-                document.educationdetails.subcategory.options[1]=new Option("Accounting","Accounting");
-                document.educationdetails.subcategory.options[2]=new Option("Human Resources","Human Resources");
-                document.educationdetails.subcategory.options[3]=new Option("Information Technology","Information Technology");
-                document.educationdetails.subcategory.options[4]=new Option("Management ","Management");
+                document.other_grad_forms.subcategory55.style.visibility="visible";
+                document.other_grad_forms.subcategory55.options[0]=new Option("Select One","");
+                document.other_grad_forms.subcategory55.options[1]=new Option("Accounting","Accounting");
+                document.other_grad_forms.subcategory55.options[2]=new Option("Human Resources","Human Resources");
+                document.other_grad_forms.subcategory55.options[3]=new Option("Information Technology","Information Technology");
+                document.other_grad_forms.subcategory55.options[4]=new Option("Management ","Management");
 
 
                 break;
 
 
             default:
-                document.educationdetails.subcategory.style.visibility="hidden";
-                document.educationdetails.subcategory.options[0]=new Option("Select One","");
+                document.other_grad_forms.subcategory55.style.visibility="hidden";
+                document.other_grad_forms.subcategory55.options[0]=new Option("Select One","");
                 break;
         }
         return true;

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140922084233) do
+ActiveRecord::Schema.define(:version => 20140923015958) do
 
   create_table "club_affiliations", :force => true do |t|
     t.integer  "online_application_form_id"
@@ -130,6 +130,14 @@ ActiveRecord::Schema.define(:version => 20140922084233) do
     t.string   "browser"
     t.string   "preference_id"
     t.string   "pass"
+  end
+
+  create_table "other_graduates", :force => true do |t|
+    t.integer  "online_application_form_id"
+    t.string   "other_degree"
+    t.string   "sub_other_degree"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "personal_details", :force => true do |t|

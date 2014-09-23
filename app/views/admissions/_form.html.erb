@@ -212,10 +212,11 @@
       <tr>
         <td>Other Graduate Degrees:</td>
         <td>
-          <%= @education_detail.other_degree %>
-          <%if @education_detail.sub_other_degree.present?   	  %>
-              - <%= @education_detail.sub_other_degree %>
-              <% end %>
+          <% @online_application.other_graduates.each do |other_graduate| %>
+              <span id="other_grad_disp<%= other_graduate.id %>" class="language-container" >&bull; <%= other_graduate.other_degree %> <%	 if other_graduate.sub_other_degree.present? %>- <%= other_graduate.sub_other_degree %> <% end %><!--<button  id="<%= other_graduate.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+          <% end %>
+
         </td>
       </tr>
       <tr>

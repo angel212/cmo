@@ -864,25 +864,11 @@
     </tr>
     <tr>
       <td>Other Graduate Degrees:</td>
-      <td>
-        <select name="education_detail[other_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.other_degree %>" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);">
-          <option>Select One</option>
-          <option>JD</option>
-          <option>MA</option>
-          <option>MD</option>
-          <option>MS</option>
-          <option>PhD</option>
-          <option>Other Business Master's</option>
+      <td><% @online_application.other_graduates.each do |other_graduate| %>
+            <span id="other_grad_disp<%= other_graduate.id %>" class="language-container" >&bull; <%= other_graduate.other_degree %> <%	 if other_graduate.sub_other_degree.present? %>- <%= other_graduate.sub_other_degree %> <% end %><button  id="<%= other_graduate.id %>" class="other-degree-delete">delete</button><br></span>
 
-        </select>
-      </td>
-      <script type="text/javascript" language="JavaScript">
-          document.write('<td><select name="education_detail[sub_other_degree]" id="subcategory" style="visibility:hidden;width:170px;" ><option value="">Select One</option></select></td>')
-      </script>
-        <noscript><select name="education_detail[other_degree]" id="subcategory" >
-          <option value="">Select Sub-Category</option>
-        </select>
-        </noscript>
+        <% end %></td>
+      <td><a href="#" id="other_grad_open">add</a> </td>
     </tr>
     <tr>
       <td>MBA Schools:</td>
@@ -1884,7 +1870,7 @@
   <form name="undergrad_form" id="undergrad_form" class="form-horizontal" method="post" action="/admissions/undergrad_major/<%= @online_application.id %>">
     <table>
       <tr>
-        <td>ndergraduate Major:</td>
+        <td>Undergraduate Major:</td>
         <td>
           <select id="undergrad" name="undergraduate_major" class="input-xlarge  dropdown-value" data-chosen-value="" onchange="javascript: undergrad2(this.options[this.selectedIndex].value);">
             <option>Select One</option>
@@ -1911,3 +1897,34 @@
 
 </div>
 
+<div id="other_grad_dialog" title="Add Other Graduate Degrees ">
+  <form name="other_grad_forms" id="other_grad" class="form-horizontal" method="post" action="/admissions/other_degree/<%= @online_application.id %>">
+
+    <table>
+      <tr>
+        <td>Other Graduate Degrees:</td>
+        <td>
+          <select name="other_degree" class="input-xlarge  dropdown-value" data-chosen-value="" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);">
+            <option>Select One</option>
+            <option>JD</option>
+            <option>MA</option>
+            <option>MD</option>
+            <option>MS</option>
+            <option>PhD</option>
+            <option>Other Business Master's</option>
+
+          </select>
+        </td><td>
+        <script type="text/javascript" language="JavaScript">
+            document.write('<td><select name="subcategory55" id="subcategory55" style="visibility:hidden;width:170px;" ><option value="">Select One</option></select></td>')
+        </script>
+        <noscript><select name="education_detail[other_degree]" id="subcategory55" >
+          <option value="">Select Sub-Category</option>
+        </select>
+        </noscript>
+      </td>
+      </tr>
+    </table>
+    <button class="btn">submit</button>
+  </form>
+</div>
