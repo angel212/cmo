@@ -111,11 +111,16 @@ html {
 
 }
 
+.panel-heading {
+  background-color: #146D55 !important;color:black;
+}
+
 .content {
   margin-left: 265px;
   overflow-y: auto;
   height: 910px;
   width: auto;
+  padding-right: 15px;
 }
 
 .leftcolumn ul li a {

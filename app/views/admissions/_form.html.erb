@@ -9,12 +9,10 @@
 
 <!-- Text input-->
 <div class="content">
-<h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55">Personal
-  Details<a href="#" id="personal_edit_link" style="color: black;font-size: 11px; margin-left: 517px;">[Edit]</a>
-</h2>
 
-
-<table class="student_table" cellpadding="3">
+  <div class="panel panel-default" style="margin-top: 30px;">
+    <div class="panel-heading" style="">Personal Details<a href="#" id="personal_edit_link" style="color: black;font-size: 11px; margin-left: 517px;">[Edit]</a></div>
+<table class="table" style="width: 500px;margin-left: 130px;color:#333;" cellpadding="3">
 <tr>
   <td>First Name:</td>
   <td>
@@ -65,9 +63,11 @@
       <%= @personal_details.current_mobile %>
     </td>
   </tr>
-</table>
   <button id="submit-personal-info" name="submit-personal-info" class="patrick-btn" style="margin: 25px 255px;">Next - Address and Contact</button>
-</div>
+
+</table>
+    </div>
+ </div>
 </div>
 <!-- End Page 1 -->
 
@@ -82,7 +82,7 @@
             position: absolute;
             padding: 0;">[Edit]</a>
     </h2>
-    <table class="student_table" cellpadding="3">
+    <table class="table" cellpadding="3">
       <tr>
         <td>Address Line 1:</td>
         <td>
@@ -175,7 +175,7 @@
   <div class="content">
     <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55">Education<a href="#" id="education_edit_link" style="color: black;font-size: 11px; margin-left: 578px;">[Edit]</a>
     </h2>
-    <table class="student_table" cellpadding="3">
+    <table class="table" cellpadding="3">
       <tr>
         <td>Program/Course Title:</td>
         <td>
@@ -258,7 +258,7 @@
           Mailing Address and Contact Information
         </button>
         <button id="submit-education-info-next" name="submit-education-info-next" class="patrick-btn">Next -
-          Professional
+          Work
           Experience
         </button>
       </div>
@@ -272,8 +272,8 @@
   <div class="content">
 
     <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55;">Work
-      Experience<a href="#" id="professional_edit_link"  style="color: black;font-size: 11px; margin-left: 435px;">[Edit]</a></h2>
-    <table class="student_table" cellpadding="3">
+      Experience<a href="#" id="professional_edit_link"  style="color: black;font-size: 11px; margin-left: 510px;">[Edit]</a></h2>
+    <table class="table" cellpadding="3">
       <tr>
         <td>Total Years of Work Experience:</td>
         <td>
@@ -387,7 +387,7 @@
 
     <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55;">Industry -
       Preference<a href="#" id="preference_edit_link" style="color: black;font-size: 11px; margin-left: 469px;">[Edit]</a></h2>
-    <table class="student_table" cellpadding="3">
+    <table class="table" cellpadding="3">
       <tr>
         <td>Industry - Preference:</td>
         <td>
@@ -432,9 +432,8 @@
       <div class="controls" style="margin: 30px 230px;">
         <button id="submit-preferences-info-back" name="submit-preferences-info-back" class="patrick-btn">Back
           -
-          Employment
+          Work Experience
         </button>
-        <button id="education-submit" name="education-submit" class="patrick-btn">Register</button>
       </div>
     </div>
   </div>
@@ -445,7 +444,7 @@
 <div id="page-5">
   <div class="content">
     <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55;">Settings</h2>
-    <table class="student_table" cellpadding="3">
+    <table class="table" cellpadding="3">
       <tr>
         <td><a href="#" id="change_email_link">Change Email </a></td>
       </tr>
@@ -460,7 +459,7 @@
 <div id="page-6">
   <div class="content">
     <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55">Contact Details</h2>
-    <table class="student_table" cellpadding="3">
+    <table class="table" cellpadding="3">
       <tr>
         <td>Current Mobile No:</td>
         <td>
@@ -494,7 +493,7 @@
 <div id="page-7">
   <div class="content">
     <h2 style="margin-top: 40px;border-bottom: 2px solid #146D55;color: #146D55;">Resume Upload</h2>
-    <table class="student_table" cellpadding="3">
+    <table class="table" cellpadding="3">
       <% RequirementType.all.each do |requirement_type| %>
           <tr>
             <td>

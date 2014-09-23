@@ -93,14 +93,14 @@
 
 <div style="">
 <!--<input type="button" onclick="printdiv('div_print')">-->
-<p><a href="#" id="back-print-btn" class="back-print-btn btn no-print" style="position: absolute;
+<a href="#" id="back-print-btn" class="back-print-btn btn btn-success no-print" style="position: absolute;
         top: 20px;
-        left: 520px;">Back</a></p>
+        left: 300px;width: 100px;">Back</a>
 
-<p><a href="javascript:window.print();" class="btn btn-info no-print" style="position: absolute;
+<a href="javascript:window.print();" class="btn btn-success no-print" style="position: absolute;
         top: 20px;
-        left: 620px;">Print Resume</a></p>
-  <div id="div_print" class="print" style="top:60px;z-index: 9999;left:290px;position: absolute;background-color:white;border:1px solid black;box-shadow:0 0 70px black;margin:0 auto 0 auto;color:black !important;">
+        left: 435px;width: 100px;">Print Resume</a>
+  <div id="div_print" class="print" style="top:60px;z-index: 9999;left:290px;position: absolute;background-color:white;border:1px solid black;box-shadow: 0 0 7px black;margin:0 auto 0 auto;color:black !important;">
     <div class="remove-overflow" style="height:540px;overflow-y:auto;padding: 30px 30px;">
   <p class="horizontal-row" style="border-bottom:2px solid black;padding-bottom:10px;width:750px;margin:0 auto;">
     <span style="font-weight:bold;font-size:32px;padding:0px;margin:0px;"><%= @personal_details.first_name %> <%= @personal_details.middle_name %> <%= @personal_details.last_name %></span><br/>

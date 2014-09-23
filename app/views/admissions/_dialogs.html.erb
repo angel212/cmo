@@ -466,9 +466,9 @@
 </table>
 
 </form>
-<button id="personal_edit_link_close" name="personal_edit_link_close" class="patrick-btn" style="margin-left: 170px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Close
+<button id="personal_edit_link_close" name="personal_edit_link_close" class="btn" style="margin-left: 165px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Close
 </button>
-<button id="personal-update" name="personal-update" class="patrick-btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
+<button id="personal-update" name="personal-update" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
   Details
 </button>
 
@@ -807,9 +807,9 @@
 
 
 </form>
-<button id="cancel_mailing" name="cancel_mailing" class="patrick-btn" style="margin-left: 170px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Close
+<button id="cancel_mailing" name="cancel_mailing" class="btn" style="margin-left: 155px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Close
 </button>
-<button id="mailing-update" name="mailing-update" class="patrick-btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
+<button id="mailing-update" name="mailing-update" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
   Details
 </button>
 
@@ -856,7 +856,7 @@
       <td>Club Affiliations:</td>
       <td>
         <% @online_application.club_affiliations.each do |club_affiliation| %>
-            <span id="club_affi<%= club_affiliation.id %>" class="language-container" >&bull; <%= club_affiliation.affiliation %> <button  id="<%= club_affiliation.id %>" class="club-affiliation-delete">delete</button><br></span>
+            <span id="club_affi<%= club_affiliation.id %>" class="language-container" >&bull; <%= club_affiliation.affiliation %> <input type="image" src="/assets/editing-delete-icon.png" id="<%= club_affiliation.id %>" class="club-affiliation-delete" style="height: 20px;width:20px;"/><br></span>
 
         <% end %>
       </td>
@@ -1060,10 +1060,10 @@
 </form>
   </span>
   <span>
-    <button id="cancel_education" name="cancel_education" class="patrick-btn" style="margin-left: 200px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
+    <button id="cancel_education" name="cancel_education" class="btn" style="margin-left: 200px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Cancel
     </button>
-    <button id="education-details-submit" name="education-details-submit" class="patrick-btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
+    <button id="education-details-submit" name="education-details-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
       Details
     </button>
 
@@ -1625,10 +1625,10 @@
 
 
   <span>
-    <button id="cancel_professional" name="cancel_professional" class="patrick-btn" style="margin-left: 220px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
+    <button id="cancel_professional" name="cancel_professional" class="btn" style="margin-left: 220px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Cancel
     </button>
-    <button id="professional-submit" name="professional-submit" class="patrick-btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
+    <button id="professional-submit" name="professional-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
       Details
     </button>
 
@@ -1779,10 +1779,10 @@
     </form>
   </span>
   <span>
-    <button id="cancel_preferences" name="cancel_preferences" class="patrick-btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
+    <button id="cancel_preferences" name="cancel_preferences" class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Cancel
     </button>
-    <button id="preferences-submit" name="preferences-submit" class="patrick-btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
+    <button id="preferences-submit" name="preferences-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Update Details
     </button>
 
@@ -1819,8 +1819,8 @@
 
 
     </form>
-    <button class="patrick-btn" id="cancel_pass" name="cancel_pass" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" >Cancel</button>
-    <button class="patrick-btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" id="changepass-submit" name="changepass-submit">Save Changes
+    <button class="btn" id="cancel_pass" name="cancel_pass" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" >Cancel</button>
+    <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" id="changepass-submit" name="changepass-submit">Save Changes
     </button>
   </div>
 </div>
@@ -1849,8 +1849,8 @@
             <input type="text" name="confirmEmail"></td>
         </tr>
       </table>
-      <button class="patrick-btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>
-      <button class="patrick-btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Save Changes
+      <button class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>
+      <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Save Changes
       </button>
     </form>
 
@@ -1860,7 +1860,11 @@
 
 <div id="club_affiliation_dialog" title="Add Affiliation">
 
-<form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/club_affiliation/<%= @online_application.id %>">
+<form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/club_affiliation/<%= @online_application.id %>" style="padding-left: 50px;
+  color: #7d7d7d;
+  margin: 0 auto 0 auto;
+  font-family: helvetica, verdana, arial, sans-serif;
+  font-size: 12px;">
   <table>
     <tr>
       <td>Club Affiliations:</td>
@@ -1886,7 +1890,7 @@
       </td>
     </tr>
   </table>
-  <button id="submit-club-affil" class="btn-info">submit</button>
+  <button id="submit-club-affil" class="btn" style="margin: 10px 145px;">Add</button>
 </form>
 
 </div>
