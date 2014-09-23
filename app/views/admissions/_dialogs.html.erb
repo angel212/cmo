@@ -856,7 +856,7 @@
       <td>Club Affiliations:</td>
       <td>
         <% @online_application.club_affiliations.each do |club_affiliation| %>
-            <span id="club_affi<%= club_affiliation.id %>" class="language-container" >&bull; <%= club_affiliation.affiliation %> <input type="image" src="/assets/editing-delete-icon.png" id="<%= club_affiliation.id %>" class="club-affiliation-delete" style="height: 20px;width:20px;"/><br></span>
+            <span id="club_affi<%= club_affiliation.id %>" class="language-container" >&bull; <%= club_affiliation.affiliation %> <button  id="<%= club_affiliation.id %>" class="club-affiliation-delete">delete</button><br></span>
 
         <% end %>
       </td>
@@ -864,25 +864,11 @@
     </tr>
     <tr>
       <td>Other Graduate Degrees:</td>
-      <td>
-        <select name="education_detail[other_degree]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.other_degree %>" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);">
-          <option>Select One</option>
-          <option>JD</option>
-          <option>MA</option>
-          <option>MD</option>
-          <option>MS</option>
-          <option>PhD</option>
-          <option>Other Business Master's</option>
+      <td><% @online_application.other_graduates.each do |other_graduate| %>
+            <span id="other_grad_disp<%= other_graduate.id %>" class="language-container" >&bull; <%= other_graduate.other_degree %> <%	 if other_graduate.sub_other_degree.present? %>- <%= other_graduate.sub_other_degree %> <% end %><button  id="<%= other_graduate.id %>" class="other-degree-delete">delete</button><br></span>
 
-        </select>
-      </td>
-      <script type="text/javascript" language="JavaScript">
-          document.write('<td><select name="education_detail[sub_other_degree]" id="subcategory" style="visibility:hidden;width:170px;" ><option value="">Select One</option></select></td>')
-      </script>
-        <noscript><select name="education_detail[other_degree]" id="subcategory" >
-          <option value="">Select Sub-Category</option>
-        </select>
-        </noscript>
+        <% end %></td>
+      <td><a href="#" id="other_grad_open">add</a> </td>
     </tr>
     <tr>
       <td>MBA Schools:</td>
@@ -893,52 +879,26 @@
     <tr>
       <td>Certifications/Licenses:</td>
       <td>
-        <select name="education_detail[certification]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.certification %>">
-          <option>Select One</option>
-          <option>Architect License</option>
-          <option>CDP</option>
-          <option>CFA</option>
-          <option>CFP</option>
-          <option>CISA</option>
-          <option>CPA</option>
-          <option>CSP</option>
-          <option>DVM</option>
-          <option>EIT</option>
-          <option>FRM</option>
-          <option>PE</option>
-          <option>PHR</option>
-          <option>Pilot License</option>
-          <option>Real Estate License</option>
-          <option>RN</option>
-          <option>Series 7</option>
-          <option>Series 63</option>
-          <option>Security Clearance</option>
-        </select>
+        <% @online_application.certifications.each do |certification| %>
+            <span id="certification<%= certification.id %>" class="language-container" >&bull; <%= certification.certification %> <%	 if certification.other.present? %> - <%= certification.other %> <% end %><button  id="<%= certification.id %>" class="certification-delete">delete</button><br></span>
+
+        <% end %>
+      </td>
+      <td>
+        <a href="#" id="certification_open">add</a>
       </td>
     </tr>
     <tr>
       <td>Undergraduate Major:</td>
       <td>
+        <% @online_application.undergraduate_majors.each do |undergraduate_major| %>
+            <span id="undergrad_disp<%= undergraduate_major.id %>" class="language-container" > &bull; <%= undergraduate_major.undergrad %> <%if undergraduate_major.sub_undergrad.present? %> - <%=undergraduate_major.sub_undergrad %> <% end %>  <button  id="<%= undergraduate_major.id %>" class="undergraduate-major-delete">delete</button><br></span>
 
-        <select id="last-school-end-date" name="education_detail[undergrad_major]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.undergrad_major %>" onchange="javascript: undergrad(this.options[this.selectedIndex].value);">
-          <option>Select One</option>
-          <option>Business</option>
-          <option>Engineering</option>
-          <option>Humanities</option>
-          <option>Science</option>
-          <option>Social Sciences</option>
-
-        </select>
+        <% end %>
 
 
-      </td>
-      <td><script type="text/javascript" language="JavaScript">
-          document.write('<select name="education_detail[sub_undergrad]" id="subcategory2" style="visibility: hidden;width:170px;" ><option value="<%= @education_detail.sub_undergrad%>"><%= @education_detail.sub_undergrad%></option></select>')
-      </script>
-        <noscript><select name="education_detail[other_degree]" id="subcategory" >
-          <option value="">Select Sub-Category</option>
-        </select>
-        </noscript></td>
+          </td>
+      <td><a href="#" id="under_grad_open"> add</a></td>
     </tr>
 
   </table>
@@ -1625,10 +1585,10 @@
 
 
   <span>
-    <button id="cancel_professional" name="cancel_professional" class="btn" style="margin-left: 220px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
+    <button id="cancel_professional" name="cancel_professional" class="patrick-btn" style="margin-left: 220px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
       Cancel
     </button>
-    <button id="professional-submit" name="professional-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
+    <button id="professional-submit" name="professional-submit" class="patrick-btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Update
       Details
     </button>
 
@@ -1895,3 +1855,101 @@
 
 </div>
 
+<div id="undergrad_major_dialog" title="Add Undergraduate Major">
+
+  <form name="undergrad_form" id="undergrad_form" class="form-horizontal" method="post" action="/admissions/undergrad_major/<%= @online_application.id %>">
+    <table>
+      <tr>
+        <td>Undergraduate Major:</td>
+        <td>
+          <select id="undergrad" name="undergraduate_major" class="input-xlarge  dropdown-value" data-chosen-value="" onchange="javascript: undergrad2(this.options[this.selectedIndex].value);">
+            <option>Select One</option>
+            <option>Business</option>-->
+            <option>Engineering</option>
+            <option>Humanities</option>
+            <option>Science</option>-->
+            <<option>Social Sciences</option>
+
+         </select>
+          <input type="hidden" value="<%= @online_application.id %>" id="club_affi-id" >
+    </td>
+      <td><script type="text/javascript" language="JavaScript">
+  document.write('<select name="subcategory22" id="subcategory22" style="visibility: hidden;width:170px;" ></select>')
+     </script>
+          <noscript><select name="education_detail[other_degree]" id="subcategory" >
+          <option value="">Select Sub-Category</option>
+          </select>
+          </noscript></td>
+      </tr>
+    </table>
+    <button id="submit-club-affil" class="btn-info">submit</button>
+  </form>
+
+</div>
+
+<div id="other_grad_dialog" title="Add Other Graduate Degrees ">
+  <form name="other_grad_forms" id="other_grad" class="form-horizontal" method="post" action="/admissions/other_degree/<%= @online_application.id %>">
+
+    <table>
+      <tr>
+        <td>Other Graduate Degrees:</td>
+        <td>
+          <select name="other_degree" class="input-xlarge  dropdown-value" data-chosen-value="" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);">
+            <option>Select One</option>
+            <option>JD</option>
+            <option>MA</option>
+            <option>MD</option>
+            <option>MS</option>
+            <option>PhD</option>
+            <option>Other Business Master's</option>
+
+          </select>
+        </td><td>
+        <script type="text/javascript" language="JavaScript">
+            document.write('<td><select name="subcategory55" id="subcategory55" style="visibility:hidden;width:170px;" ><option value="">Select One</option></select></td>')
+        </script>
+        <noscript><select name="education_detail[other_degree]" id="subcategory55" >
+          <option value="">Select Sub-Category</option>
+        </select>
+        </noscript>
+      </td>
+      </tr>
+    </table>
+    <button class="btn">submit</button>
+  </form>
+</div>
+
+<div id="certification_dialog" title="Add Certifications">
+  <form name="certification_form" id="other_grad" class="form-horizontal" method="post" action="/admissions/certification/<%= @online_application.id %>">
+    <table>
+      <tr>
+        <td>Certifications/Licenses:</td>
+        <td>
+          <select name="certification" class="input-xlarge  dropdown-value" data-chosen-value="">
+            <option>Select One</option>
+            <option>Architect License</option>
+            <option>CDP</option>
+            <option>CFA</option>
+            <option>CFP</option>
+            <option>CISA</option>
+            <option>CPA</option>
+            <option>CSP</option>
+            <option>DVM</option>
+            <option>EIT</option>
+            <option>FRM</option>
+            <option>PE</option>
+            <option>PHR</option>
+            <option>Pilot License</option>
+            <option>Real Estate License</option>
+            <option>RN</option>
+            <option>Series 7</option>
+            <option>Series 63</option>
+            <option>Security Clearance</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <button class="btn" >Submit</button>
+  </form>
+
+</div>

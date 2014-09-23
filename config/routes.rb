@@ -1,4 +1,13 @@
 OnlineApplication::Application.routes.draw do
+  resources :certifications
+
+
+  resources :other_graduates
+
+
+  resources :undergraduate_majors
+
+
   resources :club_affiliations
 
 
@@ -118,6 +127,9 @@ OnlineApplication::Application.routes.draw do
   post'/admissions/preference_industry/(:id)' => 'admissions#create_preference_industry'
   post'/admissions/preference_criteria/(:id)' => 'admissions#create_preference_criteria'
   post'/admissions/club_affiliation/(:id)' => 'admissions#create_affiliation'
+  post'/admissions/undergrad_major/(:id)' => 'admissions#create_undergrad'
+  post'/admissions/other_degree/(:id)' => 'admissions#create_other_degree'
+  post'/admissions/certification/(:id)' => 'admissions#create_certification'
 
   get 'api/language_ability/delete/(:id)' => 'admissions#delete_language'
   get '/api/function_experience/delete/(:id)' => 'admissions#delete_function'

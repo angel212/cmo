@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140918061622) do
+ActiveRecord::Schema.define(:version => 20140923031018) do
+
+  create_table "certifications", :force => true do |t|
+    t.integer  "online_application_form_id"
+    t.string   "certification"
+    t.string   "other"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
 
   create_table "club_affiliations", :force => true do |t|
     t.integer  "online_application_form_id"
@@ -132,6 +140,14 @@ ActiveRecord::Schema.define(:version => 20140918061622) do
     t.string   "pass"
   end
 
+  create_table "other_graduates", :force => true do |t|
+    t.integer  "online_application_form_id"
+    t.string   "other_degree"
+    t.string   "sub_other_degree"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
   create_table "personal_details", :force => true do |t|
     t.string   "first_name"
     t.string   "middle_name"
@@ -226,6 +242,9 @@ ActiveRecord::Schema.define(:version => 20140918061622) do
     t.string   "group_name"
     t.string   "organization_name"
   end
+
+# Could not dump table "undergraduate_majors" because of following StandardError
+#   Unknown type 'sting' for column 'sub_undergrad'
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

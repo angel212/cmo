@@ -83,6 +83,30 @@
                     draggable: false
                 }
         );
+        $("#undergrad_major_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+        $("#other_grad_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+        $("#certification_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
     });
 
 
@@ -123,6 +147,18 @@
         $("#club_aff").click(function () {
 
             $("#club_affiliation_dialog").dialog("open");
+        });
+        $("#under_grad_open").click(function () {
+
+            $("#undergrad_major_dialog").dialog("open");
+        });
+        $("#other_grad_open").click(function () {
+
+            $("#other_grad_dialog").dialog("open");
+        });
+        $("#certification_open").click(function () {
+
+            $("#certification_dialog").dialog("open");
         });
 
     });

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Online application form:</b>
+  <%= @certification.online_application_form_id %>
+</p>
+
+<p>
+  <b>Certification:</b>
+  <%= @certification.certification %>
+</p>
+
+<p>
+  <b>Other:</b>
+  <%= @certification.other %>
+</p>
+
+
+<%= link_to 'Edit', edit_certification_path(@certification) %> |
+<%= link_to 'Back', certifications_path %>
