@@ -517,7 +517,62 @@ $(document).ready(function(){
         e.preventDefault();
     })
 
-//    $('#submit-club-affil').click(function() {
+    $('.club-affiliation-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("club_affi" + e.target.id).remove()
+            document.getElementById("affl_disp" + e.target.id).remove();
+            // $( "span" ).remove( "lang" + e.target.id);
+            $.ajax('/api/club_affiliation/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+    $('.other-degree-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("other_grad" + e.target.id).remove()
+            document.getElementById("other_grad_disp" + e.target.id).remove();
+            // $( "span" ).remove( "lang" + e.target.id);
+            $.ajax('/api/other_grad/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+
+    $('.certification-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("certification" + e.target.id).remove()
+            document.getElementById("certification_disp" + e.target.id).remove();
+            // $( "span" ).remove( "lang" + e.target.id);
+            $.ajax('/api/certification/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+    $('.undergraduate-major-delete').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("undergrad" + e.target.id).remove()
+            document.getElementById("undergrad_disp" + e.target.id).remove();
+            // $( "span" ).remove( "lang" + e.target.id);
+            $.ajax('/api/undergrad/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+
+
+    //    $('#submit-club-affil').click(function() {
 //
 //
 //        $("#cl_affiliation :selected").text();

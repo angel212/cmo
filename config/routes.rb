@@ -137,7 +137,11 @@ OnlineApplication::Application.routes.draw do
   get '/api/geographic_experience/delete/(:id)' => 'admissions#delete_geographic'
   get '/api/preference_industry/delete/(:id)' => 'admissions#delete_pre_industry'
  get '/api/preference_criteria/delete/(:id)' => 'admissions#delete_pre_criteria'
+  get '/api/club_affiliation/delete/(:id)' => 'admissions#delete_club_affiliation'
+  get '/api/other_grad/delete/(:id)' => 'admissions#delete_other_grad'
+  get '/api/certification/delete/(:id)' => 'admissions#delete_certification'
 
+  get '/api/undergrad/delete/(:id)' => 'admissions#delete_undergrad'
 
   post'/api/changeEmail/(:id)' => 'admissions#changeEmail'
   post'/api/changePassword/(:id)' => 'admissions#changePassword'

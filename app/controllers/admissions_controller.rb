@@ -213,6 +213,36 @@ class AdmissionsController < ApplicationController
 
     render :json => {'status' => 'success'}.to_json
   end
+
+  def delete_club_affiliation
+    pre_criteria= ClubAffiliation.find(params[:id])
+    pre_criteria.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+
+  def  delete_other_grad
+    pre_criteria= OtherGraduate.find(params[:id])
+    pre_criteria.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+
+  def  delete_certification
+    pre_criteria= Certification.find(params[:id])
+    pre_criteria.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+
+
+  def delete_undergrad
+    pre_criteria= UndergraduateMajor.find(params[:id])
+    pre_criteria.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
+
   def changeEmail
     data= OnlineApplicationForm.find(params[:id])
   if data.personal_detail.email != params[:currentEmail]
