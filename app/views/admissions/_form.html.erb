@@ -228,7 +228,10 @@
       <tr>
         <td>Certifications/Licenses:</td>
         <td>
-          <%= @education_detail.certification %>
+          <% @online_application.certifications.each do |certification| %>
+              <span id="certification_disp<%= certification.id %>" class="language-container" >&bull; <%= certification.certification %> <%	 if certification.other.present? %> - <%= certification.other %> <% end %><!--<button  id="<%= certification.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+          <% end %>
         </td>
       </tr>
       <tr>

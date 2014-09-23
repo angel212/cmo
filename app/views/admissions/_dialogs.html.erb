@@ -879,27 +879,13 @@
     <tr>
       <td>Certifications/Licenses:</td>
       <td>
-        <select name="education_detail[certification]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.certification %>">
-          <option>Select One</option>
-          <option>Architect License</option>
-          <option>CDP</option>
-          <option>CFA</option>
-          <option>CFP</option>
-          <option>CISA</option>
-          <option>CPA</option>
-          <option>CSP</option>
-          <option>DVM</option>
-          <option>EIT</option>
-          <option>FRM</option>
-          <option>PE</option>
-          <option>PHR</option>
-          <option>Pilot License</option>
-          <option>Real Estate License</option>
-          <option>RN</option>
-          <option>Series 7</option>
-          <option>Series 63</option>
-          <option>Security Clearance</option>
-        </select>
+        <% @online_application.certifications.each do |certification| %>
+            <span id="certification<%= certification.id %>" class="language-container" >&bull; <%= certification.certification %> <%	 if certification.other.present? %> - <%= certification.other %> <% end %><button  id="<%= certification.id %>" class="certification-delete">delete</button><br></span>
+
+        <% end %>
+      </td>
+      <td>
+        <a href="#" id="certification_open">add</a>
       </td>
     </tr>
     <tr>
@@ -1927,4 +1913,39 @@
     </table>
     <button class="btn">submit</button>
   </form>
+</div>
+
+<div id="certification_dialog" title="Add Certifications">
+  <form name="certification_form" id="other_grad" class="form-horizontal" method="post" action="/admissions/certification/<%= @online_application.id %>">
+    <table>
+      <tr>
+        <td>Certifications/Licenses:</td>
+        <td>
+          <select name="certification" class="input-xlarge  dropdown-value" data-chosen-value="">
+            <option>Select One</option>
+            <option>Architect License</option>
+            <option>CDP</option>
+            <option>CFA</option>
+            <option>CFP</option>
+            <option>CISA</option>
+            <option>CPA</option>
+            <option>CSP</option>
+            <option>DVM</option>
+            <option>EIT</option>
+            <option>FRM</option>
+            <option>PE</option>
+            <option>PHR</option>
+            <option>Pilot License</option>
+            <option>Real Estate License</option>
+            <option>RN</option>
+            <option>Series 7</option>
+            <option>Series 63</option>
+            <option>Security Clearance</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <button class="btn" >Submit</button>
+  </form>
+
 </div>

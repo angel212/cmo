@@ -99,6 +99,14 @@
                     draggable: false
                 }
         );
+        $("#certification_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
     });
 
 
@@ -147,6 +155,10 @@
         $("#other_grad_open").click(function () {
 
             $("#other_grad_dialog").dialog("open");
+        });
+        $("#certification_open").click(function () {
+
+            $("#certification_dialog").dialog("open");
         });
 
     });

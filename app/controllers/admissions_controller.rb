@@ -19,6 +19,7 @@ class AdmissionsController < ApplicationController
 @affiliation= @online_application.club_affiliation
     @undergrad = @online_application.undergraduate_majors
     @other_degree = @online_application.other_graduates
+    @certification = @online_application.certifications
 
     @student=1
 
@@ -168,6 +169,11 @@ class AdmissionsController < ApplicationController
   def create_other_degree
 
     OtherGraduate.create!(:online_application_form_id => params[:id] , :other_degree => params[:other_degree], :sub_other_degree => params[:subcategory55])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+  def create_certification
+
+    Certification.create!(:online_application_form_id => params[:id] , :certification => params[:certification], :other => params[:other])
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
