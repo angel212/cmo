@@ -215,11 +215,12 @@
 
 <div id="club_affiliation_dialog" title="Add Affiliation">
 
-<form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/club_affiliation/<%= @online_application.id %>" style="padding-left: 50px;
+<form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/club_affiliation/<%= @online_application.id %>"
+      style="
   color: #7d7d7d;
   margin: 0 auto 0 auto;
   font-family: helvetica, verdana, arial, sans-serif;
-  font-size: 12px;">
+  ">
   <table>
     <tr>
       <td>Club Affiliations:</td>
@@ -252,7 +253,7 @@
 
 <div id="undergrad_major_dialog" title="Add Undergraduate Major">
 
-  <form name="undergrad_form" id="undergrad_form" class="form-horizontal" method="post" action="/admissions/undergrad_major/<%= @online_application.id %>">
+  <form name="undergrad_form" id="undergrad_form" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/undergrad_major/<%= @online_application.id %>">
     <table>
       <tr>
         <td>Undergraduate Major:</td>
@@ -277,13 +278,13 @@
           </noscript></td>
       </tr>
     </table>
-    <button id="submit-club-affil" class="patrick-btn" style="margin: 10px 145px;">submit</button>
+    <button id="submit-club-affil" class="patrick-btn" style="margin: 10px 145px;">Add</button>
   </form>
 
 </div>
 
 <div id="other_grad_dialog" title="Add Other Graduate Degrees ">
-  <form name="other_grad_forms" id="other_grad" class="form-horizontal" method="post" action="/admissions/other_degree/<%= @online_application.id %>">
+  <form name="other_grad_forms" id="other_grad" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/other_degree/<%= @online_application.id %>">
 
     <table>
       <tr>
@@ -297,9 +298,11 @@
             <option>MS</option>
             <option>PhD</option>
             <option>Other Business Master's</option>
-
           </select>
-        </td><td>
+      </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
         <script type="text/javascript" language="JavaScript">
             document.write('<td><select name="subcategory55" id="subcategory55" style="visibility:hidden;width:170px;" ><option value="">Select One</option></select></td>')
         </script>
@@ -307,15 +310,14 @@
           <option value="">Select Sub-Category</option>
         </select>
         </noscript>
-      </td>
       </tr>
     </table>
-    <button class="patrick-btn" style="margin: 10px 145px;">submit</button>
+    <button class="patrick-btn" style="margin: 10px 145px;">Add</button>
   </form>
 </div>
 
 <div id="certification_dialog" title="Add Certifications">
-  <form name="certification_form" id="other_grad" class="form-horizontal" method="post" action="/admissions/certification/<%= @online_application.id %>">
+  <form name="certification_form" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" id="other_grad" class="form-horizontal" method="post" action="/admissions/certification/<%= @online_application.id %>">
     <table>
       <tr>
         <td>Certifications/Licenses:</td>
@@ -344,14 +346,14 @@
         </td>
       </tr>
     </table>
-    <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+    <button class="patrick-btn" style="margin: 10px 145px;">Add</button>
   </form>
 
 </div>
 
 <div id="function_experience_dialog" title="Add Function Experience">
-  <form name="professional_detail" class="form-horizontal" method="post" action="/admissions/function/<%= @online_application.id %>">
-    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="professional_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/function/<%= @online_application.id %>">
+    <table style=" color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Function - Experience:</td>
         <td>
@@ -400,7 +402,7 @@
             <option value="">Select Sub-Category</option>
           </select>
           </noscript>
-          <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+          <button class="patrick-btn" style="margin: 10px 145px;">Add</button>
     </table>
 
   </form>
@@ -408,8 +410,8 @@
 
 <div id="industry_experience_dialog" title="Add Industry Experience">
 
-  <form name="industry_professional_detail" class="form-horizontal" method="post" action="/admissions/industry/<%= @online_application.id %>">
-    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="industry_professional_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/industry/<%= @online_application.id %>">
+    <table style=" color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Industry - Experience:</td>
         <td>
@@ -461,14 +463,14 @@
         </td>
         </tr>
         </table>
-    <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+    <button class="patrick-btn" style="margin: 10px 145px;">Add</button>
       </form>
 
 </div>
 
 <div id="language_dialog" title="Add Language">
 
-  <form id="-language-education-details-form" name="languageeducationdetails" class="form-horizontal" method="post" action="/admissions/language/<%= @online_application.id %>">
+  <form id="-language-education-details-form" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" name="languageeducationdetails" class="form-horizontal" method="post" action="/admissions/language/<%= @online_application.id %>">
   <table style="padding-left: 60px; margin-left: 6px;width: 565;color: #7d7d7d;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
     <tr>
       <td>Language Ability:</td>
@@ -573,15 +575,15 @@
       </td>
     </tr>
   </table>
-    <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+    <button class="patrick-btn" style="margin: 10px 145px;">Add</button>
   </form>
 
 </div>
 
 <div id="geographic_experience_dialog" title="Add Geographic Experience">
 
-  <form name="geographic_professional_detail" class="form-horizontal" method="post" action="/admissions/geographic/<%= @online_application.id %>">
-    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="geographic_professional_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/geographic/<%= @online_application.id %>">
+    <table style=" color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Geographic - Experience:</td>
         <td>
@@ -609,15 +611,15 @@
         </td>
       </tr>
     </table>
-    <button class="patrick-btn" style="margin: 10px 145px;" >Submit</button>
+    <button class="patrick-btn" style="margin: 10px 145px;" >Add</button>
   </form>
 
 </div>
 
 <div id="industry_preference_dialog" title="Add Industry Preference">
 
-  <form name="preference_industry_detail" class="form-horizontal" method="post" action="/admissions/preference_industry/<%= @online_application.id %>">
-    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="preference_industry_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/preference_industry/<%= @online_application.id %>">
+    <table style=" color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Industry - Preference:</td>
         <td>
@@ -663,15 +665,15 @@
         </td>
       </tr>
     </table>
-    <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+    <button class="patrick-btn" style="margin: 10px 145px;">Add</button>
   </form>
 
 </div>
 
 <div id="important_criteria_dialog" title="Add Important Criteria for Choosing a Job">
 
-  <form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/preference_criteria/<%= @online_application.id %>">
-    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="preference_criteria_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/preference_criteria/<%= @online_application.id %>">
+    <table style=" color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
@@ -688,6 +690,6 @@
     </table>
 
   </form>
-  <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+  <button class="patrick-btn" style="margin: 10px 145px;">Add</button>
 
 </div>
