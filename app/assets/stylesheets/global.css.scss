@@ -111,10 +111,26 @@ html {
 
 }
 
+.ui-dialog .ui-dialog-titlebar-close{
+
+}
+
+.ui-dialog {
+z-index: 99999999999;
+}
+
 .panel-default>.panel-heading {
   background-color: #146D55 !important;
   color:white;
   font-weight: bold;
+  padding: 10px 15px;
+}
+
+.ui-widget-header{
+  background-color: #146D55 !important;
+  color: #ffffff;
+  background: #146D55 !important;/*{borderColorHeader}; */
+
 }
 
 .content {

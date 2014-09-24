@@ -7,74 +7,10 @@
 
     })
 </script>
+
 <script>
     $(function () {
-        $("#personal_edit").dialog(
-                {
-                    modal: true,
-                    autoOpen: false,
-                    width: 500,
-                    draggable: false
-                }
-        );
 
-        $("#mailing_address").dialog(
-                {
-                    modal: true,
-                    autoOpen: false,
-                    height: 560,
-                    width: 500,
-                    draggable: false
-                }
-        );
-
-        $("#education_dialog").dialog(
-                {
-                    modal: true,
-                    autoOpen: false,
-                    height: 580,
-                    width: 670,
-                    draggable: false
-                }
-        );
-
-        $("#professional_dialog").dialog(
-                {
-                    modal: true,
-                    autoOpen: false,
-                    height: 580,
-                    width: 800,
-                    draggable: false
-                }
-        );
-
-        $("#preferences_dialog").dialog(
-                {
-                    modal: true,
-                    autoOpen: false,
-                    height: 600,
-                    width: 750,
-                    draggable: false
-                }
-        );
-        $("#change_email_dialog").dialog(
-                {
-                    modal: true,
-                    autoOpen: false,
-                    height: 240,
-                    width: 610,
-                    draggable: false
-                }
-        );
-        $("#change_pass_dialog").dialog(
-                {
-                    modal: true,
-                    autoOpen: false,
-                    height: 240,
-                    width: 610,
-                    draggable: false
-                }
-        );
         $("#club_affiliation_dialog").dialog(
                 {
                     modal: true,
@@ -107,43 +43,7 @@
                     draggable: false
                 }
         );
-    });
 
-
-
-
-</script>
-<script>
-    $(function () {
-
-
-        $("#personal_edit_link").click(function () {
-            $("#personal_edit").dialog("open");
-        });
-
-        $("#mailing_edit_link").click(function () {
-            $("#mailing_address").dialog("open");
-        });
-
-        $("#education_edit_link").click(function () {
-            $("#education_dialog").dialog("open");
-        });
-
-        $("#professional_edit_link").click(function () {
-            $("#professional_dialog").dialog("open");
-        });
-
-        $("#preference_edit_link").click(function () {
-            $("#preferences_dialog").dialog("open");
-        });
-
-        $("#change_email_link").click(function () {
-            $("#change_email_dialog").dialog("open");
-        });
-
-        $("#change_pass_link").click(function () {
-            $("#change_pass_dialog").dialog("open");
-        });
         $("#club_aff").click(function () {
 
             $("#club_affiliation_dialog").dialog("open");
@@ -162,35 +62,5 @@
         });
 
     });
-</script>
 
-
-<script type="text/javascript">
-    $(function () {
-
-        $("#personal_edit_link_close").click(function () {
-            $("#personal_edit").dialog("close");
-        });
-
-        $("#cancel_mailing").click(function () {
-            $("#mailing_address").dialog("close");
-        });
-
-        $("#cancel_education").click(function () {
-            $("#education_dialog").dialog("close");
-        });
-        $("#cancel_professional").click(function () {
-            $("#professional_dialog").dialog("close");
-        });
-        $("#cancel_preferences").click(function () {
-            $("#preferences_dialog").dialog("close");
-        });
-        $("#cancel_email").click(function () {
-            $("#change_email_dialog").dialog("close");
-        });
-        $("#cancel_pass").click(function () {
-            $("#change_pass_dialog").dialog("close");
-        });
-
-    });
 </script>
