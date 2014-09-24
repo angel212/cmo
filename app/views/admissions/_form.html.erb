@@ -1085,7 +1085,7 @@
               </tr>
               <tr>
                 <td>Language Ability:</td>
-                <td style="padding-left:80px; ">
+                <td>
                   <% @online_application.language_abilities.each do |language_ability| %>
                       <span style="margin-bottom: 10px;" id="lang<%= language_ability.id %>" class="language-container2" >&bull; <%= language_ability.name %> - <%= language_ability.level %><button  id="<%= language_ability.id %>" class="language-ability-delete" style="margin-left: 10px;">delete</button><br></span>
 
@@ -1255,13 +1255,14 @@
      <tr>
        <td>Industry - Experience:</td>
        <td>
+         <select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
+
+         </select>
          <% @online_application.industry_experiences.each do |industry_experience| %>
              <span id="industry<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><button  id="<%= industry_experience.id %>" class="industry-experience-delete">delete</button> <br></span>
 
          <% end %>
-         <select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
-
-         </select></td>
+       </td>
        <td><a href="#" id="industry_experience"> add</a> </td>
        </td>
          </tr>
