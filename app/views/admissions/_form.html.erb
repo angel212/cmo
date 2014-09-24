@@ -21,7 +21,7 @@
         <form id="personal_details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
         <p>
-        <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+        <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
         <tr>
           <td>First Name:</td>
           <td>
@@ -560,7 +560,7 @@
           <form id="mailing-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
   <span>
-<table style="padding-left: 50px;color: #7d7d7d;width: 500;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+<table style="padding-left: 50px;color: #7d7d7d;width: 500;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
 <tr>
   <td>Address Line 1:</td>
   <td>
@@ -892,7 +892,7 @@
       </div>
     </div>
 
-    <div class="panel panel-default" style="margin-top: 30px;">
+    <div class="panel panel-default" style="margin-top: 10px;">
       <div class="panel-heading" style="">Mailing Address and Contact Information<a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#mailing_edit_link" style="color: white;
               font-size: 11px;
               margin-left: 380px;
@@ -993,7 +993,7 @@
   <div class="content">
 
     <!-- Modal -->
-    <div class="modal fade" id="education_edit_link" tabindex="-1" role="dialog" aria-labelledby="education_edit_link" aria-hidden="true">
+    <div class="modal fade" id="education_edit_link" tabindex="-1" role="dialog" aria-labelledby="mymodalname" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -1003,7 +1003,7 @@
           <div class="modal-body">
           <form id="education-details-form" name="educationdetails" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
-            <table style="padding-left: 50px;width: 565;color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+            <table style="padding-left: 50px;width: 565;color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
               <tr>
                 <td>Program/Course Title:</td>
                 <td>
@@ -1083,12 +1083,6 @@
                 </td>
                 <td><a href="#" id="under_grad_open"> add</a></td>
               </tr>
-
-            </table>
-
-          </form>
-          <form id="-language-education-details-form" name="languageeducationdetails" class="form-horizontal" method="post" action="/admissions/language/<%= @online_application.id %>">
-            <table style="padding-left: 60px; margin-left: 6px;width: 565;color: #7d7d7d;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
               <tr>
                 <td>Language Ability:</td>
                 <td style="padding-left:80px; ">
@@ -1097,109 +1091,11 @@
 
                   <% end %>
                 </td>
-              </tr><tr><td>&nbsp;</td>
-              <td>
-                <!--<input id="last-school-end-date" name="education_detail[language]" value="<%= @education_detail.language %>" type="text" class="input-xlarge">-->
-                <select name="language_name" id="category" onchange="javascript: languagefunction(this.options[this.selectedIndex].value);" style="width: 180px;">
-                  <option>Select One</option>
-                  <option>	   Albanian	</option>
-                  <option>	   American Sign Language 	</option>
-                  <option>	   Arabic 	</option>
-                  <option>	   Armenian 	</option>
-                  <option>	   Azerbaijani 	</option>
-                  <option>	   Belarusian 	</option>
-                  <option>	   Bengali 	</option>
-                  <option>	   Bhojpuri 	</option>
-                  <option>	   Bosnian 	</option>
-                  <option>	   Bulgarian 	</option>
-                  <option>	   Burmese 	</option>
-                  <option>	   Cantonese 	</option>
-                  <option>	   Catalan 	</option>
-                  <option>	   Croatian 	</option>
-                  <option>	   Czech 	</option>
-                  <option>	   Danish 	</option>
-                  <option>	   Dutch 	</option>
-                  <option>	   Farsi 	</option>
-                  <option>	   Fijian 	</option>
-                  <option>	   Filipino 	</option>
-                  <option>	   Finnish 	</option>
-                  <option>	   French 	</option>
-                  <option>	   Georgian 	</option>
-                  <option>	   German 	</option>
-                  <option>	   Greek 	</option>
-                  <option>	   Gujarati 	</option>
-                  <option>	   Hakka 	</option>
-                  <option>	   Hebrew 	</option>
-                  <option>	   Hindi 	</option>
-                  <option>	   Hungarian 	</option>
-                  <option>	   Icelandic 	</option>
-                  <option>	   Indonesian 	</option>
-                  <option>	   Italian 	</option>
-                  <option>	   Japanese 	</option>
-                  <option>	   Javanese 	</option>
-                  <option>	   Kannada 	</option>
-                  <option>	   Kazakh 	</option>
-                  <option>	   Khmer 	</option>
-                  <option>	   Korean 	</option>
-                  <option>	   Kurdish 	</option>
-                  <option>	   Lao 	</option>
-                  <option>	   Latin 	</option>
-                  <option>	   Latvian 	</option>
-                  <option>	   Lithuanian 	</option>
-                  <option>	   Maithili 	</option>
-                  <option>	   Malay 	</option>
-                  <option>	   Malayalam 	</option>
-                  <option>	   Mandarin 	</option>
-                  <option>	   Maori 	</option>
-                  <option>	   Marathi 	</option>
-                  <option>	   Min 	</option>
-                  <option>	   Mongol 	</option>
-                  <option>	   Nepali 	</option>
-                  <option>	   Norwegian 	</option>
-                  <option>	   Oriya 	</option>
-                  <option>	   Pashto 	</option>
-                  <option>	   Persian 	</option>
-                  <option>	   Polish 	</option>
-                  <option>	   Portuguese 	</option>
-                  <option>	   Punjabi 	</option>
-                  <option>	   Romanian 	</option>
-                  <option>	   Russian 	</option>
-                  <option>	   Serbo-Croatian 	</option>
-                  <option>	   Shona 	</option>
-                  <option>	   Sindhi 	</option>
-                  <option>	   Sinhala 	</option>
-                  <option>	   Slovak 	</option>
-                  <option>	   Slovene 	</option>
-                  <option>	   Spanish 	</option>
-                  <option>	   Swahili 	</option>
-                  <option>	   Swedish 	</option>
-                  <option>	   Tagalog 	</option>
-                  <option>	   Taiwanese 	</option>
-                  <option>	   Tamil 	</option>
-                  <option>	   Telugu 	</option>
-                  <option>	   Thai 	</option>
-                  <option>	   Turkish 	</option>
-                  <option>	   Ukrainian 	</option>
-                  <option>	   Urdu 	</option>
-                  <option>	   Uzbek 	</option>
-                  <option>	   Vietnamese 	</option>
-                  <option>	   Wu 	</option>
+                <td><a href="#" id="language">add</a></td>
+              </tr>
 
-                </select>
-
-              </td>
-              <td>
-                <script type="text/javascript" language="JavaScript">
-                    document.write('<select name="language_level" id="subcategory3" style="width:140px; "><option value="">Select Language</option></select>')
-                </script>
-                <noscript><select name="language_abilities[]" id="subcategory" >
-                  <option value="">Select Language First</option>
-                </select>
-                </noscript>
-              </td>
-              <td><button>add</button></td>
-            </tr>
             </table>
+
           </form>
 
           </div>
@@ -1211,8 +1107,8 @@
       </div>
     </div>
 
-    <div class="panel panel-default" style="margin-top: 30px;">
-      <div class="panel-heading" style="">Education<a href="#" id="education_edit_link" data-toggle="modal" data-target="#education_edit_link" style="color: white;font-size: 11px; margin-left: 578px;">[Edit]</a></div>
+    <div class="panel panel-default" style="margin-top: 10px;">
+      <div class="panel-heading" style="">Education<a href="#" data-toggle="modal" data-target="#education_edit_link" style="color: white;font-size: 11px; margin-left: 578px;">[Edit]</a></div>
 
       <table class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
       <tr>
@@ -1291,14 +1187,13 @@
       <% end %>
 
         </td>
-
       </tr>
     </table>
 
     <div class="control-group">
       <label class="control-label" for="submit-education-info-next"></label>
 
-      <div class="controls" style="margin: 30px 80px;">
+      <div class="controls" style="margin: 30px 100px;">
         <button id="submit-education-info-back" name="submit-education-info-back" class="patrick-btn">Back
           -
           Mailing Address and Contact Information
@@ -1329,7 +1224,7 @@
           <div class="modal-body">
             <span>
      <form id="professional-details-form"  class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-     <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+     <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
      <tr>
        <td>Total Years of Work Experience:</td>
        <td>
@@ -1347,14 +1242,15 @@
      <tr>
        <td>Function - Experience:</td>
        <td>
-         <!--<select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">-->
-         <!--</select>-->
+         <select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">
+         </select>
          <% @online_application.function_experiences.each do |function_experience| %>
              <span id="function<%= function_experience.id %>" class="language-container" ><%= function_experience.function %> - <%= function_experience.sub_function %><button  id="<%= function_experience.id %>" class="function-experience-delete">delete</button><br></span>
 
          <% end %>
 
        </td>
+       <td><a href="#" id="function_experience"> add</a> </td>
      </tr>
      <tr>
        <td>Industry - Experience:</td>
@@ -1363,9 +1259,11 @@
              <span id="industry<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><button  id="<%= industry_experience.id %>" class="industry-experience-delete">delete</button> <br></span>
 
          <% end %>
-         <!--<select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">-->
+         <select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
 
-         <!--</select></td>-->
+         </select></td>
+       <td><a href="#" id="industry_experience"> add</a> </td>
+       </td>
          </tr>
      <tr>
      <td>Work Authorization:</td>
@@ -1639,6 +1537,7 @@
              <span id="geographic<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> - <%= geographic_experience.country %><button  id="<%= geographic_experience.id %>" class="geographic-experience-delete">delete</button><br></span>
 
          <% end %></td>
+       <td><a href="#" id="geographic_experience"> add</a> </td>
      </tr>
      <tr>
        <td>Years of Supervisory Work Experience:</td>
@@ -1716,167 +1615,6 @@
      </table>
      </form>
   </span>
-  <span>
-<form name="professional_detail" class="form-horizontal" method="post" action="/admissions/function/<%= @online_application.id %>">
-  <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
-    <tr>
-      <td>Function - Experience:</td>
-      <td>
-
-        <select name="function" id="function" class="input-xlarge  dropdown-value" onchange="javascript: functionlist(this.options[this.selectedIndex].value);">
-          <option value="">Select Category</option>
-          <option>Administration	</option>
-          <option>Advertising	</option>
-          <option>Artist	</option>
-          <option>Business Development	</option>
-          <option>	Consulting	</option>
-          <option>	Economic Analysis / Research	</option>
-          <option>	Education (Administrator / Faculty)	</option>
-          <option>	Engineering	</option>
-          <option>	Entrepreneurship	</option>
-          <option>	Finance	</option>
-          <option>	Fundraising / Development	</option>
-          <option>	Headhunters/ Exec. Search	</option>
-          <option>	Healthcare	</option>
-          <option>	Human Resources	</option>
-          <option>	Journalist / Author / Writer / Editor	</option>
-          <option>	Lawyer / Legal Professional	</option>
-          <option>	Legislative Aide / Lobbying / Advocate	</option>
-          <option>	Management	</option>
-          <option>	Management Development Program	</option>
-          <option>	Manufacturing	</option>
-          <option>	Marketing	</option>
-          <option>	Military	</option>
-          <option>	Multimedia Production / Graphic Design	</option>
-          <option>	Pharmaceuticals 	</option>
-          <option>	Purchasing / Procurement	</option>
-          <option>	Real Estate	</option>
-          <option>	Research & Development	</option>
-          <option>	Sales	</option>
-          <option>	Strategic Planning / Corporate Development	</option>
-          <option>	Information Technology	</option>
-          <option>	Technical Writer	</option>
-          <option>	Programmer	</option>
-
-        </select>
-
-      </td>
-      <td>
-        <script type="text/javascript" language="JavaScript">
-            document.write('<select name="sub_function" id="sub_function" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
-        </script>
-        <noscript><select name="function[]" id="subcategory" >
-          <option value="">Select Sub-Category</option>
-        </select>
-        </noscript>
-      </td>
-      <td>
-        <button>add</button>
-      </td>
-    </tr>
-  </table>
-
-</form>
-
-  </span>
-
-  <span>
-    <form name="industry_professional_detail" class="form-horizontal" method="post" action="/admissions/industry/<%= @online_application.id %>">
-      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
-        <tr>
-          <td>Industry - Experience:</td>
-          <td>
-            <select name="industry" id="industry" class="input-xlarge  dropdown-value" onchange="javascript: industrylist(this.options[this.selectedIndex].value);">
-              <option value="">Select Category</option>
-              <option>	Accounting	</option>
-              <option>	Advertising	</option>
-              <option>	Aerospace / Aviation / Defense	</option>
-              <option>	Agribusiness	</option>
-              <option>	Automotive	</option>
-              <option>	Construction	</option>
-              <option>	Consulting	</option>
-              <option>	Consumer Products	</option>
-              <option>	Economic Development / Microfinance	</option>
-              <option>	Education	</option>
-              <option>	Energy / Utilities	</option>
-              <option>	Engineering Services	</option>
-              <option>	Entertainment	</option>
-              <option>	Environmental Services & Sustainability	</option>
-              <option>	Financial	</option>
-              <option>	Government	</option>
-              <option>	Healthcare	</option>
-              <option>	Hospitality / Tourism	</option>
-              <option>	Human Resources / Recruitment	</option>
-              <option>	International Trade - Import / Export	</option>
-              <option>	Law / Legal Services	</option>
-              <option>	Manufacturing	</option>
-              <option>	Media	</option>
-              <option>	Natural Resources	</option>
-              <option>	Nonprofits & Social Enterprises	</option>
-              <option>	Pharmaceutical	</option>
-              <option>	Real Estate	</option>
-              <option>	Retail	</option>
-              <option>	Technology	</option>
-              <option>	Telecom	</option>
-              <option>	Transportation / Logistics	</option>
-
-
-            </select>
-          </td>
-          <td>
-            <script type="text/javascript" language="JavaScript">
-                document.write('<select name="sub_industry" id="sub_industry" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
-            </script>
-            <noscript><select name="function[]" id="subcategory" >
-              <option value="">Select Sub-Category</option>
-            </select>
-            </noscript>
-          </td>
-          <td>
-            <button>add</button>
-          </td>
-        </tr>
-      </table>
-
-    </form>
-  </span>
-            <!--for the geographic-->
-  <span>
-    <form name="geographic_professional_detail" class="form-horizontal" method="post" action="/admissions/geographic/<%= @online_application.id %>">
-      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
-        <tr>
-          <td>Geographic - Experience:</td>
-          <td>
-            <select name="continent" id="continent" class="input-xlarge  dropdown-value" onchange="javascript: geographiclist(this.options[this.selectedIndex].value);">
-              <option value="">Select Category</option>
-              <option>	  NORTH AMERICA	</option>
-              <option>	  AFRICA	</option>
-              <option>	  ASIA	</option>
-              <option>	  EUROPE	</option>
-              <option>	  LATIN AMERICA & THE CARIBBEAN	</option>
-              <option>	  MIDDLE EAST	</option>
-              <option>	  OCEANIA  Australia 	</option>
-
-
-            </select>
-          </td>
-          <td>
-            <script type="text/javascript" language="JavaScript">
-                document.write('<select name="country" id="geographic" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
-            </script>
-            <noscript><select name="function[]" id="geographic" >
-              <option value="">Select Sub-Category</option>
-            </select>
-            </noscript>
-          </td>
-          <td>
-            <button>add</button>
-          </td>
-        </tr>
-      </table>
-
-    </form>
-  </span>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -1886,7 +1624,7 @@
       </div>
     </div>
 
-    <div class="panel panel-default" style="margin-top: 30px;">
+    <div class="panel panel-default" style="margin-top: 10px;">
       <div class="panel-heading" style="">Work Experience<a href="#" id="professional_edit_link" data-toggle="modal" data-target="#professional_edit_link" style="color: white;font-size: 11px; margin-left: 540px;">[Edit]</a></div>
 
       <table class="table" style="margin: 0 auto;width: 550px;color:#333;" cellpadding="3">
@@ -1981,7 +1719,7 @@
       </tr>
     </table>
 
-    <div class="control-group" style="margin: 30px 35px;">
+    <div class="control-group" style="margin: 30px 200px;">
       <label class="control-label" for="submit-employment-info-back"></label>
       <div class="controls">
         <button id="submit-employment-info-back" name="submit-employment-info-back" class="patrick-btn">Back
@@ -2002,8 +1740,78 @@
 <div id="page-4">
   <div class="content">
 
-    <div class="panel panel-default" style="margin-top: 30px;">
-      <div class="panel-heading" style="">Industry - Preference<a href="#" id="preference_edit_link" style="color: white;font-size: 11px; margin-left: 515px;">[Edit]</a></div>
+    <!-- Modal -->
+    <div class="modal fade" id="preference_edit_link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">My Preferences</h4>
+          </div>
+          <div class="modal-body">
+            <form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
+              <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+                <tr>
+                  <td>Industry - Preference:</td>
+                  <td>
+                    <% @online_application.preference_industries.each do |preference_industry| %>
+                        <span id="pre_industry<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><button  id="<%= preference_industry.id %>" class="preference-industry-delete">delete</button><br></span>
+                    <% end %>
+                  </td>
+                  <td><a href="#" id="industry_preference"> add</a> </td>
+                </tr>
+                <tr>
+                  <td>Most Important Criteria for Choosing a Job:</td>
+                  <td>
+                    <% @online_application.preference_criteriums.each do |preference_criteriums| %>
+                        <span id="pre_criteria<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %> <button  id="<%= preference_criteriums.id %>" class="preference-criteria-delete">delete</button><br></span>
+                    <% end %>
+                  </td>
+                  <td><a href="#" id="important_criteria"> add</a> </td>
+                </tr>
+                <tr>
+                  <td>Desired job titles:</td>
+                  <td>
+                    <input id="" name="preference[job_title]" value="<%= @preference.job_title %>" type="text" class="input-xlarge">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Desired Salary after MBA (per annum):</td>
+                  <td>
+                    <select id="salary_after_mba" name="preference[salary_after_mba]" class="input-xlarge dropdown-value" data-chosen-value="<%= @preference.salary_after_mba %>">
+                      <option>Below $10,000</option>
+                      <option>$10,000 - $14,999</option>
+                      <option>$15,000 - $19,999</option>
+                      <option>$20,000 - $24,999</option>
+                      <option>$25,000 - $29,999</option>
+                      <option>$30,000 - $34,999</option>
+                      <option>$35,000 - $39,999</option>
+                      <option>$40,000 - $44,999</option>
+                      <option>$45,000 - $49,999</option>
+                      <option>$50,000 above</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Candidate Job Reporting Status:</td>
+                  <td>
+                    <input id="" name="preference[candidate_job_status]" value="<%= @preference.candidate_job_status %>" type="text" class="input-xlarge">
+                  </td>
+                </tr>
+              </table>
+            </form>
+      </span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" id="preferences-submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default" style="margin-top: 10px;">
+      <div class="panel-heading" style="">Industry - Preference<a href="#" id="preference_edit_link" data-toggle="modal" data-target="#preference_edit_link" style="color: white;font-size: 11px; margin-left: 515px;">[Edit]</a></div>
 
       <table class="table" style="margin: 0 auto;width: 500px;color:#333;" cellpadding="3">
       <tr>
@@ -2047,7 +1855,7 @@
     <div class="control-group">
       <label class="control-label" for="education-back"></label>
 
-      <div class="controls" style="margin: 30px 230px;">
+      <div class="controls" style="margin: 30px 250px;">
         <button id="submit-preferences-info-back" name="submit-preferences-info-back" class="patrick-btn">Back
           -
           Work Experience

@@ -41,6 +41,10 @@ html {
   margin-top: 10px;
 }
 
+.content-container {
+//  height: 946px;
+}
+
 .footer {
   display: block;
   width: 710px;
@@ -92,6 +96,7 @@ html {
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
+  box-shadow: 0 0 7px black;
 }
 
 .leftcolumn ul {
@@ -310,6 +315,7 @@ input[type="text"], select, input[type="date"], input[type="password"] {
 
 .panel {
   border:1px solid #146D55;
+  box-shadow: 0 0 15px black;
 }
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {

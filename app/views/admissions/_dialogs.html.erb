@@ -1,225 +1,217 @@
 
-<div id="preferences_dialog" title="My Preferences" style="overflow-y: auto;">
-<span>
-  <form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
-      <tr>
-        <td>Industry - Preference:</td>
-        <td>
-          <% @online_application.preference_industries.each do |preference_industry| %>
-              <span id="pre_industry<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><button  id="<%= preference_industry.id %>" class="preference-industry-delete">delete</button><br></span>
-
-          <% end %>
-        </td>
-      </tr>
-      <tr>
-        <td>Most Important Criteria for Choosing a Job:</td>
-        <td>
-          <% @online_application.preference_criteriums.each do |preference_criteriums| %>
-              <span id="pre_criteria<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %> <button  id="<%= preference_criteriums.id %>" class="preference-criteria-delete">delete</button><br></span>
-
-          <% end %>
-        </td>
-      </tr>
-      <tr>
-        <td>Desired job titles:</td>
-        <td>
-          <input id="" name="preference[job_title]" value="<%= @preference.job_title %>" type="text" class="input-xlarge">
-        </td>
-      </tr>
-      <tr>
-        <td>Desired Salary after MBA (per annum):</td>
-        <td>
-
-          <select id="salary_after_mba" name="preference[salary_after_mba]" class="input-xlarge dropdown-value" data-chosen-value="<%= @preference.salary_after_mba %>">
-
-            <option>Below $10,000</option>
-            <option>$10,000 - $14,999</option>
-            <option>$15,000 - $19,999</option>
-            <option>$20,000 - $24,999</option>
-            <option>$25,000 - $29,999</option>
-            <option>$30,000 - $34,999</option>
-            <option>$35,000 - $39,999</option>
-            <option>$40,000 - $44,999</option>
-            <option>$45,000 - $49,999</option>
-            <option>$50,000 above</option>
-
-
-          </select>
-
-        </td>
-      </tr>
-      <tr>
-        <td>Candidate Job Reporting Status:</td>
-        <td>
-          <input id="" name="preference[candidate_job_status]" value="<%= @preference.candidate_job_status %>" type="text" class="input-xlarge">
-        </td>
-      </tr>
-    </table>
-
-  </form>
+<!--<div id="preferences_dialog" title="My Preferences" style="overflow-y: auto;">-->
+<!--<span>-->
+  <!--<form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">-->
+    <!--<table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">-->
+      <!--<tr>-->
+        <!--<td>Industry - Preference:</td>-->
+        <!--<td>-->
+          <!--<% @online_application.preference_industries.each do |preference_industry| %>-->
+              <!--<span id="pre_industry<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><button  id="<%= preference_industry.id %>" class="preference-industry-delete">delete</button><br></span>-->
+          <!--<% end %>-->
+        <!--</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>Most Important Criteria for Choosing a Job:</td>-->
+        <!--<td>-->
+          <!--<% @online_application.preference_criteriums.each do |preference_criteriums| %>-->
+              <!--<span id="pre_criteria<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %> <button  id="<%= preference_criteriums.id %>" class="preference-criteria-delete">delete</button><br></span>-->
+          <!--<% end %>-->
+        <!--</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>Desired job titles:</td>-->
+        <!--<td>-->
+          <!--<input id="" name="preference[job_title]" value="<%= @preference.job_title %>" type="text" class="input-xlarge">-->
+        <!--</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>Desired Salary after MBA (per annum):</td>-->
+        <!--<td>-->
+          <!--<select id="salary_after_mba" name="preference[salary_after_mba]" class="input-xlarge dropdown-value" data-chosen-value="<%= @preference.salary_after_mba %>">-->
+            <!--<option>Below $10,000</option>-->
+            <!--<option>$10,000 - $14,999</option>-->
+            <!--<option>$15,000 - $19,999</option>-->
+            <!--<option>$20,000 - $24,999</option>-->
+            <!--<option>$25,000 - $29,999</option>-->
+            <!--<option>$30,000 - $34,999</option>-->
+            <!--<option>$35,000 - $39,999</option>-->
+            <!--<option>$40,000 - $44,999</option>-->
+            <!--<option>$45,000 - $49,999</option>-->
+            <!--<option>$50,000 above</option>-->
+          <!--</select>-->
+        <!--</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>Candidate Job Reporting Status:</td>-->
+        <!--<td>-->
+          <!--<input id="" name="preference[candidate_job_status]" value="<%= @preference.candidate_job_status %>" type="text" class="input-xlarge">-->
+        <!--</td>-->
+      <!--</tr>-->
+    <!--</table>-->
+  <!--</form>-->
 
 
-<span>
-    <form name="preference_industry_detail" class="form-horizontal" method="post" action="/admissions/preference_industry/<%= @online_application.id %>">
-      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
-        <tr>
-          <td>Industry - Experience:</td>
-          <td>
-            <select name="industry" id="industry" class="input-xlarge  dropdown-value" onchange="javascript: preferenceindustrylist(this.options[this.selectedIndex].value);">
-              <option value="">	Select One Industry	</option>
-              <option>	Consumer Products / Fast Moving Consumer Goods	</option>
-              <option>	Banking	</option>
-              <option>	Financial Services	</option>
-              <option>	Advertising	</option>
-              <option>	Aerospace / Aviation / Defense	</option>
-              <option>	Agribusiness	</option>
-              <option>	Automotive	</option>
-              <option>	Real Estate	</option>
-              <option>	Consulting	</option>
-              <option>	Executive Search Firm/ Headhunters	</option>
-              <option>	Education	</option>
-              <option>	Energy / Utilities / Natural Resources	</option>
-              <option>	Entertainment /Media	</option>
-              <option>	Environmental Services & Sustainability	</option>
-              <option>	Government / Military	</option>
-              <option>	Healthcare	</option>
-              <option>	Hospitality / Tourism	</option>
-              <option>	Law / Legal Services	</option>
-              <option>	Manufacturing	</option>
-              <option>	Nonprofits & Social Enterprises	</option>
-              <option>	Pharmaceutical	</option>
-              <option>	Real Estate	</option>
-              <option>	Retail	</option>
-              <option>	Technology	</option>
-              <option>	Telecommunication Services	</option>
-              <option>	Transportation / Logistics	</option>
+<!--<span>-->
+    <!--<form name="preference_industry_detail" class="form-horizontal" method="post" action="/admissions/preference_industry/<%= @online_application.id %>">-->
+      <!--<table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">-->
+        <!--<tr>-->
+          <!--<td>Industry - Experience:</td>-->
+          <!--<td>-->
+            <!--<select name="industry" id="industry" class="input-xlarge  dropdown-value" onchange="javascript: preferenceindustrylist(this.options[this.selectedIndex].value);">-->
+              <!--<option value="">	Select One Industry	</option>-->
+              <!--<option>	Consumer Products / Fast Moving Consumer Goods	</option>-->
+              <!--<option>	Banking	</option>-->
+              <!--<option>	Financial Services	</option>-->
+              <!--<option>	Advertising	</option>-->
+              <!--<option>	Aerospace / Aviation / Defense	</option>-->
+              <!--<option>	Agribusiness	</option>-->
+              <!--<option>	Automotive	</option>-->
+              <!--<option>	Real Estate	</option>-->
+              <!--<option>	Consulting	</option>-->
+              <!--<option>	Executive Search Firm/ Headhunters	</option>-->
+              <!--<option>	Education	</option>-->
+              <!--<option>	Energy / Utilities / Natural Resources	</option>-->
+              <!--<option>	Entertainment /Media	</option>-->
+              <!--<option>	Environmental Services & Sustainability	</option>-->
+              <!--<option>	Government / Military	</option>-->
+              <!--<option>	Healthcare	</option>-->
+              <!--<option>	Hospitality / Tourism	</option>-->
+              <!--<option>	Law / Legal Services	</option>-->
+              <!--<option>	Manufacturing	</option>-->
+              <!--<option>	Nonprofits & Social Enterprises	</option>-->
+              <!--<option>	Pharmaceutical	</option>-->
+              <!--<option>	Real Estate	</option>-->
+              <!--<option>	Retail	</option>-->
+              <!--<option>	Technology	</option>-->
+              <!--<option>	Telecommunication Services	</option>-->
+              <!--<option>	Transportation / Logistics	</option>-->
 
-            </select>
-          </td>
-          <td>
-            <script type="text/javascript" language="JavaScript">
-                document.write('<select name="sub_industry" id="sub_industry" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
-            </script>
-            <noscript><select name="function[]" id="subcategory" >
-              <option value="">Select Sub-Category</option>
-            </select>
-            </noscript>
-          </td>
-          <td>
-            <button>add</button>
-          </td>
-        </tr>
-      </table>
+            <!--</select>-->
+          <!--</td>-->
+          <!--<td>-->
+            <!--<script type="text/javascript" language="JavaScript">-->
+<!--           document.write('<select name="sub_industry" id="sub_industry" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
+            <!--</script>-->
+            <!--<noscript><select name="function[]" id="subcategory" >-->
+              <!--<option value="">Select Sub-Category</option>-->
+            <!--</select>-->
+            <!--</noscript>-->
+          <!--</td>-->
+          <!--<td>-->
+            <!--<button>add</button>-->
+          <!--</td>-->
+        <!--</tr>-->
+      <!--</table>-->
 
-    </form>
-  </span>
+    <!--</form>-->
+  <!--</span>-->
 
-  <span>
-    <form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/preference_criteria/<%= @online_application.id %>">
-      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
-        <tr>
-          <td>Most Important Criteria for Choosing a Job:</td>
-          <td>
-            <select name="criteria" id="criteria" class="input-xlarge  dropdown-value" >
-              <option value="">	Select One Industry	</option>
-              <option>	Job Profile	</option>
-              <option>	Location	</option>
-              <option>	Compensation and Benefits	</option>
-              <option>	Company	</option>
-              <option>	Industry	</option>
-
-
-            </select>
-          </td>
-
-          <td>
-            <button>add</button>
-          </td>
-        </tr>
-      </table>
-
-    </form>
-  </span>
-  <span>
-    <button id="cancel_preferences" name="cancel_preferences" class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
-      Cancel
-    </button>
-    <button id="preferences-submit" name="preferences-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">
-      Update Details
-    </button>
-
-</span>
-    </span>
-</div>
-
-<div id="change_pass_dialog" title="Change Password">
-  <div id="dialog-content">
-    <form id="change-pass-form" class="form-horizontal" method="post" action="/api/changePassword/<%= @online_application.id %>">
-      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
-        <tr>
-          <td>
-          Current Password:</td>
-          <td>
-          <input type="password" id="password" name="CurrentPassword" >
-          </td>
-        </tr>
-        <tr>
-          <td>
-          New Password:</td>
-          <td>
-          <input type="password" name="newPassword" id="form_password">
-          </td>
-        </tr>
-        <tr>
-          <td>
-          Confirm Password:</td>
-          <td>
-          <input type="password" name="confirmPassword" >
-          </td>
-        </tr>
-      </table>
+  <!--<span>-->
+    <!--<form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/preference_criteria/<%= @online_application.id %>">-->
+      <!--<table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">-->
+        <!--<tr>-->
+          <!--<td>Most Important Criteria for Choosing a Job:</td>-->
+          <!--<td>-->
+            <!--<select name="criteria" id="criteria" class="input-xlarge  dropdown-value" >-->
+              <!--<option value="">	Select One Industry	</option>-->
+              <!--<option>	Job Profile	</option>-->
+              <!--<option>	Location	</option>-->
+              <!--<option>	Compensation and Benefits	</option>-->
+              <!--<option>	Company	</option>-->
+              <!--<option>	Industry	</option>-->
 
 
-    </form>
-    <button class="btn" id="cancel_pass" name="cancel_pass" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" >Cancel</button>
-    <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" id="changepass-submit" name="changepass-submit">Save Changes
-    </button>
-  </div>
-</div>
+            <!--</select>-->
+          <!--</td>-->
 
-<div id="change_email_dialog" title="Change Email">
-  <div id="dialog-content">
-    <form id="changeEmailForm"  method="post" action="/api/changeEmail/<%= @online_application.id %>">
-      <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
-        <tr>
-          <td>
-          Current Email:</td>
-          <td>
-            <input name="currentEmail" type="text">
-          </td>
-        </tr>
-        <tr>
-          <td>
-          New Email:</td>
-          <td>
-            <input type="text" name="newEmail"></td>
-        </tr>
-        <tr>
-          <td>
-          Confirm Email:</td>
-          <td>
-            <input type="text" name="confirmEmail"></td>
-        </tr>
-      </table>
-      <button class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>
-      <button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Save Changes
-      </button>
-    </form>
+          <!--<td>-->
+            <!--<button>add</button>-->
+          <!--</td>-->
+        <!--</tr>-->
+      <!--</table>-->
+
+    <!--</form>-->
+  <!--</span>-->
+  <!--<span>-->
+    <!--<button id="cancel_preferences" name="cancel_preferences" class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">-->
+      <!--Cancel-->
+    <!--</button>-->
+    <!--<button id="preferences-submit" name="preferences-submit" class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">-->
+      <!--Update Details-->
+    <!--</button>-->
+
+<!--</span>-->
+    <!--</span>-->
+<!--</div>-->
+
+<!--<div id="change_pass_dialog" title="Change Password">-->
+  <!--<div id="dialog-content">-->
+    <!--<form id="change-pass-form" class="form-horizontal" method="post" action="/api/changePassword/<%= @online_application.id %>">-->
+      <!--<table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">-->
+        <!--<tr>-->
+          <!--<td>-->
+          <!--Current Password:</td>-->
+          <!--<td>-->
+          <!--<input type="password" id="password" name="CurrentPassword" >-->
+          <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>-->
+          <!--New Password:</td>-->
+          <!--<td>-->
+          <!--<input type="password" name="newPassword" id="form_password">-->
+          <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>-->
+          <!--Confirm Password:</td>-->
+          <!--<td>-->
+          <!--<input type="password" name="confirmPassword" >-->
+          <!--</td>-->
+        <!--</tr>-->
+      <!--</table>-->
 
 
-  </div>
-</div>
+    <!--</form>-->
+    <!--<button class="btn" id="cancel_pass" name="cancel_pass" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" >Cancel</button>-->
+    <!--<button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" id="changepass-submit" name="changepass-submit">Save Changes-->
+    <!--</button>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<div id="change_email_dialog" title="Change Email">-->
+  <!--<div id="dialog-content">-->
+    <!--<form id="changeEmailForm"  method="post" action="/api/changeEmail/<%= @online_application.id %>">-->
+      <!--<table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">-->
+        <!--<tr>-->
+          <!--<td>-->
+          <!--Current Email:</td>-->
+          <!--<td>-->
+            <!--<input name="currentEmail" type="text">-->
+          <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>-->
+          <!--New Email:</td>-->
+          <!--<td>-->
+            <!--<input type="text" name="newEmail"></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>-->
+          <!--Confirm Email:</td>-->
+          <!--<td>-->
+            <!--<input type="text" name="confirmEmail"></td>-->
+        <!--</tr>-->
+      <!--</table>-->
+      <!--<button class="btn" style="margin-left: 230px;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Cancel</button>-->
+      <!--<button class="btn" style="font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;">Save Changes-->
+      <!--</button>-->
+    <!--</form>-->
+
+
+  <!--</div>-->
+<!--</div>-->
 
 <div id="club_affiliation_dialog" title="Add Affiliation">
 
@@ -253,7 +245,7 @@
       </td>
     </tr>
   </table>
-  <button id="submit-club-affil" class="btn" style="margin: 10px 145px;">Add</button>
+  <button id="submit-club-affil" class="patrick-btn" style="margin: 10px 145px;">Add</button>
 </form>
 
 </div>
@@ -285,7 +277,7 @@
           </noscript></td>
       </tr>
     </table>
-    <button id="submit-club-affil" class="btn-info">submit</button>
+    <button id="submit-club-affil" class="patrick-btn" style="margin: 10px 145px;">submit</button>
   </form>
 
 </div>
@@ -318,7 +310,7 @@
       </td>
       </tr>
     </table>
-    <button class="btn">submit</button>
+    <button class="patrick-btn" style="margin: 10px 145px;">submit</button>
   </form>
 </div>
 
@@ -352,7 +344,350 @@
         </td>
       </tr>
     </table>
-    <button class="btn" >Submit</button>
+    <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
   </form>
+
+</div>
+
+<div id="function_experience_dialog" title="Add Function Experience">
+  <form name="professional_detail" class="form-horizontal" method="post" action="/admissions/function/<%= @online_application.id %>">
+    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+      <tr>
+        <td>Function - Experience:</td>
+        <td>
+
+          <select name="function" id="function" class="input-xlarge  dropdown-value" onchange="javascript: functionlist(this.options[this.selectedIndex].value);">
+            <option value="">Select Category</option>
+            <option>Administration	</option>
+            <option>Advertising	</option>
+            <option>Artist	</option>
+            <option>Business Development	</option>
+            <option>	Consulting	</option>
+            <option>	Economic Analysis / Research	</option>
+            <option>	Education (Administrator / Faculty)	</option>
+            <option>	Engineering	</option>
+            <option>	Entrepreneurship	</option>
+            <option>	Finance	</option>
+            <option>	Fundraising / Development	</option>
+            <option>	Headhunters/ Exec. Search	</option>
+            <option>	Healthcare	</option>
+            <option>	Human Resources	</option>
+            <option>	Journalist / Author / Writer / Editor	</option>
+            <option>	Lawyer / Legal Professional	</option>
+            <option>	Legislative Aide / Lobbying / Advocate	</option>
+            <option>	Management	</option>
+            <option>	Management Development Program	</option>
+            <option>	Manufacturing	</option>
+            <option>	Marketing	</option>
+            <option>	Military	</option>
+            <option>	Multimedia Production / Graphic Design	</option>
+            <option>	Pharmaceuticals 	</option>
+            <option>	Purchasing / Procurement	</option>
+            <option>	Real Estate	</option>
+            <option>	Research & Development	</option>
+            <option>	Sales	</option>
+            <option>	Strategic Planning / Corporate Development	</option>
+            <option>	Information Technology	</option>
+            <option>	Technical Writer	</option>
+            <option>	Programmer	</option>
+
+          </select>
+
+          <script type="text/javascript" language="JavaScript">
+              document.write('<select name="sub_function" id="sub_function" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
+          </script>
+          <noscript><select name="function[]" id="subcategory" >
+            <option value="">Select Sub-Category</option>
+          </select>
+          </noscript>
+          <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+    </table>
+
+  </form>
+</div>
+
+<div id="industry_experience_dialog" title="Add Industry Experience">
+
+  <form name="industry_professional_detail" class="form-horizontal" method="post" action="/admissions/industry/<%= @online_application.id %>">
+    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+      <tr>
+        <td>Industry - Experience:</td>
+        <td>
+          <select name="industry" id="industry" class="input-xlarge  dropdown-value" onchange="javascript: industrylist(this.options[this.selectedIndex].value);">
+            <option value="">Select Category</option>
+            <option>	Accounting	</option>
+            <option>	Advertising	</option>
+            <option>	Aerospace / Aviation / Defense	</option>
+            <option>	Agribusiness	</option>
+            <option>	Automotive	</option>
+            <option>	Construction	</option>
+            <option>	Consulting	</option>
+            <option>	Consumer Products	</option>
+            <option>	Economic Development / Microfinance	</option>
+            <option>	Education	</option>
+            <option>	Energy / Utilities	</option>
+            <option>	Engineering Services	</option>
+            <option>	Entertainment	</option>
+            <option>	Environmental Services & Sustainability	</option>
+            <option>	Financial	</option>
+            <option>	Government	</option>
+            <option>	Healthcare	</option>
+            <option>	Hospitality / Tourism	</option>
+            <option>	Human Resources / Recruitment	</option>
+            <option>	International Trade - Import / Export	</option>
+            <option>	Law / Legal Services	</option>
+            <option>	Manufacturing	</option>
+            <option>	Media	</option>
+            <option>	Natural Resources	</option>
+            <option>	Nonprofits & Social Enterprises	</option>
+            <option>	Pharmaceutical	</option>
+            <option>	Real Estate	</option>
+            <option>	Retail	</option>
+            <option>	Technology	</option>
+            <option>	Telecom	</option>
+            <option>	Transportation / Logistics	</option>
+
+
+          </select>
+        </td>
+        <td>
+          <script type="text/javascript" language="JavaScript">
+              document.write('<select name="sub_industry" id="sub_industry" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
+          </script>
+          <noscript><select name="function[]" id="subcategory" >
+            <option value="">Select Sub-Category</option>
+          </select>
+          </noscript>
+        </td>
+        </tr>
+        </table>
+    <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+      </form>
+
+</div>
+
+<div id="language_dialog" title="Add Language">
+
+  <form id="-language-education-details-form" name="languageeducationdetails" class="form-horizontal" method="post" action="/admissions/language/<%= @online_application.id %>">
+  <table style="padding-left: 60px; margin-left: 6px;width: 565;color: #7d7d7d;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+    <tr>
+      <td>Language Ability:</td>
+      <td>
+        <!--<input id="last-school-end  -date" name="education_detail[language]" value="<%= @education_detail.language %>" type="text" class="input-xlarge">-->
+        <select name="language_name" id="category" onchange="javascript: languagefunction(this.options[this.selectedIndex].value);" style="width: 180px;">
+          <option>Select One</option>
+          <option>	   Albanian	</option>
+          <option>	   American Sign Language 	</option>
+          <option>	   Arabic 	</option>
+          <option>	   Armenian 	</option>
+          <option>	   Azerbaijani 	</option>
+          <option>	   Belarusian 	</option>
+          <option>	   Bengali 	</option>
+          <option>	   Bhojpuri 	</option>
+          <option>	   Bosnian 	</option>
+          <option>	   Bulgarian 	</option>
+          <option>	   Burmese 	</option>
+          <option>	   Cantonese 	</option>
+          <option>	   Catalan 	</option>
+          <option>	   Croatian 	</option>
+          <option>	   Czech 	</option>
+          <option>	   Danish 	</option>
+          <option>	   Dutch 	</option>
+          <option>	   Farsi 	</option>
+          <option>	   Fijian 	</option>
+          <option>	   Filipino 	</option>
+          <option>	   Finnish 	</option>
+          <option>	   French 	</option>
+          <option>	   Georgian 	</option>
+          <option>	   German 	</option>
+          <option>	   Greek 	</option>
+          <option>	   Gujarati 	</option>
+          <option>	   Hakka 	</option>
+          <option>	   Hebrew 	</option>
+          <option>	   Hindi 	</option>
+          <option>	   Hungarian 	</option>
+          <option>	   Icelandic 	</option>
+          <option>	   Indonesian 	</option>
+          <option>	   Italian 	</option>
+          <option>	   Japanese 	</option>
+          <option>	   Javanese 	</option>
+          <option>	   Kannada 	</option>
+          <option>	   Kazakh 	</option>
+          <option>	   Khmer 	</option>
+          <option>	   Korean 	</option>
+          <option>	   Kurdish 	</option>
+          <option>	   Lao 	</option>
+          <option>	   Latin 	</option>
+          <option>	   Latvian 	</option>
+          <option>	   Lithuanian 	</option>
+          <option>	   Maithili 	</option>
+          <option>	   Malay 	</option>
+          <option>	   Malayalam 	</option>
+          <option>	   Mandarin 	</option>
+          <option>	   Maori 	</option>
+          <option>	   Marathi 	</option>
+          <option>	   Min 	</option>
+          <option>	   Mongol 	</option>
+          <option>	   Nepali 	</option>
+          <option>	   Norwegian 	</option>
+          <option>	   Oriya 	</option>
+          <option>	   Pashto 	</option>
+          <option>	   Persian 	</option>
+          <option>	   Polish 	</option>
+          <option>	   Portuguese 	</option>
+          <option>	   Punjabi 	</option>
+          <option>	   Romanian 	</option>
+          <option>	   Russian 	</option>
+          <option>	   Serbo-Croatian 	</option>
+          <option>	   Shona 	</option>
+          <option>	   Sindhi 	</option>
+          <option>	   Sinhala 	</option>
+          <option>	   Slovak 	</option>
+          <option>	   Slovene 	</option>
+          <option>	   Spanish 	</option>
+          <option>	   Swahili 	</option>
+          <option>	   Swedish 	</option>
+          <option>	   Tagalog 	</option>
+          <option>	   Taiwanese 	</option>
+          <option>	   Tamil 	</option>
+          <option>	   Telugu 	</option>
+          <option>	   Thai 	</option>
+          <option>	   Turkish 	</option>
+          <option>	   Ukrainian 	</option>
+          <option>	   Urdu 	</option>
+          <option>	   Uzbek 	</option>
+          <option>	   Vietnamese 	</option>
+          <option>	   Wu 	</option>
+
+        </select>
+
+      </td>
+      <td>
+        <script type="text/javascript" language="JavaScript">
+            document.write('<select name="language_level" id="subcategory3" style="width:140px; "><option value="">Select Language</option></select>')
+        </script>
+        <noscript><select name="language_abilities[]" id="subcategory" >
+          <option value="">Select Language First</option>
+        </select>
+        </noscript>
+      </td>
+    </tr>
+  </table>
+    <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+  </form>
+
+</div>
+
+<div id="geographic_experience_dialog" title="Add Geographic Experience">
+
+  <form name="geographic_professional_detail" class="form-horizontal" method="post" action="/admissions/geographic/<%= @online_application.id %>">
+    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+      <tr>
+        <td>Geographic - Experience:</td>
+        <td>
+          <select name="continent" id="continent" class="input-xlarge  dropdown-value" onchange="javascript: geographiclist(this.options[this.selectedIndex].value);">
+            <option value="">Select Category</option>
+            <option>	  NORTH AMERICA	</option>
+            <option>	  AFRICA	</option>
+            <option>	  ASIA	</option>
+            <option>	  EUROPE	</option>
+            <option>	  LATIN AMERICA & THE CARIBBEAN	</option>
+            <option>	  MIDDLE EAST	</option>
+            <option>	  OCEANIA  Australia 	</option>
+
+
+          </select>
+        </td>
+        <td>
+          <script type="text/javascript" language="JavaScript">
+              document.write('<select name="country" id="geographic" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
+          </script>
+          <noscript><select name="function[]" id="geographic" >
+            <option value="">Select Sub-Category</option>
+          </select>
+          </noscript>
+        </td>
+      </tr>
+    </table>
+    <button class="patrick-btn" style="margin: 10px 145px;" >Submit</button>
+  </form>
+
+</div>
+
+<div id="industry_preference_dialog" title="Add Industry Preference">
+
+  <form name="preference_industry_detail" class="form-horizontal" method="post" action="/admissions/preference_industry/<%= @online_application.id %>">
+    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+      <tr>
+        <td>Industry - Preference:</td>
+        <td>
+          <select name="industry" id="industry" class="input-xlarge  dropdown-value" onchange="javascript: preferenceindustrylist(this.options[this.selectedIndex].value);">
+            <option value="">	Select One Industry	</option>
+            <option>	Consumer Products / Fast Moving Consumer Goods	</option>
+            <option>	Banking	</option>
+            <option>	Financial Services	</option>
+            <option>	Advertising	</option>
+            <option>	Aerospace / Aviation / Defense	</option>
+            <option>	Agribusiness	</option>
+            <option>	Automotive	</option>
+            <option>	Real Estate	</option>
+            <option>	Consulting	</option>
+            <option>	Executive Search Firm/ Headhunters	</option>
+            <option>	Education	</option>
+            <option>	Energy / Utilities / Natural Resources	</option>
+            <option>	Entertainment /Media	</option>
+            <option>	Environmental Services & Sustainability	</option>
+            <option>	Government / Military	</option>
+            <option>	Healthcare	</option>
+            <option>	Hospitality / Tourism	</option>
+            <option>	Law / Legal Services	</option>
+            <option>	Manufacturing	</option>
+            <option>	Nonprofits & Social Enterprises	</option>
+            <option>	Pharmaceutical	</option>
+            <option>	Real Estate	</option>
+            <option>	Retail	</option>
+            <option>	Technology	</option>
+            <option>	Telecommunication Services	</option>
+            <option>	Transportation / Logistics	</option>
+
+          </select>
+        </td>
+        <td>
+          <script type="text/javascript" language="JavaScript">
+              document.write('<select name="sub_industry" id="sub_industry" style="width: 223px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select>')
+          </script>
+          <noscript><select name="function[]" id="subcategory" >
+            <option value="">Select Sub-Category</option>
+          </select>
+          </noscript>
+        </td>
+      </tr>
+    </table>
+    <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
+  </form>
+
+</div>
+
+<div id="important_criteria_dialog" title="Add Important Criteria for Choosing a Job">
+
+  <form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/preference_criteria/<%= @online_application.id %>">
+    <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+      <tr>
+        <td>Most Important Criteria for Choosing a Job:</td>
+        <td>
+          <select name="criteria" id="criteria" class="input-xlarge  dropdown-value" >
+            <option value="">	Select One Industry	</option>
+            <option>	Job Profile	</option>
+            <option>	Location	</option>
+            <option>	Compensation and Benefits	</option>
+            <option>	Company	</option>
+            <option>	Industry	</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+  </form>
+  <button class="patrick-btn" style="margin: 10px 145px;">Submit</button>
 
 </div>

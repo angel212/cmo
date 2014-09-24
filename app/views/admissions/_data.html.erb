@@ -44,6 +44,59 @@
                 }
         );
 
+        $("#function_experience_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+
+        $("#industry_experience_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+
+        $("#geographic_experience_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+
+        $("#language_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+        $("#industry_preference_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+        $("#important_criteria_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+
+
         $("#club_aff").click(function () {
 
             $("#club_affiliation_dialog").dialog("open");
@@ -59,6 +112,30 @@
         $("#certification_open").click(function () {
 
             $("#certification_dialog").dialog("open");
+        });
+        $("#function_experience").click(function () {
+
+            $("#function_experience_dialog").dialog("open");
+        });
+        $("#language").click(function () {
+
+            $("#language_dialog").dialog("open");
+        });
+        $("#industry_experience").click(function () {
+
+            $("#industry_experience_dialog").dialog("open");
+        });
+        $("#geographic_experience").click(function () {
+
+            $("#geographic_experience_dialog").dialog("open");
+        });
+        $("#industry_preference").click(function () {
+
+            $("#industry_preference_dialog").dialog("open");
+        });
+        $("#important_criteria").click(function () {
+
+            $("#important_criteria_dialog").dialog("open");
         });
 
     });
