@@ -1,0 +1,39 @@
+<h1>Listing education_schools</h1>
+
+<table>
+  <tr>
+    <th>Online application form</th>
+    <th>School</th>
+    <th>Location</th>
+    <th>Month started</th>
+    <th>Year started</th>
+    <th>Month ended</th>
+    <th>Year ended</th>
+    <th>Course</th>
+    <th>Remarks</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @education_schools.each do |education_school| %>
+  <tr>
+    <td><%= education_school.online_application_form_id %></td>
+    <td><%= education_school.school %></td>
+    <td><%= education_school.location %></td>
+    <td><%= education_school.month_started %></td>
+    <td><%= education_school.year_started %></td>
+    <td><%= education_school.month_ended %></td>
+    <td><%= education_school.year_ended %></td>
+    <td><%= education_school.course %></td>
+    <td><%= education_school.remarks %></td>
+    <td><%= link_to 'Show', education_school %></td>
+    <td><%= link_to 'Edit', edit_education_school_path(education_school) %></td>
+    <td><%= link_to 'Destroy', education_school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Education school', new_education_school_path %>

@@ -1189,6 +1189,20 @@
         </td>
       </tr>
     </table>
+      <legend>Schools</legend>
+
+        <% @online_application.education_schools.each do |education_school| %>
+          <table id="educ_table<%= education_school.id %>" class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
+            <tr><td><span id="education_school_disp<%= education_school.id %>-1" class="language-container" >School <%= education_school.school %></td></tr> </span>
+            <tr><td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" >Location <%= education_school.location %></td></tr> </span>
+            <tr><td><span id="education_school_disp<%= education_school.id %>-3" class="language-container" >Month-Year started <%= education_school.month_started %> - <%= education_school.year_started %></td></tr> </span>
+            <tr><td><span id="education_school_disp<%= education_school.id %>-4" class="language-container" >Month-Year ended <%= education_school.month_ended %> - <%= education_school.year_ended %></td></tr> </span>
+            <tr><td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" >Course <%= education_school.course %></td></tr> </span>
+            <tr><td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" >Location <%= education_school.remarks %></td></tr> </span>
+          </table>
+          <br>
+        <% end %>
+
 
     <div class="control-group">
       <label class="control-label" for="submit-education-info-next"></label>

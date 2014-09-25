@@ -1,4 +1,7 @@
 OnlineApplication::Application.routes.draw do
+  resources :education_schools
+
+
   resources :certifications
 
 

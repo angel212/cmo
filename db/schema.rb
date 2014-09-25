@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140923031018) do
+ActiveRecord::Schema.define(:version => 20140925020733) do
 
   create_table "certifications", :force => true do |t|
     t.integer  "online_application_form_id"
@@ -56,6 +56,20 @@ ActiveRecord::Schema.define(:version => 20140923031018) do
     t.string   "language"
     t.string   "sub_other_degree"
     t.string   "sub_undergrad"
+  end
+
+  create_table "education_schools", :force => true do |t|
+    t.integer  "online_application_form_id"
+    t.string   "school"
+    t.string   "location"
+    t.string   "month_started"
+    t.string   "year_started"
+    t.string   "month_ended"
+    t.string   "year_ended"
+    t.string   "course"
+    t.string   "remarks"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "employment_details", :force => true do |t|
