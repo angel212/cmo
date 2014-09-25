@@ -16,6 +16,7 @@ has_many :preference_criteriums
   has_many :undergraduate_majors
   has_many :other_graduates
   has_many :certifications
+  has_many :education_schools
 
   DTL_STATUS = {10 => 'registered', 20 => 'recorded', 30 => 'for verification', 40 => 'paid', 90 => 'Deleted'}
   DTL_SUBSTATUS = {10 => {11 => 'registered'},

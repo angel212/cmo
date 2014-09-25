@@ -1,0 +1,53 @@
+<%= form_for(@education_school) do |f| %>
+  <% if @education_school.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@education_school.errors.count, "error") %> prohibited this education_school from being saved:</h2>
+
+      <ul>
+      <% @education_school.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :online_application_form_id %><br />
+    <%= f.number_field :online_application_form_id %>
+  </div>
+  <div class="field">
+    <%= f.label :school %><br />
+    <%= f.text_field :school %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :month_started %><br />
+    <%= f.text_field :month_started %>
+  </div>
+  <div class="field">
+    <%= f.label :year_started %><br />
+    <%= f.text_field :year_started %>
+  </div>
+  <div class="field">
+    <%= f.label :month_ended %><br />
+    <%= f.text_field :month_ended %>
+  </div>
+  <div class="field">
+    <%= f.label :year_ended %><br />
+    <%= f.text_field :year_ended %>
+  </div>
+  <div class="field">
+    <%= f.label :course %><br />
+    <%= f.text_field :course %>
+  </div>
+  <div class="field">
+    <%= f.label :remarks %><br />
+    <%= f.text_field :remarks %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

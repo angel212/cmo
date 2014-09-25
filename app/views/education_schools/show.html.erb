@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Online application form:</b>
+  <%= @education_school.online_application_form_id %>
+</p>
+
+<p>
+  <b>School:</b>
+  <%= @education_school.school %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @education_school.location %>
+</p>
+
+<p>
+  <b>Month started:</b>
+  <%= @education_school.month_started %>
+</p>
+
+<p>
+  <b>Year started:</b>
+  <%= @education_school.year_started %>
+</p>
+
+<p>
+  <b>Month ended:</b>
+  <%= @education_school.month_ended %>
+</p>
+
+<p>
+  <b>Year ended:</b>
+  <%= @education_school.year_ended %>
+</p>
+
+<p>
+  <b>Course:</b>
+  <%= @education_school.course %>
+</p>
+
+<p>
+  <b>Remarks:</b>
+  <%= @education_school.remarks %>
+</p>
+
+
+<%= link_to 'Edit', edit_education_school_path(@education_school) %> |
+<%= link_to 'Back', education_schools_path %>

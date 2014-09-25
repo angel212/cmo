@@ -20,6 +20,7 @@ class AdmissionsController < ApplicationController
     @undergrad = @online_application.undergraduate_majors
     @other_degree = @online_application.other_graduates
     @certification = @online_application.certifications
+    @educ_school = @online_application.education_schools
 
     @student=1
 
