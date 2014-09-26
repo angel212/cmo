@@ -96,6 +96,23 @@
                 }
         );
 
+        $("#change_pass_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+        $("#change_email_dialog").dialog(
+                {
+                    modal: true,
+                    autoOpen: false,
+                    width: 500,
+                    draggable: false
+                }
+        );
+
 
         $("#club_aff").click(function () {
 
@@ -136,6 +153,14 @@
         $("#important_criteria").click(function () {
 
             $("#important_criteria_dialog").dialog("open");
+        });
+        $("#change_email_link").click(function () {
+
+            $("#change_email_dialog").dialog("open");
+        });
+        $("#change_password_link").click(function () {
+
+            $("#change_pass_dialog").dialog("open");
         });
 
     });
