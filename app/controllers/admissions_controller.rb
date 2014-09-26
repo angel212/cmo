@@ -178,6 +178,12 @@ class AdmissionsController < ApplicationController
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
+  def add_multiple_school
+    EducationSchool.create!(:online_application_form_id => params[:id] , :school => params[:school], :location => params[:location] , :month_started => params[:month_started] , :year_started => params[:year_started] , :month_ended => params[:month_ended] , :year_ended => params[:year_ended] , :course => params[:course] , :remarks => params[:remarks])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+
+  end
+
   def delete_language
     language_ability = LanguageAbility.find(params[:id])
     language_ability.delete
