@@ -10,7 +10,7 @@
 <!-- Text input-->
 <div class="content">
 
-  <div class="modal fade" id="personal_edit_link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" data-backdrop="static" data-keyboard="false"  id="personal_edit_link" tabindex="-1" role="dialog" aria-labelledby="mymodalname" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -484,7 +484,7 @@
   </div>
 
   <div class="panel panel-default" style="margin-top: 30px;">
-    <div class="panel-heading" style="">Personal Details<a href="#" id="personal_edit_link" data-toggle="modal" data-target="#personal_edit_link" style="color: white;font-size: 11px; float:right;"><span class="glyphicon glyphicon-cog"></span></a></div>
+    <div class="panel-heading" style="">Personal Details<a href="#" id="personal_edit_link" data-toggle="modal" data-target="#personal_edit_link" style="color: white;font-size: 11px; float:right;"><span> Edit <span class="glyphicon glyphicon-cog"></span></span></a></div>
 <table class="table" style=" margin:20px auto 0 auto;width: 400px;color:#333;" cellpadding="3">
 <tr>
   <td>First Name:</td>
@@ -549,7 +549,7 @@
   <div class="content">
 
     <!-- Modal -->
-    <div class="modal fade" id="mailing_edit_link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="mailing_edit_link" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -896,7 +896,7 @@
       <div class="panel-heading" style="">Mailing Address and Contact Information<a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#mailing_edit_link" style="color: white;
               font-size: 11px;
               float:right;
-              padding: 0;"><span class="glyphicon glyphicon-cog"></span></a></div>
+              padding: 0;"><span> Edit </span><span class="glyphicon glyphicon-cog"></span></a></div>
 
       <table class="table" style="width: 400px; margin:20px auto 0 auto;color:#333;" cellpadding="3">
       <tr>
@@ -992,7 +992,7 @@
   <div class="content">
 
     <!-- Modal -->
-    <div class="modal fade" id="education_edit_link" tabindex="-1" role="dialog" aria-labelledby="mymodalname" aria-hidden="true">
+    <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="education_edit_link" tabindex="-1" role="dialog" aria-labelledby="mymodalname" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -1107,7 +1107,7 @@
     </div>
 
     <div class="panel panel-default" style="margin-top: 30px;">
-      <div class="panel-heading" style="">Education<a href="#" data-toggle="modal" data-target="#education_edit_link" style="color: white;font-size: 11px; float:right;"><span class="glyphicon glyphicon-cog"></span></a></div>
+      <div class="panel-heading" style="">Education<a href="#" data-toggle="modal" data-target="#education_edit_link" style="color: white;font-size: 11px; float:right;"><span> Edit </span><span class="glyphicon glyphicon-cog"></span></a></div>
 
       <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;" cellpadding="3">
       <tr>
@@ -1188,10 +1188,10 @@
         </td>
       </tr>
     </table>
-      <legend>Schools <a href="#" data-toggle="modal" data-target="#add_school">[Add School]</a></legend>
+      <h1>Schools</h1><a href="#" data-toggle="modal" data-target="#add_school" style="float: right"><span>Add School </span><span class="glyphicon glyphicon-plus"></span></a>
 
       <!-- Modal -->
-      <div class="modal fade" id="add_school" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade" id="add_school" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -1265,7 +1265,9 @@
           <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;" cellpadding="4">
             <tr>
               <td>School:</td>
-              <td><span id="education_school_disp-1" class="language-container" ><%= education_school.school %> <a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#school-educ-<%= education_school.id %>" style="color: white; font-size: 11px;    margin-left: 380px;position: absolute; padding: 0;">[Edit]</a></span> </td></tr>
+              <td><span id="education_school_disp-1" class="language-container" ><%= education_school.school %></span> </td>
+              <td><a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#school-educ-<%= education_school.id %>" style="font-size: 11px;padding: 0;"><span> Update School </span><span class="glyphicon glyphicon-cog"></span></a></td>
+            </tr>
 
             <tr>
               <td>Location:</td>
@@ -1292,7 +1294,7 @@
         <% @online_application.education_schools.each do |education_school| %>
 
 
-        <div class="modal fade" id="school-educ-<%= education_school.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="school-educ-<%= education_school.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -1361,7 +1363,7 @@
   <div class="content">
 
     <!-- Modal -->
-    <div class="modal fade" id="professional_edit_link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="professional_edit_link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -1411,8 +1413,7 @@ glyphicon glyphicon-plus"></span></a> </td>
 
          <% end %>
        </td>
-       <td><a href="#" id="industry_experience"><span class="
-glyphicon glyphicon-plus"></span></a> </td>
+       <td><a href="#" id="industry_experience"><span class="glyphicon glyphicon-plus"></span></a> </td>
        </td>
          </tr>
      <tr>
@@ -1687,8 +1688,7 @@ glyphicon glyphicon-plus"></span></a> </td>
              <span id="geographic<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> - <%= geographic_experience.country %><a href="#"><span id="<%= geographic_experience.id %>" class="geographic-experience-delete glyphicon glyphicon-trash"></span></a><br></span>
 
          <% end %></td>
-       <td><a href="#" id="geographic_experience"><span class="
-glyphicon glyphicon-plus"></span></a> </td>
+       <td><a href="#" id="geographic_experience"><span class="glyphicon glyphicon-plus"></span></a> </td>
      </tr>
      <tr>
        <td>Years of Supervisory Work Experience:</td>
@@ -1776,7 +1776,7 @@ glyphicon glyphicon-plus"></span></a> </td>
     </div>
 
     <div class="panel panel-default" style="margin-top: 30px;">
-      <div class="panel-heading" style="">Work Experience<a href="#" id="professional_edit_link" data-toggle="modal" data-target="#professional_edit_link" style="color: white;font-size: 11px; float:right"><span class="glyphicon glyphicon-cog"></span></a></div>
+      <div class="panel-heading" style="">Work Experience<a href="#" id="professional_edit_link" data-toggle="modal" data-target="#professional_edit_link" style="color: white;font-size: 11px; float:right"><span>Edit </span><span class="glyphicon glyphicon-cog"></span></a></div>
 
       <table class="table" style=" margin:20px auto 0 auto;width: 550px;color:#333;" cellpadding="3">
       <tr>
@@ -1892,7 +1892,7 @@ glyphicon glyphicon-plus"></span></a> </td>
   <div class="content">
 
     <!-- Modal -->
-    <div class="modal fade" id="preference_edit_link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="preference_edit_link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -1962,7 +1962,7 @@ glyphicon glyphicon-plus"></span></a> </td>
     </div>
 
     <div class="panel panel-default" style="margin-top: 30px;">
-      <div class="panel-heading" style="">Industry - Preference<a href="#" id="preference_edit_link" data-toggle="modal" data-target="#preference_edit_link" style="color: white;font-size: 11px; float:right;"><span class="glyphicon glyphicon-cog"></span></a></div>
+      <div class="panel-heading" style="">Industry - Preference<a href="#" id="preference_edit_link" data-toggle="modal" data-target="#preference_edit_link" style="color: white;font-size: 11px; float:right;"><span>Edit </span><span class="glyphicon glyphicon-cog"></span></a></div>
 
       <table class="table" style=" margin:20px auto 0 auto;width: 500px;color:#333;" cellpadding="3">
       <tr>
