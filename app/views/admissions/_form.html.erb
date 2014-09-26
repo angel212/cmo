@@ -1200,41 +1200,143 @@
               <h4 class="modal-title" id="myModalLabel">Add School</h4>
             </div>
             <div class="modal-body">
-              ...
+             <form id="school-multiple-form" class="form-horizontal" method="post" action="/admissions/school/<%= @online_application.id %>">
+               <table>
+                 <tr>
+                   <td>
+                     School:
+                   </td>
+                   <td><input type="text" name="school" ></td>
+                 </tr>
+                 <tr>
+                   <td>
+                     Location:
+                   </td>
+                   <td><input type="text" name="location" ></td>
+                 </tr>
+                 <tr>
+                   <td>
+                     Month-Year Started:
+                   </td>
+                   <td>
+                     <input type="text" name="month_started" placeholder="month">
+                   </td>
+                   <td>
+                     <input type="text" name="year_started" placeholder="year">
+                   </td>
+                 </tr>
+
+                 <tr>
+                   <td>
+                     Month-Year Ended:
+                   </td>
+                   <td>
+                     <input type="text" name="month_ended" placeholder="month">
+                   </td>
+                   <td>
+                     <input type="text" name="year_ended" placeholder="year">
+                   </td>
+                 </tr>
+                 <tr>
+                   <td>
+                     Course:
+                   </td>
+                   <td> <input type="text" name="course" placeholder="....."></td>
+                 </tr>
+                 <tr>
+                   <td>
+                     Remarks:
+                   </td>
+                   <td><input type="text" name="remarks" placeholder="....."></td>
+
+                 </tr>
+               </table>
+             </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-primary" id="add-school-submit">Save changes</button>
             </div>
           </div>
         </div>
       </div>
 
         <% @online_application.education_schools.each do |education_school| %>
-          <table id="educ_table<%= education_school.id %>" class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
+          <div id="table-school-<%= education_school.id %>">
+          <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;" cellpadding="4">
             <tr>
               <td>School:</td>
-              <td><span id="education_school_disp<%= education_school.id %>-1" class="language-container" ><%= education_school.school %></td></tr> </span>
+              <td><span id="education_school_disp-1" class="language-container" ><%= education_school.school %> <a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#school-educ-<%= education_school.id %>" style="color: white; font-size: 11px;    margin-left: 380px;position: absolute; padding: 0;">[Edit]</a></span> </td></tr>
+
             <tr>
               <td>Location:</td>
-              <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><%= education_school.location %></td></tr> </span>
+              <td colspan="2"><span id="education_school_disp-2" class="language-container" ><%= education_school.location %></td></tr> </span>
+
             <tr>
               <td>Month-Year started: </td>
-              <td><span id="education_school_disp<%= education_school.id %>-3" class="language-container" ><%= education_school.month_started %> - <%= education_school.year_started %></td></tr> </span>
+              <td colspan="2"><span id="education_school_disp-3" class="language-container" ><%= education_school.month_started %> - <%= education_school.year_started %></td></tr> </span>
             <tr>
               <td>Month-Year ended: </td>
-              <td><span id="education_school_disp<%= education_school.id %>-4" class="language-container" ><%= education_school.month_ended %> - <%= education_school.year_ended %></td></tr> </span>
+              <td colspan="2"><span id="education_school_disp-4" class="language-container" ><%= education_school.month_ended %> - <%= education_school.year_ended %></td></tr> </span>
             <tr>
               <td>Course:</td>
-              <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><%= education_school.course %></td></tr> </span>
+              <td colspan="2"><span id="education_school_disp-2" class="language-container" ><%= education_school.course %></td></tr> </span>
             <tr>
               <td>Remarks:</td>
-              <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><%= education_school.remarks %></td></tr> </span>
+              <td colspan="2"><span id="education_school_disp-2" class="language-container" ><%= education_school.remarks %></td></tr> </span>
           </table>
+          </div>
           <br>
           <hr/>
         <% end %>
 
+        <% @online_application.education_schools.each do |education_school| %>
+
+
+        <div class="modal fade" id="school-educ-<%= education_school.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add School</h4>
+              </div>
+              <div class="modal-body">
+                <form id="school-multiple-form" class="form-horizontal" method="post" action="/admissions/edit_school/<%= @online_application.id %>">
+
+
+
+                  <table id="educ_table<%= education_school.id %>" class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
+                    <tr>
+                      <td>School:</td>
+                      <td><span id="education_school_disp<%= education_school.id %>-1" class="language-container" ><%= education_school.school %></td></tr> </span>
+                    <tr>
+                      <td>Location:</td>
+                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><%= education_school.location %></td></tr> </span>
+                    <tr>
+                      <td>Month-Year started: </td>
+                      <td><span id="education_school_disp<%= education_school.id %>-3" class="language-container" ><%= education_school.month_started %> - <%= education_school.year_started %></td></tr> </span>
+                    <tr>
+                      <td>Month-Year ended: </td>
+                      <td><span id="education_school_disp<%= education_school.id %>-4" class="language-container" ><%= education_school.month_ended %> - <%= education_school.year_ended %></td></tr> </span>
+                    <tr>
+                      <td>Course:</td>
+                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><%= education_school.course %></td></tr> </span>
+                    <tr>
+                      <td>Remarks:</td>
+                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><%= education_school.remarks %></td></tr> </span>
+                  </table>
+
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="add-school-submit">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <% end %>
 
     <div class="control-group">
       <label class="control-label" for="submit-education-info-next"></label>

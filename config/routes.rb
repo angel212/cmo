@@ -133,6 +133,9 @@ OnlineApplication::Application.routes.draw do
   post'/admissions/undergrad_major/(:id)' => 'admissions#create_undergrad'
   post'/admissions/other_degree/(:id)' => 'admissions#create_other_degree'
   post'/admissions/certification/(:id)' => 'admissions#create_certification'
+  post'/admissions/school/(:id)' => 'admissions#add_multiple_school'
+
+
 
   get 'api/language_ability/delete/(:id)' => 'admissions#delete_language'
   get '/api/function_experience/delete/(:id)' => 'admissions#delete_function'
@@ -145,8 +148,9 @@ OnlineApplication::Application.routes.draw do
   get '/api/certification/delete/(:id)' => 'admissions#delete_certification'
 
   get '/api/undergrad/delete/(:id)' => 'admissions#delete_undergrad'
-
+  get '/api/undergrad/delete/(:id)' => 'admissions#delete_undergrad'
   post'/api/changeEmail/(:id)' => 'admissions#changeEmail'
   post'/api/changePassword/(:id)' => 'admissions#changePassword'
+
   root :to => 'home#index'
 end

@@ -366,6 +366,10 @@ $(document).ready(function (e) {
         e.preventDefault();
         $('#change-pass-form').submit();
     })
+    $('#add-school-submit').click(function (e) {
+        e.preventDefault();
+        $('#school-multiple-form').submit();
+    })
 })
 
 function showTerminationDate() {
@@ -570,6 +574,7 @@ $(document).ready(function(){
         }
         e.preventDefault();
     })
+
 
 
     //    $('#submit-club-affil').click(function() {
