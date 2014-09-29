@@ -54,6 +54,24 @@ form {
 //  margin: 0 0 0px !important;
 }
 
+.glyphicon-plus {
+  float: right;
+}
+
+.modal-content {
+  width:700px;
+  margin-left: -50px;
+}
+
+table a:focus{
+  outline: 0;
+  text-decoration: none;
+}
+
+table a:hover {
+  text-decoration: none;
+}
+
 .footer {
   display: block;
   width: 710px;

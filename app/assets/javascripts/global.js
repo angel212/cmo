@@ -366,6 +366,10 @@ $(document).ready(function (e) {
         e.preventDefault();
         $('#change-pass-form').submit();
     })
+    $('#changeemail-submit').click(function (e) {
+        e.preventDefault();
+        $('#changeEmailForm').submit();
+    })
     $('#add-school-submit').click(function (e) {
         e.preventDefault();
         $('#school-multiple-form').submit();
