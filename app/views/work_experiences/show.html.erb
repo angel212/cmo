@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Online application form:</b>
+  <%= @work_experience.online_application_form_id %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @work_experience.company %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @work_experience.title %>
+</p>
+
+<p>
+  <b>Month started:</b>
+  <%= @work_experience.month_started %>
+</p>
+
+<p>
+  <b>Year started:</b>
+  <%= @work_experience.year_started %>
+</p>
+
+<p>
+  <b>Month ended:</b>
+  <%= @work_experience.month_ended %>
+</p>
+
+<p>
+  <b>Year ended:</b>
+  <%= @work_experience.year_ended %>
+</p>
+
+<p>
+  <b>Years:</b>
+  <%= @work_experience.years %>
+</p>
+
+<p>
+  <b>Industry:</b>
+  <%= @work_experience.industry %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @work_experience.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_experience_path(@work_experience) %> |
+<%= link_to 'Back', work_experiences_path %>

@@ -1,4 +1,7 @@
 OnlineApplication::Application.routes.draw do
+  resources :work_experiences
+
+
   resources :education_schools
 
 
