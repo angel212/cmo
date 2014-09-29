@@ -1,0 +1,41 @@
+<h1>Listing work_experiences</h1>
+
+<table>
+  <tr>
+    <th>Online application form</th>
+    <th>Company</th>
+    <th>Title</th>
+    <th>Month started</th>
+    <th>Year started</th>
+    <th>Month ended</th>
+    <th>Year ended</th>
+    <th>Years</th>
+    <th>Industry</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @work_experiences.each do |work_experience| %>
+  <tr>
+    <td><%= work_experience.online_application_form_id %></td>
+    <td><%= work_experience.company %></td>
+    <td><%= work_experience.title %></td>
+    <td><%= work_experience.month_started %></td>
+    <td><%= work_experience.year_started %></td>
+    <td><%= work_experience.month_ended %></td>
+    <td><%= work_experience.year_ended %></td>
+    <td><%= work_experience.years %></td>
+    <td><%= work_experience.industry %></td>
+    <td><%= work_experience.location %></td>
+    <td><%= link_to 'Show', work_experience %></td>
+    <td><%= link_to 'Edit', edit_work_experience_path(work_experience) %></td>
+    <td><%= link_to 'Destroy', work_experience, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Work experience', new_work_experience_path %>
