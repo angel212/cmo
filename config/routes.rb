@@ -134,6 +134,7 @@ OnlineApplication::Application.routes.draw do
   post'/admissions/other_degree/(:id)' => 'admissions#create_other_degree'
   post'/admissions/certification/(:id)' => 'admissions#create_certification'
   post'/admissions/school/(:id)' => 'admissions#add_multiple_school'
+  post'/admissions/edit_school/(:id)' => 'admissions#edit_school'
 
 
 
