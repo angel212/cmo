@@ -1304,36 +1304,40 @@
                 <h4 class="modal-title" id="myModalLabel">Add School</h4>
               </div>
               <div class="modal-body">
-                <form id="school-multiple-form" class="form-horizontal" method="post" action="/admissions/edit_school/<%= @online_application.id %>">
+                <form id="school-multiple-form<%= education_school.id %>" class="form-horizontal" method="post" action="/admissions/edit_school/<%= @online_application.id %>">
 
 
 
                   <table id="educ_table<%= education_school.id %>" class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
                     <tr>
                       <td>School:</td>
-                      <td><span id="education_school_disp<%= education_school.id %>-1" class="language-container" ><%= education_school.school %></td></tr> </span>
+                      <td><span id="education_school_disp<%= education_school.id %>-1" class="language-container" ><input type="text" value=" <%= education_school.school %>" name="school"> </span></td></tr>
                     <tr>
                       <td>Location:</td>
-                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><%= education_school.location %></td></tr> </span>
+                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" value="<%= education_school.location %>" name="location"></span></td></tr>
                     <tr>
                       <td>Month-Year started: </td>
-                      <td><span id="education_school_disp<%= education_school.id %>-3" class="language-container" ><%= education_school.month_started %> - <%= education_school.year_started %></td></tr> </span>
+                      <td><span id="education_school_disp<%= education_school.id %>-3" class="language-container" ><input type="text" value="<%= education_school.month_started %>" name="month_started"> <input type="text" value="<%= education_school.year_started %>" name="year_started"> </span></td></tr>
                     <tr>
                       <td>Month-Year ended: </td>
-                      <td><span id="education_school_disp<%= education_school.id %>-4" class="language-container" ><%= education_school.month_ended %> - <%= education_school.year_ended %></td></tr> </span>
+                      <td><span id="education_school_disp<%= education_school.id %>-4" class="language-container" ><input type="text" value="<%= education_school.month_ended %>" name="month_ended">  - <input type="text" value="<%= education_school.year_ended %>" name="yeart_ended" > </span></td></tr>
                     <tr>
                       <td>Course:</td>
-                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><%= education_school.course %></td></tr> </span>
+                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" value="<%= education_school.course %>" name="course" ></span></td></tr>
                     <tr>
                       <td>Remarks:</td>
-                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><%= education_school.remarks %></td></tr> </span>
+                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" value="<%= education_school.remarks %>" name="remarks"> </span></td></tr>
                   </table>
+<br>
+<hr>
+                  <p style="float:right; margin-right: 60px;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-primary edit_schol" name="educ_id" value="<%= education_school.id %>" >Save changes</button></p>
 
                 </form>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="add-school-submit">Save changes</button>
+                &nbsp;
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                <!--<button type="button" class="btn btn-primary edit_schol" id="<%= education_school.id %>" >Save changes</button>-->
               </div>
             </div>
           </div>

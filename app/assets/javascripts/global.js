@@ -370,6 +370,11 @@ $(document).ready(function (e) {
         e.preventDefault();
         $('#school-multiple-form').submit();
     })
+    $('.edit_school').click(function(e)
+    {
+        e.preventDefault();
+        $('#school-multiple-form' + e.target.id).submit();
+    })
 })
 
 function showTerminationDate() {

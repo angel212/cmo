@@ -183,6 +183,13 @@ class AdmissionsController < ApplicationController
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
 
   end
+  def edit_school
+    @multiple_school = EducationSchool.find(params[:educ_id])
+    @multiple_school.update_attributes!( :school => params[:school], :location => params[:location] , :month_started => params[:month_started] , :year_started => params[:year_started] , :month_ended => params[:month_ended] , :year_ended => params[:year_ended] , :course => params[:course] , :remarks => params[:remarks])
+
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+
+  end
 
   def delete_language
     language_ability = LanguageAbility.find(params[:id])
