@@ -22,6 +22,7 @@ class AdmissionsController < ApplicationController
     @certification = @online_application.certifications
     @educ_school = @online_application.education_schools
 
+
     @student=1
 
     respond_to do |format|

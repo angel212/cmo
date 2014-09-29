@@ -1860,6 +1860,44 @@
       </tr>
     </table>
 
+<legend>Work</legend>
+  <% @online_application.work_experiences.each do |work_experience| %>
+      <div id="table-work-<%= work_experience.id %>">
+        <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;" cellpadding="4">
+          <tr>
+            <td>Company Name:</td>
+            <td><span id="work_disp-1" class="language-container" ><%= work_experience.company %></span> </td>
+            <td><a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#work_exp-<%= work_experience.id %>" style="font-size: 11px;padding: 0;float:right;" class="update_school"><span> Update School </span><span class="glyphicon glyphicon-cog"></span></a></td>
+          </tr>
+
+          <tr>
+            <td>Job Title/Designation:</td>
+            <td colspan="2"><span id="work_disp-2" class="language-container" ><%= work_experience.title %></td></tr> </span>
+
+          <tr>
+            <td>Month-Year Started: </td>
+            <td colspan="2"><span id="work_disp-3" class="language-container" ><%= work_experience.month_started %> - <%= work_experience.year_started %></td></tr> </span>
+          <tr>
+            <td>Month-Year Ended: </td>
+            <td colspan="2"><span id="work_disp-4" class="language-container" ><%= work_experience.month_ended %> - <%= work_experience.year_ended %></td></tr> </span>
+          <tr>
+            <td>Years:</td>
+            <td colspan="2"><span id="work_disp-5" class="language-container" ><%= work_experience.years %></td></tr> </span>
+          <tr>
+            <td>Job Function:</td>
+            <td colspan="2"><span id="work_disp-6" class="language-container" ><%= work_experience.job_function %></td></tr> </span>
+          <tr>
+            <td>Company Industry:</td>
+            <td colspan="2"><span id="work_disp-7" class="language-container" ><%= work_experience.industry %></td></tr> </span>
+          <tr>
+            <td>Location:</td>
+            <td colspan="2"><span id="work_disp-8" class="language-container" ><%= work_experience.location %></td></tr> </span>
+        </table>
+      </div>
+      <br>
+      <hr/>
+  <% end %>
+
     <div class="control-group" style="margin: 30px 200px;">
       <label class="control-label" for="submit-employment-info-back"></label>
       <div class="controls">

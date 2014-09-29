@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140929024929) do
+ActiveRecord::Schema.define(:version => 20140929040927) do
 
   create_table "certifications", :force => true do |t|
     t.integer  "online_application_form_id"
@@ -291,6 +291,7 @@ ActiveRecord::Schema.define(:version => 20140929024929) do
     t.string   "location"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+    t.string   "job_function"
   end
 
 end
