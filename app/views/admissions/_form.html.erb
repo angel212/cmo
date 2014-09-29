@@ -1184,11 +1184,13 @@
          <span id="lang_disp<%= language_ability.id %>" class="language-container" >&bull; <%= language_ability.name %> - <%= language_ability.level %> <!--<button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button>--><br></span>
 
       <% end %>
-
+<br/>
         </td>
       </tr>
     </table>
-      <h1>Schools</h1><a href="#" data-toggle="modal" data-target="#add_school" style="float: right"><span>Add School </span><span class="glyphicon glyphicon-plus"></span></a>
+      <div class="panel-heading">
+        Schools<a href="#" data-toggle="modal" data-target="#add_school" style="color: white;font-size: 11px;float: right;"><span>Add School </span><span class="glyphicon glyphicon-plus"></span></a>
+      </div>
 
       <!-- Modal -->
       <div class="modal fade" id="add_school" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -1266,7 +1268,7 @@
             <tr>
               <td>School:</td>
               <td><span id="education_school_disp-1" class="language-container" ><%= education_school.school %></span> </td>
-              <td><a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#school-educ-<%= education_school.id %>" style="font-size: 11px;padding: 0;"><span> Update School </span><span class="glyphicon glyphicon-cog"></span></a></td>
+              <td><a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#school-educ-<%= education_school.id %>" style="font-size: 11px;padding: 0;float:right;" class="update_school"><span> Update School </span><span class="glyphicon glyphicon-cog"></span></a></td>
             </tr>
 
             <tr>
@@ -1373,7 +1375,7 @@
           <div class="modal-body">
             <span>
      <form id="professional-details-form"  class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-     <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+     <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
      <tr>
        <td>Total Years of Work Experience:</td>
        <td>
@@ -1391,8 +1393,6 @@
      <tr>
        <td>Function - Experience:</td>
        <td>
-         <select name="employment_detail[function_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.function_exp %>">
-         </select>
          <% @online_application.function_experiences.each do |function_experience| %>
              <span id="function<%= function_experience.id %>" class="language-container" ><%= function_experience.function %> - <%= function_experience.sub_function %><a href="#"><span id="<%= function_experience.id %>" class="function-experience-delete glyphicon glyphicon-trash"></span></a><br></span>
 
@@ -1405,9 +1405,6 @@ glyphicon glyphicon-plus"></span></a> </td>
      <tr>
        <td>Industry - Experience:</td>
        <td>
-         <select id="industry_exp" name="employment_detail[industry_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.industry_exp %>">
-
-         </select>
          <% @online_application.industry_experiences.each do |industry_experience| %>
              <span id="industry<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><a href="#"><span id="<%= industry_experience.id %>" class="industry-experience-delete glyphicon glyphicon-trash"></span></a><br></span>
 
@@ -1901,7 +1898,7 @@ glyphicon glyphicon-plus"></span></a> </td>
           </div>
           <div class="modal-body">
             <form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-              <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+              <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
                 <tr>
                   <td>Industry - Preference:</td>
                   <td>

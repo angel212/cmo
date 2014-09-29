@@ -42,8 +42,12 @@ html {
   background-color: #ffffff;
 }
 
-.content-container {
-  height: 300px;
+//.content-container {
+//  height: 300px;
+//}
+
+.panel table td:nth-child(1){
+  font-weight: bold;
 }
 
 form {
@@ -104,10 +108,32 @@ form {
   box-shadow: 0 0 7px black;
 }
 
+table {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
 .leftcolumn ul {
   list-style-type: none;
   margin-left: -40px;
 
+}
+
+.main {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.panel-heading a:hover, .panel-heading a:visited, .panel-heading a:focus{
+  text-decoration: none;
+  outline: none;
+}
+
+.glyphicon-trash {
+  float: right;
+  vertical-align: top;
 }
 
 .leftcolumn a {
@@ -119,7 +145,14 @@ form {
 }
 
 .leftcolumn a:hover {
+}
 
+.update_school:hover, .update_school:focus{
+  text-decoration: none;
+}
+
+.update_school:focus{
+  outline: none;
 }
 
 .ui-dialog .ui-dialog-titlebar-close{
