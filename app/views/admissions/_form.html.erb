@@ -20,7 +20,7 @@
         <div class="modal-body">
         <form id="personal_details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
-        <p>
+
         <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
         <tr>
           <td>First Name:</td>
@@ -1860,14 +1860,92 @@
       </tr>
     </table>
 
-<legend>Work</legend>
+      <div class="modal fade" id="add_work" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Add Work</h4>
+            </div>
+            <div class="modal-body">
+              <form id="work-multiple-form" class="form-horizontal" method="post" action="/admissions/work/<%= @online_application.id %>">
+                <table>
+                  <tr>
+                    <td>
+                     Company Name:
+                    </td>
+                    <td><input type="text" name="company" ></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Job Title/Designation:
+                    </td>
+                    <td><input type="text" name="title" ></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Month-Year Started:
+                    </td>
+                    <td>
+                      <input type="text" name="month_started" placeholder="month">
+                    </td>
+                    <td>
+                      <input type="text" name="year_started" placeholder="year" style="width:220px;">
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      Month-Year Ended:
+                    </td>
+                    <td>
+                      <input type="text" name="month_ended" placeholder="month">
+                    </td>
+                    <td>
+                      <input type="text" name="year_ended" placeholder="year" style="width:220px;">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Years:
+                    </td>
+                    <td> <input type="text" name="years" placeholder="....."></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Job Function:
+                    </td>
+                    <td><input type="text" name="function" placeholder="....."></td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      Company Industry:
+                    </td>
+                    <td><input type="text" name="industry" placeholder="....."></td>
+
+                  </tr>
+                </table>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="add-work-submit">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-heading">
+        Work<a href="#" data-toggle="modal" data-target="#add_work" style="color: white;font-size: 11px;float: right;"><span>Add Work </span><span class="glyphicon glyphicon-plus" style="float: none;"></span></a>
+      </div>
   <% @online_application.work_experiences.each do |work_experience| %>
       <div id="table-work-<%= work_experience.id %>">
         <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;" cellpadding="4">
           <tr>
             <td>Company Name:</td>
             <td><span id="work_disp-1" class="language-container" ><%= work_experience.company %></span> </td>
-            <td><a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#work_exp-<%= work_experience.id %>" style="font-size: 11px;padding: 0;float:right;" class="update_school"><span> Update School </span><span class="glyphicon glyphicon-cog"></span></a></td>
+            <td><a href="#" id="edit_link" data-toggle="modal" data-target="#work_exp-<%= work_experience.id %>" style="font-size: 11px;padding: 0;float:right;" class="update_school"><span> Update School </span><span class="glyphicon glyphicon-cog"></span></a></td>
           </tr>
 
           <tr>
@@ -1897,7 +1975,64 @@
       <br>
       <hr/>
   <% end %>
+  <% @online_application.work_experiences.each do |work_experience| %>
 
+
+        <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="work_exp-<%= work_experience.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add Work</h4>
+              </div>
+              <div class="modal-body">
+                <form id="work-multiple-form<%= work_experience.id %>" class="form-horizontal" method="post" action="/admissions/edit_work/<%= @online_application.id %>">
+
+
+
+                  <table id="educ_table<%= work_experience.id %>" class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
+                    <tr>
+                      <td>Company Name:</td>
+                      <td><span id="work_disp<%= work_experience.id %>-1" class="language-container" ><input type="text" value=" <%= work_experience.company %>" name="company"> </span></td></tr>
+                    <tr>
+                      <td>Job Title/Designation:</td>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.title %>" name="title"></span></td></tr>
+                    <tr>
+                      <td>Month-Year started: </td>
+                      <td><span id="work_disp<%= work_experience.id %>-3" class="language-container" ><input type="text" value="<%= work_experience.month_started %>" name="month_started"> <input type="text" value="<%= work_experience.year_started %>" name="year_started"> </span></td></tr>
+                    <tr>
+                      <td>Month-Year ended: </td>
+                      <td><span id="work_disp<%= work_experience.id %>-4" class="language-container" ><input type="text" value="<%= work_experience.month_ended %>" name="month_ended">  - <input type="text" value="<%= work_experience.year_ended %>" name="yeart_ended" > </span></td></tr>
+                    <tr>
+                      <td>Years:</td>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.years %>" name="years" ></span></td></tr>
+                    <tr>
+                      <td>Job Function:</td>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.job_function %>" name="function"> </span></td></tr>
+                    <tr>
+                      <td>Company Industry:</td>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.industry %>" name="industry"> </span></td></tr>
+
+                    <tr>
+                      <td>Location:</td>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.location %>" name="location"> </span></td></tr>
+                  </table>
+                  <br>
+                  <hr>
+                  <p style="float:right; margin-right: 60px;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-primary edit_schol" name="educ_id" value="<%= work_experience.id %>" >Save changes</button></p>
+
+                </form>
+              </div>
+              <div class="modal-footer">
+                &nbsp;
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                <!--<button type="button" class="btn btn-primary edit_schol" id="<%= work_experience.id %>" >Save changes</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <% end %>
     <div class="control-group" style="margin: 30px 200px;">
       <label class="control-label" for="submit-employment-info-back"></label>
       <div class="controls">

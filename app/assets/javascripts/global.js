@@ -374,10 +374,10 @@ $(document).ready(function (e) {
         e.preventDefault();
         $('#school-multiple-form').submit();
     })
-    $('.edit_school').click(function(e)
-    {
+
+    $('#add-work-submit').click(function (e) {
         e.preventDefault();
-        $('#school-multiple-form' + e.target.id).submit();
+        $('#work-multiple-form').submit();
     })
 })
 

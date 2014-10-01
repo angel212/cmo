@@ -189,7 +189,18 @@ class AdmissionsController < ApplicationController
     @multiple_school.update_attributes!( :school => params[:school], :location => params[:location] , :month_started => params[:month_started] , :year_started => params[:year_started] , :month_ended => params[:month_ended] , :year_ended => params[:year_ended] , :course => params[:course] , :remarks => params[:remarks])
 
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+  end
 
+  def add_multiple_work
+    WorkExperience.create!(:online_application_form_id => params[:id] , :company => params[:company], :title => params[:title] , :month_started => params[:month_started] , :year_started => params[:year_started] , :month_ended => params[:month_ended] , :year_ended => params[:year_ended] , :years => params[:years] , :job_function => params[:function] , :industry => params[:industry] , :location => params[:location])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+
+  end
+  def edit_multiple_work
+    @multiple_work = WorkExperience.find(params[:educ_id])
+    @multiple_work.update_attributes!( :company => params[:company], :location => params[:location] , :month_started => params[:month_started] , :year_started => params[:year_started] , :month_ended => params[:month_ended] , :year_ended => params[:year_ended] , :title => params[:title] , :years => params[:years] , :job_function => params[:function] ,:industry => params[:industry])
+
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
   def delete_language
