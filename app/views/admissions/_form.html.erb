@@ -3,14 +3,11 @@
 <form id="application-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
 <!-- Begin Page 1 -->
+
 <div id="page-1">
-
-<!-- Form Name -->
-
-<!-- Text input-->
 <div class="content">
 
-<div class="modal fade" data-backdrop="static" data-keyboard="false"  id="personal_edit_link" tabindex="-1" role="dialog" aria-labelledby="mymodalname" aria-hidden="true">
+  <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="personal_edit_link" tabindex="-1" role="dialog" aria-labelledby="mymodalname" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -19,8 +16,6 @@
         </div>
         <div class="modal-body">
         <form id="personal_details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-
-        <p>
         <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
         <tr>
           <td>First Name:</td>
@@ -481,6 +476,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
   <div class="panel panel-default" style="margin-top: 30px;">
@@ -541,6 +537,7 @@
   </div>
  </div>
 </div>
+
 <!-- End Page 1 -->
 
 <!-- Start Address Page-->
@@ -2092,7 +2089,7 @@
           </div>
           <div class="modal-body">
             <form id="changeEmailForm"  method="post" action="/api/changeEmail/<%= @online_application.id %>">
-              <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+              <table style="padding-left: 50px;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
                 <tr>
                   <td>
                     Current Email:</td>
@@ -2132,7 +2129,7 @@
           </div>
           <div class="modal-body">
             <form id="change-pass-form" class="form-horizontal" method="post" action="/api/changePassword/<%= @online_application.id %>">
-              <table style="padding-left: 50px;color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;font-size: 12px;" cellpadding="3">
+              <table style="padding-left: 50px;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
                 <tr>
                   <td>
                     Current Password:</td>
@@ -2230,7 +2227,6 @@
 </div>
 
 </form>
-</div>
 
 
 
