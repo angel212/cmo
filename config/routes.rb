@@ -152,6 +152,9 @@ OnlineApplication::Application.routes.draw do
   get '/api/club_affiliation/delete/(:id)' => 'admissions#delete_club_affiliation'
   get '/api/other_grad/delete/(:id)' => 'admissions#delete_other_grad'
   get '/api/certification/delete/(:id)' => 'admissions#delete_certification'
+  get '/api/work/delete/(:id)' => 'admissions#delete_work'
+  get '/api/school_educ/delete/(:id)' => 'admissions#delete_school'
+
 
   get '/api/undergrad/delete/(:id)' => 'admissions#delete_undergrad'
   get '/api/undergrad/delete/(:id)' => 'admissions#delete_undergrad'
