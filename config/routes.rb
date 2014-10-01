@@ -138,6 +138,8 @@ OnlineApplication::Application.routes.draw do
   post'/admissions/certification/(:id)' => 'admissions#create_certification'
   post'/admissions/school/(:id)' => 'admissions#add_multiple_school'
   post'/admissions/edit_school/(:id)' => 'admissions#edit_school'
+  post'/admissions/work/(:id)' => 'admissions#add_multiple_work'
+  post'/admissions/edit_work/(:id)' => 'admissions#edit_multiple_work'
 
 
 
