@@ -1812,9 +1812,10 @@
               <td>Remarks:</td>
               <td colspan="2"><span id="education_school_disp-2" class="language-container" ><%= education_school.remarks %></td></tr> </span>
           </table>
+            <br>
+            <hr/>
           </div>
-          <br>
-          <hr/>
+
         <% end %>
 
         <% @online_application.education_schools.each do |education_school| %>
@@ -1825,7 +1826,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add School</h4>
+                <h4 class="modal-title" id="myModalLabel">Add School<span style="float: right; margin-right: 10px;" class="school-educ-multi glyphicon glyphicon-trash" data-dismiss="modal" id="<%= education_school.id %>"></span></h4>
               </div>
               <div class="modal-body">
                 <form id="school-multiple-form<%= education_school.id %>" class="form-horizontal" method="post" action="/admissions/edit_school/<%= @online_application.id %>">
@@ -2502,9 +2503,10 @@
             <td>Location:</td>
             <td colspan="2"><span id="work_disp-8" class="language-container" ><%= work_experience.location %></td></tr> </span>
         </table>
+        <br>
+        <hr/>
       </div>
-      <br>
-      <hr/>
+
   <% end %>
   <% @online_application.work_experiences.each do |work_experience| %>
 
@@ -2514,7 +2516,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add Work</h4>
+                <h4 class="modal-title" id="myModalLabel">Add Work<span style="float: right; margin-right: 10px;" class="work-experience-multi glyphicon glyphicon-trash" data-dismiss="modal" id="<%= work_experience.id %>"></span></h4>
               </div>
               <div class="modal-body">
                 <form id="work-multiple-form<%= work_experience.id %>" class="form-horizontal" method="post" action="/admissions/edit_work/<%= @online_application.id %>">

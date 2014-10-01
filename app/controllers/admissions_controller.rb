@@ -268,7 +268,18 @@ class AdmissionsController < ApplicationController
 
     render :json => {'status' => 'success'}.to_json
   end
+  def delete_work
+    work_exp= WorkExperience.find(params[:id])
+    work_exp.delete
 
+    render :json => {'status' => 'success'}.to_json
+  end
+  def delete_school
+    school_= EducationSchool.find(params[:id])
+    school_.delete
+
+    render :json => {'status' => 'success'}.to_json
+  end
   def changeEmail
     data= OnlineApplicationForm.find(params[:id])
   if data.personal_detail.email != params[:currentEmail]

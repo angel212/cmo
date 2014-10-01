@@ -583,8 +583,30 @@ $(document).ready(function(){
         }
         e.preventDefault();
     })
+    $('.work-experience-multi').click(function(e) {
 
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("table-work-" + e.target.id).remove();
+//            $('#work_exp-' + e.target.id).modal('hide');
+            $.ajax('/api/work/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
+    $('.school-educ-multi').click(function(e) {
 
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("table-school-" + e.target.id).remove();
+//            $('#work_exp-' + e.target.id).modal('hide');
+            $.ajax('/api/school_educ/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();school-educ-multi
+    })
 
     //    $('#submit-club-affil').click(function() {
 //
