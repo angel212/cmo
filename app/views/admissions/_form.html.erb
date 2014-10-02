@@ -4,544 +4,10 @@
 
 <!-- Begin Page 1 -->
 
-<div id="personal-page">
-  <div class="content">
-  <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="personal_edit_link" tabindex="-1" role="dialog" aria-labelledby="mymodalname" aria-hidden="true">
-  <div class="modal-dialog">
-  <div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-    <h4 class="modal-title" id="myModalLabel">Personal Info</h4>
-  </div>
-  <div class="modal-body">
-  <form id="personal_details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-  <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
-  <tr>
-    <td>First Name:</td>
-    <td>
-      <input id="first-name" name="personal_detail[first_name]" value="<%= @personal_details.first_name %>" type="text" class="input-xlarge">
-    </td>
-  </tr>
-  <tr>
-    <td>Middle Name:</td>
-    <td>
-      <input id="middle-name" name="personal_detail[middle_name]" value="<%= @personal_details.middle_name %>" type="text" class="input-xlarge">
-    </td>
-  </tr>
-  <tr>
-    <td>Last Name:</td>
-    <td>
-      <input id="last-name" name="personal_detail[last_name]" value="<%= @personal_details.last_name %>" type="text" class="input-xlarge">
-    </td>
-  </tr>
-  <tr>
-    <td>Date of Birth:</td>
-    <td>
-      <input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">
-    </td>
-  </tr>
-  <tr>
-    <td>Gender:</td>
-    <td>
-      <select id="gender" name="personal_detail[gender]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.gender %>">
-        <option>Select One</option>
-        <option>Male</option>
-        <option>Female</option>
-      </select></td>
-  </tr>
-  <tr>
-    <td>Nationality:</td>
-    <td>
-      <select id="citizenship" name="personal_detail[citizenship]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.citizenship %>">
-        <option>Select One</option>
-        <option> Afghan</option>
-        <option> Albanian</option>
-        <option> Algerian</option>
-        <option> American</option>
-        <option> Andorran</option>
-        <option> Angolan</option>
-        <option> Antiguans</option>
-        <option> Argentinean</option>
-        <option> Armenian</option>
-        <option> Australian</option>
-        <option> Austrian</option>
-        <option> Azerbaijani</option>
-        <option> Bahamian</option>
-        <option> Bahraini</option>
-        <option> Bangladeshi</option>
-        <option> Barbadian</option>
-        <option> Barbudans</option>
-        <option> Batswana</option>
-        <option> Belarusian</option>
-        <option> Belgian</option>
-        <option> Belizean</option>
-        <option> Beninese</option>
-        <option> Bhutanese</option>
-        <option> Bolivian</option>
-        <option> Bosnian</option>
-        <option> Brazilian</option>
-        <option> British</option>
-        <option> Bruneian</option>
-        <option> Bulgarian</option>
-        <option> Burkinabe</option>
-        <option> Burmese</option>
-        <option> Burundian</option>
-        <option> Cambodian</option>
-        <option> Cameroonian</option>
-        <option> Canadian</option>
-        <option> Cape Verdean</option>
-        <option> Central African</option>
-        <option> Chadian</option>
-        <option> Chilean</option>
-        <option> Chinese</option>
-        <option> Colombian</option>
-        <option> Comoran</option>
-        <option> Congolese</option>
-        <option> Costa Rican</option>
-        <option> Croatian</option>
-        <option> Cuban</option>
-        <option> Cypriot</option>
-        <option> Czech</option>
-        <option> Danish</option>
-        <option> Djibouti</option>
-        <option> Dominican</option>
-        <option> Dutch</option>
-        <option> East Timorese</option>
-        <option> Ecuadorean</option>
-        <option> Egyptian</option>
-        <option> Emirian</option>
-        <option> Equatorial Guinean</option>
-        <option> Eritrean</option>
-        <option> Estonian</option>
-        <option> Ethiopian</option>
-        <option> Fijian</option>
-        <option> Filipino</option>
-        <option> Finnish</option>
-        <option> French</option>
-        <option> Gabonese</option>
-        <option> Gambian</option>
-        <option> Georgian</option>
-        <option> German</option>
-        <option> Ghanaian</option>
-        <option> Greek</option>
-        <option> Grenadian</option>
-        <option> Guatemalan</option>
-        <option> Guinea-Bissauan</option>
-        <option> Guinean</option>
-        <option> Guyanese</option>
-        <option> Haitian</option>
-        <option> Herzegovinian</option>
-        <option> Honduran</option>
-        <option> Hungarian</option>
-        <option> I-Kiribati</option>
-        <option> Icelander</option>
-        <option> Indian</option>
-        <option> Indonesian</option>
-        <option> Iranian</option>
-        <option> Iraqi</option>
-        <option> Irish</option>
-        <option> Israeli</option>
-        <option> Italian</option>
-        <option> Ivorian</option>
-        <option> Jamaican</option>
-        <option> Japanese</option>
-        <option> Jordanian</option>
-        <option> Kazakhstani</option>
-        <option> Kenyan</option>
-        <option> Kittian and Nevisian</option>
-        <option> Kuwaiti</option>
-        <option> Kyrgyz</option>
-        <option> Laotian</option>
-        <option> Latvian</option>
-        <option> Lebanese</option>
-        <option> Liberian</option>
-        <option> Libyan</option>
-        <option> Liechtensteiner</option>
-        <option> Lithuanian</option>
-        <option> Luxembourger</option>
-        <option> Macedonian</option>
-        <option> Malagasy</option>
-        <option> Malawian</option>
-        <option> Malaysian</option>
-        <option> Maldivan</option>
-        <option> Malian</option>
-        <option> Maltese</option>
-        <option> Marshallese</option>
-        <option> Mauritanian</option>
-        <option> Mauritian</option>
-        <option> Mexican</option>
-        <option> Micronesian</option>
-        <option> Moldovan</option>
-        <option> Monacan</option>
-        <option> Mongolian</option>
-        <option> Moroccan</option>
-        <option> Mosotho</option>
-        <option> Motswana</option>
-        <option> Mozambican</option>
-        <option> Namibian</option>
-        <option> Nauruan</option>
-        <option> Nepalese</option>
-        <option> New Zealander</option>
-        <option> Nicaraguan</option>
-        <option> Nigerian</option>
-        <option> Nigerien</option>
-        <option> North Korean</option>
-        <option> Northern Irish</option>
-        <option> Norwegian</option>
-        <option> Omani</option>
-        <option> Pakistani</option>
-        <option> Palauan</option>
-        <option> Panamanian</option>
-        <option> Papua New Guinean</option>
-        <option> Paraguayan</option>
-        <option> Peruvian</option>
-        <option> Polish</option>
-        <option> Portuguese</option>
-        <option> Qatari</option>
-        <option> Romanian</option>
-        <option> Russian</option>
-        <option> Rwandan</option>
-        <option> Saint Lucian</option>
-        <option> Salvadoran</option>
-        <option> Samoan</option>
-        <option> San Marinese</option>
-        <option> Sao Tomean</option>
-        <option> Saudi</option>
-        <option> Scottish</option>
-        <option> Senegalese</option>
-        <option> Serbian</option>
-        <option> Seychellois</option>
-        <option> Sierra Leonean</option>
-        <option> Singaporean</option>
-        <option> Slovakian</option>
-        <option> Slovenian</option>
-        <option> Solomon Islander</option>
-        <option> Somali</option>
-        <option> South African</option>
-        <option> South Korean</option>
-        <option> Spanish</option>
-        <option> Sri Lankan</option>
-        <option> Sudanese</option>
-        <option> Surinamer</option>
-        <option> Swazi</option>
-        <option> Swedish</option>
-        <option> Swiss</option>
-        <option> Syrian</option>
-        <option> Taiwanese</option>
-        <option> Tajik</option>
-        <option> Tanzanian</option>
-        <option> Thai</option>
-        <option> Togolese</option>
-        <option> Tongan</option>
-        <option> Trinidadian or Tobagonian</option>
-        <option> Tunisian</option>
-        <option> Turkish</option>
-        <option> Tuvaluan</option>
-        <option> Ugandan</option>
-        <option> Ukrainian</option>
-        <option> Uruguayan</option>
-        <option> Uzbekistani</option>
-        <option> Venezuelan</option>
-        <option> Vietnamese</option>
-        <option> Welsh</option>
-        <option> Yemenite</option>
-        <option> Zambian</option>
-        <option> Zimbabwean</option>
-
-      </select></td>
-  </tr>
-  <tr>
-  <td>Citizenship:</td>
-  <td>
-    <select id="civil_status" name="personal_detail[civil_status]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
-      <option>Select One</option>
-      <option> Afghan</option>
-      <option> Albanian</option>
-      <option> Algerian</option>
-      <option> American</option>
-      <option> Andorran</option>
-      <option> Angolan</option>
-      <option> Antiguans</option>
-      <option> Argentinean</option>
-      <option> Armenian</option>
-      <option> Australian</option>
-      <option> Austrian</option>
-      <option> Azerbaijani</option>
-      <option> Bahamian</option>
-      <option> Bahraini</option>
-      <option> Bangladeshi</option>
-      <option> Barbadian</option>
-      <option> Barbudans</option>
-      <option> Batswana</option>
-      <option> Belarusian</option>
-      <option> Belgian</option>
-      <option> Belizean</option>
-      <option> Beninese</option>
-      <option> Bhutanese</option>
-      <option> Bolivian</option>
-      <option> Bosnian</option>
-      <option> Brazilian</option>
-      <option> British</option>
-      <option> Bruneian</option>
-      <option> Bulgarian</option>
-      <option> Burkinabe</option>
-      <option> Burmese</option>
-      <option> Burundian</option>
-      <option> Cambodian</option>
-      <option> Cameroonian</option>
-      <option> Canadian</option>
-      <option> Cape Verdean</option>
-      <option> Central African</option>
-      <option> Chadian</option>
-      <option> Chilean</option>
-      <option> Chinese</option>
-      <option> Colombian</option>
-      <option> Comoran</option>
-      <option> Congolese</option>
-      <option> Costa Rican</option>
-      <option> Croatian</option>
-      <option> Cuban</option>
-      <option> Cypriot</option>
-      <option> Czech</option>
-      <option> Danish</option>
-      <option> Djibouti</option>
-      <option> Dominican</option>
-      <option> Dutch</option>
-      <option> East Timorese</option>
-      <option> Ecuadorean</option>
-      <option> Egyptian</option>
-      <option> Emirian</option>
-      <option> Equatorial Guinean</option>
-      <option> Eritrean</option>
-      <option> Estonian</option>
-      <option> Ethiopian</option>
-      <option> Fijian</option>
-      <option> Filipino</option>
-      <option> Finnish</option>
-      <option> French</option>
-      <option> Gabonese</option>
-      <option> Gambian</option>
-      <option> Georgian</option>
-      <option> German</option>
-      <option> Ghanaian</option>
-      <option> Greek</option>
-      <option> Grenadian</option>
-      <option> Guatemalan</option>
-      <option> Guinea-Bissauan</option>
-      <option> Guinean</option>
-      <option> Guyanese</option>
-      <option> Haitian</option>
-      <option> Herzegovinian</option>
-      <option> Honduran</option>
-      <option> Hungarian</option>
-      <option> I-Kiribati</option>
-      <option> Icelander</option>
-      <option> Indian</option>
-      <option> Indonesian</option>
-      <option> Iranian</option>
-      <option> Iraqi</option>
-      <option> Irish</option>
-      <option> Israeli</option>
-      <option> Italian</option>
-      <option> Ivorian</option>
-      <option> Jamaican</option>
-      <option> Japanese</option>
-      <option> Jordanian</option>
-      <option> Kazakhstani</option>
-      <option> Kenyan</option>
-      <option> Kittian and Nevisian</option>
-      <option> Kuwaiti</option>
-      <option> Kyrgyz</option>
-      <option> Laotian</option>
-      <option> Latvian</option>
-      <option> Lebanese</option>
-      <option> Liberian</option>
-      <option> Libyan</option>
-      <option> Liechtensteiner</option>
-      <option> Lithuanian</option>
-      <option> Luxembourger</option>
-      <option> Macedonian</option>
-      <option> Malagasy</option>
-      <option> Malawian</option>
-      <option> Malaysian</option>
-      <option> Maldivan</option>
-      <option> Malian</option>
-      <option> Maltese</option>
-      <option> Marshallese</option>
-      <option> Mauritanian</option>
-      <option> Mauritian</option>
-      <option> Mexican</option>
-      <option> Micronesian</option>
-      <option> Moldovan</option>
-      <option> Monacan</option>
-      <option> Mongolian</option>
-      <option> Moroccan</option>
-      <option> Mosotho</option>
-      <option> Motswana</option>
-      <option> Mozambican</option>
-      <option> Namibian</option>
-      <option> Nauruan</option>
-      <option> Nepalese</option>
-      <option> New Zealander</option>
-      <option> Nicaraguan</option>
-      <option> Nigerian</option>
-      <option> Nigerien</option>
-      <option> North Korean</option>
-      <option> Northern Irish</option>
-      <option> Norwegian</option>
-      <option> Omani</option>
-      <option> Pakistani</option>
-      <option> Palauan</option>
-      <option> Panamanian</option>
-      <option> Papua New Guinean</option>
-      <option> Paraguayan</option>
-      <option> Peruvian</option>
-      <option> Polish</option>
-      <option> Portuguese</option>
-      <option> Qatari</option>
-      <option> Romanian</option>
-      <option> Russian</option>
-      <option> Rwandan</option>
-      <option> Saint Lucian</option>
-      <option> Salvadoran</option>
-      <option> Samoan</option>
-      <option> San Marinese</option>
-      <option> Sao Tomean</option>
-      <option> Saudi</option>
-      <option> Scottish</option>
-      <option> Senegalese</option>
-      <option> Serbian</option>
-      <option> Seychellois</option>
-      <option> Sierra Leonean</option>
-      <option> Singaporean</option>
-      <option> Slovakian</option>
-      <option> Slovenian</option>
-      <option> Solomon Islander</option>
-      <option> Somali</option>
-      <option> South African</option>
-      <option> South Korean</option>
-      <option> Spanish</option>
-      <option> Sri Lankan</option>
-      <option> Sudanese</option>
-      <option> Surinamer</option>
-      <option> Swazi</option>
-      <option> Swedish</option>
-      <option> Swiss</option>
-      <option> Syrian</option>
-      <option> Taiwanese</option>
-      <option> Tajik</option>
-      <option> Tanzanian</option>
-      <option> Thai</option>
-      <option> Togolese</option>
-      <option> Tongan</option>
-      <option> Trinidadian or Tobagonian</option>
-      <option> Tunisian</option>
-      <option> Turkish</option>
-      <option> Tuvaluan</option>
-      <option> Ugandan</option>
-      <option> Ukrainian</option>
-      <option> Uruguayan</option>
-      <option> Uzbekistani</option>
-      <option> Venezuelan</option>
-      <option> Vietnamese</option>
-      <option> Welsh</option>
-      <option> Yemenite</option>
-      <option> Zambian</option>
-      <option> Zimbabwean</option>
-
-    </select>
-  </td>
-  </tr>
-  <tr>
-    <td>Current Telephone No:</td>
-    <td>
-      <input id="home-phone" name="personal_detail[current_telephone]" value="<%= @personal_details.current_telephone %>" type="text" class="input-xlarge">
-    </td>
-  </tr>
-  <tr>
-    <td>Current Mobile No:</td>
-    <td>
-      <input id="home-phone" name="personal_detail[current_mobile]" value="<%= @personal_details.current_mobile %>" type="text" class="input-xlarge">
-    </td>
-  </tr>
-  </table>
-
-  </form>
-
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="button" id="personal-update" class="btn btn-primary">Save changes</button>
-  </div>
-  </div>
-  </div>
-
-  </div>
-
-  <div class="panel panel-default" style="margin-top: 30px;">
-    <div class="panel-heading" style="">Personal Details<a href="#" id="personal_edit_link" data-toggle="modal" data-target="#personal_edit_link" style="color: white;font-size: 11px; float:right;"><span> Edit <span class="glyphicon glyphicon-cog"></span></span></a></div>
-    <table class="table" style=" margin:20px auto 0 auto;width: 400px;color:#333;" cellpadding="3">
-      <tr>
-        <td>First Name:</td>
-        <td>
-          <%= @personal_details.first_name %>
-        </td>
-      </tr>
-      <tr>
-        <td>Middle Name:</td>
-        <td>
-          <%= @personal_details.middle_name %>
-        </td>
-      </tr>
-      <tr>
-        <td>Last Name:</td>
-        <td>
-          <%= @personal_details.last_name %>
-        </td>
-      </tr>
-      <tr>
-        <td>Date of Birth:</td>
-        <td><p class="data-placeholder"><%= @personal_details.dob.strftime('%d/%m/%Y') %></p></td>
-      </tr>
-      <tr>
-        <td>Gender:</td>
-        <td>
-          <%= @personal_details.gender %></td>
-      </tr>
-      <tr>
-        <td>Nationality:</td>
-        <td>
-          <%= @personal_details.citizenship %></td>
-      </tr>
-      <tr>
-        <td>Citizenship:</td>
-        <td>
-          <%= @personal_details.civil_status %>
-        </td>
-      </tr>
-      <tr>
-        <td>Current Telephone No:</td>
-        <td>
-          <%= @personal_details.current_telephone %>
-        </td>
-      </tr>
-      <tr>
-        <td>Current Mobile No:</td>
-        <td>
-          <%= @personal_details.current_mobile %>
-        </td>
-      </tr>
-    </table>
-    <button id="submit-personal-info" name="submit-personal-info" class="patrick-btn" style="margin: 25px 250px;">Next - Address and Contact</button>
-  </div>
-
-  </div>
-</div>
-
 <div id="page-1">
 <div class="content">
 
-  <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="personal_edit_link" tabindex="-1" role="dialog" aria-labelledby="mymodalname" aria-hidden="true">
+  <div class="modal fade" id="personal_edit_link" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="mymodalname" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -1000,21 +466,18 @@
           </td>
         </tr>
         </table>
-
         </form>
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" id="personal-update" class="btn btn-primary">Save changes</button>
+          <button type="button" id="personal-update" class="btn btn-success">Save changes</button>
         </div>
       </div>
     </div>
-
   </div>
 
   <div class="panel panel-default" style="margin-top: 30px;">
-    <div class="panel-heading" style="">Personal Details<a href="#" id="personal_edit_link" data-toggle="modal" data-target="#personal_edit_link" style="color: white;font-size: 11px; float:right;"><span> Edit <span class="glyphicon glyphicon-cog"></span></span></a></div>
+    <div class="panel-heading" style="">Personal Details<a href="#" data-toggle="modal" data-target="#test" style="color: white;font-size: 11px; float:right;"><span> Edit <span class="glyphicon glyphicon-cog"></span></span></a></div>
 <table class="table" style=" margin:20px auto 0 auto;width: 400px;color:#333;" cellpadding="3">
 <tr>
   <td>First Name:</td>
@@ -1069,7 +532,478 @@
 </table>
     <button id="submit-personal-info" name="submit-personal-info" class="patrick-btn" style="margin: 25px 250px;">Next - Address and Contact</button>
   </div>
- </div>
+
+  <div class="modal fade" id="test" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Personal Details</h4>
+        </div>
+        <div class="modal-body">
+        <form id="personal_details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
+        <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+        <tr>
+          <td>First Name:</td>
+          <td>
+            <input id="first-name" name="personal_detail[first_name]" value="<%= @personal_details.first_name %>" type="text" class="input-xlarge">
+          </td>
+        </tr>
+        <tr>
+          <td>Middle Name:</td>
+          <td>
+            <input id="middle-name" name="personal_detail[middle_name]" value="<%= @personal_details.middle_name %>" type="text" class="input-xlarge">
+          </td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td>
+            <input id="last-name" name="personal_detail[last_name]" value="<%= @personal_details.last_name %>" type="text" class="input-xlarge">
+          </td>
+        </tr>
+        <tr>
+          <td>Date of Birth:</td>
+          <td>
+            <input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">
+          </td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <select id="gender" name="personal_detail[gender]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.gender %>">
+              <option>Select One</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td>Nationality:</td>
+          <td>
+            <select id="citizenship" name="personal_detail[citizenship]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.citizenship %>">
+              <option>Select One</option>
+              <option> Afghan</option>
+              <option> Albanian</option>
+              <option> Algerian</option>
+              <option> American</option>
+              <option> Andorran</option>
+              <option> Angolan</option>
+              <option> Antiguans</option>
+              <option> Argentinean</option>
+              <option> Armenian</option>
+              <option> Australian</option>
+              <option> Austrian</option>
+              <option> Azerbaijani</option>
+              <option> Bahamian</option>
+              <option> Bahraini</option>
+              <option> Bangladeshi</option>
+              <option> Barbadian</option>
+              <option> Barbudans</option>
+              <option> Batswana</option>
+              <option> Belarusian</option>
+              <option> Belgian</option>
+              <option> Belizean</option>
+              <option> Beninese</option>
+              <option> Bhutanese</option>
+              <option> Bolivian</option>
+              <option> Bosnian</option>
+              <option> Brazilian</option>
+              <option> British</option>
+              <option> Bruneian</option>
+              <option> Bulgarian</option>
+              <option> Burkinabe</option>
+              <option> Burmese</option>
+              <option> Burundian</option>
+              <option> Cambodian</option>
+              <option> Cameroonian</option>
+              <option> Canadian</option>
+              <option> Cape Verdean</option>
+              <option> Central African</option>
+              <option> Chadian</option>
+              <option> Chilean</option>
+              <option> Chinese</option>
+              <option> Colombian</option>
+              <option> Comoran</option>
+              <option> Congolese</option>
+              <option> Costa Rican</option>
+              <option> Croatian</option>
+              <option> Cuban</option>
+              <option> Cypriot</option>
+              <option> Czech</option>
+              <option> Danish</option>
+              <option> Djibouti</option>
+              <option> Dominican</option>
+              <option> Dutch</option>
+              <option> East Timorese</option>
+              <option> Ecuadorean</option>
+              <option> Egyptian</option>
+              <option> Emirian</option>
+              <option> Equatorial Guinean</option>
+              <option> Eritrean</option>
+              <option> Estonian</option>
+              <option> Ethiopian</option>
+              <option> Fijian</option>
+              <option> Filipino</option>
+              <option> Finnish</option>
+              <option> French</option>
+              <option> Gabonese</option>
+              <option> Gambian</option>
+              <option> Georgian</option>
+              <option> German</option>
+              <option> Ghanaian</option>
+              <option> Greek</option>
+              <option> Grenadian</option>
+              <option> Guatemalan</option>
+              <option> Guinea-Bissauan</option>
+              <option> Guinean</option>
+              <option> Guyanese</option>
+              <option> Haitian</option>
+              <option> Herzegovinian</option>
+              <option> Honduran</option>
+              <option> Hungarian</option>
+              <option> I-Kiribati</option>
+              <option> Icelander</option>
+              <option> Indian</option>
+              <option> Indonesian</option>
+              <option> Iranian</option>
+              <option> Iraqi</option>
+              <option> Irish</option>
+              <option> Israeli</option>
+              <option> Italian</option>
+              <option> Ivorian</option>
+              <option> Jamaican</option>
+              <option> Japanese</option>
+              <option> Jordanian</option>
+              <option> Kazakhstani</option>
+              <option> Kenyan</option>
+              <option> Kittian and Nevisian</option>
+              <option> Kuwaiti</option>
+              <option> Kyrgyz</option>
+              <option> Laotian</option>
+              <option> Latvian</option>
+              <option> Lebanese</option>
+              <option> Liberian</option>
+              <option> Libyan</option>
+              <option> Liechtensteiner</option>
+              <option> Lithuanian</option>
+              <option> Luxembourger</option>
+              <option> Macedonian</option>
+              <option> Malagasy</option>
+              <option> Malawian</option>
+              <option> Malaysian</option>
+              <option> Maldivan</option>
+              <option> Malian</option>
+              <option> Maltese</option>
+              <option> Marshallese</option>
+              <option> Mauritanian</option>
+              <option> Mauritian</option>
+              <option> Mexican</option>
+              <option> Micronesian</option>
+              <option> Moldovan</option>
+              <option> Monacan</option>
+              <option> Mongolian</option>
+              <option> Moroccan</option>
+              <option> Mosotho</option>
+              <option> Motswana</option>
+              <option> Mozambican</option>
+              <option> Namibian</option>
+              <option> Nauruan</option>
+              <option> Nepalese</option>
+              <option> New Zealander</option>
+              <option> Nicaraguan</option>
+              <option> Nigerian</option>
+              <option> Nigerien</option>
+              <option> North Korean</option>
+              <option> Northern Irish</option>
+              <option> Norwegian</option>
+              <option> Omani</option>
+              <option> Pakistani</option>
+              <option> Palauan</option>
+              <option> Panamanian</option>
+              <option> Papua New Guinean</option>
+              <option> Paraguayan</option>
+              <option> Peruvian</option>
+              <option> Polish</option>
+              <option> Portuguese</option>
+              <option> Qatari</option>
+              <option> Romanian</option>
+              <option> Russian</option>
+              <option> Rwandan</option>
+              <option> Saint Lucian</option>
+              <option> Salvadoran</option>
+              <option> Samoan</option>
+              <option> San Marinese</option>
+              <option> Sao Tomean</option>
+              <option> Saudi</option>
+              <option> Scottish</option>
+              <option> Senegalese</option>
+              <option> Serbian</option>
+              <option> Seychellois</option>
+              <option> Sierra Leonean</option>
+              <option> Singaporean</option>
+              <option> Slovakian</option>
+              <option> Slovenian</option>
+              <option> Solomon Islander</option>
+              <option> Somali</option>
+              <option> South African</option>
+              <option> South Korean</option>
+              <option> Spanish</option>
+              <option> Sri Lankan</option>
+              <option> Sudanese</option>
+              <option> Surinamer</option>
+              <option> Swazi</option>
+              <option> Swedish</option>
+              <option> Swiss</option>
+              <option> Syrian</option>
+              <option> Taiwanese</option>
+              <option> Tajik</option>
+              <option> Tanzanian</option>
+              <option> Thai</option>
+              <option> Togolese</option>
+              <option> Tongan</option>
+              <option> Trinidadian or Tobagonian</option>
+              <option> Tunisian</option>
+              <option> Turkish</option>
+              <option> Tuvaluan</option>
+              <option> Ugandan</option>
+              <option> Ukrainian</option>
+              <option> Uruguayan</option>
+              <option> Uzbekistani</option>
+              <option> Venezuelan</option>
+              <option> Vietnamese</option>
+              <option> Welsh</option>
+              <option> Yemenite</option>
+              <option> Zambian</option>
+              <option> Zimbabwean</option>
+
+            </select></td>
+        </tr>
+        <tr>
+        <td>Citizenship:</td>
+        <td>
+          <select id="civil_status" name="personal_detail[civil_status]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
+            <option>Select One</option>
+            <option> Afghan</option>
+            <option> Albanian</option>
+            <option> Algerian</option>
+            <option> American</option>
+            <option> Andorran</option>
+            <option> Angolan</option>
+            <option> Antiguans</option>
+            <option> Argentinean</option>
+            <option> Armenian</option>
+            <option> Australian</option>
+            <option> Austrian</option>
+            <option> Azerbaijani</option>
+            <option> Bahamian</option>
+            <option> Bahraini</option>
+            <option> Bangladeshi</option>
+            <option> Barbadian</option>
+            <option> Barbudans</option>
+            <option> Batswana</option>
+            <option> Belarusian</option>
+            <option> Belgian</option>
+            <option> Belizean</option>
+            <option> Beninese</option>
+            <option> Bhutanese</option>
+            <option> Bolivian</option>
+            <option> Bosnian</option>
+            <option> Brazilian</option>
+            <option> British</option>
+            <option> Bruneian</option>
+            <option> Bulgarian</option>
+            <option> Burkinabe</option>
+            <option> Burmese</option>
+            <option> Burundian</option>
+            <option> Cambodian</option>
+            <option> Cameroonian</option>
+            <option> Canadian</option>
+            <option> Cape Verdean</option>
+            <option> Central African</option>
+            <option> Chadian</option>
+            <option> Chilean</option>
+            <option> Chinese</option>
+            <option> Colombian</option>
+            <option> Comoran</option>
+            <option> Congolese</option>
+            <option> Costa Rican</option>
+            <option> Croatian</option>
+            <option> Cuban</option>
+            <option> Cypriot</option>
+            <option> Czech</option>
+            <option> Danish</option>
+            <option> Djibouti</option>
+            <option> Dominican</option>
+            <option> Dutch</option>
+            <option> East Timorese</option>
+            <option> Ecuadorean</option>
+            <option> Egyptian</option>
+            <option> Emirian</option>
+            <option> Equatorial Guinean</option>
+            <option> Eritrean</option>
+            <option> Estonian</option>
+            <option> Ethiopian</option>
+            <option> Fijian</option>
+            <option> Filipino</option>
+            <option> Finnish</option>
+            <option> French</option>
+            <option> Gabonese</option>
+            <option> Gambian</option>
+            <option> Georgian</option>
+            <option> German</option>
+            <option> Ghanaian</option>
+            <option> Greek</option>
+            <option> Grenadian</option>
+            <option> Guatemalan</option>
+            <option> Guinea-Bissauan</option>
+            <option> Guinean</option>
+            <option> Guyanese</option>
+            <option> Haitian</option>
+            <option> Herzegovinian</option>
+            <option> Honduran</option>
+            <option> Hungarian</option>
+            <option> I-Kiribati</option>
+            <option> Icelander</option>
+            <option> Indian</option>
+            <option> Indonesian</option>
+            <option> Iranian</option>
+            <option> Iraqi</option>
+            <option> Irish</option>
+            <option> Israeli</option>
+            <option> Italian</option>
+            <option> Ivorian</option>
+            <option> Jamaican</option>
+            <option> Japanese</option>
+            <option> Jordanian</option>
+            <option> Kazakhstani</option>
+            <option> Kenyan</option>
+            <option> Kittian and Nevisian</option>
+            <option> Kuwaiti</option>
+            <option> Kyrgyz</option>
+            <option> Laotian</option>
+            <option> Latvian</option>
+            <option> Lebanese</option>
+            <option> Liberian</option>
+            <option> Libyan</option>
+            <option> Liechtensteiner</option>
+            <option> Lithuanian</option>
+            <option> Luxembourger</option>
+            <option> Macedonian</option>
+            <option> Malagasy</option>
+            <option> Malawian</option>
+            <option> Malaysian</option>
+            <option> Maldivan</option>
+            <option> Malian</option>
+            <option> Maltese</option>
+            <option> Marshallese</option>
+            <option> Mauritanian</option>
+            <option> Mauritian</option>
+            <option> Mexican</option>
+            <option> Micronesian</option>
+            <option> Moldovan</option>
+            <option> Monacan</option>
+            <option> Mongolian</option>
+            <option> Moroccan</option>
+            <option> Mosotho</option>
+            <option> Motswana</option>
+            <option> Mozambican</option>
+            <option> Namibian</option>
+            <option> Nauruan</option>
+            <option> Nepalese</option>
+            <option> New Zealander</option>
+            <option> Nicaraguan</option>
+            <option> Nigerian</option>
+            <option> Nigerien</option>
+            <option> North Korean</option>
+            <option> Northern Irish</option>
+            <option> Norwegian</option>
+            <option> Omani</option>
+            <option> Pakistani</option>
+            <option> Palauan</option>
+            <option> Panamanian</option>
+            <option> Papua New Guinean</option>
+            <option> Paraguayan</option>
+            <option> Peruvian</option>
+            <option> Polish</option>
+            <option> Portuguese</option>
+            <option> Qatari</option>
+            <option> Romanian</option>
+            <option> Russian</option>
+            <option> Rwandan</option>
+            <option> Saint Lucian</option>
+            <option> Salvadoran</option>
+            <option> Samoan</option>
+            <option> San Marinese</option>
+            <option> Sao Tomean</option>
+            <option> Saudi</option>
+            <option> Scottish</option>
+            <option> Senegalese</option>
+            <option> Serbian</option>
+            <option> Seychellois</option>
+            <option> Sierra Leonean</option>
+            <option> Singaporean</option>
+            <option> Slovakian</option>
+            <option> Slovenian</option>
+            <option> Solomon Islander</option>
+            <option> Somali</option>
+            <option> South African</option>
+            <option> South Korean</option>
+            <option> Spanish</option>
+            <option> Sri Lankan</option>
+            <option> Sudanese</option>
+            <option> Surinamer</option>
+            <option> Swazi</option>
+            <option> Swedish</option>
+            <option> Swiss</option>
+            <option> Syrian</option>
+            <option> Taiwanese</option>
+            <option> Tajik</option>
+            <option> Tanzanian</option>
+            <option> Thai</option>
+            <option> Togolese</option>
+            <option> Tongan</option>
+            <option> Trinidadian or Tobagonian</option>
+            <option> Tunisian</option>
+            <option> Turkish</option>
+            <option> Tuvaluan</option>
+            <option> Ugandan</option>
+            <option> Ukrainian</option>
+            <option> Uruguayan</option>
+            <option> Uzbekistani</option>
+            <option> Venezuelan</option>
+            <option> Vietnamese</option>
+            <option> Welsh</option>
+            <option> Yemenite</option>
+            <option> Zambian</option>
+            <option> Zimbabwean</option>
+
+          </select>
+        </td>
+        </tr>
+        <tr>
+          <td>Current Telephone No:</td>
+          <td>
+            <input id="home-phone" name="personal_detail[current_telephone]" value="<%= @personal_details.current_telephone %>" type="text" class="input-xlarge">
+          </td>
+        </tr>
+        <tr>
+          <td>Current Mobile No:</td>
+          <td>
+            <input id="home-phone" name="personal_detail[current_mobile]" value="<%= @personal_details.current_mobile %>" type="text" class="input-xlarge">
+          </td>
+        </tr>
+        </table>
+        </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="personal-update2" class="btn btn-success">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 </div>
 
 <!-- End Page 1 -->
@@ -1080,351 +1014,350 @@
   <div class="content">
 
   <!-- Modal -->
-    <div class="modal fade" id="mailing_edit_link" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Education Details</h4>
-          </div>
-          <div class="modal-body">
-          <form id="mailing-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
+  <div class="modal fade" id="mailing_edit_link" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Education Details</h4>
+  </div>
+  <div class="modal-body">
+  <form id="mailing-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
-  <span>
-<table style=" color: black;width: 500;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
-<tr>
-  <td>Address Line 1:</td>
+  <table style=" color: black;width: 500;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <tr>
+    <td>Address Line 1:</td>
+    <td>
+      <input id="address-1" name="personal_detail[address_1]" value="<%= @personal_details.address_1 %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+    <td>Address Line 2:</td>
+    <td>
+      <input id="address-2" name="personal_detail[address_2]" value="<%= @personal_details.address_2 %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+    <td>Address Line 3:</td>
+    <td>
+      <input id="address-2" name="personal_detail[address_3]" value="<%= @personal_details.address_3 %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+    <td>City:</td>
+    <td>
+      <input id="city" name="personal_detail[city]" value="<%= @personal_details.city %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+    <td>Postal Code:</td>
+    <td>
+      <input id="address-post-code" name="personal_detail[address_post_code]" value="<%= @personal_details.address_post_code %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+  <td>Country:</td>
   <td>
-    <input id="address-1" name="personal_detail[address_1]" value="<%= @personal_details.address_1 %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-  <td>Address Line 2:</td>
-  <td>
-    <input id="address-2" name="personal_detail[address_2]" value="<%= @personal_details.address_2 %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-  <td>Address Line 3:</td>
-  <td>
-    <input id="address-2" name="personal_detail[address_3]" value="<%= @personal_details.address_3 %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-  <td>City:</td>
-  <td>
-    <input id="city" name="personal_detail[city]" value="<%= @personal_details.city %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-  <td>Postal Code:</td>
-  <td>
-    <input id="address-post-code" name="personal_detail[address_post_code]" value="<%= @personal_details.address_post_code %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-<td>Country:</td>
-<td>
-<select id="address-country" name="personal_detail[address_country]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.address_country %>">
-<option>Select One</option>
-<option>Afghanistan</option>
-<option>Åland Islands</option>
-<option>Albania</option>
-<option>Algeria</option>
-<option>American Samoa</option>
-<option>Andorra</option>
-<option>Angola</option>
-<option>Anguilla</option>
-<option>Antarctica</option>
-<option>Antigua And Barbuda</option>
-<option>Argentina</option>
-<option>Armenia</option>
-<option>Aruba</option>
-<option>Australia</option>
-<option>Austria</option>
-<option>Azerbaijan</option>
-<option>Bahamas</option>
-<option>Bahrain</option>
-<option>Bangladesh</option>
-<option>Barbados</option>
-<option>Belarus</option>
-<option>Belgium</option>
-<option>Belize</option>
-<option>Benin</option>
-<option>Bermuda</option>
-<option>Bhutan</option>
-<option>Bolivia</option>
-<option>Bosnia And Herzegovina</option>
-<option>Botswana</option>
-<option>Bouvet Island</option>
-<option>Brazil</option>
-<option>British Indian Ocean Territory</option>
-<option>Brunei Darussalam</option>
-<option>Bulgaria</option>
-<option>Burkina Faso</option>
-<option>Burundi</option>
-<option>Cambodia</option>
-<option>Cameroon</option>
-<option>Canada</option>
-<option>Cape Verde</option>
-<option>Cayman Islands</option>
-<option>Central African Republic</option>
-<option>Chad</option>
-<option>Chile</option>
-<option>China</option>
-<option>Christmas Island</option>
-<option>Cocos (keeling) Islands</option>
-<option>Colombia</option>
-<option>Comoros</option>
-<option>Congo</option>
-<option>Congo, The Democratic Republic Of The</option>
-<option>Cook Islands</option>
-<option>Costa Rica</option>
-<option>CÔte D'ivoire</option>
-<option>Croatia</option>
-<option>Cuba</option>
-<option>Cyprus</option>
-<option>Czech Republic</option>
-<option>Denmark</option>
-<option>Djibouti</option>
-<option>Dominica</option>
-<option>Dominican Republic</option>
-<option>Ecuador</option>
-<option>Egypt</option>
-<option>El Salvador</option>
-<option>Equatorial Guinea</option>
-<option>Eritrea</option>
-<option>Estonia</option>
-<option>Ethiopia</option>
-<option>Falkland Islands (malvinas)</option>
-<option>Faroe Islands</option>
-<option>Fiji</option>
-<option>Finland</option>
-<option>France</option>
-<option>French Guiana</option>
-<option>French Polynesia</option>
-<option>French Southern Territories</option>
-<option>Gabon</option>
-<option>Gambia</option>
-<option>Georgia</option>
-<option>Germany</option>
-<option>Ghana</option>
-<option>Gibraltar</option>
-<option>Greece</option>
-<option>Greenland</option>
-<option>Grenada</option>
-<option>Guadeloupe</option>
-<option>Guam</option>
-<option>Guatemala</option>
-<option>Guernsey</option>
-<option>Guinea</option>
-<option>Guinea-bissau</option>
-<option>Guyana</option>
-<option>Haiti</option>
-<option>Heard Island And Mcdonald Islands</option>
-<option>Honduras</option>
-<option>Hong Kong</option>
-<option>Hungary</option>
-<option>Iceland</option>
-<option>India</option>
-<option>Indonesia</option>
-<option>Iran, Islamic Republic Of</option>
-<option>Iraq</option>
-<option>Ireland</option>
-<option>Isle Of Man</option>
-<option>Israel</option>
-<option>Italy</option>
-<option>Jamaica</option>
-<option>Japan</option>
-<option>Jersey</option>
-<option>Jordan</option>
-<option>Kazakhstan</option>
-<option>Kenya</option>
-<option>Kiribati</option>
-<option>Korea, Democratic People's Republic Of</option>
-<option>Korea, Republic Of</option>
-<option>Kuwait</option>
-<option>Kyrgyzstan</option>
-<option>Lao People's Democratic Republic</option>
-<option>Latvia</option>
-<option>Lebanon</option>
-<option>Lesotho</option>
-<option>Liberia</option>
-<option>Libyan Arab Jamahiriya</option>
-<option>Liechtenstein</option>
-<option>Lithuania</option>
-<option>Luxembourg</option>
-<option>Macao</option>
-<option>Macedonia, The Former Yugoslav Republic Of</option>
-<option>Madagascar</option>
-<option>Malawi</option>
-<option>Malaysia</option>
-<option>Maldives</option>
-<option>Mali</option>
-<option>Malta</option>
-<option>Marshall Islands</option>
-<option>Martinique</option>
-<option>Mauritania</option>
-<option>Mauritius</option>
-<option>Mayotte</option>
-<option>Mexico</option>
-<option>Micronesia, Federated States Of</option>
-<option>Moldova</option>
-<option>Monaco</option>
-<option>Mongolia</option>
-<option>Montenegro</option>
-<option>Montserrat</option>
-<option>Morocco</option>
-<option>Mozambique</option>
-<option>Myanmar</option>
-<option>Namibia</option>
-<option>Nauru</option>
-<option>Nepal</option>
-<option>Netherlands</option>
-<option>Netherlands Antilles</option>
-<option>New Caledonia</option>
-<option>New Zealand</option>
-<option>Nicaragua</option>
-<option>Niger</option>
-<option>Nigeria</option>
-<option>Niue</option>
-<option>Norfolk Island</option>
-<option>Northern Mariana Islands</option>
-<option>Norway</option>
-<option>Oman</option>
-<option>Pakistan</option>
-<option>Palau</option>
-<option>Palestinian Territory, Occupied</option>
-<option>Panama</option>
-<option>Papua New Guinea</option>
-<option>Paraguay</option>
-<option>Peru</option>
-<option>Philippines</option>
-<option>Pitcairn</option>
-<option>Poland</option>
-<option>Portugal</option>
-<option>Puerto Rico</option>
-<option>Qatar</option>
-<option>RÉunion</option>
-<option>Romania</option>
-<option>Russian Federation</option>
-<option>Rwanda</option>
-<option>Saint BarthÉlemy</option>
-<option>Saint Helena</option>
-<option>Saint Kitts And Nevis</option>
-<option>Saint Lucia</option>
-<option>Saint Martin</option>
-<option>Saint Pierre And Miquelon</option>
-<option>Saint Vincent And The Grenadines</option>
-<option>Samoa</option>
-<option>San Marino</option>
-<option>Sao Tome And Principe</option>
-<option>Saudi Arabia</option>
-<option>Senegal</option>
-<option>Serbia</option>
-<option>Seychelles</option>
-<option>Sierra Leone</option>
-<option>Singapore</option>
-<option>Slovakia</option>
-<option>Slovenia</option>
-<option>Solomon Islands</option>
-<option>Somalia</option>
-<option>South Africa</option>
-<option>South Georgia And The South Sandwich Islands</option>
-<option>Spain</option>
-<option>Sri Lanka</option>
-<option>Sudan</option>
-<option>Suriname</option>
-<option>Svalbard And Jan Mayen</option>
-<option>Swaziland</option>
-<option>Sweden</option>
-<option>Switzerland</option>
-<option>Syrian Arab Republic</option>
-<option>Taiwan, Province Of China</option>
-<option>Tajikistan</option>
-<option>Tanzania, United Republic Of</option>
-<option>Thailand</option>
-<option>Timor-leste</option>
-<option>Togo</option>
-<option>Tokelau</option>
-<option>Tonga</option>
-<option>Trinidad And Tobago</option>
-<option>Tunisia</option>
-<option>Turkey</option>
-<option>Turkmenistan</option>
-<option>Turks And Caicos Islands</option>
-<option>Tuvalu</option>
-<option>Uganda</option>
-<option>Ukraine</option>
-<option>United Arab Emirates</option>
-<option>United Kingdom</option>
-<option>United States</option>
-<option>United States Minor Outlying Islands</option>
-<option>Uruguay</option>
-<option>Uzbekistan</option>
-<option>Vanuatu</option>
-<option>Vatican City State</option>
-<option>Venezuela</option>
-<option>Viet Nam</option>
-<option>Virgin Islands, British</option>
-<option>Virgin Islands, U.s.</option>
-<option>Wallis And Futuna</option>
-<option>Western Sahara</option>
-<option>Yemen</option>
-<option>Zambia</option>
-<option>Zimbabwe</option>
-</select></td>
-</tr>
-<tr>
-  <td>Home Address:</td>
-  <td>
-    <input id="home-phone" name="personal_detail[home_address]" value="<%= @personal_details.home_address %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-  <td>Home City:</td>
-  <td>
-    <input id="home-phone" name="personal_detail[home_city]" value="<%= @personal_details.home_city %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-  <td>Home Country:</td>
-  <td>
-    <input id="home-phone" name="personal_detail[home_country]" value="<%= @personal_details.home_country %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-  <td>Home Postal Code:</td>
-  <td>
-    <input id="home-phone" name="personal_detail[home_postal]" value="<%= @personal_details.home_postal %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-  <td>Home Telephone:</td>
-  <td>
-    <input id="home-phone" name="personal_detail[home_phone]" value="<%= @personal_details.home_phone %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-<tr>
-  <td>Home Mobile:</td>
-  <td>
-    <input id="cell-phone" name="personal_detail[cell_phone]" value="<%= @personal_details.cell_phone %>" type="text" class="input-xlarge">
-  </td>
-</tr>
-</table>
-</span>
-          </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" id="mailing-update" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <select id="address-country" name="personal_detail[address_country]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.address_country %>">
+  <option>Select One</option>
+  <option>Afghanistan</option>
+  <option>Åland Islands</option>
+  <option>Albania</option>
+  <option>Algeria</option>
+  <option>American Samoa</option>
+  <option>Andorra</option>
+  <option>Angola</option>
+  <option>Anguilla</option>
+  <option>Antarctica</option>
+  <option>Antigua And Barbuda</option>
+  <option>Argentina</option>
+  <option>Armenia</option>
+  <option>Aruba</option>
+  <option>Australia</option>
+  <option>Austria</option>
+  <option>Azerbaijan</option>
+  <option>Bahamas</option>
+  <option>Bahrain</option>
+  <option>Bangladesh</option>
+  <option>Barbados</option>
+  <option>Belarus</option>
+  <option>Belgium</option>
+  <option>Belize</option>
+  <option>Benin</option>
+  <option>Bermuda</option>
+  <option>Bhutan</option>
+  <option>Bolivia</option>
+  <option>Bosnia And Herzegovina</option>
+  <option>Botswana</option>
+  <option>Bouvet Island</option>
+  <option>Brazil</option>
+  <option>British Indian Ocean Territory</option>
+  <option>Brunei Darussalam</option>
+  <option>Bulgaria</option>
+  <option>Burkina Faso</option>
+  <option>Burundi</option>
+  <option>Cambodia</option>
+  <option>Cameroon</option>
+  <option>Canada</option>
+  <option>Cape Verde</option>
+  <option>Cayman Islands</option>
+  <option>Central African Republic</option>
+  <option>Chad</option>
+  <option>Chile</option>
+  <option>China</option>
+  <option>Christmas Island</option>
+  <option>Cocos (keeling) Islands</option>
+  <option>Colombia</option>
+  <option>Comoros</option>
+  <option>Congo</option>
+  <option>Congo, The Democratic Republic Of The</option>
+  <option>Cook Islands</option>
+  <option>Costa Rica</option>
+  <option>CÔte D'ivoire</option>
+  <option>Croatia</option>
+  <option>Cuba</option>
+  <option>Cyprus</option>
+  <option>Czech Republic</option>
+  <option>Denmark</option>
+  <option>Djibouti</option>
+  <option>Dominica</option>
+  <option>Dominican Republic</option>
+  <option>Ecuador</option>
+  <option>Egypt</option>
+  <option>El Salvador</option>
+  <option>Equatorial Guinea</option>
+  <option>Eritrea</option>
+  <option>Estonia</option>
+  <option>Ethiopia</option>
+  <option>Falkland Islands (malvinas)</option>
+  <option>Faroe Islands</option>
+  <option>Fiji</option>
+  <option>Finland</option>
+  <option>France</option>
+  <option>French Guiana</option>
+  <option>French Polynesia</option>
+  <option>French Southern Territories</option>
+  <option>Gabon</option>
+  <option>Gambia</option>
+  <option>Georgia</option>
+  <option>Germany</option>
+  <option>Ghana</option>
+  <option>Gibraltar</option>
+  <option>Greece</option>
+  <option>Greenland</option>
+  <option>Grenada</option>
+  <option>Guadeloupe</option>
+  <option>Guam</option>
+  <option>Guatemala</option>
+  <option>Guernsey</option>
+  <option>Guinea</option>
+  <option>Guinea-bissau</option>
+  <option>Guyana</option>
+  <option>Haiti</option>
+  <option>Heard Island And Mcdonald Islands</option>
+  <option>Honduras</option>
+  <option>Hong Kong</option>
+  <option>Hungary</option>
+  <option>Iceland</option>
+  <option>India</option>
+  <option>Indonesia</option>
+  <option>Iran, Islamic Republic Of</option>
+  <option>Iraq</option>
+  <option>Ireland</option>
+  <option>Isle Of Man</option>
+  <option>Israel</option>
+  <option>Italy</option>
+  <option>Jamaica</option>
+  <option>Japan</option>
+  <option>Jersey</option>
+  <option>Jordan</option>
+  <option>Kazakhstan</option>
+  <option>Kenya</option>
+  <option>Kiribati</option>
+  <option>Korea, Democratic People's Republic Of</option>
+  <option>Korea, Republic Of</option>
+  <option>Kuwait</option>
+  <option>Kyrgyzstan</option>
+  <option>Lao People's Democratic Republic</option>
+  <option>Latvia</option>
+  <option>Lebanon</option>
+  <option>Lesotho</option>
+  <option>Liberia</option>
+  <option>Libyan Arab Jamahiriya</option>
+  <option>Liechtenstein</option>
+  <option>Lithuania</option>
+  <option>Luxembourg</option>
+  <option>Macao</option>
+  <option>Macedonia, The Former Yugoslav Republic Of</option>
+  <option>Madagascar</option>
+  <option>Malawi</option>
+  <option>Malaysia</option>
+  <option>Maldives</option>
+  <option>Mali</option>
+  <option>Malta</option>
+  <option>Marshall Islands</option>
+  <option>Martinique</option>
+  <option>Mauritania</option>
+  <option>Mauritius</option>
+  <option>Mayotte</option>
+  <option>Mexico</option>
+  <option>Micronesia, Federated States Of</option>
+  <option>Moldova</option>
+  <option>Monaco</option>
+  <option>Mongolia</option>
+  <option>Montenegro</option>
+  <option>Montserrat</option>
+  <option>Morocco</option>
+  <option>Mozambique</option>
+  <option>Myanmar</option>
+  <option>Namibia</option>
+  <option>Nauru</option>
+  <option>Nepal</option>
+  <option>Netherlands</option>
+  <option>Netherlands Antilles</option>
+  <option>New Caledonia</option>
+  <option>New Zealand</option>
+  <option>Nicaragua</option>
+  <option>Niger</option>
+  <option>Nigeria</option>
+  <option>Niue</option>
+  <option>Norfolk Island</option>
+  <option>Northern Mariana Islands</option>
+  <option>Norway</option>
+  <option>Oman</option>
+  <option>Pakistan</option>
+  <option>Palau</option>
+  <option>Palestinian Territory, Occupied</option>
+  <option>Panama</option>
+  <option>Papua New Guinea</option>
+  <option>Paraguay</option>
+  <option>Peru</option>
+  <option>Philippines</option>
+  <option>Pitcairn</option>
+  <option>Poland</option>
+  <option>Portugal</option>
+  <option>Puerto Rico</option>
+  <option>Qatar</option>
+  <option>RÉunion</option>
+  <option>Romania</option>
+  <option>Russian Federation</option>
+  <option>Rwanda</option>
+  <option>Saint BarthÉlemy</option>
+  <option>Saint Helena</option>
+  <option>Saint Kitts And Nevis</option>
+  <option>Saint Lucia</option>
+  <option>Saint Martin</option>
+  <option>Saint Pierre And Miquelon</option>
+  <option>Saint Vincent And The Grenadines</option>
+  <option>Samoa</option>
+  <option>San Marino</option>
+  <option>Sao Tome And Principe</option>
+  <option>Saudi Arabia</option>
+  <option>Senegal</option>
+  <option>Serbia</option>
+  <option>Seychelles</option>
+  <option>Sierra Leone</option>
+  <option>Singapore</option>
+  <option>Slovakia</option>
+  <option>Slovenia</option>
+  <option>Solomon Islands</option>
+  <option>Somalia</option>
+  <option>South Africa</option>
+  <option>South Georgia And The South Sandwich Islands</option>
+  <option>Spain</option>
+  <option>Sri Lanka</option>
+  <option>Sudan</option>
+  <option>Suriname</option>
+  <option>Svalbard And Jan Mayen</option>
+  <option>Swaziland</option>
+  <option>Sweden</option>
+  <option>Switzerland</option>
+  <option>Syrian Arab Republic</option>
+  <option>Taiwan, Province Of China</option>
+  <option>Tajikistan</option>
+  <option>Tanzania, United Republic Of</option>
+  <option>Thailand</option>
+  <option>Timor-leste</option>
+  <option>Togo</option>
+  <option>Tokelau</option>
+  <option>Tonga</option>
+  <option>Trinidad And Tobago</option>
+  <option>Tunisia</option>
+  <option>Turkey</option>
+  <option>Turkmenistan</option>
+  <option>Turks And Caicos Islands</option>
+  <option>Tuvalu</option>
+  <option>Uganda</option>
+  <option>Ukraine</option>
+  <option>United Arab Emirates</option>
+  <option>United Kingdom</option>
+  <option>United States</option>
+  <option>United States Minor Outlying Islands</option>
+  <option>Uruguay</option>
+  <option>Uzbekistan</option>
+  <option>Vanuatu</option>
+  <option>Vatican City State</option>
+  <option>Venezuela</option>
+  <option>Viet Nam</option>
+  <option>Virgin Islands, British</option>
+  <option>Virgin Islands, U.s.</option>
+  <option>Wallis And Futuna</option>
+  <option>Western Sahara</option>
+  <option>Yemen</option>
+  <option>Zambia</option>
+  <option>Zimbabwe</option>
+  </select></td>
+  </tr>
+  <tr>
+    <td>Home Address:</td>
+    <td>
+      <input id="home-phone" name="personal_detail[home_address]" value="<%= @personal_details.home_address %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+    <td>Home City:</td>
+    <td>
+      <input id="home-phone" name="personal_detail[home_city]" value="<%= @personal_details.home_city %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+    <td>Home Country:</td>
+    <td>
+      <input id="home-phone" name="personal_detail[home_country]" value="<%= @personal_details.home_country %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+    <td>Home Postal Code:</td>
+    <td>
+      <input id="home-phone" name="personal_detail[home_postal]" value="<%= @personal_details.home_postal %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+    <td>Home Telephone:</td>
+    <td>
+      <input id="home-phone" name="personal_detail[home_phone]" value="<%= @personal_details.home_phone %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  <tr>
+    <td>Home Mobile:</td>
+    <td>
+      <input id="cell-phone" name="personal_detail[cell_phone]" value="<%= @personal_details.cell_phone %>" type="text" class="input-xlarge">
+    </td>
+  </tr>
+  </table>
+  </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="button" id="mailing-update" class="btn btn-success">Save changes</button>
+  </div>
+  </div>
+  </div>
+  </div>
 
-    <div class="panel panel-default" style="margin-top: 30px;">
-      <div class="panel-heading" style="">Mailing Address and Contact Information<a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#mailing_edit_link" style="color: white;
+
+  <div class="panel panel-default" style="margin-top: 30px;">
+      <div class="panel-heading" style="">Mailing Address and Contact Information<a href="#" id="personal_edit_link" data-toggle="modal" data-target="#mailing_edit_link" style="color: white;
               font-size: 11px;
               float:right;
               padding: 0;"><span> Edit </span><span class="glyphicon glyphicon-cog"></span></a></div>
@@ -1513,6 +1446,7 @@
       <button id="submit-address-info" name="submit-address-info" class="patrick-btn">Next - Education</button>
     </div>
 </div>
+
   </div>
 </div>
 
@@ -1577,7 +1511,7 @@
               <tr>
                 <td>Other Graduate Degrees:<a href="#" id="other_grad_open"><span class="glyphicon glyphicon-plus"></span></a></td>
                 <td><% @online_application.other_graduates.each do |other_graduate| %>
-                      <span id="other_grad_disp<%= other_graduate.id %>" class="language-container" >&bull; <%= other_graduate.other_degree %> <%	 if other_graduate.sub_other_degree.present? %>- <%= other_graduate.sub_other_degree %> <% end %><a href="#"><span id="<%= other_graduate.id %>" class="other-degree-delete glyphicon glyphicon-trash"></span></a><br></span>
+                      <span id="other_grad<%= other_graduate.id %>" class="language-container" >&bull; <%= other_graduate.other_degree %> <%	 if other_graduate.sub_other_degree.present? %>- <%= other_graduate.sub_other_degree %> <% end %><a href="#"><span id="<%= other_graduate.id %>" class="other-degree-delete glyphicon glyphicon-trash"></span></a><br></span>
 
                   <% end %></td>
               </tr>
@@ -1624,7 +1558,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" id="education-details-submit" class="btn btn-primary">Save changes</button>
+            <button type="button" id="education-details-submit" class="btn btn-success">Save changes</button>
           </div>
         </div>
       </div>
@@ -1713,7 +1647,7 @@
       </tr>
     </table>
       <div class="panel-heading">
-        Schools<a href="#" data-toggle="modal" data-target="#add_school" style="color: white;font-size: 11px;float: right;"><span>Add School </span><span class="glyphicon glyphicon-plus" style="float: none;"></span></a>
+        Schools<a href="#" data-toggle="modal" data-target="#add_school" style="color: white;font-size: 11px;float: right;"><span>Add School </span><span class="glyphicon glyphicon-plus" style="float: none;color:white !important;"></span></a>
       </div>
 
       <!-- Modal -->
@@ -1726,7 +1660,7 @@
             </div>
             <div class="modal-body">
              <form id="school-multiple-form" class="form-horizontal" method="post" action="/admissions/school/<%= @online_application.id %>">
-               <table>
+               <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;">
                  <tr>
                    <td>
                      School:
@@ -1744,35 +1678,32 @@
                      Month-Year Started:
                    </td>
                    <td>
-                     <input type="text" name="month_started" placeholder="month">
+                   <span class="language-container">
+                     <input type="text" name="year_started" placeholder="Year">
+                     <input type="text" name="month_started" placeholder="Month">
+                   </span>
                    </td>
-                   <td>
-                     <input type="text" name="year_started" placeholder="year">
-                   </td>
-                 </tr>
 
                  <tr>
                    <td>
                      Month-Year Ended:
                    </td>
-                   <td>
-                     <input type="text" name="month_ended" placeholder="month">
-                   </td>
-                   <td>
-                     <input type="text" name="year_ended" placeholder="year">
-                   </td>
-                 </tr>
+                   <td><span class="language-container">
+                     <input type="text" name="month_ended" placeholder="Month">
+                     <input type="text" name="month_ended" placeholder="Month">
+                   </span></td>
+                   </tr>
                  <tr>
                    <td>
                      Course:
                    </td>
-                   <td> <input type="text" name="course" placeholder="....."></td>
+                   <td> <input type="text" name="course" placeholder=""></td>
                  </tr>
                  <tr>
                    <td>
                      Remarks:
                    </td>
-                   <td><input type="text" name="remarks" placeholder="....."></td>
+                   <td><input type="text" name="remarks" placeholder=""></td>
 
                  </tr>
                </table>
@@ -1780,7 +1711,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" id="add-school-submit">Save changes</button>
+              <button type="button" class="btn btn-success" id="add-school-submit">Save changes</button>
             </div>
           </div>
         </div>
@@ -1826,7 +1757,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add School<span style="float: right; margin-right: 10px;" class="school-educ-multi glyphicon glyphicon-trash" data-dismiss="modal" id="<%= education_school.id %>"></span></h4>
+               <h4 class="modal-title" id="myModalLabel">Add School<a href="#"><span style="float: right; margin-right: 10px;" class="school-educ-multi glyphicon glyphicon-trash" data-dismiss="modal" id="<%= education_school.id %>"></span></a></h4>
               </div>
               <div class="modal-body">
                 <form id="school-multiple-form<%= education_school.id %>" class="form-horizontal" method="post" action="/admissions/edit_school/<%= @online_application.id %>">
@@ -1845,7 +1776,7 @@
                       <td><span id="education_school_disp<%= education_school.id %>-3" class="language-container" ><input type="text" value="<%= education_school.month_started %>" name="month_started"> <input type="text" value="<%= education_school.year_started %>" name="year_started"> </span></td></tr>
                     <tr>
                       <td>Month-Year ended: </td>
-                      <td><span id="education_school_disp<%= education_school.id %>-4" class="language-container" ><input type="text" value="<%= education_school.month_ended %>" name="month_ended">  - <input type="text" value="<%= education_school.year_ended %>" name="yeart_ended" > </span></td></tr>
+                      <td><span id="education_school_disp<%= education_school.id %>-4" class="language-container" ><input type="text" value="<%= education_school.month_ended %>" name="month_ended">  <input type="text" value="<%= education_school.year_ended %>" name="yeart_ended" > </span></td></tr>
                     <tr>
                       <td>Course:</td>
                       <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" value="<%= education_school.course %>" name="course" ></span></td></tr>
@@ -1855,7 +1786,7 @@
                   </table>
 <br>
 <hr>
-                  <p style="float:right; margin-right: 60px;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-primary edit_schol" name="educ_id" value="<%= education_school.id %>" >Save changes</button></p>
+                  <p style="float:right; margin-right: 60px;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-success edit_schol" name="educ_id" value="<%= education_school.id %>" >Save changes</button></p>
 
                 </form>
               </div>
@@ -2291,7 +2222,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" id="professional-submit" class="btn btn-primary">Save changes</button>
+            <button type="button" id="professional-submit" class="btn btn-success">Save changes</button>
           </div>
         </div>
       </div>
@@ -2401,7 +2332,7 @@
             </div>
             <div class="modal-body">
               <form id="work-multiple-form" class="form-horizontal" method="post" action="/admissions/work/<%= @online_application.id %>">
-                <table>
+                <table class="table" style=" margin:20px auto 0 auto;width: 650px;color:#333;">
                   <tr>
                     <td>
                      Company Name:
@@ -2419,10 +2350,10 @@
                       Month-Year Started:
                     </td>
                     <td>
-                      <input type="text" name="month_started" placeholder="month">
-                    </td>
-                    <td>
-                      <input type="text" name="year_started" placeholder="year" style="width:220px;">
+                      <span class="language-container">
+                     <input type="text" name="month_started" placeholder="Month">
+                     <input type="text" name="year_started" placeholder="Year">
+                   </span>
                     </td>
                   </tr>
 
@@ -2431,30 +2362,30 @@
                       Month-Year Ended:
                     </td>
                     <td>
-                      <input type="text" name="month_ended" placeholder="month">
-                    </td>
-                    <td>
-                      <input type="text" name="year_ended" placeholder="year" style="width:220px;">
+                      <span class="language-container">
+                     <input type="text" name="month_ended" placeholder="Month">
+                     <input type="text" name="year_ended" placeholder="Year">
+                   </span>
                     </td>
                   </tr>
                   <tr>
                     <td>
                       Years:
                     </td>
-                    <td> <input type="text" name="years" placeholder="....."></td>
+                    <td> <input type="text" name="years" placeholder=""></td>
                   </tr>
                   <tr>
                     <td>
                       Job Function:
                     </td>
-                    <td><input type="text" name="function" placeholder="....."></td>
+                    <td><input type="text" name="function" placeholder=""></td>
 
                   </tr>
                   <tr>
                     <td>
                       Company Industry:
                     </td>
-                    <td><input type="text" name="industry" placeholder="....."></td>
+                    <td><input type="text" name="industry" placeholder=""></td>
 
                   </tr>
                 </table>
@@ -2462,14 +2393,14 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary" id="add-work-submit">Save changes</button>
+              <button type="button" class="btn btn-success" id="add-work-submit">Save changes</button>
             </div>
           </div>
         </div>
       </div>
 
       <div class="panel-heading">
-        Work<a href="#" data-toggle="modal" data-target="#add_work" style="color: white;font-size: 11px;float: right;"><span>Add Work </span><span class="glyphicon glyphicon-plus" style="float: none;"></span></a>
+        Work<a href="#" data-toggle="modal" data-target="#add_work" style="color: white;font-size: 11px;float: right;"><span>Add Work </span><span class="glyphicon glyphicon-plus" style="float: none;color:white !important;"></span></a>
       </div>
   <% @online_application.work_experiences.each do |work_experience| %>
       <div id="table-work-<%= work_experience.id %>">
@@ -2516,7 +2447,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Add Work<span style="float: right; margin-right: 10px;" class="work-experience-multi glyphicon glyphicon-trash" data-dismiss="modal" id="<%= work_experience.id %>"></span></h4>
+                <h4 class="modal-title" id="myModalLabel">Add Work<a href="#"><span style="float: right; margin-right: 10px;" class="work-experience-multi glyphicon glyphicon-trash" data-dismiss="modal" id="<%= work_experience.id %>"></span></a></h4>
               </div>
               <div class="modal-body">
                 <form id="work-multiple-form<%= work_experience.id %>" class="form-horizontal" method="post" action="/admissions/edit_work/<%= @online_application.id %>">
@@ -2535,7 +2466,7 @@
                       <td><span id="work_disp<%= work_experience.id %>-3" class="language-container" ><input type="text" value="<%= work_experience.month_started %>" name="month_started"> <input type="text" value="<%= work_experience.year_started %>" name="year_started"> </span></td></tr>
                     <tr>
                       <td>Month-Year ended: </td>
-                      <td><span id="work_disp<%= work_experience.id %>-4" class="language-container" ><input type="text" value="<%= work_experience.month_ended %>" name="month_ended">  - <input type="text" value="<%= work_experience.year_ended %>" name="yeart_ended" > </span></td></tr>
+                      <td><span id="work_disp<%= work_experience.id %>-4" class="language-container" ><input type="text" value="<%= work_experience.month_ended %>" name="month_ended">  <input type="text" value="<%= work_experience.year_ended %>" name="yeart_ended" > </span></td></tr>
                     <tr>
                       <td>Years:</td>
                       <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.years %>" name="years" ></span></td></tr>
@@ -2552,7 +2483,7 @@
                   </table>
                   <br>
                   <hr>
-                  <p style="float:right; margin-right: 60px;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-primary edit_schol" name="educ_id" value="<%= work_experience.id %>" >Save changes</button></p>
+                  <p style="float:right; margin-right: 60px;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-success edit_schol" name="educ_id" value="<%= work_experience.id %>" >Save changes</button></p>
 
                 </form>
               </div>
@@ -2566,7 +2497,7 @@
         </div>
 
     <% end %>
-    <div class="control-group" style="margin: 30px 200px;">
+    <div class="control-group" style="margin: 30px 192px;">
       <label class="control-label" for="submit-employment-info-back"></label>
       <div class="controls">
         <button id="submit-employment-info-back" name="submit-employment-info-back" class="patrick-btn">Back
@@ -2649,7 +2580,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" id="preferences-submit" class="btn btn-primary">Save changes</button>
+            <button type="button" id="preferences-submit" class="btn btn-success">Save changes</button>
           </div>
         </div>
       </div>
@@ -2708,10 +2639,11 @@
       </div>
     </div>
       </div>
+
   </div>
 </div>
-</div>
 <!-- End Page 4 -->
+
 <!-- Start Page 5 -->
 <div id="page-5">
   <div class="content">
@@ -2764,7 +2696,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" id="changeemail-submit" class="btn btn-primary">Save changes</button>
+            <button type="button" id="changeemail-submit" class="btn btn-success">Save changes</button>
           </div>
         </div>
       </div>
@@ -2808,7 +2740,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" id="changepass-submit" class="btn btn-primary">Save changes</button>
+            <button type="button" id="changepass-submit" class="btn btn-success">Save changes</button>
           </div>
         </div>
       </div>

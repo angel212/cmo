@@ -115,6 +115,10 @@ table a:hover {
   margin-left: 175px;
 }
 
+.glyphicon-plus, .glyphicon-trash {
+  color:green;
+}
+
 .leftcolumn {
   position: absolute;
   height: 792px;
@@ -123,7 +127,6 @@ table a:hover {
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
-  box-shadow: 0px 2px 10px black;
 }
 
 table {
@@ -371,7 +374,7 @@ input[type="text"], select.dropdown-value, input[type="date"], input[type="passw
   height:30px;
   margin-bottom: 10px;
   width:290px;
-  padding-left: 10px;
+//  padding-left: 10px;
 }
 
 body.modal-open {
@@ -385,7 +388,8 @@ body.modal-open {
 
 .panel {
   border:1px solid #146D55;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 6px 10px #146D55;
+  margin-left: 6px;
 }
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {

@@ -2,21 +2,19 @@
   <table style="margin-left: 10px;">
     <form class="form-horizontal" action="/admissions" method="post">
       <fieldset>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">@</div>
+            <input style="width: 250px;" class="form-control" type="email" name="email"  placeholder="AIM Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputPassword2">Password</label>
+          <input type="password" class="form-control" name="password" id="exampleInputPassword2" placeholder="Password">
+        </div>
         <tr>
           <td>
-            <input id="email" name="email" type="text" placeholder="AIM Email" style="height:30px;font-family:calibri;">
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <input id="password" name="password" type="password" placeholder="Password" style="height:30px;font-family:calibri;">
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <button id="begin-app-submit" name="submit" class="btn" style="margin-left: 55px; width: 130px; margin-top: 0px; border-radius: 6px;">Login</button>
+            <button id="begin-app-submit" name="submit" class="btn btn-primary" style="margin-left: 65px; width: 130px; margin-top: 0px; border-radius: 6px;">Login</button>
           </td>
         </tr>
         <!--<div class="control-group">-->
