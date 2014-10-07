@@ -2433,12 +2433,25 @@
           <tr>
             <td>Location:</td>
             <td colspan="2"><span id="work_disp-8" class="language-container" ><%= work_experience.location %></td></tr> </span>
+        <tr>
+          <td>Job Description</td>
+          <td>
+            <% work_experience.job_descriptions.each do |job_desc| %>
+            <%=	  job_desc.job_desc %><br>
+            <%	 end %>
+          </td>
+          <td valign="middle">
+            <a href="#" data-toggle="modal" data-target="#job_desc_modal-<%=work_experience.id %>"  style="font-size: 11px;padding: 0;float:right;"><span>Update job Description</span><span class="glyphicon glyphicon-phone"></span></a>
+          </td>
+
+        </tr>
         </table>
         <br>
         <hr/>
       </div>
 
   <% end %>
+<!--modal for add work exp-->
   <% @online_application.work_experiences.each do |work_experience| %>
 
 
@@ -2509,6 +2522,89 @@
         </div>
 
     <% end %>
+    <!--modal for job desc-->
+    <% @online_application.work_experiences.each do |work_experience| %>
+
+        <div class="modal fade"  data-focus-on="input:first" data-backdrop="static" data-keyboard="false"  id="job_desc_modal-<%= work_experience.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Job Description : <%=work_experience.company %><a href="#job_desc_add-<%= work_experience.id %>" data-toggle="modal"><span style="font-size:11px; float:right;">Add New</span><span style="float: right; margin-right: 10px;" class="work-experience-multi glyphicon glyphicon-pencil" data-dismiss="modal" id="<%= work_experience.id %>"></span></a></h4>
+              </div>
+              <div class="modal-body">
+
+                <form>
+                  <table>
+                    <% if work_experience.job_descriptions.blank? %>
+                        <td colspan="2">No Descriptions Yet</td>
+
+                    <%else %>
+
+                        <% work_experience.job_descriptions.each do |job_desc| %>
+
+                        <tr><td>
+                          <input type="text" value="<%=job_desc.job_desc %>" maxlength="80" disabled>
+                        </td>
+                          <td> &nbsp;</td>
+                        </tr>
+
+
+                        <% end %>
+
+                    <% end %>
+                  </table>
+                </form>
+
+
+              </div>
+              <div class="modal-footer">
+                &nbsp;
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                <!--<button type="button" class="btn btn-primary edit_schol" id="<%= work_experience.id %>" >Save changes</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <% end %>
+    <!--add-->
+    <% @online_application.work_experiences.each do |work_experience| %>
+
+        <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="job_desc_add-<%= work_experience.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Job Description : <%=work_experience.company %><a href="#"><span style="float: right; margin-right: 10px;" class="work-experience-multi glyphicon glyphicon-trash" data-dismiss="modal" id="<%= work_experience.id %>"></span></a></h4>
+              </div>
+              <div class="modal-body">
+
+                <form name="add_new_jdescription">
+
+
+                  <table>
+                    <tr>
+
+                    </tr>
+                  </table>
+                </form>
+
+
+              </div>
+              <div class="modal-footer">
+                &nbsp;
+                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                <!--<button type="button" class="btn btn-primary edit_schol" id="<%= work_experience.id %>" >Save changes</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <% end %>
+
     <div class="control-group" style="margin: 30px 192px;">
       <label class="control-label" for="submit-employment-info-back"></label>
       <div class="controls">

@@ -21,6 +21,7 @@ class AdmissionsController < ApplicationController
     @other_degree = @online_application.other_graduates
     @certification = @online_application.certifications
     @educ_school = @online_application.education_schools
+    @work_multiple = @online_application.work_experiences
 
 
     @student=1
