@@ -1,4 +1,7 @@
 OnlineApplication::Application.routes.draw do
+  resources :job_descriptions
+
+
   resources :work_experiences
 
 

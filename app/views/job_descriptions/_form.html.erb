@@ -1,0 +1,25 @@
+<%= form_for(@job_description) do |f| %>
+  <% if @job_description.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job_description.errors.count, "error") %> prohibited this job_description from being saved:</h2>
+
+      <ul>
+      <% @job_description.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :work_experience_id %><br />
+    <%= f.number_field :work_experience_id %>
+  </div>
+  <div class="field">
+    <%= f.label :job_desc %><br />
+    <%= f.text_field :job_desc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
