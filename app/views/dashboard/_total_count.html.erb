@@ -1,18 +1,16 @@
 <div class="alert alert-info row-fluid" style="width: auto;">
   <div>
   <div class="span3">
-    <b>Total Applications</b>
-  </div>
-
-  <div class="span1">
-    <b><%= @applicants.count %></b>
+    <b>Total Applications: <%= @applicants.count %>
+      <a href="/excel/export" class="btn btn-warning" style="float:right;">Export Tool</a>
+      <a href="#" class="btn btn-warning" id="open_add_dialog" style="float:right;">Add Student Tool</a></b>
   </div>
 
   <div class="span2">
-    <a href="/excel/export" class="btn btn-warning" style="float:right;">Export Tool</a>
+
   </div>
     <div class="span2">
-      <a href="#" class="btn btn-warning" id="open_add_dialog" style="float:right;">Add Student Tool</a>
+
     </div>
   </div>
 </div>

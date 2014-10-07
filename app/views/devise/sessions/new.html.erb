@@ -8,6 +8,7 @@
         document.getElementById("footer").style.marginTop="-50px;";
         document.getElementById("main").style.height="450px";
         document.getElementById("main").style.backgroundColor="rgb(13,17,46)";
+        document.getElementById("content-container").style.backgroundColor="rgb(13, 17, 46)";
     })
 </script>
 
@@ -15,15 +16,19 @@
   <%= image_tag 'aimlogo.png' %>
 </div>
 <div style="border-radius: 9px; background-color: rgb(31, 97, 143);margin: 0 auto 0 auto;height: 240px;  width: 350px; border: 1px solid black; margin-top: 10px;padding-left: 30px;box-shadow: 0 0 5px black;">
-  <h4 style="margin-top:20px;   color:#ffffff;text-align: center;margin-left: -40px;">CAREER SERVICES OFFICE PORTAL</h4>
+  <h4 style="margin-top:20px;   color:#ffffff;text-align: center;margin-left: -40px;font-weight: bold;">CAREER SERVICES OFFICE PORTAL</h4>
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-      <tr>
-        <td style="padding-left: 50px;padding-top: 20px"><%= f.email_field :email, :autofocus => true, :placeholder => "Email", style: 'width:256px;margin-left:20px;margin-top:20px;' %></td>
-      </tr>
-      <tr>
-        <td style="padding-left: 50px;"><%= f.password_field :password, :placeholder => "Password", style: 'margin-left:20px;' %></td>
-      </tr>
-      <div><%= f.submit "SIGN IN", class: 'btn btn-primary', style: 'height: 40px;width: 150px;margin-left: 80px;' %></div>
+      <div class="form-group">
+        <div class="input-group" style="margin-top: 20px">
+          <div class="input-group-addon">@</div>
+          <%= f.email_field :email, :autofocus => true, :placeholder => "Email", class:'form-control', style: 'width:250px;'  %>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="exampleInputPassword2">Password</label>
+        <%= f.password_field :password, :placeholder => "Password", class:'form-control' %>
+      </div>
+      <div><%= f.submit "SIGN IN", class: 'btn btn-primary', style: 'height: 40px;width: 150px;margin-left: 70px;' %></div>
   <% end %>
 </div>
 <p style="text-align:center;color: white;letter-spacing: 0.5px;text-decoration:none;font-size:11px;margin-top: 10px;">Copyright © 2014 Asian Institute of Management</p>
