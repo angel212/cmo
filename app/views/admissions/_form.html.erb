@@ -2398,7 +2398,7 @@
           </div>
         </div>
       </div>
-
+<br/>
       <div class="panel-heading">
         Work<a href="#" data-toggle="modal" data-target="#add_work" style="color: white;font-size: 11px;float: right;"><span>Add Work </span><span class="glyphicon glyphicon-plus" style="float: none;color:white !important;"></span></a>
       </div>
@@ -2451,9 +2451,21 @@
               </div>
               <div class="modal-body">
                 <form id="work-multiple-form<%= work_experience.id %>" class="form-horizontal" method="post" action="/admissions/edit_work/<%= @online_application.id %>">
-
-
-
+<script>
+                  $(function() {
+                  $('.date-picker').datepicker( {
+                  changeMonth: true,
+                  changeYear: true,
+                  showButtonPanel: true,
+                  dateFormat: 'MM yy',
+                  onClose: function(dateText, inst) {
+                  var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+                  var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                  $(this).datepicker('setDate', new Date(year, month, 1));
+                  }
+                  });
+                  });
+</script>
                   <table id="educ_table<%= work_experience.id %>" class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
                     <tr>
                       <td>Company Name:</td>
@@ -2463,7 +2475,7 @@
                       <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.title %>" name="title"></span></td></tr>
                     <tr>
                       <td>Month-Year started: </td>
-                      <td><span id="work_disp<%= work_experience.id %>-3" class="language-container" ><input type="text" value="<%= work_experience.month_started %>" name="month_started"> <input type="text" value="<%= work_experience.year_started %>" name="year_started"> </span></td></tr>
+                      <td><span id="work_disp<%= work_experience.id %>-3" class="language-container" ><input type="text" value="<%= work_experience.month_started %>" name="month_started" class="date-picker"> <input type="text" value="<%= work_experience.year_started %>" name="year_started" class="date-picker"> </span></td></tr>
                     <tr>
                       <td>Month-Year ended: </td>
                       <td><span id="work_disp<%= work_experience.id %>-4" class="language-container" ><input type="text" value="<%= work_experience.month_ended %>" name="month_ended">  <input type="text" value="<%= work_experience.year_ended %>" name="yeart_ended" > </span></td></tr>
