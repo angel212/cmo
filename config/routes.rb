@@ -157,6 +157,7 @@ post '/admissions/job_description/(:id)/(:id2)' => 'admissions#add_job_descripti
   get '/api/certification/delete/(:id)' => 'admissions#delete_certification'
   get '/api/work/delete/(:id)' => 'admissions#delete_work'
   get '/api/school_educ/delete/(:id)' => 'admissions#delete_school'
+  get '/api/job_desc/delete/(:id)' => 'admissions#delete_job_desc'
 
 
   get '/api/undergrad/delete/(:id)' => 'admissions#delete_undergrad'

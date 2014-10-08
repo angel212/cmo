@@ -620,6 +620,18 @@ $(document).ready(function(){
         e.preventDefault();school-educ-multi
     })
 
+    $('.delete_job_desc').click(function(e) {
+
+        var r = confirm("Do you really want to Delete?");
+        if (r == true) {
+            document.getElementById("job_desc-disp1-" + e.target.id).remove();
+            document.getElementById("job_desc-disp2-" + e.target.id).remove();
+           $.ajax('/api/job_desc/delete/' + e.target.id);
+        } else {
+            return false;
+        }
+        e.preventDefault();
+    })
     //    $('#submit-club-affil').click(function() {
 //
 //

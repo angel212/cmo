@@ -2541,7 +2541,7 @@
           <td>Job Description</td>
           <td>
             <% work_experience.job_descriptions.each do |job_desc| %>
-            <%=	  job_desc.job_desc %><br>
+           <span id="job_desc-disp1-<%=job_desc.id %>"> <%=	  job_desc.job_desc %><br></span>
             <%	 end %>
           </td>
           <td valign="middle">
@@ -2667,10 +2667,13 @@
 
                         <% work_experience.job_descriptions.each do |job_desc| %>
 
-                        <tr><td>
-                          <input type="text" value="<%=job_desc.job_desc %>" maxlength="80" disabled>
+                        <tr id="job_desc-disp2-<%=job_desc.id %>"><td>
+                          <!--<input type="text" value="<%=job_desc.job_desc %>" maxlength="80" disabled>-->
+                          <span class="<%=job_desc.id %>" style="font-size: 11px;"><span class="glyphicon glyphicon-asterisk"></span><%=job_desc.job_desc %><br></span>
                         </td>
-                          <td> &nbsp;</td>
+                          <td valign="middle">
+                            <a href="#"  style="font-size: 11px;padding: 0;float:right;"><span></span><span class="delete_job_desc glyphicon glyphicon-trash" id="<%=job_desc.id %>"></span></a>
+                          </td>
                         </tr>
 
 
