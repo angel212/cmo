@@ -217,7 +217,6 @@
 
 <form name="preference_criteria_detail" class="form-horizontal" method="post" action="/admissions/club_affiliation/<%= @online_application.id %>"
       style="
-  color: #7d7d7d;
   margin: 0 auto 0 auto;
   font-family: helvetica, verdana, arial, sans-serif;
   ">
@@ -253,7 +252,7 @@
 
 <div id="undergrad_major_dialog" title="Add Undergraduate Major">
 
-  <form name="undergrad_form" id="undergrad_form" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/undergrad_major/<%= @online_application.id %>">
+  <form name="undergrad_form" id="undergrad_form" style="margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/undergrad_major/<%= @online_application.id %>">
     <table>
       <tr>
         <td>Undergraduate Major:</td>
@@ -284,7 +283,7 @@
 </div>
 
 <div id="other_grad_dialog" title="Add Other Graduate Degrees ">
-  <form name="other_grad_forms" id="other_grad" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/other_degree/<%= @online_application.id %>">
+  <form name="other_grad_forms" id="other_grad" style="margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/other_degree/<%= @online_application.id %>">
 
     <table style="margin: 0 auto;">
       <tr>
@@ -317,7 +316,7 @@
 </div>
 
 <div id="certification_dialog" title="Add Certifications">
-  <form name="certification_form" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" id="other_grad" class="form-horizontal" method="post" action="/admissions/certification/<%= @online_application.id %>">
+  <form name="certification_form" style="margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" id="other_grad" class="form-horizontal" method="post" action="/admissions/certification/<%= @online_application.id %>">
     <table>
       <tr>
         <td>Certifications/Licenses:</td>
@@ -352,8 +351,8 @@
 </div>
 
 <div id="function_experience_dialog" title="Add Function Experience">
-  <form name="professional_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/function/<%= @online_application.id %>">
-    <table style=" color: #7d7d7d;width: 500px;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="professional_detail" style="margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/function/<%= @online_application.id %>">
+    <table style="width: 500px;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Function - Experience:</td>
         <td>
@@ -410,8 +409,8 @@
 
 <div id="industry_experience_dialog" title="Add Industry Experience">
 
-  <form name="industry_professional_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/industry/<%= @online_application.id %>">
-    <table style=" color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="industry_professional_detail" style="margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/industry/<%= @online_application.id %>">
+    <table style="width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Industry - Experience:</td>
         <td>
@@ -470,8 +469,8 @@
 
 <div id="language_dialog" title="Add Language">
 
-  <form id="-language-education-details-form" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" name="languageeducationdetails" class="form-horizontal" method="post" action="/admissions/language/<%= @online_application.id %>">
-  <table style="padding-left: 60px; margin-left: 6px;width: 565;color: #7d7d7d;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form id="-language-education-details-form" style="margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" name="languageeducationdetails" class="form-horizontal" method="post" action="/admissions/language/<%= @online_application.id %>">
+  <table style="padding-left: 60px; margin-left: 6px;width: 565;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
     <tr>
       <td>Language Ability:</td>
       <td>
@@ -582,8 +581,8 @@
 
 <div id="geographic_experience_dialog" title="Add Geographic Experience">
 
-  <form name="geographic_professional_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/geographic/<%= @online_application.id %>">
-    <table style=" color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="geographic_professional_detail" style="margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/geographic/<%= @online_application.id %>">
+    <table style="width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Geographic - Experience:</td>
         <td>
@@ -618,8 +617,8 @@
 
 <div id="industry_preference_dialog" title="Add Industry Preference">
 
-  <form name="preference_industry_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/preference_industry/<%= @online_application.id %>">
-    <table style=" color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="preference_industry_detail" style="margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/preference_industry/<%= @online_application.id %>">
+    <table style="width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Industry - Preference:</td>
         <td>
@@ -672,8 +671,8 @@
 
 <div id="important_criteria_dialog" title="Add Important Criteria for Choosing a Job">
 
-  <form name="preference_criteria_detail" style=" color: #7d7d7d;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/preference_criteria/<%= @online_application.id %>">
-    <table style=" color: #7d7d7d;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+  <form name="preference_criteria_detail" style="margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" class="form-horizontal" method="post" action="/admissions/preference_criteria/<%= @online_application.id %>">
+    <table style="width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
       <tr>
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
