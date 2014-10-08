@@ -143,7 +143,7 @@ OnlineApplication::Application.routes.draw do
   post'/admissions/edit_school/(:id)' => 'admissions#edit_school'
   post'/admissions/work/(:id)' => 'admissions#add_multiple_work'
   post'/admissions/edit_work/(:id)' => 'admissions#edit_multiple_work'
-
+post '/admissions/job_description/(:id)/(:id2)' => 'admissions#add_job_description'
 
 
   get 'api/language_ability/delete/(:id)' => 'admissions#delete_language'

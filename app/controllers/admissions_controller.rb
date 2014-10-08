@@ -204,6 +204,12 @@ class AdmissionsController < ApplicationController
     redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
+  def add_job_description
+    JobDescription.create!(:work_experience_id => params[:id2] ,:job_desc => params[:job_description])
+    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+
+  end
+
   def delete_language
     language_ability = LanguageAbility.find(params[:id])
     language_ability.delete
