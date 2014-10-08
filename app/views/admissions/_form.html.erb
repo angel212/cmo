@@ -2705,14 +2705,28 @@
               </div>
               <div class="modal-body">
 
-                <form name="add_new_jdescription">
+                <script>
+                    function countChar<%=work_experience.id %>(val) {
+                        var len = val.value.length;
+                        if (len >= 80) {
+                            val.value = val.value.substring(0, 80);
+                        } else {
+                            $('#charNum<%=work_experience.id %>').text(80 - len);
+                        }
+                    };
+                </script>
+                <form id="trolll" class="form-horizontal" method="post" action="/admissions/job_description/<%= @online_application.id %>/<%=work_experience.id%>">
 
 
                   <table>
                     <tr>
-
+    <td>
+      <input type="text" id="field" onkeyup="countChar<%=work_experience.id%>(this)"  name="job_description" maxlength="80">
+      <div id="charNum<%=work_experience.id %>"></div>
+</td>
                     </tr>
                   </table>
+                  <button>Save</button>
                 </form>
 
 
