@@ -1744,8 +1744,15 @@
           </div>
         </div>
       </div>
-
+      <% if @online_application.education_schools.blank?%>
+<div><br>
+   <legend style="margin-left: 68px;">No Schools yet</legend>
+    </div>
+        <% end %>
         <% @online_application.education_schools.each do |education_school| %>
+
+
+
           <div id="table-school-<%= education_school.id %>">
           <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;" cellpadding="4">
             <tr>
