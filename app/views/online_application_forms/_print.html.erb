@@ -1,5 +1,208 @@
-<%= render :partial => 'online_application_forms/print/personal_information' %>
-<%= render :partial => 'online_application_forms/print/academic_information' %>
-<%= render :partial => 'online_application_forms/print/employment_information' %>
-<hr/>
-<p><a href="javascript:window.print();" class="btn btn-info">Print</a></p>
+<%-# render :partial => 'online_application_forms/print/personal_information' %>
+<%-# render :partial => 'online_application_forms/print/academic_information' %>
+<%-# render :partial => 'online_application_forms/print/employment_information' %>
+<head>
+  <style>
+      @media print {
+          * {
+              font-size:14px;
+          }
+
+          td {
+              margin:10px 10px;
+          }
+
+          @page{margin:0px auto;}
+
+          .leftcolumn {
+              display:none !important;
+          }
+
+          #div_print {
+          }
+
+          td.header {
+              background-color: gray !important;
+              color: black;
+              -webkit-print-color-adjust: exact !important;
+          }
+
+          .no-print, .no-print *
+          {
+              display: none !important;
+          }
+
+          .content-container, .admissions-container, .print {
+              display:block !important;
+              height: auto !important;
+              width: auto !important;
+              overflow-x: hidden !important;
+          }
+
+          .footer-online-admissions {
+              display: none !important;
+          }
+
+          .print {
+              display:block !important;
+              position: absolute;
+              border:1px solid white !important;
+              box-shadow:0 0 0px;
+              left:0px !important;
+              top:10px;
+              /*height:1056px !important;*/
+              /*background-color:white;*/
+              /*border:1px solid black;*/
+              /*height:600px;*/
+              /*width:816px;*/
+              margin:0;
+          }
+
+          .remove-overflow{
+              height:auto !important;
+          }
+
+          .date-pick {
+              display: none !important;
+          }
+          .resume {
+              width: 1000px !important;
+              font-size: 20px !important;
+          }
+
+          .horizontal-row {
+              width: 1000px !important;
+          }
+
+      }
+  </style>
+  <link rel="stylesheet" href="/assets/global.css.scss">
+  <script language="javascript">
+      function printdiv(printpage)
+      {
+
+          var headstr = "<html><head>";
+          var style = "<link rel='stylesheet' href='/assets/global.css.scss'>";
+          var endheadstr = "</head><body>";
+          var title = "<title></title>";
+          var footstr = "</body>";
+          var newstr = document.all.item(printpage).innerHTML;
+          var oldstr = document.body.innerHTML;
+          document.body.innerHTML = headstr+title+style+endheadstr+newstr+footstr;
+
+          window.print();
+
+          document.body.innerHTML = oldstr;
+          return true;
+      }
+  </script>
+</head>
+
+<div style="">
+  <!--<input type="button" onclick="printdiv('div_print')">-->
+  <!--<a href="#" id="back-print-btn" class="btn btn-default back-print-btn no-print" style="position: absolute;
+          top: 20px;
+          left: 550px;width: 110px;">Back</a>-->
+
+  <a href="javascript:window.print();" class="btn btn-primary no-print" style="position: absolute;
+          top: 135px;
+          left: 720px;
+          width: 110px;">Print Resume</a>
+  <div id="div_print" class="print" style="color: black !important;
+          position: absolute;
+          zoom: 90%;
+          box-shadow: 0 0 10px #146D55;
+          ">
+    <div class="remove-overflow" style="height:760px;overflow-y:auto;padding: 30px 30px;">
+      <p class="horizontal-row" style="border-bottom:2px solid black;padding-bottom:10px;width:750px;margin:0 auto;">
+        <span style="font-weight:bold;font-size:32px;padding:0px;margin:0px;"><%= @online_application_form.personal_detail.first_name %> <%= @online_application_form.personal_detail.middle_name %> <%= @online_application_form.personal_detail.last_name %></span><br/>
+        <span style="font-size: 12px"><%= @online_application_form.personal_detail.current_mobile %> / <%= @online_application_form.personal_detail.email %></span>
+        <img src="http://tapmiblogs.files.wordpress.com/2010/11/aim-logo.png" style="height: 70px;float: right;margin-top: -44px;">
+      </p>
+      <br/>
+
+      <table class="resume" style="font-family: arial,sans-serif;margin:0 auto;
+              width: 750px;
+              font-size:16px;
+              border-width: 1px;
+              border-color: #000;
+              border-collapse: collapse;">
+        <tr>
+          <td class="heading" colspan="6">EDUCATION</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold;">
+            <%= @online_application_form.education_detail.mba_school %><br/><%=@online_application_form.education_detail.last_school_course_title%>
+          </td>
+          <td>
+            Location:
+          </td>
+        </tr>
+        <tr>
+          <td><ul><li>Date of Graduation: <%= @online_application_form.education_detail.last_school_end_date %></li></ul></td>
+        </tr>
+
+        <% @online_application_form.education_schools.each do |education_school| %>
+            <% if education_school.present? %>
+                <tr>
+                  <td style="font-weight: bold;"><%= education_school.school %><br/><%= education_school.course %></td>
+                  <td>Location: <%= education_school.location %><br/><%= education_school.year_started %>-<%= education_school.year_ended %></td>
+                </tr>
+                <tr>
+                </tr>
+            <% end %>
+        <% end %>
+
+        <td class="heading" colspan="6">WORK EXPERIENCE</td>
+        <% @online_application_form.work_experiences.each do |work_experience| %>
+            <tr>
+              <td style="font-weight:bold;">
+                <%= work_experience.company %>, <%= work_experience.job_function %><br/>
+                <%= work_experience.title %>
+                <% work_experience.job_descriptions.each do |job_desc| %>
+
+                    <ul style="font-weight: 100">
+                      <li><%= job_desc.job_desc %></li>
+                    </ul>
+                <% end %>
+              </td>
+              <td valign="top">Location: <%= work_experience.location %><br/>
+                <%= work_experience.year_started %>-<%= work_experience.year_ended %>
+              </td>
+            </tr>
+        <% end %>
+
+        <tr>
+          <td class="heading" colspan="6">CO-CURRICULAR ACTIVITIES</td>
+        </tr>
+        <tr>
+          <td style="font-weight:bold;">
+            AIM Consulting Club<br/>
+            Core Team
+          </td>
+          <td>Location: Makati City, PH<br/>
+            2013-2014</td>
+        </tr>
+        <tr>
+          <td style="font-weight:bold;">American Chamber of Commerce<br/>Member</td>
+          <td>Location: Makati City, PH<br/>
+            2013-2014</td>
+        </tr>
+        <tr>
+          <td class="heading" colspan="6">OTHER INFORMATION</td>
+        </tr>
+        <tr>
+          <td style="font-weight:bold;">
+            <ul>
+              <li>Recipient of STAR AWARD in 2012</li>
+              <li>Recipient of 2 Citibank RAVE Awards (2009, 2010)</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+<!--<hr/>-->
+<!--<p><a href="javascript:window.print();" class="btn btn-info">Print</a></p>-->

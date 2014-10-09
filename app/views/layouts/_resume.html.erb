@@ -1,258 +1,205 @@
 <head>
   <style>
-      .resume {
-          font-family:Helvetica;
-          font-size:13px;
-          padding:5px 10px;
-      }
+      @media print {
+          * {
+              font-size:14px;
+          }
 
-      .resume td{
-          padding:0px 10px;
-      }
+          td {
+              margin:10px 10px;
+          }
 
-      .resume td:first-child{
-          padding:5px 10px;
-      }
+          @page{margin:0px auto;}
 
+          .leftcolumn {
+              display:none !important;
+          }
+
+          #div_print {
+              margin-top:-180px;
+          }
+
+          td.header {
+              background-color: gray !important;
+              color: black;
+              -webkit-print-color-adjust: exact !important;
+          }
+
+          .no-print, .no-print *
+          {
+              display: none !important;
+          }
+
+          .content-container, .admissions-container, .print {
+              display:block !important;
+              height: auto !important;
+              width: auto !important;
+              overflow-x: hidden !important;
+          }
+
+          .footer-online-admissions {
+              display: none !important;
+          }
+
+          .print {
+              display:block !important;
+              position: absolute;
+              border:1px solid white !important;
+              box-shadow:0 0 0px;
+              left:0px !important;
+              top:10px;
+              /*height:1056px !important;*/
+              /*background-color:white;*/
+              /*border:1px solid black;*/
+              /*height:600px;*/
+              /*width:816px;*/
+              margin:0;
+          }
+
+          .remove-overflow{
+              height:auto !important;
+          }
+
+          .date-pick {
+              display: none !important;
+          }
+          .resume {
+              width: 1000px !important;
+              font-size: 20px !important;
+          }
+
+          .horizontal-row {
+              width: 1000px !important;
+          }
+
+      }
   </style>
+  <link rel="stylesheet" href="/assets/global.css.scss">
+  <script language="javascript">
+      function printdiv(printpage)
+      {
+
+          var headstr = "<html><head>";
+          var style = "<link rel='stylesheet' href='/assets/global.css.scss'>";
+          var endheadstr = "</head><body>";
+          var title = "<title></title>";
+          var footstr = "</body>";
+          var newstr = document.all.item(printpage).innerHTML;
+          var oldstr = document.body.innerHTML;
+          document.body.innerHTML = headstr+title+style+endheadstr+newstr+footstr;
+
+          window.print();
+
+          document.body.innerHTML = oldstr;
+          return true;
+      }
+  </script>
 </head>
-<div style="height:100%;width:100%;">
-  <!--<img src="http://www.guiasamarillas.es/_images/empresa/back.png" />-->
-  <div style="z-index: 9999;left:350px;position: absolute;background-color:white;border:1px solid black;height:630px;width:800px;box-shadow:0 0 70px black;margin:0 auto 0 auto;color:black !important;">
-    <div style="height:570px;overflow-y:auto;padding: 30px 30px;">
-      <p style="border-bottom:2px solid black;padding-bottom:10px;width:650;margin:0 auto;">
-        <span style="font-weight:bold;font-size:24px;padding:0px;margin:0px;"><%= @online_application_form.personal_detail.first_name %> <%= @online_application_form.personal_detail.middle_name %> <%= @online_application_form.personal_detail.last_name %></span><br/>
-        <%= @online_application_form.personal_detail.address_1 %> <%= @online_application_form.personal_detail.address_2 %> <%= @online_application_form.personal_detail.city %> <%= @online_application_form.personal_detail.address_state %>, <%= @online_application_form.personal_detail.address_country %>
-        <%= @online_application_form.personal_detail.address_post_code %> <br/>
-        <%= @online_application_form.personal_detail.current_telephone %> <br/>
-        <%= @online_application_form.personal_detail.email %>
+
+<div style="">
+  <!--<input type="button" onclick="printdiv('div_print')">-->
+  <!--<a href="#" id="back-print-btn" class="btn btn-default back-print-btn no-print" style="position: absolute;
+          top: 20px;
+          left: 550px;width: 110px;">Back</a>-->
+
+  <a href="javascript:window.print();" class="btn btn-primary no-print" style="position: absolute;
+          top: 135px;
+          left: 720px;
+          width: 110px;">Print Resume</a>
+  <div id="div_print" class="print" style="color: black !important;
+          position: absolute;
+          zoom: 90%;
+          box-shadow: 0 0 10px #146D55;
+          left: 480px;
+          top: 200px;">
+    <div class="remove-overflow" style="height:790px;overflow-y:auto;padding: 30px 30px;">
+      <p class="horizontal-row" style="border-bottom:2px solid black;padding-bottom:10px;width:750px;margin:0 auto;">
+        <span style="font-weight:bold;font-size:32px;padding:0px;margin:0px;"><%= @personal_details.first_name %> <%= @personal_details.middle_name %> <%= @personal_details.last_name %></span><br/>
+        <span style="font-size: 12px"><%= @personal_details.current_mobile %> / <%= @personal_details.email %></span>
+        <img src="http://tapmiblogs.files.wordpress.com/2010/11/aim-logo.png" style="height: 70px;float: right;margin-top: -44px;">
       </p>
-
       <br/>
 
-      <table class="resume" width="670" cellpadding="0" cellspacing="0" style="font-family: arial,sans-serif;margin:0 auto;
-              font-size:13px;
+      <table class="resume" style="font-family: arial,sans-serif;margin:0 auto;
+              width: 750px;
+              font-size:16px;
               border-width: 1px;
               border-color: #000;
               border-collapse: collapse;">
         <tr>
-          <td style="width:400px; font-size:15px;font-weight:bold;background-color:gray;" colspan="6">PERSONAL INFORMATION</td>
+          <td class="heading" colspan="6">EDUCATION</td>
         </tr>
         <tr>
-          <td colspan="6">&nbsp;</td>
-        </tr>
-        <tr>
-          <td valign="top" colspan="2" style="font-weight:bold;">
-            Name:
+          <td style="font-weight: bold;">
+            <%= @education_detail.mba_school %><br/><%= @education_detail.last_school_course_title%>
           </td>
-          <td><%= @online_application_form.personal_detail.first_name %> <%= @online_application_form.personal_detail.middle_name %> <%= @online_application_form.personal_detail.last_name %></td>
-        </tr>
-        <tr>
-          <td width="127" valign="top" style="font-weight:bold;">Birthdate:
+          <td>
+            Location:
           </td>
-          <td><%= @online_application_form.personal_detail.dob %></td>
         </tr>
         <tr>
-          <td style="font-weight:bold;">Age:</td>
-          <td><%= (DateTime.now - @online_application_form.personal_detail.dob).to_i / 365 if @online_application_form.personal_detail.dob.present? %></td>
+          <td><ul><li>Date of Graduation: <%= @education_detail.last_school_end_date %></li></ul></td>
         </tr>
-        <tr>
-          <td width="153" valign="top" style="font-weight:bold;">Citizenship:
-          </td>
-          <td><%= @online_application_form.personal_detail.citizenship %></td>
-        </tr>
-        <tr>
-          <td width="102" valign="top" style="font-weight:bold;">Gender:
-          </td>
-          <td><%= @online_application_form.personal_detail.gender %></td>
-        </tr>
-        <tr>
-          <td width="198" valign="top" style="font-weight:bold;">Civil Status:
-          </td>
-          <td><%= @online_application_form.personal_detail.civil_status %></td>
-        </tr>
-        <tr>
 
+        <% @online_application.education_schools.each do |education_school| %>
+            <% if education_school.present? %>
+                <tr>
+                  <td style="font-weight: bold;"><%= education_school.school %><br/><%= education_school.course %></td>
+                  <td>Location: <%= education_school.location %><br/><%= education_school.year_started %>-<%= education_school.year_ended %></td>
+                </tr>
+                <tr>
+                </tr>
+            <% end %>
+        <% end %>
+
+        <td class="heading" colspan="6">WORK EXPERIENCE</td>
+        <% @online_application.work_experiences.each do |work_experience| %>
+            <tr>
+              <td style="font-weight:bold;">
+                <%= work_experience.company %>, <%= work_experience.job_function %><br/>
+                <%= work_experience.title %>
+                <% work_experience.job_descriptions.each do |job_desc| %>
+
+                    <ul style="font-weight: 100">
+                      <li><%= job_desc.job_desc %></li>
+                    </ul>
+                <% end %>
+              </td>
+              <td valign="top">Location: <%= work_experience.location %><br/>
+                <%= work_experience.year_started %>-<%= work_experience.year_ended %>
+              </td>
+            </tr>
+        <% end %>
+
+        <tr>
+          <td class="heading" colspan="6">CO-CURRICULAR ACTIVITIES</td>
         </tr>
         <tr>
-          <td height="31" valign="top" style="font-weight:bold;">Current Telephone #:
+          <td style="font-weight:bold;">
+            AIM Consulting Club<br/>
+            Core Team
           </td>
-          <td><%= @online_application_form.personal_detail.current_telephone %></td>
+          <td>Location: Makati City, PH<br/>
+            2013-2014</td>
         </tr>
         <tr>
-          <td colspan="2" valign="top" style="font-weight:bold;">Current Mobile:
+          <td style="font-weight:bold;">American Chamber of Commerce<br/>Member</td>
+          <td>Location: Makati City, PH<br/>
+            2013-2014</td>
+        </tr>
+        <tr>
+          <td class="heading" colspan="6">OTHER INFORMATION</td>
+        </tr>
+        <tr>
+          <td style="font-weight:bold;">
+            <ul>
+              <li>Recipient of STAR AWARD in 2012</li>
+              <li>Recipient of 2 Citibank RAVE Awards (2009, 2010)</li>
+            </ul>
           </td>
-          <td><%= @online_application_form.personal_detail.current_mobile %></td>
-        </tr>
-        <tr>
-          <td colspan="3" valign="top" style="font-weight:bold;">Email:
-          </td>
-          <td><%= @online_application_form.personal_detail.email %></td>
-        </tr>
-        <tr>
-          <td valign="top" colspan="6" style="font-weight:bold;">
-            Address:
-          </td>
-          <td><%= @online_application_form.personal_detail.address_1 %><br/>
-            <%= @online_application_form.personal_detail.address_2 %><br/>
-            <%= @online_application_form.personal_detail.city %> <%= @online_application_form.personal_detail.address_state %> <%= @online_application_form.personal_detail.address_post_code %><br/>
-            <%= @online_application_form.personal_detail.address_country %></td>
-        </tr>
-        <tr>
-          <td width="127" colspan="2" valign="top" style="font-weight:bold;">City:
-          </td>
-          <td><%= @online_application_form.personal_detail.city %></td>
-        </tr>
-        <tr>
-          <td width="127" valign="top" style="font-weight:bold;">Postal Code:
-          </td>
-          <td><%= @online_application_form.personal_detail.address_post_code %></td>
-        </tr>
-        <tr>
-          <td width="127" colspan="2" valign="top" style="font-weight:bold;">Country:</td>
-          <td><%= @online_application_form.personal_detail.address_country %></td>
-        </tr>
-        <tr>
-          <td valign="top" colspan="6" style="font-weight:bold;">
-            Home Address:
-          </td>
-          <td><%= @online_application_form.personal_detail.home_address %></td>
-        </tr>
-        <tr>
-          <td valign="top" colspan="2" style="font-weight:bold;">
-            Home City:
-          </td>
-          <td><%= @online_application_form.personal_detail.home_city %></td>
-        </tr>
-        <tr>
-          <td valign="top" colspan="2" style="font-weight:bold;">
-            Home Country:
-          </td>
-          <td><%= @online_application_form.personal_detail.home_country %></td>
-        </tr>
-        <tr>
-          <td valign="top" colspan="2" style="font-weight:bold;">
-            Home Postal:
-          </td>
-          <td><%= @online_application_form.personal_detail.home_postal %></td>
-        </tr>
-        <tr>
-          <td valign="top" colspan="3" style="font-weight:bold;">
-            Home Telephone:
-          </td>
-          <td><%= @online_application_form.personal_detail.home_phone %></td>
-        </tr>
-        <tr>
-          <td valign="top" colspan="3" style="font-weight:bold;">
-            Cellphone:
-          </td>
-          <td><%= @online_application_form.personal_detail.cell_phone %></td>
         </tr>
       </table>
 
-      <br/>
-
-      <table class="resume" width="670" cellpadding="0" cellspacing="0" style="font-family: arial,sans-serif;margin:0 auto;
-              font-size:13px;
-              border-width: 1px;
-              border-color: #000;
-              border-collapse: collapse;">
-        <tr>
-          <td style="width:400px; font-weight:bold;background-color:gray;" colspan="6">ACADEMIC INFORMATION</td>
-        </tr>
-        <tr>
-          <td colspan="6">&nbsp;</td>
-        </tr>
-        <tr>
-          <td height="25" colspan="4" style="font-weight:bold;">Bachelor Degree</td>
-        </tr>
-        <tr>
-          <td width="201" colspan="2" valign="top" style="font-weight:bold;">Course:</td>
-          <td><%= @online_application_form.education_detail.last_school_degree %> <%= @online_application_form.education_detail.last_school_course_title %></td>
-        </tr>
-        <tr>
-          <td width="168" valign="top" style="font-weight:bold;">Class Year:
-          <td><%= @online_application_form.education_detail.class_year %></td>
-        </tr>
-        <tr>
-          <td width="168" valign="top" style="font-weight:bold;">Graduation Year:</td>
-          <td><%= @online_application_form.education_detail.last_school_end_date %></td>
-        </tr>
-        <tr>
-          <td width="210"colspan="2" valign="top" style="font-weight:bold;">Scholarship:</td>
-          <td><%= @online_application_form.education_detail.scholarship %></td>
-        </tr>
-        <tr>
-          <td width="261" colspan="2" valign="top" style="font-weight:bold;">Club Affiliations:</td>
-          <td><%= @online_application_form.education_detail.affiliation %></td>
-        </tr>
-        <tr>
-          <td valign="top" style="font-weight:bold;">MBA Schools</td>
-          <td><%= @online_application_form.education_detail.mba_school %></td>
-        </tr>
-        <tr>
-          <td valign="top" style="font-weight:bold;">Certifications/Licenses </td>
-          <td><%= @online_application_form.education_detail.certification %></td>
-        </tr>
-        <tr>
-          <td valign="top" style="font-weight:bold;">Undergraduate Major</td>
-          <td><%= @online_application_form.education_detail.undergrad_major %></td>
-        </tr>
-        <tr>
-          <td colspan="6" style="font-weight:bold;">Other Graduate Degrees</td>
-          <td><%= @online_application_form.education_detail.other_degree %></td>
-        </tr>
-        <tr>
-          <td valign="top" style="font-weight:bold;">Laguange Ability</td>
-          <td><%= @online_application_form.education_detail.language %></td>
-        </tr>
-      </table>
-
-      <br/>
-      <TABLE class="resume" width="670" cellpadding="0" cellspacing="0" style="font-family: arial,sans-serif;margin:0 auto;
-              font-size:13px;
-              border-width: 1px;
-              border-color: #000;
-              border-collapse: collapse;">
-        <tr>
-          <td style="width:400px; font-weight:bold;background-color:gray;" colspan="6">EMPLOYMENT INFORMATION</td>
-        </tr>
-        <tr>
-          <td colspan="6">&nbsp;</td>
-        </tr>
-        <tr>
-          <td colspan="4" style="font-weight:bold;">Current / Previous (will be triggered by the info in the duration field)</td>
-        </tr>
-        <tr>
-          <td width="160" valign="top" style="font-weight:bold;">Company:</td>
-          <td><%= @online_application_form.employment_detail.company_before_mba%></td>
-        </tr>
-        <tr>
-          <td width="204" valign="top" style="font-weight:bold;">Industry:</td>
-          <td><%= @online_application_form.employment_detail.industry_exp %></td>
-        </tr>
-        <tr>
-          <td colspan="2" valign="top" style="font-weight:bold;">Address:</td>
-          <td><%= @online_application_form.employment_detail.company_location %></td>
-        </tr>
-        <tr>
-          <td valign="top" style="font-weight:bold;">Position:</td>
-          <td><%= @online_application_form.employment_detail.job_title %></td>
-        </tr>
-        <tr>
-          <td valign="top" style="font-weight:bold;">Duration:</td>
-          <td><%= @online_application_form.employment_detail.years_ofexp %></td>
-        </tr>
-        <tr>
-          <td width="233" valign="top" style="font-weight:bold;">Total Managerial Experience:</td>
-          <td><%= @online_application_form.employment_detail.years_supervisor_exp %></td>
-        </tr>
-        <tr>
-          <td width="243" valign="top" style="font-weight:bold;">Total Work Experience:</td>
-          <td><%= @online_application_form.employment_detail.years_ofexp %></td>
-        </tr>
-      </table>
     </div>
-
   </div>
 </div>
