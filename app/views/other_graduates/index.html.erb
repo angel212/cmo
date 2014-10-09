@@ -1,0 +1,27 @@
+<h1>Listing other_graduates</h1>
+
+<table>
+  <tr>
+    <th>Online application form</th>
+    <th>Other degree</th>
+    <th>Sub other degree</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @other_graduates.each do |other_graduate| %>
+  <tr>
+    <td><%= other_graduate.online_application_form_id %></td>
+    <td><%= other_graduate.other_degree %></td>
+    <td><%= other_graduate.sub_other_degree %></td>
+    <td><%= link_to 'Show', other_graduate %></td>
+    <td><%= link_to 'Edit', edit_other_graduate_path(other_graduate) %></td>
+    <td><%= link_to 'Destroy', other_graduate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Other graduate', new_other_graduate_path %>
