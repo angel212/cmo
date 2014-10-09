@@ -12,11 +12,12 @@
   </div>
 
   <div class="span3">
-    <%= link_to 'Return To Dashboard', '/dashboard', :class => 'btn' %>
+    <%= link_to 'Return To Dashboard', '/dashboard', :class => 'btn btn-primary' %>
   </div>
 </div>
-
+<span class="no-print">
 <hr/>
+  </span>
 <div>
   <form method="get" action="/online_application_status/update_status/<%= @online_application_form.id %>">
     <!--<%= render :partial => 'dashboard/status' %>-->
@@ -25,7 +26,7 @@
 
 
 <div class="tabbable"> <!-- Only required for left/right tabs -->
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs no-print">
     <li class="active"><a href="#tab1" data-toggle="tab">Basic Information</a></li>
     <li><a href="#tab3" data-toggle="tab">Requirements</a></li>
 

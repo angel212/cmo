@@ -2,8 +2,8 @@
 
 @media print {
   td.heading {
-    color:#ffffff !important;
-    background-color: #000 !important;
+    color:black !important;
+    background-color: gray !important;
     -webkit-print-color-adjust: exact;
   }
 
@@ -74,7 +74,15 @@ table a:hover {
   text-decoration: none;
 }
 
-.footer {
+.tablee > thead > tr > th, .tablee > tbody > tr > th, .tablee > tfoot > tr > th, .tablee > thead > tr > td, .tablee > tbody > tr > td, .tablee > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.footerr {
   display: block;
   width: 710px;
   height: 30px;
@@ -116,8 +124,13 @@ table a:hover {
   margin-left: 175px;
 }
 
-.glyphicon-plus, .glyphicon-trash {
+.glyphicon-plus, .glyphicon-trash,.glyphicon-pencil {
   color:green;
+}
+
+.remove-hover:hover, .remove-hover:focus {
+  text-decoration: none;
+  outline: none;
 }
 
 .leftcolumn {
@@ -153,7 +166,7 @@ table {
   outline: none;
 }
 
-.glyphicon-trash {
+.glyphicon-trash, .glyphicon-pencil {
   float: right;
   vertical-align: top;
 }
@@ -539,8 +552,8 @@ ul li.changeColor a {
 .heading {
   width: 400px;
   font-weight: bold;
-  background-color: black;
-  color: #ffffff;
+  color: black;
+  background-color: gray;
 }
 
 .myButton {
