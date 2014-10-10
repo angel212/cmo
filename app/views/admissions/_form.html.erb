@@ -2518,6 +2518,10 @@
       <div class="panel-heading">
         Work<a href="#" data-toggle="modal" data-target="#add_work" style="color: white;font-size: 11px;float: right;"><span>Add Work </span><span class="glyphicon glyphicon-plus" style="float: none;color:white !important;"></span></a>
       </div>
+      <% if @online_application.work_experiences.blank? %>
+    <br>
+    <div style="margin-left:68px; "> <legend>No Work Experiences Yet</legend></div>
+        <% end %>
   <% @online_application.work_experiences.each do |work_experience| %>
       <div id="table-work-<%= work_experience.id %>">
         <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;" cellpadding="4">
