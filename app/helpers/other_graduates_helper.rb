@@ -1,0 +1,2 @@
+module OtherGraduatesHelper
+end
