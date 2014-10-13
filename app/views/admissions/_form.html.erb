@@ -2311,7 +2311,7 @@
         <td>Function - Experience:</td>
         <td>
           <% @online_application.function_experiences.each do |function_experience| %>
-              <span id="function_disp<%= function_experience.id %>" class="language-container" ><%= function_experience.function %> - <%= function_experience.sub_function %><!--<button  id="<%= function_experience.id %>" class="language-ability-delete">delete</button>--><br></span>
+              <span id="function_disp<%= function_experience.id %>" class="language-container" ><%= function_experience.function %> <%	 if function_experience.sub_function.present? %>- <%= function_experience.sub_function %><%	 end  %><!--<button  id="<%= function_experience.id %>" class="language-ability-delete">delete</button>--><br></span>
 
           <% end %>
 
@@ -2321,7 +2321,7 @@
         <td>Industry - Experience:</td>
         <td>
           <% @online_application.industry_experiences.each do |industry_experience| %>
-              <span id="industry_disp<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><!--<button  id="<%= industry_experience.id %>" class="language-ability-delete">delete</button>--><br></span>
+              <span id="industry_disp<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> <%	if industry_experience.sub_industry.present?  %> - <%= industry_experience.sub_industry %> <% end %><!--<button  id="<%= industry_experience.id %>" class="language-ability-delete">delete</button>--><br></span>
 
           <% end %>
 
@@ -2337,7 +2337,7 @@
         <td>Geographic - Experience:</td>
         <td>
           <% @online_application.geographic_experiences.each do |geographic_experience| %>
-              <span id="geographic_disp<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> - <%= geographic_experience.country %><!--<button  id="<%= geographic_experience.id %>" class="language-ability-delete">delete</button>--><br></span>
+              <span id="geographic_disp<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> <% if geographic_experience.country.present?  %> - <%= geographic_experience.country %> <% end %><!--<button  id="<%= geographic_experience.id %>" class="language-ability-delete">delete</button>--><br></span>
 
           <% end %>
         </td>

@@ -28,6 +28,7 @@
 <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs no-print">
     <li class="active"><a href="#tab1" data-toggle="tab">Basic Information</a></li>
+    <li><a href="#tab2" data-toggle="tab">Profile Information</a></li>
     <li><a href="#tab3" data-toggle="tab">Requirements</a></li>
 
   </ul>
@@ -37,7 +38,13 @@
         <%= render :partial => 'print' %>
       </div>
     </div>
-
+    <div class="tab-pane" id="tab2">
+      <div id="requirements">
+        <%= render :partial => 'online_application_forms/print/personal_information' %>
+        <%= render :partial => 'online_application_forms/print/academic_information' %>
+        <%= render :partial => 'online_application_forms/print/employment_information' %>
+      </div>
+      </div>
     <div class="tab-pane" id="tab3">
       <div id="requirements">
         <%= render :partial => 'requirements' %>
