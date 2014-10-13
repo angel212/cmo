@@ -7,7 +7,7 @@
     <td style="width:400px; font-weight:bold; background:#989898;" colspan="6">ACADEMIC INFORMATION</td>
   </tr>
   <tr>
-    <td height="25" colspan="4" style="font-weight:bold;">Bachelor Degree</td>
+    <td height="25" colspan="5" style="font-weight:bold;">Bachelor Degree</td>
   </tr>
   <tr>
     <td width="201" colspan="2" valign="top" height="43" style="font-weight:bold;">Course:
@@ -17,29 +17,63 @@
       <p class="form-detail"><%= @online_application_form.education_detail.class_year %></p></td>
     <td width="168" valign="top" style="font-weight:bold;">Graduation Year:
       <p class="form-detail"><%= @online_application_form.education_detail.last_school_end_date %></p></td>
+    <td width="210"colspan="2" valign="top" style="font-weight:bold;">Scholarship:
+      <p class="form-detail"><%= @online_application_form.education_detail.scholarship %></p></td>
+  </tr>
+  <tr>
+
+    <td height="34"  valign="top" style="font-weight:bold;" colspan="5"> MBA Schools
+      <p class="form-detail"><%= @online_application_form.education_detail.mba_school %> </p>
+    </td>
+  </tr>
+
+  <tr>
+
+
 
   </tr>
   <tr>
-    <td width="210"colspan="2" valign="top" style="font-weight:bold;">Scholarship:
-      <p class="form-detail"><%= @online_application_form.education_detail.scholarship %></p></td>
-    <td width="261" colspan="2" valign="top" style="font-weight:bold;">Club Affiliations:
-      <p class="form-detail"><%= @online_application_form.education_detail.affiliation %></p></td>
-  </tr>
-  <tr>
-    <td colspan="6" style="font-weight:bold;">Other Graduate Degrees
-      <p class="form-detail"><%= @online_application_form.education_detail.other_degree %></p></td>
-  </tr>
-  <tr>
-    <td height="34"  valign="top" style="font-weight:bold;"> MBA Schools
-      <p class="form-detail"><%= @online_application_form.education_detail.mba_school %> </p>
+    <td colspan="3" style="font-weight:bold;">Other Graduate Degrees
+    <br>
+      <% @online_application_form.other_graduates.each do |other_graduate| %>
+          <span id="other_grad_disp<%= other_graduate.id %>" class="language-container" style="margin-left: 5px;" >&bull; <%= other_graduate.other_degree %> <%	 if other_graduate.sub_other_degree.present? %>- <%= other_graduate.sub_other_degree %> <% end %><br></span>
+
+      <% end %>
     </td>
-    <td  valign="top" style="font-weight:bold;">Certifications/Licenses
-      <p class="form-detail"><%= @online_application_form.education_detail.certification %></p>
+    <td  valign="top" style="font-weight:bold;" colspan="3">Undergraduate Major
+     <br>
+      <% @online_application_form.undergraduate_majors.each do |undergraduate_major| %>
+          <span id="undergrad_disp<%= undergraduate_major.id %>" class="language-container" style="margin-left: 5px;"> &bull; <%= undergraduate_major.undergrad %> <%if undergraduate_major.sub_undergrad.present? %> - <%=undergraduate_major.sub_undergrad %> <% end %>  <!--<button  id="<%= undergraduate_major.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+      <% end %>
     </td>
-    <td  valign="top" style="font-weight:bold;">Undergraduate Major
-      <p class="form-detail"><%= @online_application_form.education_detail.undergrad_major %></p>
-    <td  valign="top" style="font-weight:bold;">Laguange Ability
-      <p class="form-detail"><%= @online_application_form.education_detail.language %></p>
+  </tr>
+
+
+  <tr>
+    <td width="261" colspan="3" valign="top" style="font-weight:bold;">Club Affiliations:
+   <br>
+      <% @online_application_form.club_affiliation.each do |club_affiliation| %>
+          <span id="affl_disp<%= club_affiliation.id %>" class="language-container" style="margin-left: 5px;"> &bull; <%= club_affiliation.affiliation %>  <!--<button  id="<%= club_affiliation.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+      <% end %>
+    </td>
+    <td  valign="top" style="font-weight:bold;" colspan="3">Certifications/Licenses
+      <br>
+      <% @online_application_form.certifications.each do |certification| %>
+          <span id="certification_disp<%= certification.id %>" class="language-container" style="margin-left: 5px;">&bull; <%= certification.certification %> <%	 if certification.other.present? %> - <%= certification.other %> <% end %><!--<button  id="<%= certification.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+      <% end %>
+    </td>
+    </tr>
+
+  <tr>
+    <td  valign="top" style="font-weight:bold;" colspan="5">Laguange Ability
+      <br>
+      <% @online_application_form.language_abilities.each do |language_ability| %>
+          <span id="lang_disp<%= language_ability.id %>" class="language-container" style="margin-left: 5px;">&bull; <%= language_ability.name %> - <%= language_ability.level %> <!--<button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button>--><br></span>
+
+      <% end %>
     </td>
   </tr>
 </table>
