@@ -1467,7 +1467,7 @@
           <div class="modal-body">
           <form id="education-details-form" name="educationdetails" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
-            <table style=" width: 565;color: black;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
+            <table style=" width: 535px;color: black;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
               <tr>
                 <td>Program/Course Title:</td>
                 <td>
@@ -1500,20 +1500,22 @@
                 </td>
               </tr>
               <tr>
-                <td>Club Affiliations:<a href="#"><span id="club_aff" class="glyphicon glyphicon-plus"></span></a></td>
+                <td>Club Affiliations:</td>
                 <td>
                   <% @online_application.club_affiliation.each do |club_affiliation| %>
                       <span id="club_affi<%= club_affiliation.id %>" class="language-container" >&bull; <%= club_affiliation.affiliation %> <a href="#"><span id="<%= club_affiliation.id %>" class="club-affiliation-delete glyphicon glyphicon-trash" ></span></a><br></span>
 
                   <% end %>
                 </td>
+                <td><a href="#"><span id="club_aff" class="glyphicon glyphicon-plus"></span></a></td>
               </tr>
               <tr>
-                <td>Other Graduate Degrees:<a href="#" id="other_grad_open"><span class="glyphicon glyphicon-plus"></span></a></td>
+                <td>Other Graduate Degrees:</td>
                 <td><% @online_application.other_graduates.each do |other_graduate| %>
                       <span id="other_grad<%= other_graduate.id %>" class="language-container" >&bull; <%= other_graduate.other_degree %> <%	 if other_graduate.sub_other_degree.present? %>- <%= other_graduate.sub_other_degree %> <% end %><a href="#"><span id="<%= other_graduate.id %>" class="other-degree-delete glyphicon glyphicon-trash"></span></a><br></span>
 
                   <% end %></td>
+                <td><a href="#" id="other_grad_open"><span class="glyphicon glyphicon-plus"></span></a></td>
               </tr>
               <tr>
                 <td>MBA Schools:</td>
@@ -1522,16 +1524,17 @@
                 </td>
               </tr>
               <tr>
-                <td>Certifications/Licenses:<a href="#"><span class="glyphicon glyphicon-plus" id="certification_open"></span></a></td>
+                <td>Certifications/Licenses:</td>
                 <td>
                   <% @online_application.certifications.each do |certification| %>
                       <span id="certification<%= certification.id %>" class="language-container" >&bull; <%= certification.certification %> <%	 if certification.other.present? %> - <%= certification.other %> <% end %><a href=""><span id="<%= certification.id %>" class="certification-delete glyphicon glyphicon-trash"></span></a><br></span>
 
                   <% end %>
                 </td>
+                <td><a href="#"><span class="glyphicon glyphicon-plus" id="certification_open"></span></a></td>
               </tr>
               <tr>
-                <td>Undergraduate Major:<a href="#" id="under_grad_open"><span class="glyphicon glyphicon-plus"></span></a></td>
+                <td>Undergraduate Major:</td>
                 <td>
                   <% @online_application.undergraduate_majors.each do |undergraduate_major| %>
                       <span id="undergrad_disp<%= undergraduate_major.id %>" class="language-container" > &bull; <%= undergraduate_major.undergrad %> <%if undergraduate_major.sub_undergrad.present? %> - <%=undergraduate_major.sub_undergrad %> <% end %> <a href="#"><span id="<%= undergraduate_major.id %>" class="undergraduate-major-delete glyphicon glyphicon-trash"></span></a><br></span>
@@ -1540,15 +1543,17 @@
 
 
                 </td>
+                <td><a href="#" id="under_grad_open"><span class="glyphicon glyphicon-plus"></span></a></td>
               </tr>
               <tr>
-                <td>Language Ability:<a href="#" id="language"><span class="glyphicon glyphicon-plus"></span></a></td>
+                <td>Language Ability:</td>
                 <td>
                   <% @online_application.language_abilities.each do |language_ability| %>
                       <span style="margin-bottom: 10px;" id="lang<%= language_ability.id %>" class="language-container2" >&bull; <%= language_ability.name %> - <%= language_ability.level %><a href="#"><span id="<%= language_ability.id %>" class="language-ability-delete glyphicon glyphicon-trash"></span></a><br></span>
 
                   <% end %>
                 </td>
+                <td><a href="#" id="language"><span class="glyphicon glyphicon-plus"></span></a></td>
               </tr>
 
             </table>
@@ -1660,7 +1665,7 @@
             </div>
             <div class="modal-body">
              <form id="school-multiple-form" class="form-horizontal" method="post" action="/admissions/school/<%= @online_application.id %>">
-               <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;">
+               <table style=" margin:20px auto 0 auto;color:#333;">
                  <tr>
                    <td>
                      School:
@@ -1747,7 +1752,7 @@
 
         <% @online_application.education_schools.each do |education_school| %>
           <div id="table-school-<%= education_school.id %>">
-          <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;" cellpadding="4">
+          <table class="table" style=" margin:20px auto 0 auto;color:#333;width:560px;" cellpadding="4">
             <tr>
               <td>School:</td>
               <td><span id="education_school_disp-1" class="language-container" ><%= education_school.school %></span> </td>
@@ -1792,7 +1797,7 @@
 
 
 
-                  <table id="educ_table<%= education_school.id %>" class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
+                  <table id="educ_table<%= education_school.id %>" style="margin: 0 auto;color:#333;width:500px;" cellpadding="3">
                     <tr>
                       <td>School:</td>
                       <td><span id="education_school_disp<%= education_school.id %>-1" class="language-container" ><input type="text" value=" <%= education_school.school %>" name="school"> </span></td></tr>
@@ -1852,11 +1857,11 @@
 
                 </form>
               </div>
-              <div class="modal-footer">
-                &nbsp;
+              <!--<div class="modal-footer">-->
+                <!--&nbsp;-->
                 <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
                 <!--<button type="button" class="btn btn-primary edit_schol" id="<%= education_school.id %>" >Save changes</button>-->
-              </div>
+              <!--</div>-->
             </div>
           </div>
         </div>
@@ -1897,7 +1902,7 @@
           <div class="modal-body">
             <span>
      <form id="professional-details-form"  class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
-     <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
+     <table style=" color: black;width: 575px;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
      <tr>
        <td>Total Years of Work Experience:</td>
        <td>
@@ -1913,7 +1918,7 @@
        </td>
      </tr>
      <tr>
-       <td>Function - Experience:<a href="#" id="function_experience"><span class="glyphicon glyphicon-plus"></span></a></td>
+       <td>Function - Experience:</td>
        <td>
          <% @online_application.function_experiences.each do |function_experience| %>
              <span id="function<%= function_experience.id %>" class="language-container" ><%= function_experience.function %> - <%= function_experience.sub_function %><a href="#"><span id="<%= function_experience.id %>" class="function-experience-delete glyphicon glyphicon-trash"></span></a><br></span>
@@ -1921,15 +1926,17 @@
          <% end %>
 
        </td>
+       <td><a href="#" id="function_experience"><span class="glyphicon glyphicon-plus"></span></a></td>
      </tr>
      <tr>
-       <td>Industry - Experience:<a href="#" id="industry_experience"><span class="glyphicon glyphicon-plus"></span></a></td>
+       <td>Industry - Experience:</td>
        <td>
          <% @online_application.industry_experiences.each do |industry_experience| %>
              <span id="industry<%= industry_experience.id %>" class="language-container" ><%= industry_experience.industry %> - <%= industry_experience.sub_industry %><a href="#"><span id="<%= industry_experience.id %>" class="industry-experience-delete glyphicon glyphicon-trash"></span></a><br></span>
 
          <% end %>
        </td>
+       <td><a href="#" id="industry_experience"><span class="glyphicon glyphicon-plus"></span></a></td>
        </td>
          </tr>
      <tr>
@@ -2198,12 +2205,13 @@
      </select></td>
      </tr>
      <tr>
-       <td>Geographic - Experience:<a href="#" id="geographic_experience"><span class="glyphicon glyphicon-plus"></span></a></td>
+       <td>Geographic - Experience:</td>
        <td>
          <% @online_application.geographic_experiences.each do |geographic_experience| %>
              <span id="geographic<%= geographic_experience.id %>" class="language-container" ><%= geographic_experience.continent %> - <%= geographic_experience.country %><a href="#"><span id="<%= geographic_experience.id %>" class="geographic-experience-delete glyphicon glyphicon-trash"></span></a><br></span>
 
          <% end %></td>
+       <td><a href="#" id="geographic_experience"><span class="glyphicon glyphicon-plus"></span></a></td>
      </tr>
      <tr>
        <td>Years of Supervisory Work Experience:</td>
@@ -2293,7 +2301,7 @@
     <div class="panel panel-default" style="margin-top: 30px;">
       <div class="panel-heading" style="">Work Experience<a href="#" id="professional_edit_link" data-toggle="modal" data-target="#professional_edit_link" style="color: white;font-size: 11px; float:right"><span>Edit </span><span class="glyphicon glyphicon-cog"></span></a></div>
 
-      <table class="table" style=" margin:20px auto 0 auto;width: 550px;color:#333;" cellpadding="3">
+      <table class="table" style=" margin:20px auto 0 auto;width: 595px;color:#333;" cellpadding="3">
       <tr>
         <td>Total Years of Work Experience:</td>
         <td>
@@ -2406,7 +2414,7 @@
             </div>
             <div class="modal-body">
               <form id="work-multiple-form" class="form-horizontal" method="post" action="/admissions/work/<%= @online_application.id %>">
-                <table class="table" style=" margin:20px auto 0 auto;width: 650px;color:#333;">
+                <table style=" margin:20px auto 0 auto;color:#333;">
                   <tr>
                     <td>
                      Company Name:
@@ -2513,7 +2521,7 @@
       </div>
   <% @online_application.work_experiences.each do |work_experience| %>
       <div id="table-work-<%= work_experience.id %>">
-        <table class="table" style=" margin:20px auto 0 auto;width: 590px;color:#333;" cellpadding="4">
+        <table class="table" style=" margin:20px auto 0 auto;color:#333;width: 590px" cellpadding="4">
           <tr>
             <td>Company Name:</td>
             <td><span id="work_disp-1" class="language-container" ><%= work_experience.company %></span> </td>
@@ -2574,7 +2582,7 @@
               <div class="modal-body">
                 <form id="work-multiple-form<%= work_experience.id %>" class="form-horizontal" method="post" action="/admissions/edit_work/<%= @online_application.id %>">
 
-                  <table id="educ_table<%= work_experience.id %>" class="table" style="margin: 0 auto;width: 590px;color:#333;" cellpadding="3">
+                  <table id="educ_table<%= work_experience.id %>" style="margin: 0 auto;color:#333;" cellpadding="3">
                     <tr>
                       <td>Company Name:</td>
                       <td><span id="work_disp<%= work_experience.id %>-1" class="language-container" ><input type="text" value=" <%= work_experience.company %>" name="company"> </span></td></tr>
@@ -2643,11 +2651,11 @@
 
                 </form>
               </div>
-              <div class="modal-footer">
-                &nbsp;
+              <!--<div class="modal-footer">-->
+                <!--&nbsp;-->
                 <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
                 <!--<button type="button" class="btn btn-primary edit_schol" id="<%= work_experience.id %>" >Save changes</button>-->
-              </div>
+              <!--</div>-->
             </div>
           </div>
         </div>
@@ -2677,11 +2685,10 @@
 
                         <tr id="job_desc-disp2-<%=job_desc.id %>"><td>
                           <!--<input type="text" value="<%=job_desc.job_desc %>" maxlength="80" disabled>-->
-                          <span class="<%=job_desc.id %>" style="font-size: 11px;"><span class="glyphicon glyphicon-asterisk"></span><%=job_desc.job_desc %><br></span>
+                          <ul>
+                          <li class="<%=job_desc.id %>" style="font-size: 12px;color:black;width: 520px;"><%=job_desc.job_desc %><a href="#"  style="font-size: 11px;padding: 0;float:right;"><span></span><span class="delete_job_desc glyphicon glyphicon-trash" style="vertical-align: top;" id="<%=job_desc.id %>"></span></a></li>
+                          </ul>
                         </td>
-                          <td valign="middle">
-                            <a href="#"  style="font-size: 11px;padding: 0;float:right;"><span></span><span class="delete_job_desc glyphicon glyphicon-trash" id="<%=job_desc.id %>"></span></a>
-                          </td>
                         </tr>
 
 
@@ -2720,9 +2727,9 @@
                     function countChar<%=work_experience.id %>(val) {
                         var len = val.value.length;
                         if (len >= 80) {
-                            val.value = val.value.substring(0, 80);
+                            val.value = val.value.substring(0, 80) + "characters left";
                         } else {
-                            $('#charNum<%=work_experience.id %>').text(80 - len);
+                            $('#charNum<%=work_experience.id %>').text(80 - len) + "characters left";
                         }
                     };
                 </script>
@@ -2732,12 +2739,15 @@
                   <table>
                     <tr>
     <td>
-      <input type="text" id="field" onkeyup="countChar<%=work_experience.id%>(this)"  name="job_description" maxlength="80">
-      <div id="charNum<%=work_experience.id %>"></div>
+      <input type="text" id="field" onkeyup="countChar<%=work_experience.id%>(this)" style="width: 560px;
+              color: black;
+              font-family: arial;
+              font-size: 13px;" name="job_description" maxlength="80">
+      <div id="charNum<%=work_experience.id %>" style="color: black"></div>
 </td>
                     </tr>
                   </table>
-                  <button>Save</button>
+                  <button class="btn btn-success">Save</button>
                 </form>
 
 
@@ -2778,7 +2788,8 @@
     <!-- Modal -->
     <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="preference_edit_link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="width: 760px;
+                margin-left: -60px;">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="myModalLabel">My Preferences</h4>
@@ -2787,20 +2798,22 @@
             <form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
               <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
                 <tr>
-                  <td>Industry - Preference:<a href="#" id="industry_preference"><span class="glyphicon glyphicon-plus"></span></a></td>
+                  <td>Industry - Preference:</td>
                   <td>
                     <% @online_application.preference_industries.each do |preference_industry| %>
                         <span id="pre_industry<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><a href="#"><span id="<%= preference_industry.id %>" class="preference-industry-delete glyphicon glyphicon-trash"></span></a><br></span>
                     <% end %>
                   </td>
+                  <td><a href="#" id="industry_preference"><span class="glyphicon glyphicon-plus"></span></a></td>
                 </tr>
                 <tr>
-                  <td>Most Important Criteria for Choosing a Job:<a href="#" id="important_criteria"><span class="glyphicon glyphicon-plus"></span></a></td>
+                  <td>Most Important Criteria for Choosing a Job:</td>
                   <td>
                     <% @online_application.preference_criteriums.each do |preference_criteriums| %>
                         <span id="pre_criteria<%= preference_criteriums.id %>" class="language-container" ><%= preference_criteriums.criteria %><a href="#"><span id="<%= preference_criteriums.id %>" class="preference-criteria-delete glyphicon glyphicon-trash"></span></a><br></span>
                     <% end %>
                   </td>
+                  <td><a href="#" id="important_criteria"><span class="glyphicon glyphicon-plus"></span></a></td>
                 </tr>
                 <tr>
                   <td>Desired job titles:</td>
