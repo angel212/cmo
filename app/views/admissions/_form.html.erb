@@ -564,7 +564,11 @@
         <tr>
           <td>Date of Birth:</td>
           <td>
-            <input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">
+            <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+              <input class="span2" size="16" type="text" value="12-02-2012">
+              <span class="add-on"><i class="icon-th"></i></span>
+            </div>
+            <!--<input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">-->
           </td>
         </tr>
         <tr>
@@ -1859,8 +1863,8 @@
                       <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" value="<%= education_school.remarks %>" name="remarks"> </span></td></tr>
                   </table>
 <br>
-<hr>
-                  <p style="float:right; margin-right: 60px;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-success edit_schol" name="educ_id" value="<%= education_school.id %>" >Save changes</button></p>
+<hr style="margin-top: 0px;">
+                  <p style="float:right;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-success edit_schol" name="educ_id" value="<%= education_school.id %>" >Save changes</button></p>
 
                 </form>
               </div>
@@ -2657,8 +2661,8 @@
 
                   </table>
                   <br>
-                  <hr>
-                  <p style="float:right; margin-right: 60px;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-success edit_schol" name="educ_id" value="<%= work_experience.id %>" >Save changes</button></p>
+                  <hr style="margin: 0px;">
+                  <p style="float:right;"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="submit" class="btn btn-success edit_schol" name="educ_id" value="<%= work_experience.id %>" >Save changes</button></p>
 
                 </form>
               </div>

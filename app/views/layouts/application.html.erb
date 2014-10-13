@@ -14,6 +14,9 @@
   <script type="text/javascript" src="/assets/jssor.utils.js"></script>
   <script type="text/javascript" src="/assets/jssor.slider.js"></script>
 
+  <link href="http://www.eyecon.ro/bootstrap-datepicker/css/bootstrap.css" rel="stylesheet">
+  <link href="http://www.eyecon.ro/bootstrap-datepicker/css/datepicker.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <!-- Optional theme -->
   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
@@ -100,18 +103,26 @@
             color: white;
             height: 35px;
             width: 100%;">
-      <p id="header" style="height: 40px;width: 1000px;color: white; position: absolute;font-size: 18px; margin-top: 3px; font-weight: bold; padding-top: 4px; text-align: center;" class="no-print">Career
+      <p id="header" style="height: 40px;width: 1000px;color: white; position: absolute;font-size: 18px; margin-top: 3px; font-weight: bold; padding-top: 4px; text-align: center;font-family: Verdana;
+              font-size: 15px;
+              line-height: 22px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              font-weight: bold;" class="no-print">Career
         Services Office</p>
     </div>
     <%if @student.present? %>
         <div class="leftcolumn no-print" id="leftcolumn">
-          <div style="height: 290px;
+          <div style="height: 280px;
                   border-bottom: 1px solid #146D55">
-            <p style="padding-left: 40px; font-weight: bold;  font-size: 14px;"><br/><span style="color:rgb(13,17,46);">
-        Welcome, <br>
-
+            <p style="padding-left: 40px;margin-top: 10px;"><br/><span style="color:rgb(13,17,46);">
               <% if   @student==1%>
-        <span style=""><%= @online_application.personal_detail.first_name %> <%= @online_application.personal_detail.last_name %></span>
+        <span style="font-family: Verdana;
+                font-size: 15px;
+                line-height: 14px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-weight: bold;"><%= @online_application.personal_detail.first_name %> <%= @online_application.personal_detail.last_name %></span>
             <% end %></span><br/></p><br/>
             <img src="http://san.ee.ic.ac.uk/images/male_profile.jpg" style="
             height: 190px;
@@ -119,7 +130,6 @@
                     margin-left: 22px;
                     margin-top: -15px;
                     z-index: 999;
-                    border: 1px solid black;
                     border-radius: 4px;"/>
           </div>
           <div id="navigation">
