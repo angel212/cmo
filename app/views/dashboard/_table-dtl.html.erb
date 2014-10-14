@@ -27,12 +27,14 @@
 
   <div class="table-responsive">
   <table class="table-striped tablee" cellpadding="3" style="width: 910px;color: #333333;margin-bottom: 50px">
+    <thead>
     <tr>
       <th class="col-md-1">#</th>
       <th class="col-md-2">Student Name</th>
       <th class="col-md-2">Status</th>
       <th class="col-md-2">Actions</th>
     </tr>
+    </thead>
     <% @applicants.each do |applicant| %>
         <% personal_detail = applicant.personal_detail %>
         <% if personal_detail.present? %>
