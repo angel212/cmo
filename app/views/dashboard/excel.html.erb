@@ -4,11 +4,10 @@
 <script>
     window.onload = function () {
         $('#leftcolumn').hide();
-        document.getElementById("header").style.marginLeft="120px";
         $('#result-table').each(function () {
             var $table = $(this);
 
-            var $button = $("<a download=\"download.csv\" class='btn btn-success' style='float:right;'>");
+            var $button = $("<a download=\"download.csv\" class='btn btn-primary' style='float:right;'>");
             $button.text("Download Excel");
             $button.insertAfter($('#button-marker'));
 
@@ -82,8 +81,7 @@
 
 </script>
 
-<br/>
-<div class="alert alert-info row-fluid" style="width: auto;">
+<div class="alert alert-info row-fluid" style="width: auto;background-color: white;border-bottom: 1px solid #ffffff;">
   <!--<div class="span8">-->
     <!--<p style="position: relative; top: 5px;">Deleted Applications Are Not Included</p>-->
   <!--</div>-->

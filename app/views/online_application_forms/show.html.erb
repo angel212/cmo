@@ -7,16 +7,15 @@
 
 <p id="notice"><%= notice %></p>
 
-<div style="padding-bottom: 10px;" class="row row-fluid no-print">
+<div style="padding-bottom: 10px;margin-right: 0px;margin-left: 0px;" class="row row-fluid no-print">
   <div class="span9">
   </div>
 
   <div class="span3">
-    <%= link_to 'Return To Dashboard', '/dashboard', :class => 'btn btn-primary' %>
+    <%= link_to 'Return To Dashboard', '/dashboard', :class => 'btn btn-primary', style: 'margin:10px 0 0 10px;' %>
   </div>
 </div>
 <span class="no-print">
-<hr/>
   </span>
 <div>
   <form method="get" action="/online_application_status/update_status/<%= @online_application_form.id %>">
@@ -26,20 +25,21 @@
 
 
 <div class="tabbable"> <!-- Only required for left/right tabs -->
-  <ul class="nav nav-tabs no-print">
+  <ul class="nav nav-tabs no-print" style="margin-top: 20px;">
     <li class="active"><a href="#tab1" data-toggle="tab">Basic Information</a></li>
     <li><a href="#tab2" data-toggle="tab">Profile Information</a></li>
     <li><a href="#tab3" data-toggle="tab">Requirements</a></li>
 
   </ul>
   <div class="tab-content" style="margin: 35px 110px;">
-    <div class="tab-pane active" id="tab1" style=" height: 700px; width: 775px; overflow-y: auto;">
+    <div class="tab-pane active" id="tab1" style="width: 775px; overflow-y: auto;">
       <div id="print-details" >
         <%= render :partial => 'print' %>
       </div>
     </div>
     <div class="tab-pane" id="tab2">
-      <div id="requirements" >
+      <div id="requirements" style=" height: 600px;
+      overflow-x: auto;">
         <%= render :partial => 'online_application_forms/print/personal_information' %>
         <%= render :partial => 'online_application_forms/print/academic_information' %>
         <%= render :partial => 'online_application_forms/print/employment_information' %>

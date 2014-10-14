@@ -104,16 +104,13 @@
           top: 20px;
           left: 550px;width: 110px;">Back</a>-->
 
-  <a href="javascript:window.print();" class="btn btn-primary no-print" style="position: absolute;
-          top: 135px;
-          left: 720px;
-          width: 110px;">Print Resume</a>
+  <a href="javascript:window.print();" class="btn btn-primary no-print" style="margin-left: 320px;">Print Resume</a>
   <div id="div_print" class="print" style="color: black !important;
           position: absolute;
           zoom: 90%;
-          box-shadow: 0 0 10px #146D55;
+          box-shadow: 0 0 10px #333;margin-left: 25px;margin-top: 10px;
           ">
-    <div class="remove-overflow" style="height:760px;overflow-y:auto;padding: 30px 30px;">
+    <div class="remove-overflow" style="height:640px;overflow-y:auto;padding: 30px 30px;">
       <p class="horizontal-row" style="border-bottom:2px solid black;padding-bottom:10px;width:750px;margin:0 auto;">
         <span style="font-weight:bold;font-size:32px;padding:0px;margin:0px;"><%= @online_application_form.personal_detail.first_name %> <%= @online_application_form.personal_detail.middle_name %> <%= @online_application_form.personal_detail.last_name %></span><br/>
         <span style="font-size: 12px"><%= @online_application_form.personal_detail.current_mobile %> / <%= @online_application_form.personal_detail.email %></span>

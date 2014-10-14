@@ -446,6 +446,15 @@ body {
 //  border-top:1px solid #ffffff;
 }
 
+#requirements table td {
+  padding: 5px 5px 0px 10px;
+  color:#333;
+}
+
+#requirements table td .form-detail{
+  font-weight: normal;
+}
+
 .leftcolumn ul li {
   border-bottom: #146D55 thin solid;
   font-weight: bold;
