@@ -564,11 +564,11 @@
         <tr>
           <td>Date of Birth:</td>
           <td>
-            <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-              <input class="span2" size="16" type="text" value="12-02-2012">
-              <span class="add-on"><i class="icon-th"></i></span>
-            </div>
-            <!--<input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">-->
+            <!--<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">-->
+              <!--<input class="span2" size="16" type="text" value="12-02-2012">-->
+              <!--<span class="add-on"><i class="icon-th"></i></span>-->
+            <!--</div>-->
+            <input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">
           </td>
         </tr>
         <tr>
@@ -1763,7 +1763,7 @@
 
 
           <div id="table-school-<%= education_school.id %>">
-          <table class="table" style=" margin:20px auto 0 auto;color:#333;width:560px;" cellpadding="4">
+          <table class="table" style=" margin:20px auto 0 auto;color:#333;width:590px;" cellpadding="4">
             <tr>
               <td>School:</td>
               <td><span id="education_school_disp-1" class="language-container" ><%= education_school.school %></span> </td>
@@ -2569,7 +2569,9 @@
           <td>Job Description</td>
           <td>
             <% work_experience.job_descriptions.each do |job_desc| %>
-           <span id="job_desc-disp1-<%=job_desc.id %>"> <%=	  job_desc.job_desc %><br></span>
+                <ul style="margin-left: -25px;">
+           <span id="job_desc-disp1-<%=job_desc.id %>"><li> <%=	  job_desc.job_desc %></span></li></span>
+                </ul>
             <%	 end %>
           </td>
           <td>
@@ -2874,13 +2876,14 @@
     <div class="panel panel-default" style="margin-top: 30px;">
       <div class="panel-heading" style="">Industry - Preference<a href="#" id="preference_edit_link" data-toggle="modal" data-target="#preference_edit_link" style="color: white;font-size: 11px; float:right;"><span>Edit </span><span class="glyphicon glyphicon-cog"></span></a></div>
 
-      <table class="table" style=" margin:20px auto 0 auto;width: 500px;color:#333;" cellpadding="3">
+      <table class="table" style=" margin:20px auto 0 auto;width: 700px;color:#333;" cellpadding="3">
       <tr>
         <td>Industry - Preference:</td>
         <td>
           <% @online_application.preference_industries.each do |preference_industry| %>
-              <span id="pre_industry_disp<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><!--<button  id="<%= preference_industry.id %>" class="language-ability-delete">delete</button>--><br></span>
-
+              <ul style="margin-left: -25px;">
+              <span id="pre_industry_disp<%= preference_industry.id %>" class="language-container" ><li><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><!--<button  id="<%= preference_industry.id %>" class="language-ability-delete">delete</button>--></li></span>
+              </ul>
           <% end %>
         </td>
       </tr>

@@ -26,6 +26,10 @@ $(document).ready(function (e) {
         $("#pop").toggle();
     });
 
+    $('#dropdownMenu3').on("click", function() {
+       $(".dropdown-menu").toggle();
+    });
+
     $(".patrick-btn").on("click", function() {
         $("body").scrollTop(0);
     });

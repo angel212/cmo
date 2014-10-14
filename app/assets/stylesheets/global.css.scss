@@ -50,6 +50,7 @@ html {
 .panel table td:nth-child(1){
   font-weight: bold;
   max-width: 400px;
+  min-width: 140px;
 }
 
 form {
@@ -75,9 +76,12 @@ table a:hover {
 .tablee > thead > tr > th, .tablee > tbody > tr > th, .tablee > tfoot > tr > th, .tablee > thead > tr > td, .tablee > tbody > tr > td, .tablee > tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857143;
-  vertical-align: top;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+}
+
+.tablee {
+  font-size: 13px;
 }
 
 .footerr {
@@ -208,6 +212,10 @@ z-index: 99999999999;
   color: #ffffff;
   background: #146D55 !important;/*{borderColorHeader}; */
 
+}
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+  border-radius: 50%;
 }
 
 .content {

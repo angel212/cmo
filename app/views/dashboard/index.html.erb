@@ -28,9 +28,43 @@
   <!--<%= render :partial => 'status' %>-->
 <!--</form>-->
 <br/>
-<%= render :partial => 'total_count' %>
-<br/>
-<div style="margin-left: 180px;">
+<!--<div class="dropdown clearfix">-->
+<!--<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown">-->
+  <!--Dropdown-->
+  <!--<span class="caret"></span>-->
+<!--</button>-->
+<!--<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">-->
+  <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Regular link</a></li>-->
+  <!--<li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled link</a></li>-->
+  <!--<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another link</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add Student</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-top:-17px;padding-right:35px;margin-left: 40px;overflow-y: auto;
+        height: 792px;">
+  <h1 style="color: #333;margin-top: 30px">Dashboard  <a href="/excel/export" class="btn btn-primary" style="margin: 5px 3px 0px 0px;float:right;">Export Tool</a>
+    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin: 5px 10px 0px 0px;float:right;">Add Student Tool</a>
+  </h1>
+  <b style="color: #333">Total Applications: <%= @applicants.count %></b>
+  <hr/>
 <table>
   <tr>
     <td valign="top">
