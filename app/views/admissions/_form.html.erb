@@ -1,5 +1,32 @@
 <%= javascript_include_tag 'realtime' %>
 
+
+
+
+
+<script>
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    $( document ).ready(function() {
+
+        var page = getParameterByName('page');
+    if( page == '3'){
+        $('.education-btn').click();
+    }
+     else if (page == '4')
+    {
+        $('.workexperience-btn').click();
+    }
+    else if (page == '5')
+    {
+        $('.profile-btn').click();
+    }
+    });
+</script>
 <form id="application-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
 
 <!-- Begin Page 1 -->
