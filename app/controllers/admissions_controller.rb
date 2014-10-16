@@ -105,7 +105,6 @@ class AdmissionsController < ApplicationController
       end
 
 
-
       @online_application.update_attribute :browser, request.env['HTTP_USER_AGENT']
     rescue Exception => e
       # Add an exception hider
@@ -120,7 +119,7 @@ class AdmissionsController < ApplicationController
 
     #::AbcRegistrationMailer.registration_alert(@online_application).deliver!
     #redirect_to edit_supplemental_detail_path(@supplemental_detail)
-    redirect_to "/admissions/#{@online_application.id}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{@online_application.id}/edit", {alert: 'profile updated successfully'.html_safe} and return
   end
 
 
