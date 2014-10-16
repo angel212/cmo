@@ -127,62 +127,62 @@ class AdmissionsController < ApplicationController
   def create_language
 
     LanguageAbility.create!(:online_application_form_id => params[:id] , :name => params[:language_name], :level=> params[:language_level])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=3" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
   def create_function
 
     FunctionExperience.create!(:online_application_form_id => params[:id] , :function => params[:function], :sub_function=> params[:sub_function])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=4" , {alert: 'profile updated successfully'.html_safe} and return
   end
   def create_industry
 
     IndustryExperience.create!(:online_application_form_id => params[:id] , :industry => params[:industry], :sub_industry=> params[:sub_industry])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=4" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
   def create_geographic
 
     GeographicExperience.create!(:online_application_form_id => params[:id] , :continent => params[:continent], :country=> params[:country])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=4" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
   def create_preference_industry
 
     PreferenceIndustry.create!(:online_application_form_id => params[:id] , :industry => params[:industry], :sub_industry=> params[:sub_industry])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=5" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
   def create_preference_criteria
 
     PreferenceCriterium.create!(:online_application_form_id => params[:id] , :criteria => params[:criteria])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=5" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
   def create_affiliation
 
     ClubAffiliation.create!(:online_application_form_id => params[:id] , :affiliation => params[:affiliation])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=3" , {alert: 'profile updated successfully'.html_safe} and return
   end
   def create_undergrad
 
     UndergraduateMajor.create!(:online_application_form_id => params[:id] , :undergrad => params[:undergraduate_major], :sub_undergrad => params[:subcategory22])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=3" , {alert: 'profile updated successfully'.html_safe} and return
   end
   def create_other_degree
 
     OtherGraduate.create!(:online_application_form_id => params[:id] , :other_degree => params[:other_degree], :sub_other_degree => params[:subcategory55])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=3" , {alert: 'profile updated successfully'.html_safe} and return
   end
   def create_certification
 
     Certification.create!(:online_application_form_id => params[:id] , :certification => params[:certification], :other => params[:other])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=3" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
   def add_multiple_school
     EducationSchool.create!(:online_application_form_id => params[:id] , :school => params[:school], :location => params[:location] , :month_started => params[:month_started] , :year_started => params[:year_started] , :month_ended => params[:month_ended] , :year_ended => params[:year_ended] , :course => params[:course] , :remarks => params[:remarks])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=3" , {alert: 'profile updated successfully'.html_safe} and return
 
   end
   def edit_school
@@ -194,7 +194,7 @@ class AdmissionsController < ApplicationController
 
   def add_multiple_work
     WorkExperience.create!(:online_application_form_id => params[:id] , :company => params[:company], :title => params[:title] , :month_started => params[:month_started] , :year_started => params[:year_started] , :month_ended => params[:month_ended] , :year_ended => params[:year_ended] , :years => params[:years] , :job_function => params[:function] , :industry => params[:industry] , :location => params[:location])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=4" , {alert: 'profile updated successfully'.html_safe} and return
 
   end
   def edit_multiple_work
@@ -206,7 +206,7 @@ class AdmissionsController < ApplicationController
 
   def add_job_description
     JobDescription.create!(:work_experience_id => params[:id2] ,:job_desc => params[:job_description])
-    redirect_to "/admissions/#{params[:id]}/edit" , {alert: 'profile updated successfully'.html_safe} and return
+    redirect_to "/admissions/#{params[:id]}/edit/?page=4" , {alert: 'profile updated successfully'.html_safe} and return
 
   end
 
