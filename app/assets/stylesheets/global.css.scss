@@ -47,7 +47,7 @@ html {
 //  height: 300px;
 //}
 
-.panel table td:nth-child(1){
+.panel table.table td:nth-child(1){
   font-weight: bold;
   max-width: 400px;
   min-width: 140px;
@@ -453,6 +453,11 @@ body {
 
 #requirements table td .form-detail{
   font-weight: normal;
+}
+
+.modal-body table td:first-child{
+  font-size: 14px;
+  vertical-align: middle;
 }
 
 .leftcolumn ul li {

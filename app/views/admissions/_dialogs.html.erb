@@ -224,7 +224,7 @@
     <tr>
       <td>Club Affiliations:</td>
       <td>
-        <select name="affiliation" id="cl_affiliation" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.affiliation %>">
+        <select name="affiliation" id="cl_affiliation" class="form-control  dropdown-value" data-chosen-value="<%= @education_detail.affiliation %>">
           <option>Select One</option>
           <option>ADB Alumni Association Association</option>
           <option>AIM Green</option>
@@ -257,7 +257,7 @@
       <tr>
         <td>Undergraduate Major:</td>
         <td>
-          <select id="undergrad" name="undergraduate_major" class="input-xlarge  dropdown-value" data-chosen-value="" onchange="javascript: undergrad2(this.options[this.selectedIndex].value);">
+          <select id="undergrad" name="undergraduate_major" class="form-control  dropdown-value" data-chosen-value="" onchange="javascript: undergrad2(this.options[this.selectedIndex].value);">
             <option>Select One</option>
             <option>Business</option>-->
             <option>Engineering</option>
@@ -269,7 +269,7 @@
           <input type="hidden" value="<%= @online_application.id %>" id="club_affi-id" >
     </td>
       <td><script type="text/javascript" language="JavaScript">
-  document.write('<tr><td>&nbsp;</td><td><select name="subcategory22" id="subcategory22" class="dropdown-value" style="visibility: hidden;width:290px;" ></select></td></tr>')
+  document.write('<tr><td>&nbsp;</td><td><select name="subcategory22" id="subcategory22" class="form-control dropdown-value" style="visibility: hidden;width:290px;" ></select></td></tr>')
      </script>
           <noscript><select name="education_detail[other_degree]" id="subcategory" >
           <option value="">Select Sub-Category</option>
@@ -289,7 +289,7 @@
       <tr>
         <td>Other Graduate Degrees:</td>
         <td>
-          <select name="other_degree" class="input-xlarge  dropdown-value" data-chosen-value="" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);">
+          <select name="other_degree" class="form-control  dropdown-value" data-chosen-value="" onchange="javascript: dropdownlist(this.options[this.selectedIndex].value);">
             <option>Select One</option>
             <option>JD</option>
             <option>MA</option>
@@ -303,7 +303,7 @@
       <tr>
         <td>&nbsp;</td>
         <script type="text/javascript" language="JavaScript">
-            document.write('<td><select name="subcategory55" id="subcategory55" style="display: none;width:290px;" class="input-xlarge dropdown-value"><option value="">Select One</option></select></td>')
+            document.write('<td><select name="subcategory55" id="subcategory55" style="display: none;width:290px;" class="form-control dropdown-value"><option value="">Select One</option></select></td>')
         </script>
         <noscript><select name="education_detail[other_degree]" id="subcategory55" >
           <option value="">Select Sub-Category</option>
@@ -321,7 +321,7 @@
       <tr>
         <td>Certifications/Licenses:</td>
         <td>
-          <select name="certification" class="input-xlarge  dropdown-value" data-chosen-value="">
+          <select name="certification" class="form-control  dropdown-value" data-chosen-value="">
             <option>Select One</option>
             <option>Architect License</option>
             <option>CDP</option>
@@ -357,7 +357,7 @@
         <td>Function - Experience:</td>
         <td>
 
-          <select name="function" id="function" class="input-xlarge  dropdown-value" onchange="javascript: functionlist(this.options[this.selectedIndex].value);">
+          <select name="function" id="function" class="form-control  dropdown-value" onchange="javascript: functionlist(this.options[this.selectedIndex].value);">
             <option value="">Select Category</option>
             <option>Administration	</option>
             <option>Advertising	</option>
@@ -395,7 +395,7 @@
           </select>
 
           <script type="text/javascript" language="JavaScript">
-              document.write('<tr><td>&nbsp;</td><td><select name="sub_function" id="sub_function" style="width: 290px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select></td></tr>')
+              document.write('<tr><td>&nbsp;</td><td><select name="sub_function" id="sub_function" style="width: 290px;" class="form-control  dropdown-value"><option value="">Select Sub-Category</option></select></td></tr>')
           </script>
           <noscript><select name="function[]" id="subcategory" >
             <option value="">Select Sub-Category</option>
@@ -414,7 +414,7 @@
       <tr>
         <td>Industry - Experience:</td>
         <td>
-          <select name="industry" id="industry" class="input-xlarge  dropdown-value" onchange="javascript: industrylist(this.options[this.selectedIndex].value);">
+          <select name="industry" id="industry" class="form-control  dropdown-value" onchange="javascript: industrylist(this.options[this.selectedIndex].value);">
             <option value="">Select Category</option>
             <option>	Accounting	</option>
             <option>	Advertising	</option>
@@ -453,7 +453,7 @@
         </td>
         <td>
           <script type="text/javascript" language="JavaScript">
-              document.write('<tr><td>&nbsp;</td><td><select name="sub_industry" id="sub_industry" style="width: 290px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select></td></tr>')
+              document.write('<tr><td>&nbsp;</td><td><select name="sub_industry" id="sub_industry" style="width: 290px;" class="form-control  dropdown-value"><option value="">Select Sub-Category</option></select></td></tr>')
           </script>
           <noscript><select name="function[]" id="subcategory" >
             <option value="">Select Sub-Category</option>
@@ -475,7 +475,7 @@
       <td>Language Ability:</td>
       <td>
         <!--<input id="last-school-end  -date" name="education_detail[language]" value="<%= @education_detail.language %>" type="text" class="input-xlarge">-->
-        <select name="language_name" id="category" class="dropdown-value" onchange="javascript: languagefunction(this.options[this.selectedIndex].value);" style="width: 290px;">
+        <select name="language_name" id="category" class="dropdown-value form-control" onchange="javascript: languagefunction(this.options[this.selectedIndex].value);" style="width: 290px;">
           <option>Select One</option>
           <option>	   Albanian	</option>
           <option>	   American Sign Language 	</option>
@@ -565,7 +565,7 @@
       </td>
       <td>
         <script type="text/javascript" language="JavaScript">
-            document.write('<tr><td>&nbsp;</td><td><select name="language_level" id="subcategory3" class="dropdown-value" style="width:290px; "><option value="">Select Language</option></select></td></tr>')
+            document.write('<tr><td>&nbsp;</td><td><select name="language_level" id="subcategory3" class="form-control dropdown-value" style="width:290px; "><option value="">Select Language</option></select></td></tr>')
         </script>
         <noscript><select name="language_abilities[]" id="subcategory" >
           <option value="">Select Language First</option>
@@ -586,7 +586,7 @@
       <tr>
         <td>Geographic - Experience:</td>
         <td>
-          <select name="continent" id="continent" class="input-xlarge  dropdown-value" onchange="javascript: geographiclist(this.options[this.selectedIndex].value);">
+          <select name="continent" id="continent" class="form-control  dropdown-value" onchange="javascript: geographiclist(this.options[this.selectedIndex].value);">
             <option value="">Select Category</option>
             <option>	  NORTH AMERICA	</option>
             <option>	  AFRICA	</option>
@@ -601,7 +601,7 @@
         </td>
         <td>
           <script type="text/javascript" language="JavaScript">
-              document.write('<tr><td>&nbsp;</td><td><select name="country" id="geographic" style="width: 290px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select></td></tr>')
+              document.write('<tr><td>&nbsp;</td><td><select name="country" id="geographic" style="width: 290px;" class="form-control  dropdown-value"><option value="">Select Sub-Category</option></select></td></tr>')
           </script>
           <noscript><select name="function[]" id="geographic" >
             <option value="">Select Sub-Category</option>
@@ -622,7 +622,7 @@
       <tr>
         <td>Industry - Preference:</td>
         <td>
-          <select name="industry" id="industry" class="input-xlarge  dropdown-value" onchange="javascript: preferenceindustrylist(this.options[this.selectedIndex].value);">
+          <select name="industry" id="industry" class="form-control  dropdown-value" onchange="javascript: preferenceindustrylist(this.options[this.selectedIndex].value);">
             <option value="">	Select One Industry	</option>
             <option>	Consumer Products / Fast Moving Consumer Goods	</option>
             <option>	Banking	</option>
@@ -655,7 +655,7 @@
         </td>
         <td>
           <script type="text/javascript" language="JavaScript">
-              document.write('<tr><td>&nbsp;</td><td><select name="sub_industry" id="sub_industry" style="width: 290px;" class="input-xlarge  dropdown-value"><option value="">Select Sub-Category</option></select></td></tr>')
+              document.write('<tr><td>&nbsp;</td><td><select name="sub_industry" id="sub_industry" style="width: 290px;" class="form-control  dropdown-value"><option value="">Select Sub-Category</option></select></td></tr>')
           </script>
           <noscript><select name="function[]" id="subcategory" >
             <option value="">Select Sub-Category</option>
@@ -676,7 +676,7 @@
       <tr>
         <td>Most Important Criteria for Choosing a Job:</td>
         <td>
-          <select name="criteria" id="criteria" class="input-xlarge  dropdown-value" >
+          <select name="criteria" id="criteria" class="form-control  dropdown-value" >
             <option value="">	Select One Industry	</option>
             <option>	Job Profile	</option>
             <option>	Location	</option>

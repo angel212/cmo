@@ -20,31 +20,31 @@
         <tr>
           <td>First Name:</td>
           <td>
-            <input id="first-name" name="personal_detail[first_name]" value="<%= @personal_details.first_name %>" type="text" class="input-xlarge">
+            <input id="first-name" name="personal_detail[first_name]" value="<%= @personal_details.first_name %>" type="text" class="form-control">
           </td>
         </tr>
         <tr>
           <td>Middle Name:</td>
           <td>
-            <input id="middle-name" name="personal_detail[middle_name]" value="<%= @personal_details.middle_name %>" type="text" class="input-xlarge">
+            <input id="middle-name" name="personal_detail[middle_name]" value="<%= @personal_details.middle_name %>" type="text" class="form-control">
           </td>
         </tr>
         <tr>
           <td>Last Name:</td>
           <td>
-            <input id="last-name" name="personal_detail[last_name]" value="<%= @personal_details.last_name %>" type="text" class="input-xlarge">
+            <input id="last-name" name="personal_detail[last_name]" value="<%= @personal_details.last_name %>" type="text" class="form-control">
           </td>
         </tr>
         <tr>
           <td>Date of Birth:</td>
           <td>
-            <input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">
+            <input type="text" id="" class="date-pick dob form-control" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">
           </td>
         </tr>
         <tr>
           <td>Gender:</td>
           <td>
-            <select id="gender" name="personal_detail[gender]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.gender %>">
+            <select id="gender" name="personal_detail[gender]" class="form-control dropdown-value" data-chosen-value="<%= @personal_details.gender %>">
               <option>Select One</option>
               <option>Male</option>
               <option>Female</option>
@@ -53,7 +53,7 @@
         <tr>
           <td>Nationality:</td>
           <td>
-            <select id="citizenship" name="personal_detail[citizenship]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.citizenship %>">
+            <select id="citizenship" name="personal_detail[citizenship]" class="form-control dropdown-value" data-chosen-value="<%= @personal_details.citizenship %>">
               <option>Select One</option>
               <option> Afghan</option>
               <option> Albanian</option>
@@ -254,7 +254,7 @@
         <tr>
         <td>Citizenship:</td>
         <td>
-          <select id="civil_status" name="personal_detail[civil_status]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
+          <select id="civil_status" name="personal_detail[civil_status]" class="form-control dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
             <option>Select One</option>
             <option> Afghan</option>
             <option> Albanian</option>
@@ -456,13 +456,13 @@
         <tr>
           <td>Current Telephone No:</td>
           <td>
-            <input id="home-phone" name="personal_detail[current_telephone]" value="<%= @personal_details.current_telephone %>" type="text" class="input-xlarge">
+            <input id="home-phone" name="personal_detail[current_telephone]" value="<%= @personal_details.current_telephone %>" type="text" class="form-control">
           </td>
         </tr>
         <tr>
           <td>Current Mobile No:</td>
           <td>
-            <input id="home-phone" name="personal_detail[current_mobile]" value="<%= @personal_details.current_mobile %>" type="text" class="input-xlarge">
+            <input id="home-phone" name="personal_detail[current_mobile]" value="<%= @personal_details.current_mobile %>" type="text" class="form-control">
           </td>
         </tr>
         </table>
@@ -543,22 +543,23 @@
         <div class="modal-body">
         <form id="personal_details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
         <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3">
+
         <tr>
           <td>First Name:</td>
           <td>
-            <input id="first-name" name="personal_detail[first_name]" value="<%= @personal_details.first_name %>" type="text" class="input-xlarge">
+            <input id="first-name" name="personal_detail[first_name]" value="<%= @personal_details.first_name %>" type="text" class="form-control">
           </td>
         </tr>
         <tr>
           <td>Middle Name:</td>
           <td>
-            <input id="middle-name" name="personal_detail[middle_name]" value="<%= @personal_details.middle_name %>" type="text" class="input-xlarge">
+            <input id="middle-name" name="personal_detail[middle_name]" value="<%= @personal_details.middle_name %>" type="text" class="form-control">
           </td>
         </tr>
         <tr>
           <td>Last Name:</td>
           <td>
-            <input id="last-name" name="personal_detail[last_name]" value="<%= @personal_details.last_name %>" type="text" class="input-xlarge">
+            <input id="last-name" name="personal_detail[last_name]" value="<%= @personal_details.last_name %>" type="text" class="form-control">
           </td>
         </tr>
         <tr>
@@ -568,13 +569,13 @@
               <!--<input class="span2" size="16" type="text" value="12-02-2012">-->
               <!--<span class="add-on"><i class="icon-th"></i></span>-->
             <!--</div>-->
-            <input type="text" id="" class="date-pick dob" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">
+            <input type="text" id="" class="date-pick dob form-control" name="personal_detail[dob]" value="<%= @personal_details.dob.strftime('%d/%m/%Y') %>">
           </td>
         </tr>
         <tr>
           <td>Gender:</td>
           <td>
-            <select id="gender" name="personal_detail[gender]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.gender %>">
+            <select id="gender" name="personal_detail[gender]" class="form-control dropdown-value" data-chosen-value="<%= @personal_details.gender %>">
               <option>Select One</option>
               <option>Male</option>
               <option>Female</option>
@@ -583,7 +584,7 @@
         <tr>
           <td>Nationality:</td>
           <td>
-            <select id="citizenship" name="personal_detail[citizenship]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.citizenship %>">
+            <select id="citizenship" name="personal_detail[citizenship]" class="form-control dropdown-value" data-chosen-value="<%= @personal_details.citizenship %>">
               <option>Select One</option>
               <option> Afghan</option>
               <option> Albanian</option>
@@ -784,7 +785,7 @@
         <tr>
         <td>Citizenship:</td>
         <td>
-          <select id="civil_status" name="personal_detail[civil_status]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
+          <select id="civil_status" name="personal_detail[civil_status]" class="form-control dropdown-value" data-chosen-value="<%= @personal_details.civil_status %>">
             <option>Select One</option>
             <option> Afghan</option>
             <option> Albanian</option>
@@ -986,13 +987,13 @@
         <tr>
           <td>Current Telephone No:</td>
           <td>
-            <input id="home-phone" name="personal_detail[current_telephone]" value="<%= @personal_details.current_telephone %>" type="text" class="input-xlarge">
+            <input id="home-phone" name="personal_detail[current_telephone]" value="<%= @personal_details.current_telephone %>" type="text" class="form-control">
           </td>
         </tr>
         <tr>
           <td>Current Mobile No:</td>
           <td>
-            <input id="home-phone" name="personal_detail[current_mobile]" value="<%= @personal_details.current_mobile %>" type="text" class="input-xlarge">
+            <input id="home-phone" name="personal_detail[current_mobile]" value="<%= @personal_details.current_mobile %>" type="text" class="form-control">
           </td>
         </tr>
         </table>
@@ -1032,37 +1033,37 @@
   <tr>
     <td>Address Line 1:</td>
     <td>
-      <input id="address-1" name="personal_detail[address_1]" value="<%= @personal_details.address_1 %>" type="text" class="input-xlarge">
+      <input id="address-1" name="personal_detail[address_1]" value="<%= @personal_details.address_1 %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
     <td>Address Line 2:</td>
     <td>
-      <input id="address-2" name="personal_detail[address_2]" value="<%= @personal_details.address_2 %>" type="text" class="input-xlarge">
+      <input id="address-2" name="personal_detail[address_2]" value="<%= @personal_details.address_2 %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
     <td>Address Line 3:</td>
     <td>
-      <input id="address-2" name="personal_detail[address_3]" value="<%= @personal_details.address_3 %>" type="text" class="input-xlarge">
+      <input id="address-2" name="personal_detail[address_3]" value="<%= @personal_details.address_3 %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
     <td>City:</td>
     <td>
-      <input id="city" name="personal_detail[city]" value="<%= @personal_details.city %>" type="text" class="input-xlarge">
+      <input id="city" name="personal_detail[city]" value="<%= @personal_details.city %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
     <td>Postal Code:</td>
     <td>
-      <input id="address-post-code" name="personal_detail[address_post_code]" value="<%= @personal_details.address_post_code %>" type="text" class="input-xlarge">
+      <input id="address-post-code" name="personal_detail[address_post_code]" value="<%= @personal_details.address_post_code %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
   <td>Country:</td>
   <td>
-  <select id="address-country" name="personal_detail[address_country]" class="input-xlarge dropdown-value" data-chosen-value="<%= @personal_details.address_country %>">
+  <select id="address-country" name="personal_detail[address_country]" class="form-control dropdown-value" data-chosen-value="<%= @personal_details.address_country %>">
   <option>Select One</option>
   <option>Afghanistan</option>
   <option>Åland Islands</option>
@@ -1315,37 +1316,37 @@
   <tr>
     <td>Home Address:</td>
     <td>
-      <input id="home-phone" name="personal_detail[home_address]" value="<%= @personal_details.home_address %>" type="text" class="input-xlarge">
+      <input id="home-phone" name="personal_detail[home_address]" value="<%= @personal_details.home_address %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
     <td>Home City:</td>
     <td>
-      <input id="home-phone" name="personal_detail[home_city]" value="<%= @personal_details.home_city %>" type="text" class="input-xlarge">
+      <input id="home-phone" name="personal_detail[home_city]" value="<%= @personal_details.home_city %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
     <td>Home Country:</td>
     <td>
-      <input id="home-phone" name="personal_detail[home_country]" value="<%= @personal_details.home_country %>" type="text" class="input-xlarge">
+      <input id="home-phone" name="personal_detail[home_country]" value="<%= @personal_details.home_country %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
     <td>Home Postal Code:</td>
     <td>
-      <input id="home-phone" name="personal_detail[home_postal]" value="<%= @personal_details.home_postal %>" type="text" class="input-xlarge">
+      <input id="home-phone" name="personal_detail[home_postal]" value="<%= @personal_details.home_postal %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
     <td>Home Telephone:</td>
     <td>
-      <input id="home-phone" name="personal_detail[home_phone]" value="<%= @personal_details.home_phone %>" type="text" class="input-xlarge">
+      <input id="home-phone" name="personal_detail[home_phone]" value="<%= @personal_details.home_phone %>" type="text" class="form-control">
     </td>
   </tr>
   <tr>
     <td>Home Mobile:</td>
     <td>
-      <input id="cell-phone" name="personal_detail[cell_phone]" value="<%= @personal_details.cell_phone %>" type="text" class="input-xlarge">
+      <input id="cell-phone" name="personal_detail[cell_phone]" value="<%= @personal_details.cell_phone %>" type="text" class="form-control">
     </td>
   </tr>
   </table>
@@ -1475,7 +1476,7 @@
               <tr>
                 <td>Program/Course Title:</td>
                 <td>
-                  <select id="last-school-course-title" name="education_detail[last_school_course_title]" class="input-xlarge dropdown-value" data-chosen-value="<%= @education_detail.last_school_course_title %>">
+                  <select id="last-school-course-title" name="education_detail[last_school_course_title]" class="form-control dropdown-value" data-chosen-value="<%= @education_detail.last_school_course_title %>">
                     <option>MBA - Master of Business Administration</option>
                     <option>Master's Degree</option>
                   </select>
@@ -1485,19 +1486,19 @@
               <tr>
                 <td>Class Year:</td>
                 <td>
-                  <input id="last-school-year-date" name="education_detail[class_year]" value="<%= @education_detail.class_year %>" type="text" class="input-xlarge">
+                  <input id="last-school-year-date" name="education_detail[class_year]" value="<%= @education_detail.class_year %>" type="text" class="form-control">
                 </td>
               </tr>
               <tr>
                 <td>Graduation Date (approximate):</td>
                 <td>
-                  <input id="last-school-end-date" name="education_detail[last_school_end_date]" value="<%= @education_detail.last_school_end_date %>" type="text" class="input-xlarge date-pick non-dob">
+                  <input id="last-school-end-date" name="education_detail[last_school_end_date]" value="<%= @education_detail.last_school_end_date %>" type="text" class="form-control date-pick non-dob">
                 </td>
               </tr>
               <tr>
                 <td>Do you Have Scholarship?:</td>
                 <td>
-                  <select name="education_detail[scholarship]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @education_detail.scholarship %>">
+                  <select name="education_detail[scholarship]" class="form-control  dropdown-value" data-chosen-value="<%= @education_detail.scholarship %>">
                     <option>Yes</option>
                     <option>No</option>
                   </select>
@@ -1524,7 +1525,7 @@
               <tr>
                 <td>MBA Schools:</td>
                 <td>
-                  <input id="last-school-end-date" name="education_detail[mba_school]" value="<%= @education_detail.mba_school %>" type="text" class="input-xlarge">
+                  <input id="last-school-end-date" name="education_detail[mba_school]" value="<%= @education_detail.mba_school %>" type="text" class="form-control">
                 </td>
               </tr>
               <tr>
@@ -1674,13 +1675,13 @@
                    <td>
                      School:
                    </td>
-                   <td><input type="text" name="school" ></td>
+                   <td><input class="form-control" type="text" name="school" ></td>
                  </tr>
                  <tr>
                    <td>
                      Location:
                    </td>
-                   <td><input type="text" name="location" ></td>
+                   <td><input class="form-control" type="text" name="location" ></td>
                  </tr>
                  <tr>
                    <td>
@@ -1688,7 +1689,7 @@
                    </td>
                    <td>
                    <span class="language-container">
-                     <select type="text" name="month_started"  class="input-xlarge dropdown-value" data-chosen-value="<%=  %>" style="width: 200px">
+                     <select type="text" name="month_started"  class="form-control dropdown-value" data-chosen-value="<%=  %>" style="width: 200px;position:absolute;">
                        <option>January</option>
                        <option>February</option>
                        <option>March</option>
@@ -1703,7 +1704,7 @@
                        <option>December</option>
                      </select>
                      <!--<input type="text" name="year_started" placeholder="Year">-->
-                     <input type="text" name="year_started" placeholder="Year" style="width: 86px;">
+                     <input type="text" class="form-control" name="year_started" placeholder="Year" style="width: 86px;float:right;">
                    </span>
                    </td>
 
@@ -1712,7 +1713,7 @@
                      Month-Year Ended:
                    </td>
                    <td><span class="language-container">
-                     <select type="text" name="month_ended"  class="input-xlarge dropdown-value" data-chosen-value="<%=  %>" style="width: 200px">
+                     <select type="text" name="month_ended"  class="form-control dropdown-value" data-chosen-value="<%=  %>" style="position:absolute;width: 200px">
                        <option>January</option>
                        <option>February</option>
                        <option>March</option>
@@ -1727,20 +1728,20 @@
                        <option>December</option>
                      </select>
                      <!--<input type="text" name="year_ended" placeholder="Month">-->
-                     <input type="text" name="year_ended" placeholder="Year" style="width: 86px;">
+                     <input type="text" name="year_ended" class="form-control" placeholder="Year" style="float:right;width: 86px;">
                    </span></td>
                    </tr>
                  <tr>
                    <td>
                      Course:
                    </td>
-                   <td> <input type="text" name="course" placeholder=""></td>
+                   <td> <input type="text" name="course" class="form-control" placeholder=""></td>
                  </tr>
                  <tr>
                    <td>
                      Remarks:
                    </td>
-                   <td><input type="text" name="remarks" placeholder=""></td>
+                   <td><input type="text" name="remarks" class="form-control" placeholder=""></td>
 
                  </tr>
                </table>
@@ -1765,7 +1766,7 @@
           <div id="table-school-<%= education_school.id %>">
           <table class="table" style=" margin:20px auto 0 auto;color:#333;width:590px;" cellpadding="4">
             <tr>
-              <td>School:</td>
+              <td class="col-md-5">School:</td>
               <td><span id="education_school_disp-1" class="language-container" ><%= education_school.school %></span> </td>
               <td><a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#school-educ-<%= education_school.id %>" style="font-size: 11px;padding: 0;float:right;" class="update_school"><span> Update School </span><span class="glyphicon glyphicon-cog"></span></a></td>
             </tr>
@@ -1808,17 +1809,17 @@
 
 
 
-                  <table id="educ_table<%= education_school.id %>" style="margin: 0 auto;color:#333;width:500px;" cellpadding="3">
+                  <table id="educ_table<%= education_school.id %>" style="margin: 0 auto;color:#333;" cellpadding="3">
                     <tr>
                       <td>School:</td>
-                      <td><span id="education_school_disp<%= education_school.id %>-1" class="language-container" ><input type="text" value=" <%= education_school.school %>" name="school"> </span></td></tr>
+                      <td><span id="education_school_disp<%= education_school.id %>-1" class="language-container" ><input type="text" class="form-control" value=" <%= education_school.school %>" name="school"> </span></td></tr>
                     <tr>
                       <td>Location:</td>
-                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" value="<%= education_school.location %>" name="location"></span></td></tr>
+                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" class="form-control" value="<%= education_school.location %>" name="location"></span></td></tr>
                     <tr>
                       <td>Month-Year started: </td>
                       <td><span id="education_school_disp<%= education_school.id %>-3" class="language-container" >
-                        <select type="text" name="month_started"  class="input-xlarge dropdown-value" data-chosen-value="<%= education_school.month_started %>" style="width: 200px">
+                        <select type="text" name="month_started"  class="form-control dropdown-value" data-chosen-value="<%= education_school.month_started %>" style="width: 200px;position:absolute;">
                           <option>January</option>
                           <option>February</option>
                           <option>March</option>
@@ -1833,12 +1834,12 @@
                           <option>December</option>
                         </select>
                         <!--<input type="text" value="<%= education_school.month_started %>" name="month_started"> -->
-                        <input type="text" value="<%= education_school.year_started %>" name="year_started" style="width: 86px;">
+                        <input type="text" class="form-control" value="<%= education_school.year_started %>" name="year_started" style="float:right;width: 86px;">
                       </span></td></tr>
                     <tr>
                       <td>Month-Year ended: </td>
                       <td><span id="education_school_disp<%= education_school.id %>-4" class="language-container" >
-                        <select type="text" name="month_ended"  class="input-xlarge dropdown-value" data-chosen-value="<%= education_school.month_ended %>" style="width: 200px">
+                        <select type="text" name="month_ended"  class="form-control dropdown-value" data-chosen-value="<%= education_school.month_ended %>" style="width: 200px;position:absolute;">
                           <option>January</option>
                           <option>February</option>
                           <option>March</option>
@@ -1853,14 +1854,14 @@
                           <option>December</option>
                         </select>
                         <!--<input type="text" value="<%= education_school.month_ended %>" name="month_ended">-->
-                        <input type="text" value="<%= education_school.year_ended %>" name="year_ended" style="width: 86px;" >
+                        <input type="text" class="form-control" value="<%= education_school.year_ended %>" name="year_ended" style="float:right;width: 86px;" >
                       </span></td></tr>
                     <tr>
                       <td>Course:</td>
-                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" value="<%= education_school.course %>" name="course" ></span></td></tr>
+                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" class="form-control" value="<%= education_school.course %>" name="course" ></span></td></tr>
                     <tr>
                       <td>Remarks:</td>
-                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" value="<%= education_school.remarks %>" name="remarks"> </span></td></tr>
+                      <td><span id="education_school_disp<%= education_school.id %>-2" class="language-container" ><input type="text" class="form-control" value="<%= education_school.remarks %>" name="remarks"> </span></td></tr>
                   </table>
 <br>
 <hr style="margin-top: 0px;">
@@ -1917,7 +1918,7 @@
      <tr>
        <td>Total Years of Work Experience:</td>
        <td>
-         <select id="years_ofexp" name="employment_detail[years_ofexp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_ofexp %>">
+         <select id="years_ofexp" name="employment_detail[years_ofexp]" class="form-control  dropdown-value" data-chosen-value="<%= @employment_detail.years_ofexp %>">
            <option>Less than 2 years</option>
            <option>2-5 years</option>
            <option>5-10 years</option>
@@ -1953,7 +1954,7 @@
      <tr>
      <td>Work Authorization:</td>
      <td>
-     <select name="employment_detail[work_authorization]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.work_authorization %>">
+     <select name="employment_detail[work_authorization]" class="form-control  dropdown-value" data-chosen-value="<%= @employment_detail.work_authorization %>">
      <option>United States</option>
      <option>European Union</option>
      <option>Afghanistan</option>
@@ -2227,7 +2228,7 @@
      <tr>
        <td>Years of Supervisory Work Experience:</td>
        <td>
-         <select name="employment_detail[years_supervisor_exp]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.years_supervisor_exp %>">
+         <select name="employment_detail[years_supervisor_exp]" class="form-control  dropdown-value" data-chosen-value="<%= @employment_detail.years_supervisor_exp %>">
            <option> 0 - 1 Years
            </option>
            <option> 1 - 3 Years
@@ -2246,7 +2247,7 @@
      <tr>
        <td>Salary prior to MBA (per annum):</td>
        <td>
-         <select name="employment_detail[salary_mba]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.salary_mba %>">
+         <select name="employment_detail[salary_mba]" class="form-control  dropdown-value" data-chosen-value="<%= @employment_detail.salary_mba %>">
            <option>Below $10,000</option>
            <option>$10,000 - $14,999</option>
            <option>$15,000 - $19,999</option>
@@ -2262,7 +2263,7 @@
      <tr>
        <td>Sabbatical?:</td>
        <td>
-         <select name="employment_detail[sabbatical]" class="input-xlarge  dropdown-value" data-chosen-value="<%= @employment_detail.sabbatical %>">
+         <select name="employment_detail[sabbatical]" class="form-control  dropdown-value" data-chosen-value="<%= @employment_detail.sabbatical %>">
            <option>Yes</option>
            <option>No</option>
          </select></td>
@@ -2270,31 +2271,31 @@
      <tr>
        <td>Name of Company before MBA:</td>
        <td>
-         <input id="company-name" name="employment_detail[company_before_mba]" value="<%= @employment_detail.company_before_mba %>" type="text" class="input-xlarge">
+         <input id="company-name" name="employment_detail[company_before_mba]" value="<%= @employment_detail.company_before_mba %>" type="text" class="form-control">
        </td>
      </tr>
      <tr>
        <td>Location:</td>
        <td>
-         <input id="company-name" name="employment_detail[company_location]" value="<%= @employment_detail.company_location %>" type="text" class="input-xlarge">
+         <input id="company-name" name="employment_detail[company_location]" value="<%= @employment_detail.company_location %>" type="text" class="form-control">
        </td>
      </tr>
      <tr>
        <td>Job title / designation:</td>
        <td>
-         <input id="company-name" name="employment_detail[job_title]" value="<%= @employment_detail.job_title %>" type="text" class="input-xlarge">
+         <input id="company-name" name="employment_detail[job_title]" value="<%= @employment_detail.job_title %>" type="text" class="form-control">
        </td>
      </tr>
      <tr>
        <td>Bachelor's Degree:</td>
        <td>
-         <input id="company-name" name="employment_detail[degree]" value="<%= @employment_detail.degree %>" type="text" class="input-xlarge">
+         <input id="company-name" name="employment_detail[degree]" value="<%= @employment_detail.degree %>" type="text" class="form-control">
        </td>
      </tr>
      <tr>
        <td>School:</td>
        <td>
-         <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.school %>" type="text" class="input-xlarge">
+         <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.school %>" type="text" class="form-control">
        </td>
      </tr>
      </table>
@@ -2314,7 +2315,7 @@
 
       <table class="table" style=" margin:20px auto 0 auto;width: 595px;color:#333;" cellpadding="3">
       <tr>
-        <td>Total Years of Work Experience:</td>
+        <td class="col-md-5">Total Years of Work Experience:</td>
         <td>
           <%= @employment_detail.years_ofexp %>
         </td>
@@ -2430,13 +2431,13 @@
                     <td>
                      Company Name:
                     </td>
-                    <td><input type="text" name="company" ></td>
+                    <td><input class="form-control" type="text" name="company" ></td>
                   </tr>
                   <tr>
                     <td>
                       Job Title/Designation:
                     </td>
-                    <td><input type="text" name="title" ></td>
+                    <td><input class="form-control" type="text" name="title" ></td>
                   </tr>
                   <tr>
                     <td>
@@ -2444,7 +2445,7 @@
                     </td>
                     <td>
                       <span class="language-container">
-                        <select type="text" name="month_started"  class="input-xlarge dropdown-value" style="width: 200px">
+                        <select type="text" name="month_started"  class="form-control dropdown-value" style="width: 200px;position:absolute;">
                           <option>January</option>
                           <option>February</option>
                           <option>March</option>
@@ -2459,9 +2460,9 @@
                           <option>December</option>
                         </select>
                      <!--<input type="text" name="month_started" placeholder="Month">-->
-                        <!--<select type="text" name="year_started" id="mySelect" class="input-xlarge dropdown-value" data-chosen-value="<%=  %>">-->
+                        <!--<select type="text" name="year_started" id="mySelect" class="form-control dropdown-value" data-chosen-value="<%=  %>">-->
                         <!--</select>-->
-                     <input type="text" name="year_started" placeholder="Year" style="width: 86px;">
+                     <input type="text" name="year_started" class="form-control" placeholder="Year" style="float:right;width: 86px;">
                    </span>
                     </td>
                   </tr>
@@ -2472,7 +2473,7 @@
                     </td>
                     <td>
                       <span class="language-container">
-                        <select type="text" name="month_ended"  class="input-xlarge dropdown-value" data-chosen-value="<%=  %>" style="width: 200px">
+                        <select type="text" name="month_ended"  class="form-control dropdown-value" data-chosen-value="<%=  %>" style="position:absolute;width: 200px">
                           <option>January</option>
                           <option>February</option>
                           <option>March</option>
@@ -2487,7 +2488,7 @@
                           <option>December</option>
                         </select>
                      <!--<input type="text" name="month_ended" placeholder="Month">-->
-                     <input type="text" name="year_ended" placeholder="Year" style="width: 86px;">
+                     <input type="text" name="year_ended" class="form-control"placeholder="Year" style="float:right;width: 86px;">
                    </span>
                     </td>
                   </tr>
@@ -2495,24 +2496,24 @@
                     <td>
                       Years:
                     </td>
-                    <td> <input type="text" name="years" placeholder=""></td>
+                    <td> <input type="text" name="years" class="form-control" placeholder=""></td>
                   </tr>
                   <tr>
                     <td>
                       Job Function:
                     </td>
-                    <td><input type="text" name="function" placeholder=""></td>
+                    <td><input type="text" name="function" class="form-control" placeholder=""></td>
 
                   </tr>
                   <tr>
                     <td>Location:</td>
-                    <td><input type="text" name="location" placeholder=""></td>
+                    <td><input type="text" name="location" class="form-control" placeholder=""></td>
                   </tr>
                   <tr>
                     <td>
                       Company Industry:
                     </td>
-                    <td><input type="text" name="industry" placeholder=""></td>
+                    <td><input type="text" name="industry" class="form-control" placeholder=""></td>
 
                   </tr>
 
@@ -2539,7 +2540,7 @@
         <table class="table" style=" margin:20px auto 0 auto;color:#333;width: 590px" cellpadding="4">
           <tr>
             <td class="col-md-1">Company Name:</td>
-            <td class="col-md-5"><span id="work_disp-1" class="language-container" ><%= work_experience.company %></span> </td>
+            <td class="col-md-4"><span id="work_disp-1" class="language-container" ><%= work_experience.company %></span> </td>
             <td class="col-md-2"><a href="#" id="mailing_edit_link" data-toggle="modal" data-target="#work_exp-<%= work_experience.id %>" style="font-size: 11px;padding: 0;float:right;" class="update_school"><span> Update Work </span><span class="glyphicon glyphicon-cog"></span></a></td>
           </tr>
 
@@ -2602,14 +2603,14 @@
                   <table id="educ_table<%= work_experience.id %>" style="margin: 0 auto;color:#333;" cellpadding="3">
                     <tr>
                       <td>Company Name:</td>
-                      <td><span id="work_disp<%= work_experience.id %>-1" class="language-container" ><input type="text" value=" <%= work_experience.company %>" name="company"> </span></td></tr>
+                      <td><span id="work_disp<%= work_experience.id %>-1" class="language-container" ><input type="text" class="form-control" value=" <%= work_experience.company %>" name="company"> </span></td></tr>
                     <tr>
                       <td>Job Title/Designation:</td>
-                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.title %>" name="title"></span></td></tr>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" class="form-control" value="<%= work_experience.title %>" name="title"></span></td></tr>
                     <tr>
                       <td>Month-Year started: </td>
                       <td><span id="work_disp<%= work_experience.id %>-3" class="language-container" >
-                        <select type="text" name="month_started"  class="input-xlarge dropdown-value" data-chosen-value="<%=work_experience.month_started %>" style="width: 200px">
+                        <select type="text" name="month_started"  class="form-control dropdown-value" data-chosen-value="<%=work_experience.month_started %>" style="position:absolute;width: 200px">
                           <option>January</option>
                           <option>February</option>
                           <option>March</option>
@@ -2624,12 +2625,12 @@
                           <option>December</option>
                         </select>
                         <!--<input type="text" value="<%= work_experience.month_started %>" name="month_started" >-->
-                        <input type="text" value="<%= work_experience.year_started %>" name="year_started" style="width: 86px;" placeholder="Year">
+                        <input type="text" value="<%= work_experience.year_started %>" class="form-control" name="year_started" style="float:right;width: 86px;" placeholder="Year">
                       </span></td></tr>
                     <tr>
                       <td>Month-Year ended: </td>
                       <td><span id="work_disp<%= work_experience.id %>-4" class="language-container" >
-                        <select type="text" name="month_ended"  class="input-xlarge dropdown-value" data-chosen-value="<%= work_experience.month_ended  %>" style="width: 200px">
+                        <select type="text" name="month_ended"  class="form-control dropdown-value" data-chosen-value="<%= work_experience.month_ended  %>" style="width: 200px;position:absolute;">
                           <option>January</option>
                           <option>February</option>
                           <option>March</option>
@@ -2644,22 +2645,22 @@
                           <option>December</option>
                         </select>
                         <!--<input type="text" value="<%= work_experience.month_ended %>" name="month_ended">-->
-                        <input type="text" value="<%= work_experience.year_ended %>" name="year_ended" style="width: 86px;" placeholder="Year">
+                        <input type="text" value="<%= work_experience.year_ended %>" class="form-control" name="year_ended" style="float:right;width: 86px;" placeholder="Year">
                       </span></td></tr>
                     <tr>
                       <td>Years:</td>
-                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.years %>" name="years" ></span></td></tr>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container"><input type="text" class="form-control" value="<%= work_experience.years %>" name="years" ></span></td></tr>
                     <tr>
                       <td>Job Function:</td>
-                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.job_function %>" name="function"> </span></td></tr>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container"><input type="text" class="form-control" value="<%= work_experience.job_function %>" name="function"> </span></td></tr>
 
                     <tr>
                       <td>Location:</td>
-                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.location %>" name="location"> </span></td></tr>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container"><input type="text" class="form-control" value="<%= work_experience.location %>" name="location"> </span></td></tr>
 
                     <tr>
                       <td>Company Industry:</td>
-                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container" ><input type="text" value="<%= work_experience.industry %>" name="industry"> </span></td></tr>
+                      <td><span id="work_disp<%= work_experience.id %>-2" class="language-container"><input type="text" class="form-control" value="<%= work_experience.industry %>" name="industry"> </span></td></tr>
 
                   </table>
                   <br>
@@ -2744,23 +2745,22 @@
                     function countChar<%=work_experience.id %>(val) {
                         var len = val.value.length;
                         if (len >= 80) {
-                            val.value = val.value.substring(0, 80) + "characters left";
+                           val.value = val.value.substring(0, 80);
                         } else {
-                            $('#charNum<%=work_experience.id %>').text(80 - len) + "characters left";
+                           $('#charNum<%=work_experience.id %>').text(80 - len);
                         }
                     };
                 </script>
-                <form id="trolll" class="form-horizontal" method="post" action="/admissions/job_description/<%= @online_application.id %>/<%=work_experience.id%>">
+                <form id="trolll" method="post" action="/admissions/job_description/<%= @online_application.id %>/<%=work_experience.id%>">
 
 
                   <table>
                     <tr>
     <td>
-      <input type="text" id="field" onkeyup="countChar<%=work_experience.id%>(this)" style="width: 560px;
-              color: black;
+      <input type="text" class="form-control" id="field" onkeyup="countChar<%=work_experience.id%>(this)" style="width: 560px;
               font-family: arial;
               font-size: 13px;" name="job_description" maxlength="80">
-      <div id="charNum<%=work_experience.id %>" style="color: black"></div>
+      <div id="charNum<%=work_experience.id %>" style="color: #333;"><span></span></div>
 </td>
                     </tr>
                   </table>
@@ -2835,13 +2835,13 @@
                 <tr>
                   <td>Desired job titles:</td>
                   <td>
-                    <input id="" name="preference[job_title]" value="<%= @preference.job_title %>" type="text" class="input-xlarge">
+                    <input id="" name="preference[job_title]" value="<%= @preference.job_title %>" type="text" class="form-control">
                   </td>
                 </tr>
                 <tr>
                   <td>Desired Salary after MBA (per annum):</td>
                   <td>
-                    <select id="salary_after_mba" name="preference[salary_after_mba]" class="input-xlarge dropdown-value" data-chosen-value="<%= @preference.salary_after_mba %>">
+                    <select id="salary_after_mba" name="preference[salary_after_mba]" class="form-control dropdown-value" data-chosen-value="<%= @preference.salary_after_mba %>">
                       <option>Below $10,000</option>
                       <option>$10,000 - $14,999</option>
                       <option>$15,000 - $19,999</option>
@@ -2858,7 +2858,7 @@
                 <tr>
                   <td>Candidate Job Reporting Status:</td>
                   <td>
-                    <input id="" name="preference[candidate_job_status]" value="<%= @preference.candidate_job_status %>" type="text" class="input-xlarge">
+                    <input id="" name="preference[candidate_job_status]" value="<%= @preference.candidate_job_status %>" type="text" class="form-control">
                   </td>
                 </tr>
               </table>
@@ -2964,20 +2964,20 @@
                   <td>
                     Current Email:</td>
                   <td>
-                    <input name="currentEmail" type="text">
+                    <input name="currentEmail" class="form-control"type="text">
                   </td>
                 </tr>
                 <tr>
                   <td>
                     New Email:</td>
                   <td>
-                    <input type="text" name="newEmail"></td>
+                    <input type="text" class="form-control" name="newEmail"></td>
                 </tr>
                 <tr>
                   <td>
                     Confirm Email:</td>
                   <td>
-                    <input type="text" name="confirmEmail"></td>
+                    <input type="text" class="form-control" name="confirmEmail"></td>
                 </tr>
               </table>
             </form>
@@ -3004,21 +3004,21 @@
                   <td>
                     Current Password:</td>
                   <td>
-                    <input type="password" id="password" name="CurrentPassword" >
+                    <input type="password" id="password" class="form-control" name="CurrentPassword" >
                   </td>
                 </tr>
                 <tr>
                   <td>
                     New Password:</td>
                   <td>
-                    <input type="password" name="newPassword" id="form_password">
+                    <input type="password" name="newPassword" class="form-control" id="form_password">
                   </td>
                 </tr>
                 <tr>
                   <td>
                     Confirm Password:</td>
                   <td>
-                    <input type="password" name="confirmPassword" >
+                    <input type="password" class="form-control" name="confirmPassword" >
                   </td>
                 </tr>
               </table>
@@ -3045,19 +3045,19 @@
       <tr>
         <td>Current Mobile No:</td>
         <td>
-          <input id="" name="" value="" type="text" class="input-xlarge">
+          <input id="" name="" value="" type="text" class="form-control">
         </td>
       </tr>
       <tr>
         <td>Current Telephone No:</td>
         <td>
-          <input id="" name="" value="" type="text" class="input-xlarge">
+          <input id="" name="" value="" type="text" class="form-control">
         </td>
       </tr>
       <tr>
         <td>Current Email Address:</td>
         <td>
-          <input id="" name="" value="" type="text" class="input-xlarge date-pick non-dob">
+          <input id="" name="" value="" type="text" class="form-control date-pick non-dob">
         </td>
       </tr>
     </table>
