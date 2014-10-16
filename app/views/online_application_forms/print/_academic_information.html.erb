@@ -68,7 +68,7 @@
     </tr>
 
   <tr>
-    <td  valign="top" style="font-weight:bold;" colspan="5">Laguange Ability
+    <td  valign="top" style="font-weight:bold;" colspan="5">Language Ability
       <br>
       <% @online_application_form.language_abilities.each do |language_ability| %>
           <span id="lang_disp<%= language_ability.id %>" class="form-detail" style="margin-left: 5px;">&bull; <%= language_ability.name %> - <%= language_ability.level %> <!--<button  id="<%= language_ability.id %>" class="language-ability-delete">delete</button>--><br></span>
