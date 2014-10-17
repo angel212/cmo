@@ -264,8 +264,13 @@ ActiveRecord::Schema.define(:version => 20141007002756) do
     t.string   "organization_name"
   end
 
-# Could not dump table "undergraduate_majors" because of following StandardError
-#   Unknown type 'sting' for column 'sub_undergrad'
+  create_table "undergraduate_majors", :force => true do |t|
+    t.integer  "online_application_form_id"
+    t.string   "undergrad"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.string   "sub_undergrad"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

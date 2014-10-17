@@ -105,6 +105,6 @@ class RequirementsController < ApplicationController
                         requirement_type_id: params['requirement_type_id'],
                         file_name: params['key'])
 
-    redirect_to edit_supplemental_detail_path(requirement.online_application_form.supplemental_detail), :notice => 'Requirement uploaded successfully.'
+    redirect_to edit_admission_path(requirement.online_application_form.id), :notice => 'Requirement uploaded successfully.'
   end
 end

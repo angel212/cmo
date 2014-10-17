@@ -17,6 +17,8 @@
                   if ($('#<%= "requirement#{requirement_type_id}"%>').val().length === 0) {
                       ee.preventDefault();
                       alert('Choose a file to upload before attempting to upload it.');
+                  } else {
+                      alert('Click OK to begin upload');
                   }
               })
           })
