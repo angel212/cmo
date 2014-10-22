@@ -177,6 +177,12 @@ session[:sda] =@online_application.id
     redirect_to "/admissions/#{params[:id]}/edit/?page=4" , {alert: 'profile updated successfully'.html_safe} and return
   end
 
+  def create_job_status
+
+    GeographicExperience.create!(:online_application_form_id => params[:id] , :candidate_job_status => params[:candidate_job_status])
+    redirect_to "/admissions/#{params[:id]}/edit/?page=4" , {alert: 'profile updated successfully'.html_safe} and return
+  end
+
   def create_preference_industry
 
     PreferenceIndustry.create!(:online_application_form_id => params[:id] , :industry => params[:industry], :sub_industry=> params[:sub_industry])

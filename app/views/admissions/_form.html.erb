@@ -2837,42 +2837,42 @@
           <h4 class="modal-title" id="myModalLabel">Job Reporting Status</h4>
         </div>
         <div class="modal-body">
-          <form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
+          <form id="preference-details-form-2" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
             <table style=" color: black;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
               <tr>
                 <td style="vertical-align:top">Candidate Job Reporting Status:</td>
                 <td>
                     <div class="controls">
                       <label class="radio" for="radios-0">
-                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Seeking a Position" checked="checked">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Seeking a Position" <% if @preference.candidate_job_status == 'Seeking a Position' %>checked="checked" <% end %>>
                         Seeking a Position
                       </label>
                       <label class="radio" for="radios-1">
-                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Seeking an offer">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Seeking an offer" <% if @preference.candidate_job_status == 'Seeking an offer' %>checked="checked" <% end %>>
                         Seeking an offer
                       </label>
                       <label class="radio" for="radios-0">
-                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Accepted an offer">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Accepted an offer" <% if @preference.candidate_job_status == 'Accepted an offer' %>checked="checked" <% end %>>
                         Accepted an offer
                       </label>
                       <label class="radio" for="radios-1">
-                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Starting a business">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Starting a business" <% if @preference.candidate_job_status == 'Starting a business' %>checked="checked" <% end %>>
                         Starting a business
                       </label>
                       <label class="radio" for="radios-0">
-                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Postponing job search">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Postponing job search"<% if @preference.candidate_job_status == 'Postponing job search' %>checked="checked" <% end %>>
                         Postponing job search
                       </label>
                       <label class="radio" for="radios-1">
-                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Continuing education">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Continuing education" <% if @preference.candidate_job_status == 'Continuing education' %>checked="checked" <% end %>>
                         Continuing education
                       </label>
                       <label class="radio" for="radios-0">
-                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Company sponsored">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Company sponsored" <% if @preference.candidate_job_status == 'Company sponsored' %>checked="checked" <% end %>>
                         Company sponsored
                       </label>
                       <label class="radio" for="radios-1">
-                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Not seeking employment for other reasons">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Not seeking employment for other reasons" <% if @preference.candidate_job_status == 'Not seeking employment for other reasons' %>checked="checked" <% end %>>
                         Not seeking employment for other reasons
                       </label>
                     </div>
@@ -2884,7 +2884,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" id="preferences-submit" class="btn btn-success">Save changes</button>
+          <button type="button" id="preferences-submit-2" class="btn btn-success">Save changes</button>
         </div>
       </div>
     </div>
@@ -2893,7 +2893,7 @@
     <div class="panel panel-default" style="margin-top: 30px;">
       <div class="panel-heading" style="">Job Reporting Status<a href="#" id="job_status_edit_link" data-toggle="modal" data-target="#job_status_edit_link" style="color: white;font-size: 11px; float:right;"><span>Edit </span><span class="glyphicon glyphicon-cog"></span></a></div>
 
-      <table class="table" style=" margin:20px auto 0 auto;width: 700px;color:#333;margin-bottom: 20px;" cellpadding="3">
+      <table class="table" style="margin:20px auto 0 auto;width: 700px;color:#333;margin-bottom: 20px;" cellpadding="3">
         <tr>
           <td>Candidate Job Reporting Status:</td>
           <td >

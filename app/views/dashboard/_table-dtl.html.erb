@@ -26,26 +26,15 @@
   <hr/>
 
   <div class="table-responsive">
-  <table class="table-striped tablee" cellpadding="3" style="width: 910px;color: #333333;margin-bottom: 50px">
-    <thead>
-    <tr>
-      <th class="col-md-1">#</th>
-      <th class="col-md-2">Student Name</th>
-      <th class="col-md-2">Status</th>
-      <th class="col-md-2">Actions</th>
-    </tr>
-    </thead>
-    <% @applicants.each do |applicant| %>
-        <% personal_detail = applicant.personal_detail %>
-        <% if personal_detail.present? %>
-            <tr>
-              <td><%= applicant.try(:id) %></td>
-              <td><%= "#{personal_detail.first_name} #{personal_detail.middle_name} #{personal_detail.last_name}" %></td>
-              <td><%= OnlineApplicationForm.get_status(applicant.status).capitalize %></td>
-              <td><%= link_to('View', online_application_form_path(applicant.id), :class => 'btn btn-info no-print', style: 'margin-right:3px;') %><button class="btn btn-warning" style="margin-right: 3px;">Edit</button><button class="btn btn-danger" style="margin-right: 3px;">Delete</button></td>
-            </tr>
-        <% end %>
-    <% end %>
-  </table>
+    <table data-url="data1.json" data-height="299" data-click-to-select="true">
+      <thead>
+      <tr>
+        <th data-field="state" data-checkbox="true"></th>
+        <th data-field="id" data-align="right">Item ID</th>
+        <th data-field="name" data-align="center">Item Name</th>
+        <th data-field="price" data-align="">Item Price</th>
+      </tr>
+      </thead>
+    </table>
     </div>
 </div>

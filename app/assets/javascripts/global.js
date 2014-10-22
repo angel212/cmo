@@ -404,6 +404,10 @@ $(document).ready(function (e) {
         e.preventDefault();
         $('#preference-details-form').submit();
     })
+    $('#preferences-submit-2').click(function (e) {
+        e.preventDefault();
+        $('#preference-details-form-2').submit();
+    })
     $('#changepass-submit').click(function (e) {
         e.preventDefault();
         $('#change-pass-form').submit();
