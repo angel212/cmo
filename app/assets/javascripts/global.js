@@ -10,6 +10,7 @@ $(document).ready(function (e) {
     $('div#page-7').hide();
     $('div#page-8').hide();
     $('div#page-9').hide();
+    $('div#job-status-page').hide();
     $('div#address-page').hide();
     $('#pop').hide();
     //$('.jBox-container').hide();
@@ -20,7 +21,8 @@ $(document).ready(function (e) {
     $('#end-date-label').hide();
     $('#highest-degree-obtained').hide();
     $('#aim-alumni-form').hide();
-    $('#registration-submission').hide();
+    $('#registration-submission').hide()
+
 
     $("#pop-btn").on("click", function() {
         $("#pop").toggle();
@@ -190,6 +192,7 @@ $(document).ready(function (e) {
         $('div#page-6').hide();
         $('div#page-7').hide();
         $('div#address-page').hide();
+        $('div#job-status-page').hide();
         e.preventDefault();
     })
 
@@ -205,6 +208,7 @@ $(document).ready(function (e) {
     $('div#resume').hide();
     $('div#page-6').hide();
     $('div#page-7').hide();
+    $('div#job-status-page').hide();
     e.preventDefault();
 })
 
@@ -220,6 +224,7 @@ $(document).ready(function (e) {
         $('div#page-9').hide();
         $('div#page-6').hide();
         $('div#page-7').hide();
+        $('div#job-status-page').hide();
         e.preventDefault();
     })
 
@@ -235,6 +240,7 @@ $(document).ready(function (e) {
         $('div#resume').hide();
         $('div#page-6').hide();
         $('div#page-7').hide();
+        $('div#job-status-page').hide();
         e.preventDefault();
     })
 
@@ -249,7 +255,8 @@ $(document).ready(function (e) {
         $('div#resume').hide()
         $('div#page-9').hide();
         $('div#page-6').hide();
-        $('div#page-7').hide();
+        $('div#page-7').hide()
+        $('div#job-status-page').hide();
         e.preventDefault();
     })
 
@@ -264,6 +271,7 @@ $(document).ready(function (e) {
         $('div#page-9').hide();
         $('div#page-6').hide();
         $('div#page-7').show();
+        $('div#job-status-page').hide();
         e.preventDefault();
     })
 
@@ -314,6 +322,24 @@ $(document).ready(function (e) {
         $('div#page-7').hide();
         $('div#page-9').show();
         $('div#page-8').hide();
+        $('div#job-status-page').hide();
+//        disable_scroll();
+        e.preventDefault();
+    })
+
+    $('.job-status-btn').click(function (e) {
+        $('div#page-2').hide();
+        $('div#page-3').hide();
+        $('div#page-4').hide();
+        $('div#page-5').hide();
+        $('div#page-1').hide();
+        $('div#address-page').hide();
+        $('div#resume').hide();
+        $('div#page-6').hide();
+        $('div#page-7').hide();
+        $('div#page-9').hide();
+        $('div#page-8').hide();
+        $('div#job-status-page').show();
 //        disable_scroll();
         e.preventDefault();
     })

@@ -107,7 +107,12 @@
               text-transform: uppercase;
               letter-spacing: 1px;
               font-weight: bold;" class="no-print">Career
-        Services Office</p>
+        Services Office</p><div class="span4" style="position: relative;
+            top: 1px;
+            right: 0px;
+            float: right;">
+    <%	 if @student.blank? %><a href="/users/sign_out" id="sign-out" class="btn btn-warning no-print" data-method="delete" rel="nofollow" style="border-radius: 0px;">Sign Out</a><% end  %>
+    </div>
     </div>
     <%if @student.present? %>
         <div class="leftcolumn no-print" id="leftcolumn">
@@ -139,6 +144,7 @@
               <li><a href="view_profile.html" class="profile-btn">Preferences</a></li>
               <li><a href="#" class="myuploads-btn">My Uploads</a></li>
               <li><a href="#" class="myresume-btn">Professional Summary</a></li>
+              <li><a href="#" class="job-status-btn">Job Reporting Status</a></li>
               <li><a href="#" class="settings-btn">Settings</a></li>
               <li><a href="../../" style="" id="">Logout</a></li>
             </ul>

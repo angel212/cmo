@@ -2808,7 +2808,7 @@
 
     <% end %>
 
-    <div class="control-group" style="margin: 30px 192px;">
+    <div class="control-group" style="margin: 30px 191px;">
       <label class="control-label" for="submit-employment-info-back"></label>
       <div class="controls">
         <button id="submit-employment-info-back" name="submit-employment-info-back" class="patrick-btn">Back
@@ -2824,6 +2824,98 @@
   </div>
 </div>
 <!-- End Page 3 -->
+
+<div id="job-status-page">
+  <div class="content">
+
+    <div class="modal fade" data-backdrop="static" data-keyboard="false"  id="job_status_edit_link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="width: 760px;
+              margin-left: -60px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Job Reporting Status</h4>
+        </div>
+        <div class="modal-body">
+          <form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
+            <table style=" color: black;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
+              <tr>
+                <td style="vertical-align:top">Candidate Job Reporting Status:</td>
+                <td>
+                    <div class="controls">
+                      <label class="radio" for="radios-0">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Seeking a Position" checked="checked">
+                        Seeking a Position
+                      </label>
+                      <label class="radio" for="radios-1">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Seeking an offer">
+                        Seeking an offer
+                      </label>
+                      <label class="radio" for="radios-0">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Accepted an offer">
+                        Accepted an offer
+                      </label>
+                      <label class="radio" for="radios-1">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Starting a business">
+                        Starting a business
+                      </label>
+                      <label class="radio" for="radios-0">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Postponing job search">
+                        Postponing job search
+                      </label>
+                      <label class="radio" for="radios-1">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Continuing education">
+                        Continuing education
+                      </label>
+                      <label class="radio" for="radios-0">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-0" value="Company sponsored">
+                        Company sponsored
+                      </label>
+                      <label class="radio" for="radios-1">
+                        <input type="radio" name="preference[candidate_job_status]" id="radios-1" value="Not seeking employment for other reasons">
+                        Not seeking employment for other reasons
+                      </label>
+                    </div>
+                </td>
+              </tr>
+            </table>
+          </form>
+          </span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="preferences-submit" class="btn btn-success">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="panel panel-default" style="margin-top: 30px;">
+      <div class="panel-heading" style="">Job Reporting Status<a href="#" id="job_status_edit_link" data-toggle="modal" data-target="#job_status_edit_link" style="color: white;font-size: 11px; float:right;"><span>Edit </span><span class="glyphicon glyphicon-cog"></span></a></div>
+
+      <table class="table" style=" margin:20px auto 0 auto;width: 700px;color:#333;" cellpadding="3">
+        <tr>
+          <td>Candidate Job Reporting Status:</td>
+          <td>
+            <%= @preference.candidate_job_status %>
+          </td>
+        </tr>
+      </table>
+
+      <div class="control-group">
+        <label class="control-label" for="education-back"></label>
+
+        <div class="controls" style="margin: 30px 250px;">
+          <button id="submit-preferences-info-back" name="submit-preferences-info-back" class="patrick-btn">Back
+            -
+            Work Experience
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <!-- Start Page 4 -->
 <div id="page-4">
@@ -2882,12 +2974,6 @@
                     </select>
                   </td>
                 </tr>
-                <tr>
-                  <td>Candidate Job Reporting Status:</td>
-                  <td>
-                    <input id="" name="preference[candidate_job_status]" value="<%= @preference.candidate_job_status %>" type="text" class="form-control">
-                  </td>
-                </tr>
               </table>
             </form>
       </span>
@@ -2933,12 +3019,6 @@
         <td>Desired Salary after MBA (per annum):</td>
         <td>
           <%= @preference.salary_after_mba %>
-        </td>
-      </tr>
-      <tr>
-        <td>Candidate Job Reporting Status:</td>
-        <td>
-          <%= @preference.candidate_job_status %>
         </td>
       </tr>
     </table>
