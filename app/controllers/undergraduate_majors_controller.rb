@@ -1,4 +1,5 @@
 class UndergraduateMajorsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /undergraduate_majors
   # GET /undergraduate_majors.json
   def index

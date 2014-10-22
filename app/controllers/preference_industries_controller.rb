@@ -1,4 +1,5 @@
 class PreferenceIndustriesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /preference_industries
   # GET /preference_industries.json
   def index

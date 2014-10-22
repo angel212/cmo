@@ -1,4 +1,5 @@
 class EducationSchoolsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /education_schools
   # GET /education_schools.json
   def index

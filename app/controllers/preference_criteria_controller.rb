@@ -1,4 +1,5 @@
 class PreferenceCriteriaController < ApplicationController
+  before_filter :authenticate_user!
   # GET /preference_criteria
   # GET /preference_criteria.json
   def index

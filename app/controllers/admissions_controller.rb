@@ -7,28 +7,40 @@ class AdmissionsController < ApplicationController
   end
 
   def edit
-    @online_application = OnlineApplicationForm.find(params[:id])
-    @personal_details = @online_application.personal_detail
-    @employment_detail = @online_application.employment_detail
-    @education_detail = @online_application.education_detail
-    @preference = @online_application.preference
-    @language = @online_application.language_abilities
-    @function = @online_application.function_experiences
-    @industry = @online_application.industry_experiences
-    @preference_industry = @online_application.preference_industries
-@affiliation= @online_application.club_affiliation
-    @undergrad = @online_application.undergraduate_majors
-    @other_degree = @online_application.other_graduates
-    @certification = @online_application.certifications
-    @educ_school = @online_application.education_schools
-    @work_multiple = @online_application.work_experiences
-
-
-    @student=1
-
-    respond_to do |format|
-      format.html
+    if(session[:sda].blank?)
+      redirect_to root_url , {alert:'Logout successfully'.html_safe} and return
     end
+
+    if params[:id] == session[:sda]
+
+      @online_application = OnlineApplicationForm.find(session[:sda])
+      @personal_details = @online_application.personal_detail
+      @employment_detail = @online_application.employment_detail
+      @education_detail = @online_application.education_detail
+      @preference = @online_application.preference
+      @language = @online_application.language_abilities
+      @function = @online_application.function_experiences
+      @industry = @online_application.industry_experiences
+      @preference_industry = @online_application.preference_industries
+      @affiliation= @online_application.club_affiliation
+      @undergrad = @online_application.undergraduate_majors
+      @other_degree = @online_application.other_graduates
+      @certification = @online_application.certifications
+      @educ_school = @online_application.education_schools
+      @work_multiple = @online_application.work_experiences
+
+
+      @student=1
+
+      respond_to do |format|
+        format.html
+      end
+
+    elsif params[:id] != session[:sda]
+
+      redirect_to("/admissions/#{session[:sda]}/edit") and return
+    end
+
   end
 
   def create
@@ -69,8 +81,8 @@ class AdmissionsController < ApplicationController
     elsif @online_application.present? &&  @online_application.pass != params[:password]
       redirect_to '/', {alert: 'Incorrect Email or Password'.html_safe} and return
     end
-
-   redirect_to("/admissions/#{@online_application.id}/edit") and return
+session[:sda] =@online_application.id
+   redirect_to("/admissions/#{session[:sda]}/edit") and return
 
   end
 
@@ -332,5 +344,9 @@ class AdmissionsController < ApplicationController
       params.merge!(key => DateTime.strptime(value, '%d/%m/%Y')) if key.scan('date').count > 0
     end
   end
+def logout
+  session[:sda]= nil
+redirect_to root_url , {alert:'Logout successfully'.html_safe} and return
+end
 
 end

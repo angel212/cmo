@@ -1,4 +1,5 @@
 class OtherGraduatesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /other_graduates
   # GET /other_graduates.json
   def index
