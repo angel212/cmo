@@ -1,4 +1,5 @@
 class IndustryExperiencesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /industry_experiences
   # GET /industry_experiences.json
   def index

@@ -19,7 +19,7 @@ has_many :preference_criteriums
   has_many :education_schools
   has_many :work_experiences
 
-  DTL_STATUS = {10 => 'registered', 20 => 'recorded', 30 => 'for verification', 40 => 'paid', 90 => 'Deleted'}
+  DTL_STATUS = {10 => 'Pending', 20 => 'recorded', 30 => 'for verification', 40 => 'paid', 90 => 'Deleted'}
   DTL_SUBSTATUS = {10 => {11 => 'registered'},
                20 => {21 => 'recorded'},
                30 => {31 => 'for for verification'},

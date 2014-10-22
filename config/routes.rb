@@ -128,6 +128,7 @@ OnlineApplication::Application.routes.draw do
   get '/excel/export' => 'dashboard#excel'
   get 'submit_requirement' => 'requirements#submit_requirement'
   post 'supplement/(:id)' => 'supplemental_details#update'
+  get '/logout/' => 'admissions#logout'
 
   post'/admissions/language/(:id)' => 'admissions#create_language'
   post'/admissions/function/(:id)' => 'admissions#create_function'
@@ -144,6 +145,7 @@ OnlineApplication::Application.routes.draw do
   post'/admissions/work/(:id)' => 'admissions#add_multiple_work'
   post'/admissions/edit_work/(:id)' => 'admissions#edit_multiple_work'
 post '/admissions/job_description/(:id)/(:id2)' => 'admissions#add_job_description'
+  post '/dashboard/submit_new' => 'dashboard#add_new_student'
 
 
   get 'api/language_ability/delete/(:id)' => 'admissions#delete_language'
@@ -158,6 +160,7 @@ post '/admissions/job_description/(:id)/(:id2)' => 'admissions#add_job_descripti
   get '/api/work/delete/(:id)' => 'admissions#delete_work'
   get '/api/school_educ/delete/(:id)' => 'admissions#delete_school'
   get '/api/job_desc/delete/(:id)' => 'admissions#delete_job_desc'
+
 
 
   get '/api/undergrad/delete/(:id)' => 'admissions#delete_undergrad'

@@ -1,4 +1,5 @@
 class RequirementsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /requirements
   # GET /requirements.json
   def index

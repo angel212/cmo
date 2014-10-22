@@ -1510,18 +1510,18 @@
                 </td>
 
               </tr>
-              <tr>
-                <td>Class Year:</td>
-                <td>
-                  <input id="last-school-year-date" name="education_detail[class_year]" value="<%= @education_detail.class_year %>" type="text" class="form-control">
-                </td>
-              </tr>
-              <tr>
-                <td>Graduation Date (approximate):</td>
-                <td>
-                  <input id="last-school-end-date" name="education_detail[last_school_end_date]" value="<%= @education_detail.last_school_end_date %>" type="text" class="form-control date-pick non-dob">
-                </td>
-              </tr>
+              <!--<tr>-->
+                <!--<td>Class Year:</td>-->
+                <!--<td>-->
+                  <!--<input id="last-school-year-date" name="education_detail[class_year]" value="<%= @education_detail.class_year %>" type="text" class="form-control">-->
+                <!--</td>-->
+              <!--</tr>-->
+              <!--<tr>-->
+                <!--<td>Graduation Date (approximate):</td>-->
+                <!--<td>-->
+                  <!--<input id="last-school-end-date" name="education_detail[last_school_end_date]" value="<%= @education_detail.last_school_end_date %>" type="text" class="form-control date-pick non-dob">-->
+                <!--</td>-->
+              <!--</tr>-->
               <tr>
                 <td>Do you Have Scholarship?:</td>
                 <td>
@@ -2313,18 +2313,18 @@
          <input id="company-name" name="employment_detail[job_title]" value="<%= @employment_detail.job_title %>" type="text" class="form-control">
        </td>
      </tr>
-     <tr>
-       <td>Bachelor's Degree:</td>
-       <td>
-         <input id="company-name" name="employment_detail[degree]" value="<%= @employment_detail.degree %>" type="text" class="form-control">
-       </td>
-     </tr>
-     <tr>
-       <td>School:</td>
-       <td>
-         <input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.school %>" type="text" class="form-control">
-       </td>
-     </tr>
+     <!--<tr>-->
+       <!--<td>Bachelor's Degree:</td>-->
+       <!--<td>-->
+         <!--<input id="company-name" name="employment_detail[degree]" value="<%= @employment_detail.degree %>" type="text" class="form-control">-->
+       <!--</td>-->
+     <!--</tr>-->
+     <!--<tr>-->
+       <!--<td>School:</td>-->
+       <!--<td>-->
+         <!--<input id="company-name" name="employment_detail[school]" value="<%= @employment_detail.school %>" type="text" class="form-control">-->
+       <!--</td>-->
+     <!--</tr>-->
      </table>
      </form>
   </span>
@@ -2418,18 +2418,18 @@
           <%= @employment_detail.job_title %>
         </td>
       </tr>
-      <tr>
-        <td>Bachelor's Degree:</td>
-        <td>
-          <%= @employment_detail.degree %>
-        </td>
-      </tr>
-      <tr>
-        <td>School:</td>
-        <td>
-          <%= @employment_detail.school %>
-        </td>
-      </tr>
+      <!--<tr>-->
+        <!--<td>Bachelor's Degree:</td>-->
+        <!--<td>-->
+          <!--<%= @employment_detail.degree %>-->
+        <!--</td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td>School:</td>-->
+        <!--<td>-->
+          <!--<%= @employment_detail.school %>-->
+        <!--</td>-->
+      <!--</tr>-->
     </table>
 
       <!--<script>
@@ -2934,7 +2934,7 @@
             <form id="preference-details-form" class="form-horizontal" method="post" action="/admissions/submit/<%= @online_application.id %>">
               <table style=" color: black;width: 565;margin: 0 auto 0 auto;font-family: helvetica, verdana, arial, sans-serif;" cellpadding="3" class="table">
                 <tr>
-                  <td>Industry - Preference:</td>
+                  <td>My Preference:</td>
                   <td>
                     <% @online_application.preference_industries.each do |preference_industry| %>
                         <span id="pre_industry<%= preference_industry.id %>" class="language-container" ><%= preference_industry.industry %> - <%= preference_industry.sub_industry %><a href="#"><span id="<%= preference_industry.id %>" class="preference-industry-delete glyphicon glyphicon-trash"></span></a><br></span>
@@ -2952,7 +2952,7 @@
                   <td><a href="#" id="important_criteria"><span class="glyphicon glyphicon-plus"></span></a></td>
                 </tr>
                 <tr>
-                  <td>Desired job titles:</td>
+                  <td>Desired Job Title/Designation:</td>
                   <td>
                     <input id="" name="preference[job_title]" value="<%= @preference.job_title %>" type="text" class="form-control">
                   </td>
@@ -3010,7 +3010,7 @@
         </td>
       </tr>
       <tr>
-        <td>Desired job titles:</td>
+        <td>Desired Job Title/Designation:</td>
         <td>
           <%= @preference.job_title %>
         </td>

@@ -22,5 +22,17 @@ class DashboardController < ApplicationController
   def excel
     @online_applications = OnlineApplicationForm.where('status != 90').order('id DESC')
   end
+  def add_new_student
+    @online_application = OnlineApplicationForm.create!(status: 10, :pass => 'password')
+    @personal_details = PersonalDetail.create!(:email => params[:email], :dob => params[:dob] , :first_name => params[:first_name], :last_name => params[:last_name] , :gender => params[:gender] )
+    @employment_detail = EmploymentDetail.create!
+    @education_detail = EducationDetail.create!
+    @preferences = Preference.create!
 
+    @online_application.update_attributes!(personal_detail_id: @personal_details.id,
+                                           employment_detail_id: @employment_detail.id,
+                                           education_detail_id: @education_detail.id,
+                                           preference_id: @preferences.id)
+    redirect_to "/dashboard"  , {alert: 'profile is successfully added' .html_safe} and return
+  end
 end

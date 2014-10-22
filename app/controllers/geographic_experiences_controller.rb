@@ -1,4 +1,5 @@
 class GeographicExperiencesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /geographic_experiences
   # GET /geographic_experiences.json
   def index

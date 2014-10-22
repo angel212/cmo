@@ -1,4 +1,5 @@
 class OnlineApplicationFormsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /online_application_forms
   # GET /online_application_forms.json
   def index

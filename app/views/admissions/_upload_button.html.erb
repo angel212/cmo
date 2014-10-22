@@ -8,9 +8,9 @@
       <input type="hidden" name="signature" value="<%= create_signature(@online_application.id, requirement_type_id) %>">
       <!-- Include any additional input fields here -->
 
-      <input name="file" type="file" id="<%= "requirement#{requirement_type_id}" %>">
-      <br>
-      <input type="submit" value="Upload" class="btn btn-info" id="<%= "submit_requirement#{requirement_type_id}" %>">
+      <input name="file" type="file" id="<%= "requirement#{requirement_type_id}" %>" accept="application/pdf">
+
+      <input type="submit" value="Upload" class="btn btn-info" id="<%= "submit_requirement#{requirement_type_id}" %>" >
       <script type="text/javascript">
           $(document).ready(function (e) {
               $('#<%= "submit_requirement#{requirement_type_id}"%>').click(function (ee) {

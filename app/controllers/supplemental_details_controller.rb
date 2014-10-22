@@ -1,4 +1,5 @@
 class SupplementalDetailsController < ApplicationController
+  before_filter :authenticate_user!
   include SupplementalDetailsHelper
   # GET /supplemental_details
   # GET /supplemental_details.json
